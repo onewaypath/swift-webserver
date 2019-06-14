@@ -1,0 +1,1505 @@
+/* Font Face
+   ========================================= */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+@font-face {
+    font-family: 'oklahomabold';
+    src: url('../fonts/oklahoma_bold-webfont.woff2') format('woff2'),url('../fonts/oklahoma_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'oklahomaregular';
+    src: url('../fonts/oklahoma_normal-webfont.woff2') format('woff2'),url('../fonts/oklahoma_normal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Basic css
+   ========================================= */
+body{
+    padding:0;
+    margin:0;
+    background:#f2f2f2;
+}
+img{
+    display:block;
+    max-width:100%;
+}
+#page-container-wrap{
+    margin: auto;
+    border: 20px solid #ffffff;
+    width:100%;
+    background: #dae1e7;
+    box-sizing: border-box;
+}
+ul, li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+    outline: none !important;
+}
+body, input, textarea{
+    font-family: 'Open Sans', sans-serif;
+}
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #656565;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+    color: #656565;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+    color: #656565;
+}
+input:-moz-placeholder { /* Firefox 18- */
+    color: #656565;
+}
+figure{
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'oklahomabold';
+}
+p{
+    font-size: 18px;
+    line-height: 35px;
+    color: #030004;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+a, button{
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+p b{
+    font-weight: 600;
+}
+h2{
+    color: #080002;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: normal;
+    text-align: center;
+    display: table;
+    width: auto;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+h3{
+	font-size: 30px;
+}
+input{
+    outline: none !important;
+}
+section, footer{
+    padding: 80px 0;
+    /* min-height: 100vh; */
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+section aside, footer aside{
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+section figure, footer figure{
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+section h2, section#home-news h3{
+    margin-bottom: 50px;
+}
+blockquote{
+    font-size: 18px;
+    line-height: 35px;
+    color: #030004;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 0 0;
+    font-weight: 300;
+    float: left;
+    width: 100%;
+    display: none;
+}
+form input, form textarea{
+    height: 47px;
+    padding:10px 12px;
+    background:#ffffff;
+    border:1px solid #ffffff;
+    box-sizing:border-box;
+    font-size:16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    border-radius:0;
+    box-shadow:none;
+    width: 100%;
+}
+form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c3c3c3;
+}
+form input::-moz-placeholder { /* Firefox 19+ */
+  color: #c3c3c3;
+}
+form input:-ms-input-placeholder { /* IE 10+ */
+  color: #c3c3c3;
+}
+form input:-moz-placeholder { /* Firefox 18- */
+  color: #c3c3c3;
+}
+form textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c3c3c3;
+}
+form textarea::-moz-placeholder { /* Firefox 19+ */
+  color: #c3c3c3;
+}
+form textarea:-ms-input-placeholder { /* IE 10+ */
+  color: #c3c3c3;
+}
+form textarea:-moz-placeholder { /* Firefox 18- */
+  color: #c3c3c3;
+}
+form textarea{
+	height: 130px;
+}
+form input.wpcf7-submit,
+form button{
+    background:#cd9933;
+    border: none;
+    box-shadow:none;
+    border-radius:0;
+    color: #3e3e3e;
+    text-transform:uppercase;
+    font-family: 'oklahomabold';
+    text-align:center;
+    cursor:pointer;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+input.wpcf7-submit:hover,
+form button:hover{
+    background-color: #3e3e3e;
+    color: #fff;
+}
+form p{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+section#bio span.wpcf7-not-valid-tip{
+    position: absolute;
+    top: 100%;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 0 10px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    height: 35px;
+    border-radius: 4px;
+    line-height: 35px;
+    color: red;
+    width: 100%;
+    z-index: 1;
+}
+div.wpcf7 .ajax-loader{
+    display: none !important;
+}
+
+/* Header [ Navbar ]
+   ========================================= */
+    nav{
+        position: fixed;
+        z-index: 2;
+        top: 75px;
+        left: 95px;
+    }
+    nav a{
+        width: 100%;
+        float: left;
+        margin: 0 0 20px;
+    }
+    nav a:last-child{
+        margin: 0;
+    }
+    nav a{
+        padding: 15px 20px;
+        width: 100%;
+        text-decoration: none !important;
+        border-radius: 5px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ca972b;
+        font-weight: 600;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    nav a span{
+        opacity: 0;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+    nav a img{
+        margin: 0 auto;
+    }
+    nav a:hover, nav a[data-active="1"]{
+        background: #fff;
+    }
+    nav a:hover span, nav a[data-active="1"] span{
+        opacity: 1;
+    }
+    nav a:hover img:last-child, nav a[data-active="1"] img:last-child{
+        display: block;
+    }
+    nav a:hover img:first-child, nav a[data-active="1"] img:first-child{
+        display: none;
+    }
+    nav{
+        max-width: 180px;
+        width: 100%;
+    }
+    nav:after{
+        position: absolute;
+        content: "";
+        right: 70px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #a17720;
+        z-index: -1;
+        opacity: .24;
+    }
+    nav a figure{
+        float: left;
+        margin: 0 25px 0 0;
+        width: 33px;
+        text-align: center;
+    }
+    nav a img:last-child{
+        display: none;
+    }
+    nav button{
+        display: none;
+    }
+
+
+/* Home Section [ Section 1 ]
+   ========================================= */
+section:nth-child(1){
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    min-height: calc(100vh - 20px);
+}
+section:nth-child(1) ul{
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+/* section:nth-child(1) figure{
+    position: relative;
+} */
+section:nth-child(1) aside{
+    vertical-align: middle;
+}
+section:nth-child(1) h1{
+    margin: 0;
+    font-size: unset;
+}
+section:nth-child(1) h1, section:nth-child(1) h1 p{
+    width: 100%;
+    display: inline-block;
+}
+section:nth-child(1) p img{
+    display: none;
+    position: absolute;
+    top: 170%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+section:nth-child(1) figure > p:last-child:after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 37%;
+    bottom: 0;
+    background: #cd9933;
+    width: 1px;
+    right: 50%;
+    opacity: 0.2;
+}
+section:nth-child(1) figure > p:last-child:before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 16px;
+    bottom: 37%;
+    background: #cd9933;
+    width: 16px;
+    right: calc(50% - 8px);
+    border-radius: 50%;
+}
+section:nth-child(1) ul li a{
+    color: #cd9933
+}
+section:nth-child(1) figure h1 p{
+    text-transform: uppercase;
+    font-size: 54px;
+    font-family: 'oklahomaregular';
+    font-weight: normal;
+    color: #000;
+    margin: 0;
+}
+section:nth-child(1) figure h1 p{
+    text-transform: uppercase;
+    font-family: 'oklahomaregular';
+    font-weight: normal;
+    width: auto;
+    font-size: 54px;
+}
+section:nth-child(1) figure h1 p:nth-child(1){
+    width: 100%;
+    display: inline-block;
+    font-style: normal;
+    color: #000;
+    line-height: normal;
+}
+section:nth-child(1) figure h1 p:nth-child(2){
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    position: relative;
+    color: #000;
+}
+section:nth-child(1) figure h1 p:nth-child(2):after{
+    position: absolute;
+    content: "";
+    top: calc(50% - 2px);
+    height: 2px;
+    width: 130px;
+    left: -147px;
+    background-color: #000;
+}
+section:nth-child(1) figure h1 p:nth-child(2):before{
+    position: absolute;
+    content: "";
+    top: calc(50% - 2px);
+    height: 2px;
+    width: 130px;
+    right: -147px;
+    background-color: #000;
+}
+section:nth-child(1) ul{
+	position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+
+
+/* Attention Section [ Section 2 ]
+   ========================================= */
+	section#attention{
+	    position: relative;
+	    z-index: 1;
+	}
+	section#attention h2{
+		padding: 40px 0 25px;
+		background: url('../images/attention-title.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		margin-bottom: 0;
+	}
+	section#attention, #bio, section#steps
+  /* , section#booking-section */
+  {
+	    background-color: #cd9933;
+	}
+	section#attention figure{
+	    max-width: 1020px;
+	}
+	section#attention h3:first-child{
+	    max-width: 800px;
+	    margin: 0 auto 90px;
+	    display: table;
+	    text-align: center;
+	    padding: 0 80px;
+      text-transform: uppercase;
+	}
+	section#attention h3{
+	    text-align: center;
+	    padding: 0 210px;
+	    margin: 0;
+	}
+
+/* Consultation​ Section [ Section 3 ]
+   ========================================= */
+   	section#consultation​{
+   		text-align: center;
+   	}
+   	section#consultation​ h2{
+   		position: relative;
+   	}
+   	section#consultation​ h2:after{
+   		position: absolute;
+   		content: "";
+   		background:  #080002;
+   		width: 60%;
+   		height: 1px;
+   		bottom: 0;
+   		left: 0;
+   		right: 0;
+   		margin: 0 auto;
+   	}
+   	section#consultation​ p{
+   		margin: 0 0 50px;
+   	}
+   	section#consultation​ div{
+   		display: -ms-flexbox;
+   		display: flex;
+   		-ms-flex-wrap: wrap;
+   		flex-wrap: wrap;
+   		margin: 0 -25px -50px;
+   		padding: 40px 0 0;
+   	}
+   	section#consultation​ div div{
+   		width: 50%;
+   		padding: 0 25px;
+   		margin: 0 0 50px;
+   		display: inline-block;
+   	}
+   	section#consultation​ div h3{
+   		color: #cc9933;
+   		margin: 0 0 15px;
+   		width: 100%;
+   	}
+   	section#consultation​ div p{
+   		margin: 0;
+   	}
+   	
+
+/* Steps Section [ Section 4 ]
+   ========================================= */
+   	section#steps{
+   		text-align: center;
+   	}
+    section#steps h3:first-child{
+      text-transform: uppercase;
+      max-width: 380px;
+      margin: 0 auto 50px;
+    }
+   	section#steps h3{
+   		margin: 0;
+   	}
+   	section#steps h6{
+   		margin: 60px 0 0;
+   	}
+   	section#steps h6{
+   		font-size: 18px;
+   		position: relative;
+   		padding: 0 0 5px;
+   	}
+   	section#steps h6:after{
+   		position: absolute;
+   		content: "";
+   		background:  #080002;
+   		width: 50px;
+   		height: 1px;
+   		bottom: 0;
+   		left: 0;
+   		right: 0;
+   		margin: 0 auto;
+   	}
+   	section#steps p{
+   		margin: 20px 0 0;
+   	}
+/* Booking section 
+   ========================================= */
+   	section#booking-section h2{
+   		border-bottom: 1px solid #080002;
+   		margin-bottom: 80px;
+   	}
+    section#booking-section div{
+        float: left;
+    }
+    section#booking-section a{
+        text-decoration: none !important;
+    }
+    section#booking-section div table{
+        width: 100%;
+        text-align: center;
+    }
+    section#booking-section div:nth-of-type(1){
+        width: 55%;
+    }
+    section#booking-section div:nth-of-type(2){
+        width: 45%;
+        padding-left: 30px;
+        margin-top: -8px;
+    }
+    section#booking-section p:nth-of-type(1){
+        color: #222222;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 0 0 40px 15px;
+    }
+    section#booking-section p:nth-of-type(1) a{
+        margin-right: 18px;
+        color: #222222;
+        font-size: 18px;
+    }
+    section#booking-section p:nth-of-type(1) a:hover, section#booking-section p:nth-of-type(1) a:focus, section#booking-section p:nth-of-type(1) a:active{
+        color: #cc9933;
+    }
+    section#booking-section div th, section#booking-section div td, section#booking-section div td a{
+        font-size: 16px;
+        color: #000;
+    }
+    section#booking-section div th, section#booking-section div td, section#booking-section div td{
+        padding: 3px;
+    }
+    section#booking-section div table a:hover, section#booking-section div table a:focus, section#booking-section div table a:active{
+        color: #fff;
+        background-color: #cc9933;
+    }
+    section#booking-section div:nth-of-type(1) table th{
+        font-weight: normal;
+    }
+    section#booking-section div:nth-of-type(1) table td, section#booking-section div:nth-of-type(1) table td a{
+        font-weight: 600;
+    }
+    section#booking-section div:nth-of-type(1) table a{
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        display: inline-block;
+        line-height: 37px;
+        font-weight: 500;
+    }
+    #disabled{
+        pointer-events: none;
+        color: #949494 !important;
+    }
+    section#booking-section div:nth-of-type(2) table a{
+        border-radius: 3px;
+        padding: 8px 15px;
+        display: inline-block;
+    }
+    section#booking-section p:nth-of-type(2){
+        font-size: 14px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 60px 0 0;
+        font-weight: 400;
+    }
+    section#booking-section p:nth-of-type(2) span i{
+        color: #cc9933;
+        margin-right: 5px;
+    }
+    section#booking-section p:nth-of-type(2) select{
+        background: #e4eaef;
+        border-radius: 3px;
+        padding: 7px 12px;
+        border: none;
+        margin-left: 20px;
+    }
+    section#booking-section p:nth-of-type(2) br{
+        display: none;
+    }
+    #embed-booking-section p{
+        text-align: center;
+    }
+    #embed-booking-section a{
+        padding: 7px 25px;
+        display: inline-block;
+        background: #cc9933;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        border-radius: 5px;
+        text-transform: capitalize;
+    }
+    #embed-booking-section a:hover, #embed-booking-section a:active, #embed-booking-section a:focus{
+        background: #222;
+    }
+
+/* ADD YOUR DETAILS section 
+   ========================================= */
+	   	section#booking-section{
+	   		text-align: center;
+	   	}
+   		section#booking-section h2{
+   			border-bottom: 1px solid #080002;
+   			margin-bottom: 30px
+   		}
+   		section#booking-section input{
+   			width: calc(33.33% - 3.33px);
+   			margin: 0 5px 5px 0;
+   			float: left;
+   		}
+   		section#booking-section input:nth-of-type(3){
+   			margin-right: 0;
+   		}
+   		section#booking-section input:nth-of-type(4){
+   			width: 100%;
+   		}
+   		section#booking-section form button {
+   		    margin-top: 20px;
+   		    
+   		}
+   		section#booking-section form button:hover, section#booking-section form button:focus{
+   			background: #3e3e3e;
+   			color: #fff;
+   		}
+   		section#booking-section form{
+   			margin-top: 80px; 
+   		}
+   		section#booking-section p{
+   			font-weight: 400;
+   		}
+
+/* Bio Section
+   ========================================= */
+	section#bio figure{
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	section#bio h2{
+	    border-bottom: 1px solid;
+	        order: 1;
+	}
+	section#bio p:nth-of-type(1){
+		order: 3;
+		margin-top: 50px;
+	}
+	section#bio p:nth-of-type(2){
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 100%;
+	    text-align: center;
+	    order: 2;
+	}
+	section#bio span {
+	    font-size: 20px;
+	    color: #050505;
+	    font-weight: normal;
+	    text-transform: uppercase;
+	    font-family: 'oklahomaregular';
+	    padding-bottom: 6px;
+	    border-bottom: 1px solid;
+	}
+	section#bio img{
+	    margin: 0 auto 30px;
+      border-radius: 100%;
+	}
+
+
+
+/* Home News
+   ========================================= */
+    section#home-news h3{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        font-size: 35px;
+        text-transform: uppercase;
+        line-height: 40px;
+        z-index: 1;
+        margin: 0;
+        color: #fff;
+    }
+    section#home-news h2{
+        font-size: 15px;
+        text-transform: uppercase;
+        width: 100%;
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        color: #000;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: 0.7;
+        margin: 0;
+    }
+    section#home-news aside{
+        position: relative;
+        min-height: 110px;
+        margin: 0 auto 50px;
+        z-index: 1;
+        display: block;
+        padding: 20px 0;
+    }
+    section#home-news aside:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        background: url(https://onewaypath.com/wp-content/uploads/2019/05/home-news.png);
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        z-index: -1;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    section#home-news ul{
+        margin: 0 -20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    section#home-news ul li{
+        padding: 0 20px;
+        width: 33.33%;
+    }
+    section#home-news ul h4{
+        font-size: 15px;
+        display: inline-block;
+        width: 100%;
+        opacity: .7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+        line-height: normal;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+    }
+    section#home-news ul h5{
+        font-size: 29px;
+        margin: 15px 0 20px;
+        line-height: 38px;
+    }
+    section#home-news ul p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    section#home-news ul a{
+        width: auto;
+        color: #000;
+        border-bottom: 1px solid #000;
+        font-size: 18px;
+        padding: 0 0 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 25px 0 0;
+        display: inline-block;
+    }
+    section#home-news ul a:hover{
+        color: #fff;
+        border-color: #fff;
+    }
+    section#home-news div{
+        width: 100%;
+        margin: 100px 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    section#home-news div a{
+        font-size: 16px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 400;
+        text-decoration: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: 0 40px;
+    }
+    section#home-news div a img{
+        margin-left: 15px;
+        -webkit-transition: all 0.3s ease 0s;
+           -moz-transition: all 0.3s ease 0s;
+            -ms-transition: all 0.3s ease 0s;
+             -o-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+    }
+    section#home-news div a:hover img{
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translateX(15px);
+           -moz-transform: translateX(15px);
+            -ms-transform: translateX(15px);
+             -o-transform: translateX(15px);
+                transform: translateX(15px);
+    }
+    section#home-news div a:hover{
+        color: #fff;
+    }
+
+
+/* Contact Section [ Footer ]
+   ========================================= */
+footer{
+    /* padding-bottom: 25px; */
+    text-align:center;
+    /* min-height: calc(100vh - 20px); */
+}
+footer h2{
+    border: none;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+footer address{
+    font-style: normal;
+}
+footer p{
+    color: #000;
+    font-size: 20px;
+    line-height: 40px;
+}
+footer p a{
+    color: #000;
+    text-decoration: none;
+}
+footer address:nth-child(3){
+    margin: 45px auto 50px;
+    max-width: 500px;
+    display: table;
+    border:1px solid #ccc;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+    width: 100%;
+}
+footer address:nth-child(3) p b{
+    text-transform: uppercase;
+}
+footer figcaption{
+    margin: 0 0 50px;
+}
+footer figcaption ul{
+    margin: 0 auto;
+    display: table;
+}
+footer figcaption ul li{
+    float: left;
+}
+footer figcaption ul li a, footer figcaption ul li a:hover{
+    color: #000;
+}
+footer p:nth-child(4){
+    font-size: 16px;
+    color: #000;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+}
+footer ul{
+	text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 20px;
+}
+footer li, section:nth-child(1) ul li{
+	display: inline-block;
+    margin: 0 12px;
+}
+footer li a, section:nth-child(1) ul li a{
+    font-size: 24px;
+}
+section:nth-child(1) ul li a{
+	color: #cd9933;
+}
+footer li a{
+	color: #fff;
+}
+footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section:nth-child(1) ul li a:focus{
+	color: #000;
+}
+
+
+/* Media Screen
+   ========================================= */
+
+@media screen and (max-width: 1400px){
+    section#bio p{
+        margin: 0 auto;
+    }
+    section#bio form h2{
+        margin: 0 auto 40px;
+    }
+    section#attention h3{
+        padding: 0 140px;
+    }
+    nav{
+        top: 55px;
+        left: 55px;
+    }
+    
+}
+
+@media screen and (max-width: 1300px){
+    nav{
+        top: 45px;
+        left: 45px;
+    }
+    nav a{
+        padding: 12px 15px;
+        margin: 0 0 15px;
+    }
+    nav{
+        max-width: 160px;
+    }
+    nav a figure{
+        margin: 0 10px 0 0;
+    }
+    section#bio p:nth-child(2), section#attention h3:first-child{
+        max-width: 700px;
+    }
+    section#attention figure {
+	    max-width: 860px;
+	}
+	section#attention h3:first-child{
+		margin: 0 auto 70px;
+	}
+}
+
+@media screen and (max-width: 1199px){
+    section:nth-child(1) ul {
+        right: 60px;
+        bottom: 60px;
+    }
+    h2{
+        font-size: 42px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    section h2, section#home-news aside{
+        margin-bottom: 35px;
+    }
+    section#attention h3{
+        padding: 35px 15px;
+    }
+    section#bio form h2 {
+        font-size: 28px;
+        line-height: 34px;
+        max-width: 510px;
+    }
+    footer p{
+        font-size: 18px;
+    }
+    footer address:nth-child(3){
+        margin: 40px auto;
+    }
+    section#bio p:nth-child(2), section#attention h3:first-child{
+        max-width: 570px;
+    }
+    section#attention figure {
+        max-width: 690px;
+    }
+    section#attention h3:first-child{
+    	padding: 0;
+    	margin: 0 auto 50px;
+    }
+    section#attention h3 {
+        padding: 0 80px;
+        font-size: 26px;
+    }
+    section#consultation​ p {
+        margin: 0 0 40px;
+    }
+    section#consultation​ div h3{
+    	margin: 0 0 10px;
+    }
+    section#consultation​ div{
+    	padding: 20px 0 0;
+    }
+    section#steps h3:first-child{
+    	max-width: 330px;
+    }
+    section, footer{
+    	padding: 70px 0;
+    }
+    section#booking-section, section#embed-booking-section{
+        padding-bottom: 80px;
+    }
+    section#booking-section p:nth-of-type(2){
+        margin: 50px 0 0;
+    }
+    section#booking-section h2{
+    	margin-bottom: 60px;
+    }
+    section#booking-section form {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    section:nth-child(1) ul {
+        right: 50px;
+        bottom: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p, blockquote{
+        font-size: 17px;
+        line-height: 32px;
+    }
+    section#attention h3 {
+        margin: 30px 0 0;
+    }
+    /* section#bio p:nth-child(3) {
+        margin: 40px auto;
+    } */
+    section#bio form h2 {
+        margin: 0 auto 25px;
+    }
+    footer p {
+        font-size: 16px;
+        line-height: 32px;
+    }
+    footer h2{
+        margin-bottom: 25px;
+    }
+    footer address:nth-child(3) {
+        margin: 35px auto;
+        padding: 15px;
+    }
+    footer figcaption {
+        margin: 0 0 35px;
+    }
+    footer p:nth-child(4){
+        font-size: 14px;
+        line-height: 26px;
+    }
+    section#home-news ul h5{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    section#home-news div{
+        margin: 80px 0 0;
+    }
+    nav button{
+        display: block;
+        border: none;
+        background: transparent;
+        padding: 0;
+        float: left;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 40px;
+    }
+    nav{
+        top: 20px;
+        left: 20px;
+        max-width: 110px;
+    }
+    nav div{
+        background: #e4eaef;
+        padding: 30px 0 30px 25px;
+        display: none;
+    }
+    nav a{
+        float: none;
+    }
+    nav:after, nav a span{
+        display: none;
+    }
+    section#consultation​ div{
+    	padding: 10px 0 0;
+    }
+    section, footer{
+    	padding: 50px 0;
+    }
+    section#steps h6 {
+        margin: 50px 0 0;
+    }
+    section#booking-section div table{
+        margin: 0 auto;
+    }
+    section#booking-section div:nth-of-type(2), section#booking-section div:nth-of-type(1){
+        width: 100%;
+    }
+    section#booking-section div:nth-of-type(2){
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    section#booking-section figure{
+        max-width: 580px;
+    }
+    section#booking-section div:nth-of-type(2) table{
+        max-width: 400px;
+    }
+    section#booking-section p:nth-of-type(1){
+        margin-bottom: 30px;
+    }
+    section#booking-section, section#embed-booking-section{
+        padding-bottom: 60px;
+    }
+    section#booking-section p:nth-of-type(2){
+        margin: 40px 0 0;
+    }
+    section#booking-section h2{
+    	margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 920px){
+    section#bio form{
+        padding: 0 15px;
+    }
+    section#bio form span.wpcf7-form-control-wrap{
+        width: calc(33.33% - 6px);
+    }
+    section#bio form span.wpcf7-form-control-wrap:nth-child(3){
+        width: 33.33%;
+        margin-right: 0;
+    }
+    section#bio form input:nth-child(5){
+        width: 100%;
+    }
+    section#bio form .g-recaptcha{
+        margin: -12px 0 -10px -30px;
+        transform: scale(0.7);
+        width: 197px;
+    }
+    section#bio form ul{ margin: 0; max-width: 100%;position: relative;   padding: 0 15px;}
+    section#bio form input.wpcf7-submit {width: calc(100% - 218px);padding: 15px 10px;float: right;height: auto;}
+    section#bio figure{padding: 0 5px;}
+    section#bio figure p, section#bio form h2{padding: 0 15px;}
+    section#bio form ul:after{content: ''; display: block; clear: both; width: 100%;}
+    form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0px; left: 0;}
+    section#bio form li .g-recaptcha div {width: 100% !important;height: 100% !important;}
+}
+
+@media screen and (max-width: 767px){
+    section:nth-child(1) ul{
+        right: 0;
+        bottom: auto;
+        top: 50px;
+        width: 100%;
+    }
+    h2 {
+        font-size: 30px;
+        padding-bottom: 0;
+    }
+    section figure, footer figure{
+        padding: 0 20px;
+    }
+    /* footer{
+        padding-right: 20px;
+        padding-left: 20px;
+    } */
+    p, blockquote{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    blockquote{
+        text-align: center;
+    }
+    section#attention h3:first-child b {
+        font-weight: 300;
+    }
+    section#attention h3:first-child,
+    section#bio div,
+    section#bio p{
+        text-align: center;
+    }
+    section#attention h3{
+       	padding: 0;
+       	max-width: 500px;
+       	margin: 0 auto;
+    }
+    section h2{
+        line-height: 45px;
+    }
+    section#bio form h2{
+        text-align: center;
+        line-height: 40px;
+        font-size: 30px;
+        max-width: 540px;
+    }
+    section#bio p:nth-of-type(1){
+    	margin-top: 0;
+    }
+    section#bio p:nth-of-type(2){
+        margin: 40px auto 0;
+    }
+    section#bio form ul li{
+        width: 50%;
+    }
+    section#bio form ul li:nth-child(3){
+        width: 100%;
+    }
+    footer h2{
+        margin-bottom: 40px;
+    }
+    section#attention figure blockquote{
+        margin: 0 0 30px;
+    }
+    section:nth-child(1) figure h1 p{
+        font-size: 38px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2){
+        font-size: 20px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2):before {
+        width: 90px;
+        right: -100px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2):after {
+        width: 90px;
+        left: -100px;
+    }
+    section#bio form span.wpcf7-form-control-wrap:nth-child(3){
+        width: 100%;
+    }
+    section#bio form span.wpcf7-form-control-wrap:nth-child(2){
+        width: 50%;
+        margin-right: 0;
+    }
+    section#bio form span.wpcf7-form-control-wrap{
+        width: calc(50% - 6px);
+    }
+    section#home-news h3{
+        font-size: 30px;
+    }
+    section#home-news aside{
+        min-height: 100px;
+        padding: 10px 0;
+    }
+    section#home-news ul li{
+        margin: 0 0 50px;
+        width: 100%;
+    }
+    section#home-news ul li:last-child{
+        margin: 0;
+    }
+    section#home-news ul h5{
+        font-size: 30px;
+        margin: 10px 0;
+        line-height: 38px;
+    }
+    section#home-news ul a{
+        margin: 20px 0 0;
+    }
+    section#home-news div{
+        margin: 60px 0 0;
+    }
+    section#home-news h2{
+        line-height: 30px;
+    }
+    section:nth-child(1) figure > p:last-child:before {
+        bottom: 35%;
+        width: 14px;
+        height: 14px;
+        right: calc(50% - 7px);
+    }
+    section#attention h3:first-child{
+    	margin:  0 auto 40px ;
+    }
+    section#consultation​ div{
+    	margin: 0 0 -40px;
+    }
+    section#consultation​ div div{
+    	width: 100%;
+    	padding: 0;
+    	margin: 0 0 40px;
+    }
+    section#consultation​ h2{
+    	line-height: normal;
+    	padding-bottom: 10px;
+    }
+    section#booking-section p:nth-of-type(1) {
+        margin-bottom: 20px;
+    }
+    section#booking-section div:nth-of-type(2){
+        margin-top: 25px;
+    }
+    section#booking-section, section#embed-booking-section{
+        padding-bottom: 50px;
+    }
+    section#booking-section h2{
+    	margin-bottom: 20px;
+    }
+    section#booking-section form {
+        margin-top: 40px;
+    }
+    section#booking-section input{
+    	width: calc(50% - 2.5px);
+    }
+    section#booking-section input:nth-of-type(2){
+    	margin-right: 0; 
+    }
+    section#booking-section input:nth-of-type(3){
+    	width: 100%;
+    }
+    section#bio figure{
+    	display: inline-block;
+    }
+    footer ul, section:nth-child(1) ul{
+    	display: none;
+    }
+}
+
+@media screen and (max-width: 481px){
+    section#bio figure{    padding: 0 5px;}
+    section#bio figure p, section#bio form h2{padding: 0 15px;}
+    section#bio form ul{margin: 0; max-width: 100%;position: relative;padding: 0 0;}
+    section#bio form ul:after{content: ''; display: block; clear: both; width: 100%;}
+    form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0; left: 0;}
+    section#bio form{padding: 0 2px;}
+    section#bio form input.wpcf7-submit {margin-top: 0px;padding: 10px 10px;width: calc(100% - 170px);}
+    section#bio form .g-recaptcha{
+        margin: 0px 0 -35px 0px;
+        transform: scale(0.55);
+        display: block;
+        width: 162px;
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+    section#home-news div{
+        display: inline-block;
+        margin: 45px 0 0;
+    }
+    section#home-news div a{
+        margin: 15px 0 0;
+        width: 100%;
+    }
+    section#steps h3:first-child{
+    	/* font-size: 18px; */
+    	max-width: 230px;
+      margin-bottom: 40px;
+    }
+}
+@media screen and (max-height: 481px){
+    section:nth-child(1) figure > p:last-child:after{
+        height: 30%;
+    }
+    section:nth-child(1) figure > p:last-child:before{
+        bottom: 30%;
+    }
+}
+
+@media screen and (max-width: 390px){
+    section#bio form li .g-recaptcha {
+        margin: 0;
+        transform:scale(0.7778);
+        -webkit-transform:scale(0.7778);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+    }
+    section#bio form li .g-recaptcha div{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    section#bio form ul{
+        display: block;
+        margin: 0 auto;
+        max-width: 240px;
+    }
+    section#bio form button{
+        margin-top: -11px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2){
+        font-size: 16px;
+    }
+    section:nth-child(1) figure h1 p{
+        font-size: 30px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2):after{
+        top: calc(50% - 1px);
+        height: 2px;
+        width: 70px;
+        left: -78px;
+    }
+    section:nth-child(1) figure h1 p:nth-child(2):before{
+        top: calc(50% - 1px);
+        height: 2px;
+        width: 70px;
+        right: -78px;
+    }
+    section#consultation​ h2, section#booking-section h2{
+    	font-size: 25px;
+    }
+    section#booking-section p:nth-of-type(1){
+        margin-left: 10px;
+    }
+    b#july-month{
+    	display: none;
+    }
+    section#booking-section div:nth-of-type(1) table a{
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
+    section#booking-section div th, section#booking-section div td, section#booking-section div td a{
+        font-size: 13px;
+    }
+    section#booking-section div:nth-of-type(2) th, section#booking-section div:nth-of-type(2) td, 
+    section#booking-section div:nth-of-type(2) td a, section#booking-section p:nth-of-type(1){
+        font-size: 14px;
+    }
+    section#booking-section div:nth-of-type(2) table a{
+        padding: 8px 5px;
+        width: 100%;
+    }
+    section#booking-section p:nth-of-type(2) select{
+        min-width: 200px;
+        margin: 5px 0 0;
+    }
+    form input{
+    	height: 45px;
+    }
+    footer p{
+    	font-size: 14px;
+    }
+    footer address p{
+    	font-size: 16px;
+    }
+}
