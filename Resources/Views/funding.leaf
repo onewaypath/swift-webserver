@@ -4,50 +4,50 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>One Way Path Legal Services</title>
+      <title>One Way Path Group</title>
 
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="./assets/funding/css/funding.css" />
+      <link rel="stylesheet" href="./funding/01/css/funding.css" />
    </head>
    <body>
 
      <!--  	<nav>
       		<button>
-      			<img src="./assets/funding/images/menu-icon.png" alt="Menu selector">
+      			<img src="./funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
 	      		<a href="#home" data-active="1">
 					<figure>
-						<img src="./assets/funding/images/home-icon-dark.png" alt="Home icon">
-						<img src="./assets/funding/images/home-icon.png" alt="Home icon">
+						<img src="./funding/01/images/home-icon-dark.png" alt="Home icon">
+						<img src="./funding/01/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
 				<a href="#attention">
 					<figure>
-						<img src="./assets/funding/images/setting-icon-dark.png" alt="Services icon">
-						<img src="./assets/funding/images/setting-icon-gold.png" alt="Services icon">
+						<img src="./funding/01/images/setting-icon-dark.png" alt="Services icon">
+						<img src="./funding/01/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>ATTENTION</span>
 				</a>
 				<a href="#bio">
 					<figure>
-						<img src="./assets/funding/images/bio-icon-dark.png" alt="Bio icon">
-						<img src="./assets/funding/images/bio-icon-gold.png" alt="Bio icon">
+						<img src="./funding/01/images/bio-icon-dark.png" alt="Bio icon">
+						<img src="./funding/01/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
 				</a>
 				<a href="#booking-section">
 					<figure>
-						<img src="./assets/funding/images/news-icon-dark.png" alt="News">
-						<img src="./assets/funding/images/news-icon-gold.png" alt="News">
+						<img src="./funding/01/images/news-icon-dark.png" alt="News">
+						<img src="./funding/01/images/news-icon-gold.png" alt="News">
 					</figure>
 					<span>BOOKING</span>
 				</a>
 				<a href="#contact">
 					<figure>
-						<img src="./assets/funding/images/contact-icon-dark.png" alt="Contact icon">
-						<img src="./assets/funding/images/contact-icon-gold.png" alt="Contact icon">
+						<img src="./funding/01/images/contact-icon-dark.png" alt="Contact icon">
+						<img src="./funding/01/images/contact-icon-gold.png" alt="Contact icon">
 					</figure>
 					<span>contact</span>
 				</a>
@@ -110,12 +110,12 @@
         				<p>Be prepared for any meetings, phone calls and follow-up conversations and learn how to convince funders that your project is the one they should choose.</p>
         			</div>
         		</div>
-        		<h3>How does it work? Well it’s simple really… </h3>
         	</figure>
         </section>
 
         <section id="steps" data-identifier="page-section">
         	<figure>
+        		<h3>How does it work? Well it’s simple really… </h3>
         		<h3>2 STEPS:</h3>
         		<h3>Your next project’s success</h3>
         		<h6>STEP #1</h6>
@@ -316,7 +316,7 @@
          		<h2>Bio</h2>
          		<p><b>I have spent the past 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations and businesses.</b> As your representative, I will draw on my expertise in finance to help you take advantage of opportunities to sustain and grow your business or non-profit.</p>
          		<p>
-         			<img src="./assets/funding/images/bio-img.jpg" alt="Bio" title="Bio" />
+         			<img src="./funding/01/images/bio-img.jpg" alt="Bio" title="Bio" />
          			<span>Alex Young</span>
          		</p>
          	</figure>
@@ -360,6 +360,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
-      <script src="./assets/funding/js/funding.js?v=xdfxdf"></script>
+      <script src="./funding/01/js/funding.js?v=xdfxdf"></script>
    </body>
 </html>

@@ -103,8 +103,8 @@ input{
     outline: none !important;
 }
 section, footer{
-    padding: 90px 0;
-    min-height: 100vh;
+    padding: 80px 0;
+    /* min-height: 100vh; */
     width: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -452,7 +452,7 @@ section:nth-child(1) ul{
 	}
 	section#attention h3:first-child{
 	    max-width: 800px;
-	    margin: 90px auto;
+	    margin: 0 auto 90px;
 	    display: table;
 	    text-align: center;
 	    padding: 0 80px;
@@ -491,8 +491,8 @@ section:nth-child(1) ul{
    		display: flex;
    		-ms-flex-wrap: wrap;
    		flex-wrap: wrap;
-   		margin: 0 -25px;
-   		padding: 40px 0;
+   		margin: 0 -25px -50px;
+   		padding: 40px 0 0;
    	}
    	section#consultation​ div div{
    		width: 50%;
@@ -508,18 +508,18 @@ section:nth-child(1) ul{
    	section#consultation​ div p{
    		margin: 0;
    	}
-   	section#consultation​ h3:last-child{
-   		text-transform: uppercase;
-   		max-width: 380px;
-   		margin: 0 auto;
-   		color: #3d3d3d;
-   	}
+   	
 
 /* Steps Section [ Section 4 ]
    ========================================= */
    	section#steps{
    		text-align: center;
    	}
+    section#steps h3:first-child{
+      text-transform: uppercase;
+      max-width: 380px;
+      margin: 0 auto 50px;
+    }
    	section#steps h3{
    		margin: 0;
    	}
@@ -880,9 +880,9 @@ section:nth-child(1) ul{
 /* Contact Section [ Footer ]
    ========================================= */
 footer{
-    padding-bottom: 25px;
+    /* padding-bottom: 25px; */
     text-align:center;
-    min-height: calc(100vh - 20px);
+    /* min-height: calc(100vh - 20px); */
 }
 footer h2{
     border: none;
@@ -1002,7 +1002,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
 	    max-width: 860px;
 	}
 	section#attention h3:first-child{
-		margin: 70px auto;
+		margin: 0 auto 70px;
 	}
 }
 
@@ -1042,7 +1042,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     }
     section#attention h3:first-child{
     	padding: 0;
-    	margin: 50px auto;
+    	margin: 0 auto 50px;
     }
     section#attention h3 {
         padding: 0 80px;
@@ -1055,9 +1055,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     	margin: 0 0 10px;
     }
     section#consultation​ div{
-    	padding: 20px 0;
+    	padding: 20px 0 0;
     }
-    section#consultation​ h3:last-child{
+    section#steps h3:first-child{
     	max-width: 330px;
     }
     section, footer{
@@ -1151,7 +1151,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
         display: none;
     }
     section#consultation​ div{
-    	padding: 10px 0;
+    	padding: 10px 0 0;
     }
     section, footer{
     	padding: 50px 0;
@@ -1341,10 +1341,10 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
         right: calc(50% - 7px);
     }
     section#attention h3:first-child{
-    	margin: 40px auto;
+    	margin:  0 auto 40px ;
     }
     section#consultation​ div{
-    	margin: 0;
+    	margin: 0 0 -40px;
     }
     section#consultation​ div div{
     	width: 100%;
@@ -1411,9 +1411,10 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
         margin: 15px 0 0;
         width: 100%;
     }
-    section#consultation​ h3:last-child{
-    	font-size: 18px;
+    section#steps h3:first-child{
+    	/* font-size: 18px; */
     	max-width: 230px;
+      margin-bottom: 40px;
     }
 }
 @media screen and (max-height: 481px){
