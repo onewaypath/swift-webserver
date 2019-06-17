@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "apiTools",
-        "repositoryURL": "https://github.com/rahyoung/apiTools.git",
+        "repositoryURL": "git://github.com/rahyoung/apiTools.git",
         "state": {
           "branch": null,
           "revision": "a3acff485e3c9b6a42f602e927e23dcac0ca6d1c",
