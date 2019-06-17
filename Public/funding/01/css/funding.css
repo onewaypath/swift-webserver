@@ -184,11 +184,13 @@ form textarea{
 }
 form input.wpcf7-submit,
 form button{
-    background:#cd9933;
+    /* background:#cd9933; */
+    background:#dae1e7;
     border: none;
     box-shadow:none;
     border-radius:0;
-    color: #3e3e3e;
+     color: #3e3e3e; 
+  
     text-transform:uppercase;
     font-family: 'oklahomabold';
     text-align:center;
@@ -229,7 +231,11 @@ section#bio span.wpcf7-not-valid-tip{
 div.wpcf7 .ajax-loader{
     display: none !important;
 }
-
+section#detail-form form .g-recaptcha {
+    transform: scale(0.64);
+    margin: -68px 0 -10px 565px;
+    float: left;
+}
 /* Header [ Navbar ]
    ========================================= */
     nav{
@@ -408,8 +414,8 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 130px;
-    left: -147px;
+    width: 80px;
+    left: -92px;
     background-color: #000;
 }
 section:nth-child(1) figure h1 p:nth-child(2):before{
@@ -417,8 +423,8 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 130px;
-    right: -147px;
+    width: 80px;
+    right: -92px;
     background-color: #000;
 }
 section:nth-child(1) ul{
@@ -433,6 +439,7 @@ section:nth-child(1) ul{
 	section#attention{
 	    position: relative;
 	    z-index: 1;
+		    padding: 160px 0;
 	}
 	section#attention h2{
 		padding: 40px 0 25px;
@@ -463,7 +470,17 @@ section:nth-child(1) ul{
 	    padding: 0 210px;
 	    margin: 0;
 	}
-
+	section.book{
+	padding:0;
+}
+	
+	/* contact Form */
+	#detail-form input,#detail-form .captcha{    width: calc(25% - 6px);
+    float: left;
+    margin: 0 6px 6px 0;
+    position: relative;}
+	
+/* 
 /* Consultation​ Section [ Section 3 ]
    ========================================= */
    	section#consultation​{
@@ -476,7 +493,7 @@ section:nth-child(1) ul{
    		position: absolute;
    		content: "";
    		background:  #080002;
-   		width: 60%;
+   		width: 100%;
    		height: 1px;
    		bottom: 0;
    		left: 0;
@@ -529,13 +546,18 @@ section:nth-child(1) ul{
    	section#steps h6{
    		font-size: 18px;
    		position: relative;
-   		padding: 0 0 5px;
+    /* padding: 0 0 5px; */
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    padding: 60px 0 0;
    	}
+	
    	section#steps h6:after{
    		position: absolute;
    		content: "";
    		background:  #080002;
-   		width: 50px;
+   		width: 100%;
    		height: 1px;
    		bottom: 0;
    		left: 0;
@@ -547,6 +569,9 @@ section:nth-child(1) ul{
    	}
 /* Booking section 
    ========================================= */
+   section#detail-form {
+    background-color: #cd9933;
+}
    	section#booking-section h2{
    		border-bottom: 1px solid #080002;
    		margin-bottom: 80px;

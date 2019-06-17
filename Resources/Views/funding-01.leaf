@@ -5,7 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>One Way Path Group</title>
-
+<script src='https://www.google.com/recaptcha/api.js'></script>
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="/funding/01/css/funding.css" />
    </head>
@@ -59,9 +59,9 @@
 			<figure>
 				<h1>
 				<p>ONE WAY PATH</p>
-				<p>group</p>
+				<p>LEGAL SERVICES</p>
 				</h1>
-				<p></p>
+				
 			</figure>
 			<!-- <ul>
          		<li>
@@ -301,13 +301,12 @@
 		  
 		  <section id="detail-form" data-identifier="page-section">
 			<figure>
-				<h2>Add your details</h2>
-				<p>Please let us know if you have any special requests. Thank you.</p>
+				<h2>SIGNUP TO OUR NEWSLETTER</h2>
 				<form action="https://onewaypath.com/phpScripts/userFormHandler.php" method="get" accept-charset="utf-8">
 					<input type="text" placeholder="First Name" name="firstname">
 					<input type="text" placeholder="Last Name" name="lastname">
 					<input type="email" placeholder="E-mail Address" name="email">
-					<textarea name="" placeholder="Notes"></textarea>
+					<div class="captcha g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
 					<button type="submit">Submit</button>
 				</form>
 			</figure>
@@ -323,7 +322,9 @@
          		</p>
          	</figure>
         </section>
-
+         <!--<section class="book">
+		 <iframe name="checkfront" class="CHECKFRONT_DROPLET" src="https://onewaypathlegal.checkfront.com/reserve/?inline=1&amp;category_id=1&amp;provider=droplet&amp;ssl=1&amp;src=https%3A%2F%2Fonewaypath.com&amp;1560602562600" frameborder="0" scrolling="no" style="height: 800px; display: block; min-height: 60px; overflow: hidden; transition: height 200ms ease-out 0s; width: 1px; min-width: 100%;"></iframe>
+		 </section>-->
         <footer id="contact" data-identifier="page-section">
 		    <figure>
 	    	    <h2>Contact</h2>

@@ -59,9 +59,9 @@
 			<figure>
 				<h1>
 				<p>ONE WAY PATH</p>
-				<p>group</p>
+				<p>LEGAL SERVICES</p>
 				</h1>
-				<p></p>
+				
 			</figure>
 			<!-- <ul>
          		<li>
@@ -321,7 +321,9 @@
          		</p>
          	</figure>
         </section>
-
+        <!-- <section class="book">
+		 <iframe name="checkfront" class="CHECKFRONT_DROPLET" src="https://onewaypathlegal.checkfront.com/reserve/?inline=1&amp;category_id=1&amp;provider=droplet&amp;ssl=1&amp;src=https%3A%2F%2Fonewaypath.com&amp;1560602562600" frameborder="0" scrolling="no" style="height: 800px; display: block; min-height: 60px; overflow: hidden; transition: height 200ms ease-out 0s; width: 1px; min-width: 100%;"></iframe>
+		 </section>-->
         <footer id="contact" data-identifier="page-section">
 		    <figure>
 	    	    <h2>Contact</h2>
