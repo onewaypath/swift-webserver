@@ -232,12 +232,12 @@ div.wpcf7 .ajax-loader{
     display: none !important;
 }
 section#detail-form form .g-recaptcha {
-    transform: scale(0.64);
-    margin: -68px 0 -10px 565px;
+    transform: scale(0.65);
+    margin: -68px 0 -10px 550px;
     float: left;
 }
 /* contact Form */
-	#detail-form input,#detail-form .captcha{    width: calc(25% - 6px);
+	#detail-form input,#detail-form .captcha{    width: calc(25% - 5px);
     float: left;
     margin: 0 6px 6px 0;
     position: relative;}
