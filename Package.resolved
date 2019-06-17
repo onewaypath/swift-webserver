@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "apiTools",
-        "repositoryURL": "git://github.com/rahyoung/apiTools.git",
+        "repositoryURL": "/Users/alexyoung/OneDrive - One Way Path Investing Limited/Swift/apiTools/.git",
         "state": {
           "branch": null,
           "revision": "a3acff485e3c9b6a42f602e927e23dcac0ca6d1c",
