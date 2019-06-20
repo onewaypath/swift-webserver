@@ -84,6 +84,7 @@
         		<!-- <h2>ATTENTION</h2> -->
         		<h3>Attention first nation goverments municipalities, community agencies and all community owned businesses:</h3>
         		<h3>Feeling Lost Because You Can’t Find The Right Funding Opportunities for Your Organization?</h3>
+				<h3><a href="../../funding/02">This link should send you to Funding-02</a></h3>
         	</figure>
         </section>
 
@@ -302,9 +303,9 @@
 		  <section id="detail-form" data-identifier="page-section">
 			<figure>
 				<h2>SIGNUP TO OUR NEWSLETTER</h2>
-				<form action="https://onewaypath.com/phpScripts/userFormHandler.php" method="get" accept-charset="utf-8">
-					<input type="text" placeholder="First Name" name="firstname">
-					<input type="text" placeholder="Last Name" name="lastname">
+				<form action="./../subscribe/" method="get" accept-charset="utf-8">
+					<input type="text" placeholder="First Name" name="firstName">
+					<input type="text" placeholder="Last Name" name="lastName">
 					<input type="email" placeholder="E-mail Address" name="email">
 					<div class="g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
 					<button type="submit">Submit</button>

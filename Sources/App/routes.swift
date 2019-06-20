@@ -1,9 +1,43 @@
 import Vapor
-// import apiTools
+import activeCampaignApi
+
+struct UsersFilters: Content {
+    var firstName: String
+    var lastName: String
+    var email: String
+}
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     // "It works" page
+    
+    
+    router.get("subscribe") { req -> String in
+        
+        let filters = try req.query.decode(UsersFilters.self)
+        
+        let firstName = filters.firstName
+        let lastName = filters.lastName
+        let email = filters.email
+        
+        var tester = activeCampaignApi()
+        tester.test()
+        tester.addContact(firstName: firstName, lastName: lastName, emailAddress: email) { code, ID in
+            tester.apiResponse = true
+            tester.resultCode = code!
+            tester.subscriberID = ID!
+            
+        }
+        
+        while tester.apiResponse == false {
+            
+        }
+        
+        return "user id #\(tester.subscriberID), First Name #\(firstName), Last Name #\(lastName), Email #\(email)"
+    }
+    
+   
+    
     router.get { req in
         return try req.view().render("welcome")
     }
@@ -23,6 +57,25 @@ public func routes(_ router: Router) throws {
     router.get ("incorporation", "02") { req in
         return try req.view().render("incorporation-02")
     }
+    
+    /*router.get("contactAdded") { req -> Future<View> in
+    
+    
+        var tester = activeCampaignApi()
+        tester.test()
+        tester.addContact(firstName: "Alex", lastName: "Young", emailAddress: "rahyoung@gmail.com") { code, ID in
+            tester.apiResponse = true
+            tester.resultCode = code!
+            tester.subscriberID = ID!
+            
+        }
+        
+        while tester.apiResponse == false {
+            
+        }
+        return try req.view().render("funding-01")
+        
+    }*/
     
     /*router.get("bonus") { req -> Future<View> in
         var o365User = O365UserStruct()
