@@ -1,7 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      
+	   <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
+      <script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-27239837-5');
+	  </script> 
+	   
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>One Way Path Group</title>
@@ -84,7 +94,6 @@
         		<!-- <h2>ATTENTION</h2> -->
         		<h3>Attention first nation goverments municipalities, community agencies and all community owned businesses:</h3>
         		<h3>Feeling Lost Because You Can’t Find The Right Funding Opportunities for Your Organization?</h3>
-				<h3><a href="../../funding/02">This link should send you to Funding-02</a></h3>
         	</figure>
         </section>
 

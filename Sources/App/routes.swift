@@ -12,7 +12,8 @@ public func routes(_ router: Router) throws {
     // "It works" page
     
     
-    router.get("subscribe") { req -> String in
+    
+    router.get("subscribe") { req -> Future<View> in
         
         let filters = try req.query.decode(UsersFilters.self)
         
@@ -33,7 +34,9 @@ public func routes(_ router: Router) throws {
             
         }
         
-        return "user id #\(tester.subscriberID), First Name #\(firstName), Last Name #\(lastName), Email #\(email)"
+        let data = ["subscriberID": tester.subscriberID]
+        return try req.view().render("subscribe", data)
+        //return "user id #\(tester.subscriberID), First Name #\(firstName), Last Name #\(lastName), Email #\(email)"
     }
     
    
