@@ -185,12 +185,12 @@ form textarea{
 form input.wpcf7-submit,
 form button{
     /* background:#cd9933; */
-    background:#dae1e7;
+    
     border: none;
     box-shadow:none;
     border-radius:0;
-     color: #3e3e3e; 
-  
+    background-color: #3e3e3e;
+    color: #fff;  
     text-transform:uppercase;
     font-family: 'oklahomabold';
     text-align:center;
@@ -206,8 +206,9 @@ form button{
 }
 input.wpcf7-submit:hover,
 form button:hover{
-    background-color: #3e3e3e;
-    color: #fff;
+    
+    background:#dae1e7;
+    color: #3e3e3e; 
 }
 form p{
     margin: 0 !important;
@@ -414,8 +415,8 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 80px;
-    left: -92px;
+    width: 130px;
+    left: -147px;
     background-color: #000;
 }
 section:nth-child(1) figure h1 p:nth-child(2):before{
@@ -423,8 +424,8 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 80px;
-    right: -92px;
+    width: 130px;
+    right: -147px;
     background-color: #000;
 }
 section:nth-child(1) ul{
@@ -1215,31 +1216,31 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
 }
 
 @media screen and (max-width: 920px){
-    section#bio form{
-        padding: 0 15px;
+    section#detail-form form{
+      padding: 0 15px;
     }
-    section#bio form span.wpcf7-form-control-wrap{
-        width: calc(33.33% - 6px);
+    section#detail-form form input{
+      width: calc(33.33% - 6px);
     }
-    section#bio form span.wpcf7-form-control-wrap:nth-child(3){
-        width: 33.33%;
-        margin-right: 0;
+    section#detail-form form input:nth-child(3){
+      width: 33.33%;
+      margin-right: 0;
     }
-    section#bio form input:nth-child(5){
-        width: 100%;
+    section#detail-form form input:nth-child(5){
+      width: 100%;
     }
-    section#bio form .g-recaptcha{
-        margin: -12px 0 -10px -30px;
-        transform: scale(0.7);
-        width: 197px;
+    section#detail-form form .g-recaptcha{
+      margin: -12px 0 -10px -30px;
+      transform: scale(0.7);
+      width: 197px;
     }
-    section#bio form ul{ margin: 0; max-width: 100%;position: relative;   padding: 0 15px;}
-    section#bio form input.wpcf7-submit {width: calc(100% - 218px);padding: 15px 10px;float: right;height: auto;}
-    section#bio figure{padding: 0 5px;}
-    section#bio figure p, section#bio form h2{padding: 0 15px;}
-    section#bio form ul:after{content: ''; display: block; clear: both; width: 100%;}
+    section#detail-form form ul{ margin: 0; max-width: 100%;position: relative;   padding: 0 15px;}
+    section#detail-form form button {width: calc(100% - 218px);padding: 15px 10px;float: right;}
+    section#detail-form figure{padding: 0 5px;}
+    section#detail-form figure p, section#detail-form form h2{padding: 0 15px;}
+    section#detail-form form ul:after{content: ''; display: block; clear: both; width: 100%;}
     form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0px; left: 0;}
-    section#bio form li .g-recaptcha div {width: 100% !important;height: 100% !important;}
+    section#detail-form form li .g-recaptcha div {width: 100% !important;height: 100% !important;}
 }
 
 @media screen and (max-width: 767px){
@@ -1410,23 +1411,45 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     footer ul, section:nth-child(1) ul{
     	display: none;
     }
+    section#detail-form form input:nth-child(3){
+      width: 100%;
+    }
+    section#detail-form form input:nth-child(2){
+      width: 50%;
+      margin-right: 0;
+    }
+    section#detail-form form input {
+        width: calc(50% - 6px);
+    }
 }
 
 @media screen and (max-width: 481px){
-    section#bio figure{    padding: 0 5px;}
+    /* section#bio figure{    padding: 0 5px;}
     section#bio figure p, section#bio form h2{padding: 0 15px;}
     section#bio form ul{margin: 0; max-width: 100%;position: relative;padding: 0 0;}
     section#bio form ul:after{content: ''; display: block; clear: both; width: 100%;}
     form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0; left: 0;}
     section#bio form{padding: 0 2px;}
     section#bio form input.wpcf7-submit {margin-top: 0px;padding: 10px 10px;width: calc(100% - 170px);}
-    section#bio form .g-recaptcha{
+    section#detail-form form .g-recaptcha{
         margin: 0px 0 -35px 0px;
         transform: scale(0.55);
         display: block;
         width: 162px;
         transform-origin: 0 0;
         -webkit-transform-origin: 0 0;
+    } */
+    section#detail-form figure{    padding: 0 5px;}
+    section#detail-form figure p, section#detail-form form h2{padding: 0 15px;}
+    section#detail-form form{padding: 0 2px;}
+    section#detail-form form button {margin-top: 0px;padding: 10px 10px;width: calc(100% - 170px);}
+    section#detail-form form .g-recaptcha{
+      margin: 0px 0 -35px 0px;
+      transform: scale(0.55);
+      display: block;
+      width: 162px;
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
     }
     section#home-news div{
         display: inline-block;

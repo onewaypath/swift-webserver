@@ -10,11 +10,11 @@ let package = Package(
         .package(url: "https://github.com/vapor/leaf.git", from: "3.0.2"),
         //.package(url: "git@github.com:rahyoung/apiTools.git", from: "1.0.1")
         //.package(url: "../apiTools/.git", from: "1.0.1")
-        .package(url: "https://github.com/rahyoung/apiTools.git", from: "1.0.0")
+        //.package(url: "https://github.com/rahyoung/apiTools.git",  from: "1.0.0")
 
     ],
     targets: [
-        .target(name: "App", dependencies: ["Leaf", "Vapor", "apiTools"]),
+        .target(name: "App", dependencies: ["Leaf", "Vapor"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]

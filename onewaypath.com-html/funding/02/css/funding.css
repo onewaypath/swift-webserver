@@ -408,8 +408,8 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 80px;
-    left: -92px;
+    width: 130px;
+    left: -147px;
     background-color: #000;
 }
 section:nth-child(1) figure h1 p:nth-child(2):before{
@@ -417,8 +417,8 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     content: "";
     top: calc(50% - 2px);
     height: 2px;
-    width: 80px;
-    right: -92px;
+    width: 130px;
+    right: -147px;
     background-color: #000;
 }
 section:nth-child(1) ul{
