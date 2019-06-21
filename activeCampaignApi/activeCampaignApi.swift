@@ -54,10 +54,8 @@ public struct activeCampaignApi {
             if (error != nil) {
                 print("the http host responded with the following error:")
                 print(error!)
-                print("data:")
-                print(data!)
-                print("response:")
-                print(response!)
+                if (data != nil) { print("data: \(data!)") }
+                if (response != nil) { print("response: \(response!)") }
             }
             else
             {
