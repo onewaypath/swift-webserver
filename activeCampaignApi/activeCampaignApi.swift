@@ -17,7 +17,7 @@ public struct activeCampaignApi {
     
     public func addContact(firstName: String, lastName: String, emailAddress: String, completionHandler: @escaping (_ code: Int?, _ ID: Int?) -> Void) {
         
-        print (emailAddress)
+        print ("adding headers...")
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded",
             "User-Agent": "PostmanRuntime/7.15.0",
@@ -31,31 +31,36 @@ public struct activeCampaignApi {
             "Connection": "keep-alive",
             "cache-control": "no-cache"
         ]
-        
+        print ("headers added sucessfully")
+        print ("compiling post data..")
         let postData = NSMutableData(data: "email=\(emailAddress)".data(using: String.Encoding.utf8)!)
         postData.append("&first_name=\(firstName)".data(using: String.Encoding.utf8)!)
         postData.append("&last_name=\(lastName)".data(using: String.Encoding.utf8)!)
         postData.append("&p[1]=1".data(using: String.Encoding.utf8)!)
-        
+        print ("post data successfulling compiled")
+        print ("forming request...")
         let request = NSMutableURLRequest(url: NSURL(string: "https://onewaypath52346.api-us1.com/admin/api.php?api_action=contact_add&api_key=7cc162a7ee0dde7912a1ecbbb97e3e60ed4bb243e43b8683edad81826f0e7d2189dfcad2&api_output=json")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
         request.httpBody = postData as Data
-        
+        print ("request formed")
+        print ("forming URL session...")
         let session = URLSession.shared
+        print ("URL session formed")
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             if (error != nil) {
                 print(error!)
             }
             else
             {
+                print ("parsing data...")
                 //let responseData = String(data: data!, encoding: String.Encoding.utf8)
                 let receivedData = try? JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
                 if receivedData !=  nil
                 {
-                   
+                print("JSON sucessfully parsed")
                     if let resultCodeInt = receivedData!!["result_code"] as? Int, let subscriberIDInt = receivedData!!["subscriber_id"] as? Int {
                             completionHandler(resultCodeInt, subscriberIDInt)
                             print(receivedData!!.description)
@@ -85,7 +90,9 @@ public struct activeCampaignApi {
             }*/
         })
         
+        print ("resuming data task")
         dataTask.resume()
+        
     }
     
     
