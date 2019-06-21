@@ -50,7 +50,9 @@ public struct activeCampaignApi {
         let session = URLSession.shared
         print ("URL session formed")
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            print ("starting datatask...")
             if (error != nil) {
+                print("the http host responded with the following error:")
                 print(error!)
             }
             else
