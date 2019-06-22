@@ -40,7 +40,7 @@ public struct activeCampaignApi {
         print ("post data successfulling compiled")
         print ("forming request...")
         let request = NSMutableURLRequest(url: NSURL(string: "https://onewaypath52346.api-us1.com/admin/api.php?api_action=contact_add&api_key=7cc162a7ee0dde7912a1ecbbb97e3e60ed4bb243e43b8683edad81826f0e7d2189dfcad2&api_output=json")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
+                                          cachePolicy: .reloadIgnoringLocalCacheData,
                                           timeoutInterval: 10.0)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
