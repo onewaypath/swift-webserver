@@ -20,15 +20,14 @@ public struct activeCampaignApi {
         print ("adding headers...")
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded",
-            "User-Agent": "PostmanRuntime/7.15.0",
-            "Accept": "*/*",
-            "Cache-Control": "no-cache",
+            //"User-Agent": "PostmanRuntime/7.15.0",
+            // "Cache-Control": "no-cache",
             "Postman-Token": "4ccff03b-69f5-4c28-b433-9d9c6fa6df69,df131bac-7589-4375-8d81-45cf43b63302",
-            "Host": "onewaypath52346.api-us1.com",
-            "cookie": "__cfduid=d58ccae4405c6780544e44bb5c586a68c1561030989; PHPSESSID=l2kr72l3m3n7aakfhbev96vlb1; em_acp_globalauth_cookie=805bdaa9-c4ef-41f5-9b19-e3f226d499a8",
-            "accept-encoding": "gzip, deflate",
-            "content-length": "69",
-            "Connection": "keep-alive",
+           // "Host": "onewaypath52346.api-us1.com",
+           // "cookie": "__cfduid=d58ccae4405c6780544e44bb5c586a68c1561030989; PHPSESSID=l2kr72l3m3n7aakfhbev96vlb1; em_acp_globalauth_cookie=805bdaa9-c4ef-41f5-9b19-e3f226d499a8",
+            // "accept-encoding": "gzip, deflate",
+            // "content-length": "69",
+            // "Connection": "keep-alive",
             "cache-control": "no-cache"
         ]
         print ("headers added sucessfully")
