@@ -42,7 +42,7 @@ public func routes(_ router: Router) throws {
    
     
     router.get { req in
-        return try req.view().render("welcome")
+        return try req.view().render("incorporation-01")
     }
     
     /*router.get ("funding", "01") { req in
