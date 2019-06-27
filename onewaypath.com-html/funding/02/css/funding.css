@@ -1031,6 +1031,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#attention h3{
         padding: 35px 15px;
     }
+    section#attention{
+        padding: 140px 0;
+    }
     section#bio form h2 {
         font-size: 28px;
         line-height: 34px;
@@ -1103,6 +1106,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     /* section#bio p:nth-child(3) {
         margin: 40px auto;
     } */
+     section#attention{
+        padding: 100px 0;
+    }   
     section#bio form h2 {
         margin: 0 auto 25px;
     }
@@ -1165,7 +1171,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     	padding: 50px 0;
     }
     section#steps h6 {
-        margin: 50px 0 0;
+        padding: 50px 0 0;
     }
     section#booking-section div table{
         margin: 0 auto;
@@ -1253,6 +1259,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#attention h3:first-child b {
         font-weight: 300;
     }
+    section#attention{
+        padding: 80px 0;
+    }    
     section#attention h3:first-child,
     section#bio div,
     section#bio p{

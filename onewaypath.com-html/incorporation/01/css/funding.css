@@ -526,20 +526,6 @@ section:nth-child(1) ul{
 /* Steps Section [ Section 4 ]
 
    ========================================= */
- #detail-form h2{
-	 position:relative;
-   }
-   section#detail-form h2:after {
-    position: absolute;
-    content: "";
-    background: #080002;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
    section#detail-form {
     background-color: #cd9933;
 }
@@ -578,11 +564,11 @@ section:nth-child(1) ul{
    		position: relative;
    		/* padding: 0 0 5px; */
 		text-align: center;
-    display: table;
+    display: inline-block;
     margin: 0 auto;
     padding: 60px 0 0;
    	}
-   	section#steps h6:after{
+/*    	section#steps h6:after{
    		position: absolute;
    		content: "";
    		background:  #080002;
@@ -592,7 +578,7 @@ section:nth-child(1) ul{
    		left: 0;
    		right: 0;
    		margin: 0 auto;
-   	}
+   	} */
    	section#steps p{
    		margin: 20px 0 0;
    	}
@@ -1090,6 +1076,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#attention h3{
         padding: 35px 15px;
     }
+    section#attention{
+        padding: 140px 0;
+    }
     section#bio form h2 {
         font-size: 28px;
         line-height: 34px;
@@ -1142,6 +1131,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#booking-section form {
         margin-top: 50px;
     }
+    section#steps h6:first-child{
+      padding: 0;
+    } 
 }
 
 @media screen and (max-width: 991px){
@@ -1162,9 +1154,13 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     /* section#bio p:nth-child(3) {
         margin: 40px auto;
     } */
-    section#bio form h2 {
-        margin: 0 auto 25px;
-    }
+    section#attention{
+        padding: 100px 0;
+    } 
+    section#steps h6:first-child{
+      padding: 0;
+    }   
+
     footer p {
         font-size: 16px;
         line-height: 32px;
@@ -1224,7 +1220,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     	padding: 50px 0;
     }
     section#steps h6 {
-        margin: 50px 0 0;
+        padding: 50px 0 0;
     }
     section#booking-section div table{
         margin: 0 auto;
@@ -1254,26 +1250,36 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#booking-section h2{
     	margin-bottom: 50px;
     }
+    section#steps h6:nth-of-type(1){
+      padding: 0;
+    }
 }
 
 @media screen and (max-width: 920px){
-    section#bio form{
+    section#detail-form form{
         padding: 0 15px;
     }
-    section#bio form span.wpcf7-form-control-wrap{
+    section#detail-form form input{
         width: calc(33.33% - 6px);
     }
-    section#bio form span.wpcf7-form-control-wrap:nth-child(3){
+    section#detail-form form span.wpcf7-form-control-wrap:nth-child(3){
         width: 33.33%;
         margin-right: 0;
     }
-    section#bio form input:nth-child(5){
+    section#detail-form form input:nth-child(5){
         width: 100%;
     }
-    section#bio form .g-recaptcha{
+    section#detail-form form .g-recaptcha{
         margin: -12px 0 -10px -30px;
         transform: scale(0.7);
         width: 197px;
+    }
+    section#detail-form form input:nth-child(3) {
+        width: 33.33%;
+        margin-right: 0;
+    }
+    section#detail-form figure {
+        padding: 0 5px;
     }
     section#bio form ul{ margin: 0; max-width: 100%;position: relative;   padding: 0 15px;}
     section#bio form input.wpcf7-submit {width: calc(100% - 218px);padding: 15px 10px;float: right;height: auto;}
@@ -1282,6 +1288,16 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#bio form ul:after{content: ''; display: block; clear: both; width: 100%;}
     form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0px; left: 0;}
     section#bio form li .g-recaptcha div {width: 100% !important;height: 100% !important;}
+    section#detail-form form button {
+      width: calc(100% - 218px);
+      padding: 15px 10px;
+      float: right;
+    }
+    section#detail-form form .g-recaptcha {
+        margin: -12px 0 -10px -30px;
+        transform: scale(0.7);
+        width: 197px;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -1312,6 +1328,9 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#attention h3:first-child b {
         font-weight: 300;
     }
+    section#attention{
+        padding: 80px 0;
+    }    
     section#attention h3:first-child,
     section#bio div,
     section#bio p{
@@ -1337,10 +1356,17 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section#bio p:nth-of-type(2){
         margin: 40px auto 0;
     }
-    section#bio form ul li{
+    section#detail-form form ul li{
         width: 50%;
     }
-    section#bio form ul li:nth-child(3){
+    section#detail-form form input:nth-child(2) {
+        width: 50%;
+        margin-right: 0;
+    }
+    section#detail-form form input {
+        width: calc(50% - 6px);
+    }
+    section#detail-form form input:nth-child(3){
         width: 100%;
     }
     footer h2{
@@ -1356,21 +1382,21 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
         font-size: 20px;
     }
     section:nth-child(1) figure h1 p:nth-child(2):before {
-        width: 90px;
-        right: -100px;
+        width: 45px;
+        right: -55px;
     }
     section:nth-child(1) figure h1 p:nth-child(2):after {
-        width: 90px;
-        left: -100px;
+        width: 45px;
+        left: -55px;
     }
-    section#bio form span.wpcf7-form-control-wrap:nth-child(3){
+    section#detail-form form span.wpcf7-form-control-wrap:nth-child(3){
         width: 100%;
     }
-    section#bio form span.wpcf7-form-control-wrap:nth-child(2){
+    section#detail-form form span.wpcf7-form-control-wrap:nth-child(2){
         width: 50%;
         margin-right: 0;
     }
-    section#bio form span.wpcf7-form-control-wrap{
+    section#detail-form form span.wpcf7-form-control-wrap{
         width: calc(50% - 6px);
     }
     section#home-news h3{
@@ -1462,7 +1488,7 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0; left: 0;}
     section#bio form{padding: 0 2px;}
     section#bio form input.wpcf7-submit {margin-top: 0px;padding: 10px 10px;width: calc(100% - 170px);}
-    section#bio form .g-recaptcha{
+    section#detail-form form .g-recaptcha {
         margin: 0px 0 -35px 0px;
         transform: scale(0.55);
         display: block;
@@ -1483,6 +1509,15 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     	max-width: 230px;
       margin-bottom: 40px;
     }
+    section#detail-form form button {
+        margin-top: 0px;
+        padding: 10px 10px;
+        width: calc(100% - 170px);
+    }
+     section#detail-form figure,
+     section#detail-form form {
+        padding: 0 5px;
+    }   
 }
 @media screen and (max-height: 481px){
     section:nth-child(1) figure > p:last-child:after{
@@ -1522,14 +1557,14 @@ footer li a:hover, footer li a:focus,section:nth-child(1) ul li a:hover, section
     section:nth-child(1) figure h1 p:nth-child(2):after{
         top: calc(50% - 1px);
         height: 2px;
-        width: 70px;
-        left: -78px;
+        width: 30px;
+        left: -40px;
     }
     section:nth-child(1) figure h1 p:nth-child(2):before{
         top: calc(50% - 1px);
         height: 2px;
-        width: 70px;
-        right: -78px;
+        width: 30px;
+        right: -40px;
     }
     section#consultation​ h2, section#booking-section h2{
     	font-size: 25px;
