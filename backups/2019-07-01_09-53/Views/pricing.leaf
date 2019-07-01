@@ -18,47 +18,47 @@
 
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" href="./pricing/css/pricing.css" />
+      <link rel="stylesheet" href="/pricing/css/pricing.css" />
    </head>
    <body>
 
      <!--  	<nav>
       		<button>
-      			<img src="./funding/01/images/menu-icon.png" alt="Menu selector">
+      			<img src="/funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
 	      		<a href="#home" data-active="1">
 					<figure>
-						<img src="./funding/01/images/home-icon-dark.png" alt="Home icon">
-						<img src="./funding/01/images/home-icon.png" alt="Home icon">
+						<img src="/funding/01/images/home-icon-dark.png" alt="Home icon">
+						<img src="/funding/01/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
 				<a href="#attention">
 					<figure>
-						<img src="./funding/01/images/setting-icon-dark.png" alt="Services icon">
-						<img src="./funding/01/images/setting-icon-gold.png" alt="Services icon">
+						<img src="/funding/01/images/setting-icon-dark.png" alt="Services icon">
+						<img src="/funding/01/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>ATTENTION</span>
 				</a>
 				<a href="#bio">
 					<figure>
-						<img src="./funding/01/images/bio-icon-dark.png" alt="Bio icon">
-						<img src="./funding/01/images/bio-icon-gold.png" alt="Bio icon">
+						<img src="/funding/01/images/bio-icon-dark.png" alt="Bio icon">
+						<img src="/funding/01/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
 				</a>
 				<a href="#booking-section">
 					<figure>
-						<img src="./funding/01/images/news-icon-dark.png" alt="News">
-						<img src="./funding/01/images/news-icon-gold.png" alt="News">
+						<img src="/funding/01/images/news-icon-dark.png" alt="News">
+						<img src="/funding/01/images/news-icon-gold.png" alt="News">
 					</figure>
 					<span>BOOKING</span>
 				</a>
 				<a href="#contact">
 					<figure>
-						<img src="./funding/01/images/contact-icon-dark.png" alt="Contact icon">
-						<img src="./funding/01/images/contact-icon-gold.png" alt="Contact icon">
+						<img src="/funding/01/images/contact-icon-dark.png" alt="Contact icon">
+						<img src="/funding/01/images/contact-icon-gold.png" alt="Contact icon">
 					</figure>
 					<span>contact</span>
 				</a>
@@ -202,6 +202,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
-      <script src="./funding/01/js/funding.js?v=xdfxdf"></script>
+      <script src="/funding/01/js/funding.js?v=xdfxdf"></script>
    </body>
 </html>
+

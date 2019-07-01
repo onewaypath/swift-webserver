@@ -14,50 +14,50 @@
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>One Way Path Group</title>
+      <title>One Way Path Legal Services</title>
 
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="./funding/02/css/funding.css" />
+      <link rel="stylesheet" href="/incorporation/02/css/funding.css" />
    </head>
    <body>
 
      <!--  	<nav>
       		<button>
-      			<img src="./funding/02/images/menu-icon.png" alt="Menu selector">
+      			<img src="/incorporation/02/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
 	      		<a href="#home" data-active="1">
 					<figure>
-						<img src="./funding/02/images/home-icon-dark.png" alt="Home icon">
-						<img src="./funding/02/images/home-icon.png" alt="Home icon">
+						<img src="/incorporation/02/images/home-icon-dark.png" alt="Home icon">
+						<img src="/incorporation/02/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
 				<a href="#attention">
 					<figure>
-						<img src="./funding/02/images/setting-icon-dark.png" alt="Services icon">
-						<img src="./funding/02/images/setting-icon-gold.png" alt="Services icon">
+						<img src="/incorporation/02/images/setting-icon-dark.png" alt="Services icon">
+						<img src="/incorporation/02/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>ATTENTION</span>
 				</a>
 				<a href="#bio">
 					<figure>
-						<img src="./funding/02/images/bio-icon-dark.png" alt="Bio icon">
-						<img src="./funding/02/images/bio-icon-gold.png" alt="Bio icon">
+						<img src="/incorporation/02/images/bio-icon-dark.png" alt="Bio icon">
+						<img src="/incorporation/02/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
 				</a>
 				<a href="#booking-section">
 					<figure>
-						<img src="./funding/02/images/news-icon-dark.png" alt="News">
-						<img src="./funding/02/images/news-icon-gold.png" alt="News">
+						<img src="/incorporation/02/images/news-icon-dark.png" alt="News">
+						<img src="/incorporation/02/images/news-icon-gold.png" alt="News">
 					</figure>
 					<span>BOOKING</span>
 				</a>
 				<a href="#contact">
 					<figure>
-						<img src="./funding/02/images/contact-icon-dark.png" alt="Contact icon">
-						<img src="./funding/02/images/contact-icon-gold.png" alt="Contact icon">
+						<img src="/incorporation/02/images/contact-icon-dark.png" alt="Contact icon">
+						<img src="/incorporation/02/images/contact-icon-gold.png" alt="Contact icon">
 					</figure>
 					<span>contact</span>
 				</a>
@@ -69,7 +69,7 @@
 			<figure>
 				<h1>
 				<p>ONE WAY PATH</p>
-				<p>group</p>
+				<p>LEGAL SERVICES</p>
 				</h1>
 				
 			</figure>
@@ -92,17 +92,19 @@
         <section id="attention" data-identifier="page-section">
         	<figure>
         		<!-- <h2>ATTENTION</h2> -->
-        		<h3>Attention first nation goverments municipalities, community agencies and all community owned businesses:</h3>
-        		<h3>Feeling Lost Because You Can’t Find The Right Funding Opportunities for Your Organization?</h3>
+        		<h3>Get Your Business Incorporated In Just 1 hour</h3>
+        		<h3>By An Expert In Law & Finance</h3>
         	</figure>
         </section>
 
         <section id="consultation​" data-identifier="page-section">
         	<figure>
         		<h2>Schedule a FREE<br>Consultation​</h2>
-        		<p>and learn how you can <b>​SIGNIFICANTLY</b> ​increase the amount of money you raise for your next community project</p>
-        		<p>By using a unique approach that combines; law, finance and public policy you can now effortlessly:</p>
-        		<div>
+        		<p>As someone running a new business you might feel overwhelmed with decisions such as <u>the right time to incorporate your business</u>, what <b>legal form</b> to choose, and otherconcerns that would require extensive research. <b>It could be difficult to fix mistakes in this area retroactively.</b></p>
+        		<p>Do you agree that every minute you are investing into this could be a minute spent on actually generating income with your business instead?</p>
+				<p>If so, here is how you can get your startup or small-to-medium sized businessincorporated the right way while only investing 30 minutes of your time.</p>
+        		<!--
+				<div>
         			<div>
         				<h3>Identify Funding Opportunities</h3>
         				<p>So that you can grow your organization’s community projects  - without worrying where your next pot of funding is coming from.</p>
@@ -119,19 +121,20 @@
         				<h3>Prepare and Persuade</h3>
         				<p>Be prepared for any meetings, phone calls and follow-up conversations and learn how to convince funders that your project is the one they should choose.</p>
         			</div>
-        		</div>
+        		</div> -->
         	</figure>
         </section>
 
         <section id="steps" data-identifier="page-section">
         	<figure>
-        		<h3>How does it work? Well it’s simple really… </h3>
-        		<h3>2 STEPS:</h3>
-        		<h3>Your next project’s success</h3>
-        		<h6>STEP #1</h6>
-        		<p>Enter your name, email and phone number in the space provided and click ‘Schedule Free Consultation’</p>
-        		<h6>STEP #2</h6>
-        		<p>Once I receive your message, I will be in contact with you to discuss your organization in more depth. This is where we can really dig into the opportunities that are available for your project that ​you <b>won’t find being offered anywhere else</b></p>
+        		<h3>Our Process </h3>
+        		<!--
+				<h3>2 STEPS:</h3>
+        		<h3>Your next project’s success</h3> -->
+        		<h6>STEP #1 Free Consultation</h6>
+        		<p>Schedule a free consultation with our incorporation lawyer Alex Young who has also 16 years of experience in finances to find out if it's the right time to incorporate your business and what form of business organization you should use.</p>
+				<h6>STEP #2 1 Hour Meeting</h6>
+        		<p>Alex Young will take you through the whole process and document all the necessary information to get your business incorporated. Please note that business setups of higher complexity might require more time.</p>
         	</figure>
         </section>
 
@@ -326,14 +329,12 @@
          		<h2>Bio</h2>
          		<p><b>I have spent the past 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations and businesses.</b> As your representative, I will draw on my expertise in finance to help you take advantage of opportunities to sustain and grow your business or non-profit.</p>
          		<p>
-         			<img src="./funding/02/images/bio-img.jpg" alt="Bio" title="Bio" />
+         			<img src="/incorporation/02/images/bio-img.jpg" alt="Bio" title="Bio" />
          			<span>Alex Young</span>
          		</p>
          	</figure>
         </section>
-        <!-- <section class="book">
-		 <iframe name="checkfront" class="CHECKFRONT_DROPLET" src="https://onewaypathlegal.checkfront.com/reserve/?inline=1&amp;category_id=1&amp;provider=droplet&amp;ssl=1&amp;src=https%3A%2F%2Fonewaypath.com&amp;1560602562600" frameborder="0" scrolling="no" style="height: 800px; display: block; min-height: 60px; overflow: hidden; transition: height 200ms ease-out 0s; width: 1px; min-width: 100%;"></iframe>
-		 </section>-->
+
         <footer id="contact" data-identifier="page-section">
 		    <figure>
 	    	    <h2>Contact</h2>
@@ -372,6 +373,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
-      <script src="./funding/02/js/funding.js?v=xdfxdf"></script>
+      <script src="/incorporation/02/js/funding.js?v=xdfxdf"></script>
    </body>
 </html>
+

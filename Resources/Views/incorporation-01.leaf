@@ -100,8 +100,8 @@
         <section id="consultation​" data-identifier="page-section">
         	<figure>
         		<h2>Schedule a FREE<br>Consultation​</h2>
-        		<p>As someone running a new business you might feel overwhelmed with decisions such as what <b>legal form</b> to choose, how to draft appropriate resolutions and by-laws, whether you need other documents like shareholder agreements, and other concerns that would require extensive research. <b>It could be difficult to fix mistakes in this area retroactively.</b></p>
-        		<p>Do you agree that every minute you are investing into this could be a minute spent on actually generating income with your business instead?</p>
+        		<p>As someone running a new business you might feel overwhelmed with decisions required to incorporate your business such as what <b>legal form</b> to choose, how to draft appropriate resolutions and by-laws, whether you need other documents like shareholder agreements, and other concerns that would require extensive research. <b>It could be difficult to fix mistakes in this area retroactively.</b></p>
+        		<p>Do you agree that every minute you are investing into the incorporation process could be a minute spent on actually generating income with your business instead?</p>
 				<p>If so, would you like to deterimne whether you could get your startup or small-to-medium sized business incorporated the right way while only investing 30 minutes of your time?</p>
         		<!--
 				<div>
@@ -127,16 +127,16 @@
 
         <section id="steps" data-identifier="page-section">
         	<figure>
-        		<h3>Our Process </h3>
+        		<h3>Our Process and Prices </h3>
         		<!--
 				<h3>2 STEPS:</h3>
         		<h3>Your next project’s success</h3> -->
         		<h6>STEP #1: Sign Up to Our Newsletter</h6>
-        		<p>Enter your name and email and click submit. Review our newsletters to get to know us and our expertise, or if you prefer, proceed directly to Step #2</p>
+        		<p>Enter your name and email and click submit. Review our newsletters to get to link to our incorporation price and get to know us and our expertise, or if you prefer,<br>proceed directly to Step #2</p>
         		<h6>STEP #2: Free Consultation</h6>
         		<p>Schedule a free consultation with our incorporation lawyer Alex Young who also has 16 years of experience in finances to find out what is required to incorporate your business and whether you can benefit from our express business setup service.</p>
 				<h6>STEP #3: 30 Minute Meeting</h6>
-        		<p>Alex Young will discuss the process with you and determine what you will need to organize your business or non-profit organization the right way. Please note that business setups of higher complexity might require more time.</p>
+        		<p>Alex Young will discuss the incorporation process with you and determine what you will need to organize your business or non-profit organization the right way. Please note that business setups of higher complexity might require more time.</p>
         	</figure>
         </section>
 <!--
@@ -316,7 +316,7 @@
 		  
 		  <section id="detail-form" data-identifier="page-section">
 			<figure>
-				<h2>SIGNUP TO OUR NEWSLETTER</h2>
+				<h2>SIGNUP TO OUR NEWSLETTER AND GET OUR CURRENT PRICE LIST</h2>
 				
 				<form action="/./subscribe/" method="get" accept-charset="utf-8">
 					<input type="text" placeholder="First Name" name="firstName">

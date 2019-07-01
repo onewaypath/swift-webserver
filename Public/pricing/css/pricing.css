@@ -431,10 +431,33 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
         appearance: none;
     }
 
+/* Bio section
+   ========================================= */
+    section#bio h2 {
+       margin-bottom: 50px;
+    }
+    section#bio p img {
+       margin: 0 auto 30px;
+    }
+    section#bio {
+        margin-bottom: 80px;
+    }
+    section#bio p:nth-child(3) {
+        margin: 70px 0 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        color: #050505;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-family: 'oklahomaregular'; 
+    }
+
 
 /* footer [ Footer ]
    ========================================= */
-    footer#footer{
+    /* footer#footer{
         padding: 100px 0 40px;
     }
     footer#footer p{
@@ -461,6 +484,57 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     }
     footer#footer p:nth-of-type(2) a:hover{
         color: #cd9933;
+    } */
+
+    footer{
+        padding: 40px 0;
+        text-align:center;
+        min-height: calc(100vh - 20px);
+        background-color: #cd9933;
+    }
+    footer h2{
+        border: none;
+        margin-bottom: 35px;
+        padding-bottom: 0;
+    }
+    footer address{
+        font-style: normal;
+    }
+    footer p{
+        color: #000;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    footer address:nth-child(3){
+        margin: 45px auto 50px;
+        max-width: 500px;
+        display: table;
+        border:1px solid rgba(255, 255, 255, 0.34);
+        padding: 20px;
+        width: 100%;
+    }
+    footer address:nth-child(3) p b{
+        text-transform: uppercase;
+    }
+    footer figcaption{
+        margin: 0 0 50px;
+    }
+    footer figcaption ul{
+        margin: 0 auto;
+        display: table;
+    }
+    footer figcaption ul li{
+        float: left;
+    }
+    footer figcaption ul li a, footer figcaption ul li a:hover{
+        color: #000;
+    }
+    footer p:nth-child(4){
+        font-size: 16px;
+        color: #000;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: center;
     }
 
 
@@ -513,17 +587,17 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
         line-height: 34px;
         max-width: 510px;
     }
-    footer p{
-        font-size: 18px;
-    }
-    footer address:nth-child(3){
-        margin: 40px auto;
-    }
     section#bio p:nth-child(2), section#services p{
         max-width: 570px;
     }
     section#rates {
         padding: 0 0 100px;
+    }
+    section#bio h2 {
+       margin-bottom: 35px;
+    }
+    section#bio {
+        margin-bottom: 70px;
     }
 }
 
@@ -546,7 +620,7 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
         margin: 30px 0 0;
     }
     section#bio p:nth-child(3) {
-        margin: 40px auto;
+        margin: 40px 0 0;
     }
     section#bio form h2 {
         margin: 0 auto 25px;
@@ -583,17 +657,20 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     section h2 {
         margin-bottom: 50px;
     }
-    footer#footer {
+    /* footer#footer {
         padding: 80px 0 30px;
     }
     footer#footer p:nth-of-type(2){
         margin: 10px 0 0;
-    }
+    } */
     section#add-details p:nth-of-type(1){
         margin: 0 0 40px;
     }
     section#rates {
         padding: 0 0 80px;
+    }
+    section#bio {
+        margin-bottom: 60px;
     }
 }
 
@@ -667,7 +744,7 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
         max-width: 540px;
     }
     section#bio p:nth-child(3) {
-        margin: 40px auto 60px;
+        margin: 40px 0 0;
     }
     section#bio form ul li{
         width: 50%;
@@ -731,7 +808,6 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     section#rates {
         padding: 0 0 70px;
     }
-
 }
 
 

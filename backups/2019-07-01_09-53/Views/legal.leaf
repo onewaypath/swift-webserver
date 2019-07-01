@@ -7,40 +7,40 @@
       <title>One Way Path Legal Services</title>
 
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="./legal/css/style.css" />
+      <link rel="stylesheet" href="/legal/css/style.css" />
    </head>
    <body>
 
       	<nav>
       		<button>
-      			<img src="./legal/images/menu-icon.png" alt="Menu selector">
+      			<img src="/legal/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
 	      		<a href="#home" data-active="1">
 					<figure>
-						<img src="./legal/images/home-icon-dark.png" alt="Home icon">
-						<img src="./legal/images/home-icon.png" alt="Home icon">
+						<img src="/legal/images/home-icon-dark.png" alt="Home icon">
+						<img src="/legal/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
 				<a href="#services">
 					<figure>
-						<img src="./legal/images/setting-icon-dark.png" alt="Services icon">
-						<img src="./legal/images/setting-icon-gold.png" alt="Services icon">
+						<img src="/legal/images/setting-icon-dark.png" alt="Services icon">
+						<img src="/legal/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>services</span>
 				</a>
 				<a href="#bio">
 					<figure>
-						<img src="./legal/images/bio-icon-dark.png" alt="Bio icon">
-						<img src="./legal/images/bio-icon-gold.png" alt="Bio icon">
+						<img src="/legal/images/bio-icon-dark.png" alt="Bio icon">
+						<img src="/legal/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
 				</a>
 				<a href="#contact">
 					<figure>
-						<img src="./legal/images/contact-icon-dark.png" alt="Contact icon">
-						<img src="./legal/images/contact-icon-gold.png" alt="Contact icon">
+						<img src="/legal/images/contact-icon-dark.png" alt="Contact icon">
+						<img src="/legal/images/contact-icon-gold.png" alt="Contact icon">
 					</figure>
 					<span>contact</span>
 				</a>
@@ -51,7 +51,7 @@
         <section id="home" data-identifier="page-section">
          		<figure>
 	         		<h1><p>one way path</p> <p>legal services</p></h1>
-	         		<!-- <p><img src="./legal/images/logo-bottom-border-img.png" alt="" /></p> -->
+	         		<!-- <p><img src="/legal/images/logo-bottom-border-img.png" alt="" /></p> -->
 	         	</figure>
 	         	<!-- <ul>
 	         		<li>
@@ -74,18 +74,18 @@
             		<h2>Services</h2>
             		<p>When helping you to form and structure your business or when negotiating agreements on your behalf, our objective is to use the law to maximize your return on investment.</p>
             			<h3>	
-            				<img src="./legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
-            				<!-- <img src="./legal/images/service-1.png" alt="Incorporation" title="Incorporation" /> -->
+            				<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
+            				<!-- <img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" /> -->
             				<span>Incorporation</span>
             			</h3>
             			<h3>
-            				<img src="./legal/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
-            				<!-- <img src="./legal/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> -->
+            				<img src="/legal/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
+            				<!-- <img src="/legal/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> -->
             				<span>Purchase and Sale</span>
             			</h3>
             			<h3>
-            				<img src="./legal/images/service-3-dark.png" alt="Secured Finance" title="Secured Finance" />
-            				<!-- <img src="./legal/images/service-3.png" alt="Secured Finance" title="Secured Finance" /> -->
+            				<img src="/legal/images/service-3-dark.png" alt="Secured Finance" title="Secured Finance" />
+            				<!-- <img src="/legal/images/service-3.png" alt="Secured Finance" title="Secured Finance" /> -->
             				<span>Secured Finance</span>
             			</h3>
 
@@ -102,7 +102,7 @@
 	         		<h2>Bio</h2>
 	         		<p>Alex Young focuses his legal practice on business formation and corporate commercial transactions. In addition to his legal training and experience, Alex has spent 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations, and businesses. As your lawyer, he will draw on his expertise in finance to help you sustain and grow your business or non-profit organization.</p>
 	         		<p>
-	         			<img src="./legal/images/bio-img.jpg" alt="Bio" title="Bio" />
+	         			<img src="/legal/images/bio-img.jpg" alt="Bio" title="Bio" />
 	         			Alex Young
 	         			<!-- <figcaption>
 	         				
@@ -122,7 +122,7 @@
 		     			</blockquote> -->
 	         		</p>
 					<h2>SIGNUP TO OUR NEWSLETTER</h2>
-	         		<form action="./../subscribe/" method="get" accept-charset="utf-8">
+	         		<form action="/./subscribe/" method="get" accept-charset="utf-8">
 						<input type="text" placeholder="First Name" name="firstName">
 						<input type="text" placeholder="Last Name" name="lastName">
 						<input type="email" placeholder="E-mail Address" name="email">
@@ -165,6 +165,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
-      <script src="./legal/js/scripts.js?v=xdfxdf"></script>
+      <script src="/legal/js/scripts.js?v=xdfxdf"></script>
    </body>
 </html>

@@ -15,49 +15,49 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>One Way Path Group</title>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+
       <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="./funding/01/css/funding.css" />
+      <link rel="stylesheet" href="/funding/02/css/funding.css" />
    </head>
    <body>
 
      <!--  	<nav>
       		<button>
-      			<img src="./funding/01/images/menu-icon.png" alt="Menu selector">
+      			<img src="/funding/02/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
 	      		<a href="#home" data-active="1">
 					<figure>
-						<img src="./funding/01/images/home-icon-dark.png" alt="Home icon">
-						<img src="./funding/01/images/home-icon.png" alt="Home icon">
+						<img src="/funding/02/images/home-icon-dark.png" alt="Home icon">
+						<img src="/funding/02/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
 				<a href="#attention">
 					<figure>
-						<img src="./funding/01/images/setting-icon-dark.png" alt="Services icon">
-						<img src="./funding/01/images/setting-icon-gold.png" alt="Services icon">
+						<img src="/funding/02/images/setting-icon-dark.png" alt="Services icon">
+						<img src="/funding/02/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>ATTENTION</span>
 				</a>
 				<a href="#bio">
 					<figure>
-						<img src="./funding/01/images/bio-icon-dark.png" alt="Bio icon">
-						<img src="./funding/01/images/bio-icon-gold.png" alt="Bio icon">
+						<img src="/funding/02/images/bio-icon-dark.png" alt="Bio icon">
+						<img src="/funding/02/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
 				</a>
 				<a href="#booking-section">
 					<figure>
-						<img src="./funding/01/images/news-icon-dark.png" alt="News">
-						<img src="./funding/01/images/news-icon-gold.png" alt="News">
+						<img src="/funding/02/images/news-icon-dark.png" alt="News">
+						<img src="/funding/02/images/news-icon-gold.png" alt="News">
 					</figure>
 					<span>BOOKING</span>
 				</a>
 				<a href="#contact">
 					<figure>
-						<img src="./funding/01/images/contact-icon-dark.png" alt="Contact icon">
-						<img src="./funding/01/images/contact-icon-gold.png" alt="Contact icon">
+						<img src="/funding/02/images/contact-icon-dark.png" alt="Contact icon">
+						<img src="/funding/02/images/contact-icon-gold.png" alt="Contact icon">
 					</figure>
 					<span>contact</span>
 				</a>
@@ -134,7 +134,7 @@
         		<p>Once I receive your message, I will be in contact with you to discuss your organization in more depth. This is where we can really dig into the opportunities that are available for your project that ​you <b>won’t find being offered anywhere else</b></p>
         	</figure>
         </section>
-<!--
+
 		<section id="booking-section">
 			<figure>
 				<h2><span>BOOKING</span></h2>
@@ -305,34 +305,33 @@
 					<button type="submit">Submit</button>
 				</form>
 			</figure>
-		</section> -->
+		</section>
 
-		
-		  
-		  <section id="detail-form" data-identifier="page-section">
+		<!-- <section id="detail-form" data-identifier="page-section">
 			<figure>
-				<h2>SIGNUP TO OUR NEWSLETTER</h2>
-				<form action="./../subscribe/" method="get" accept-charset="utf-8">
-					<input type="text" placeholder="First Name" name="firstName">
-					<input type="text" placeholder="Last Name" name="lastName">
-					<input type="email" placeholder="E-mail Address" name="email">
-					<div class="g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
+				<h2>Add your details</h2>
+				<p>Please let us know if you have any special requests. Thank you.</p>
+				<form action="index_submit" method="get" accept-charset="utf-8">
+					<input type="text" placeholder="First Name">
+					<input type="text" placeholder="Last Name">
+					<input type="email" placeholder="E-mail Address">
+					<textarea name="" placeholder="Notes"></textarea>
 					<button type="submit">Submit</button>
 				</form>
 			</figure>
-		</section> 
+		</section> -->
 
         <section id="bio" data-identifier="page-section">
          	<figure>
          		<h2>Bio</h2>
          		<p><b>I have spent the past 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations and businesses.</b> As your representative, I will draw on my expertise in finance to help you take advantage of opportunities to sustain and grow your business or non-profit.</p>
          		<p>
-         			<img src="./funding/01/images/bio-img.jpg" alt="Bio" title="Bio" />
+         			<img src="/funding/02/images/bio-img.jpg" alt="Bio" title="Bio" />
          			<span>Alex Young</span>
          		</p>
          	</figure>
         </section>
-         <!--<section class="book">
+        <!-- <section class="book">
 		 <iframe name="checkfront" class="CHECKFRONT_DROPLET" src="https://onewaypathlegal.checkfront.com/reserve/?inline=1&amp;category_id=1&amp;provider=droplet&amp;ssl=1&amp;src=https%3A%2F%2Fonewaypath.com&amp;1560602562600" frameborder="0" scrolling="no" style="height: 800px; display: block; min-height: 60px; overflow: hidden; transition: height 200ms ease-out 0s; width: 1px; min-width: 100%;"></iframe>
 		 </section>-->
         <footer id="contact" data-identifier="page-section">
@@ -373,6 +372,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="https://www.google.com/recaptcha/api.js"></script>
-      <script src="./funding/01/js/funding.js?v=xdfxdf"></script>
+      <script src="/funding/02/js/funding.js?v=xdfxdf"></script>
    </body>
 </html>
+

@@ -53,8 +53,16 @@ public func routes(_ router: Router) throws {
         return try req.view().render("funding-02")
     }*/
     
+    router.get ("legal") { req in
+        return try req.view().render("legal")
+    }
+    
     router.get ("incorporation") { req in
         return try req.view().render("incorporation-01")
+    }
+    
+    router.get ("pricing") { req in
+        return try req.view().render("pricing")
     }
     
     /*router.get ("incorporation", "02") { req in
