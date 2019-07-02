@@ -328,28 +328,45 @@
    			max-width: 700px;
    			margin: 0 auto;
    			display: table;
+   			text-align: center;
    		}
-   		section:nth-child(2) h3{
-   			width: 33.33%;
-   			outline: none !important;
-   			text-decoration: none;
-   			float: left;
-   			color: #000;
+		section:nth-child(2) h3, section:nth-child(2) a{
+			width: 33.33%;
+			font-family: 'oklahomabold';
+			font-size: 1.17em;
+			outline: none !important;
+			text-decoration: none;
+			float: left;
+			color: #000;
    			padding: 35px 15px 55px;
    			text-align: center;
    			box-sizing: border-box;
    			margin: 80px 0 0;
-   			-webkit-transition: all 0.3s ease 0s;
-   			   -moz-transition: all 0.3s ease 0s;
-   			    -ms-transition: all 0.3s ease 0s;
-   			     -o-transition: all 0.3s ease 0s;
-   			        transition: all 0.3s ease 0s;
+   			border-radius: 5px;
+   			-webkit-transition: all 0s ease 0s;
+   			  -moz-transition: all 0s ease 0s;
+   			   -ms-transition: all 0s ease 0s;
+   			    -o-transition: all 0s ease 0s;
+   			       transition: all 0s ease 0s;
    		}
-   		section:nth-child(2) h3 img{
+   		section:nth-child(2) a:hover{
+   			color: #fff;
+   			background: #dba334;
+   		}
+   		section:nth-child(2) a:hover span{
+   			border-color: #fff;
+   		}
+   		section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
+   			display: none;
+   		}
+   		section:nth-child(2) a:hover img:nth-of-type(2){
+   			display: table;
+   		}
+   		section:nth-child(2) h3 img, section:nth-child(2) a img{
    			margin: 0 auto 30px;
    			display: table;
    		}
-   		section:nth-child(2) h3 span{
+   		section:nth-child(2) h3 span, section:nth-child(2) a span{
    			font-size: 18px;
    			line-height: 25px;
    			width: auto;
@@ -359,10 +376,10 @@
    			font-family: 'oklahomabold';
    			text-transform: uppercase;
    			-webkit-transition: all 0.3s ease 0s;
-   			   -moz-transition: all 0.3s ease 0s;
-   			    -ms-transition: all 0.3s ease 0s;
-   			     -o-transition: all 0.3s ease 0s;
-   			        transition: all 0.3s ease 0s;
+   			  -moz-transition: all 0.3s ease 0s;
+   			   -ms-transition: all 0.3s ease 0s;
+   			    -o-transition: all 0.3s ease 0s;
+   			       transition: all 0.3s ease 0s;
    		}
    		section:nth-child(2) figure blockquote{
    			margin: 30px 0 0;
@@ -373,6 +390,9 @@
    ========================================= */
    		section:nth-child(3){
    			background-color: transparent;
+   		}
+   		section:nth-child(3) p{
+   			text-align: center;
    		}
    		section:nth-child(3) p:nth-child(3){
    			margin: 70px auto;
@@ -507,7 +527,7 @@
 			section:nth-child(3) form h2{
 				margin: 0 auto 40px;
 			}
-			section:nth-child(2) h3{
+			section:nth-child(2) h3,section:nth-child(2) a{
 				margin: 50px 0 0;
 			}
 			nav{
@@ -530,7 +550,7 @@
 			section h2{
 				margin-bottom: 35px;
 			}
-			section:nth-child(2) h3{
+			section:nth-child(2) h3,section:nth-child(2) a{
 				padding: 35px 15px;	
 			}
 			section:nth-child(3) form h2 {
@@ -572,10 +592,10 @@
 				font-size: 17px;
 				line-height: 32px;
 			}
-			section:nth-child(2) h3 span{
+			section:nth-child(2) h3 span, section:nth-child(2) a span{
 				line-height: 20px;
 			}
-			section:nth-child(2) h3 {
+			section:nth-child(2) h3, section:nth-child(2) a{
 			    margin: 30px 0 0;
 			}
 			section:nth-child(3) p:nth-child(3) {
@@ -699,7 +719,7 @@
 			section:nth-child(2) p, section:nth-child(3) p{
 				text-align: center;
 			}
-			section:nth-child(2) h3{
+			section:nth-child(2) h3, section:nth-child(2) a{
 				width: 100%;
 				order: 2;
 			}

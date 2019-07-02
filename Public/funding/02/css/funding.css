@@ -715,6 +715,7 @@ section.book{
 	section#bio p:nth-of-type(1){
 		order: 3;
 		margin-top: 50px;
+    text-align: center;
 	}
 	section#bio p:nth-of-type(2){
 	    display: inline-block;

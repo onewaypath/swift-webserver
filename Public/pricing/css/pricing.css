@@ -168,6 +168,89 @@ div.wpcf7 .ajax-loader{
     display: none;
 }
 
+/* Header [ Navbar ]
+   ========================================= */
+    nav{
+        position: fixed;
+        z-index: 2;
+        top: 75px;
+        left: 95px;
+    }
+    nav a{
+        width: 100%;
+        float: left;
+        margin: 0 0 20px;
+    }
+    nav a:last-child{
+        margin: 0;
+    }
+    nav a{
+        padding: 15px 20px;
+        width: 100%;
+        text-decoration: none !important;
+        border-radius: 5px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ca972b;
+        font-weight: 600;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    nav a span{
+        opacity: 0;
+        -webkit-transition: all 0.3s ease 0s;
+           -moz-transition: all 0.3s ease 0s;
+            -ms-transition: all 0.3s ease 0s;
+             -o-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+    }
+    nav a img{
+        margin: 0 auto;
+    }
+    nav a:hover, nav a[data-active="1"]{
+        background: #fff;
+    }
+    nav a:hover span, nav a[data-active="1"] span{
+        opacity: 1;
+    }
+    nav a:hover img:last-child, nav a[data-active="1"] img:last-child{
+        display: block;
+    }
+    nav a:hover img:first-child, nav a[data-active="1"] img:first-child{
+        display: none;
+    }
+    nav{
+        max-width: 180px;
+        width: 100%;
+    }
+    nav:after{
+        position: absolute;
+        content: "";
+        right: 70px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #a17720;
+        z-index: -1;
+        opacity: .24;
+    }
+    nav a figure{
+        float: left;
+        margin: 0 25px 0 0;
+        width: 33px;
+        text-align: center;
+    }
+    nav a img:last-child{
+        display: none;
+    }
+    nav button{
+        display: none;
+    }
+
 
 /* Home Section [ Section 1 ]
    ========================================= */
@@ -557,6 +640,10 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     section#services h3{
         margin: 50px 0 0;
     }
+    nav{
+        top: 55px;
+        left: 55px;
+    }
 }
 
 @media screen and (max-width: 1300px){
@@ -598,6 +685,20 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     }
     section#bio {
         margin-bottom: 70px;
+    }
+    nav{
+        top: 45px;
+        left: 45px;
+    }
+    nav a{
+        padding: 12px 15px;
+        margin: 0 0 15px;
+    }
+    nav{
+        max-width: 160px;
+    }
+    nav a figure{
+        margin: 0 10px 0 0;
     }
 }
 
@@ -671,6 +772,33 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     }
     section#bio {
         margin-bottom: 60px;
+    }
+    nav button{
+        display: block;
+        border: none;
+        background: transparent;
+        padding: 0;
+        float: left;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 40px;
+    }
+    nav{
+        top: 20px;
+        left: 20px;
+        max-width: 110px;
+    }
+    nav div{
+        background: #e4eaef;
+        padding: 30px 0 30px 25px;
+        display: none;
+    }
+    nav a{
+        float: none;
+    }
+    nav:after, nav a span{
+        display: none;
     }
 }
 

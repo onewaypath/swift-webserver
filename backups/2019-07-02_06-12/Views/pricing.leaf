@@ -22,7 +22,7 @@
    </head>
    <body>
 
-      	<nav>
+     <!--  	<nav>
       		<button>
       			<img src="/funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
@@ -34,13 +34,13 @@
 					</figure>
 					<span>home</span>
 				</a>
-				<!-- <a href="#attention">
+				<a href="#attention">
 					<figure>
 						<img src="/funding/01/images/setting-icon-dark.png" alt="Services icon">
 						<img src="/funding/01/images/setting-icon-gold.png" alt="Services icon">
 					</figure>
 					<span>ATTENTION</span>
-				</a> -->
+				</a>
 				<a href="#bio">
 					<figure>
 						<img src="/funding/01/images/bio-icon-dark.png" alt="Bio icon">
@@ -48,13 +48,13 @@
 					</figure>
 					<span>bio</span>
 				</a>
-				<!-- <a href="#booking-section">
+				<a href="#booking-section">
 					<figure>
 						<img src="/funding/01/images/news-icon-dark.png" alt="News">
 						<img src="/funding/01/images/news-icon-gold.png" alt="News">
 					</figure>
 					<span>BOOKING</span>
-				</a> -->
+				</a>
 				<a href="#contact">
 					<figure>
 						<img src="/funding/01/images/contact-icon-dark.png" alt="Contact icon">
@@ -63,7 +63,7 @@
 					<span>contact</span>
 				</a>
 			</div>
-      	</nav>
+      	</nav> -->
 
       <div id="page-container-wrap">
 		<section id="home" data-identifier="page-section">
