@@ -266,20 +266,22 @@ section:nth-child(1){
     right: 100px;
     bottom: 100px;
 } */
-section:nth-child(1) figure{
+/* section:nth-child(1) figure{
     position: relative;
-}
+} */
 section:nth-child(1) aside{
     vertical-align: middle;
 }
 section:nth-child(1) h1{
+    position: absolute;
+    right: 70px;
+    top: 50px;
     margin: 0;
-    font-size: unset;
-}
-section:nth-child(1) h1, section:nth-child(1) h1 p{
+} 
+/* section:nth-child(1) h1, section:nth-child(1) h1 p{
     width: 100%;
     display: inline-block;
-}
+} */
 /* section:nth-child(1) p img{
     display: block;
     position: absolute;
@@ -305,12 +307,11 @@ section:nth-child(1) figure h1 p{
     font-weight: normal;
     width: auto;
     font-size: 54px;
+    display: inline-block;
 }
 section:nth-child(1) figure h1 p:nth-child(1){
-    width: 100%;
-    display: inline-block;
+    display: block;
     font-style: normal;
-    color: #000;
     line-height: normal;
 }
 section:nth-child(1) figure h1 p:nth-child(2){
@@ -707,6 +708,10 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
         right: 50px;
         bottom: 50px;
     }
+    section:nth-child(1) h1{
+        top: 20px;
+        right: 20px;
+    }
     h2 {
         font-size: 40px;
     }
@@ -935,6 +940,15 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
     }
     section#rates {
         padding: 0 0 70px;
+    }
+    section:nth-child(1) h1 {
+        position: relative;
+        margin-bottom: 0;
+        top: 30px;
+        right: 0;
+    }
+    section:nth-child(1){
+        padding: 90px 0;
     }
 }
 

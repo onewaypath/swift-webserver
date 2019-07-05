@@ -33,14 +33,14 @@
       			<img src="/subscribe/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
-	      		<a data-target="new" href="../legal#home" data-active="1">
+	      		<a data-target="new" href="legal.html#home" data-active="1">
 					<figure>
 						<img src="/subscribe/images/home-icon-dark.png" alt="Home icon">
 						<img src="/subscribe/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
-				<a data-target="new" href="../legal#services">
+				<a data-target="new" href="legal.html#services">
 					<figure>
 						<img src="/subscribe/images/setting-icon-dark.png" alt="Services icon">
 						<img src="/subscribe/images/setting-icon-gold.png" alt="Services icon">

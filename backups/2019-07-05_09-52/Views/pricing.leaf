@@ -27,7 +27,7 @@
       			<img src="/funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
-	      		<a data-target="new" href="../legal#home" data-active="1">
+	      		<a data-target="new" href="legal#home" data-active="1">
 					<figure>
 						<img src="/funding/01/images/home-icon-dark.png" alt="Home icon">
 						<img src="/funding/01/images/home-icon.png" alt="Home icon">
@@ -41,7 +41,7 @@
 					</figure>
 					<span>ATTENTION</span>
 				</a> -->
-				<a data-target="new" href="../legal#services">
+				<a data-target="new" href="legal#services">
 					<figure>
 						<img src="/funding/01/images/setting-icon-dark.png" alt="Services icon">
 						<img src="/funding/01/images/setting-icon-gold.png" alt="Services icon">

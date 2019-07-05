@@ -3,21 +3,21 @@
    <head>
       
 	    <!-- Global site tag (gtag.js) - Google Analytics -->
-     <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
       <script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		  gtag('config', 'UA-27239837-5');
-	  </script> -->
+	  </script>
 	  
 	  <!-- Set the user ID using signed-in user_id. --> 
-	<!--   <script>
+	  <script>
 		  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 		  ga('create', 'UA-27239837-5', 'auto');
 		  ga('set', 'userId', #(subscriberID));
 		  ga('send', 'pageview');
-	  </script>  -->
+	  </script> 
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,14 +33,14 @@
       			<img src="/subscribe/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
-	      		<a data-target="new" href="../legal#home" data-active="1">
+	      		<a href="#home" data-active="1">
 					<figure>
 						<img src="/subscribe/images/home-icon-dark.png" alt="Home icon">
 						<img src="/subscribe/images/home-icon.png" alt="Home icon">
 					</figure>
 					<span>home</span>
 				</a>
-				<a data-target="new" href="../legal#services">
+				<!-- <a href="#services">
 					<figure>
 						<img src="/subscribe/images/setting-icon-dark.png" alt="Services icon">
 						<img src="/subscribe/images/setting-icon-gold.png" alt="Services icon">
@@ -53,7 +53,7 @@
 						<img src="/subscribe/images/bio-icon-gold.png" alt="Bio icon">
 					</figure>
 					<span>bio</span>
-				</a>
+				</a> -->
 				<a href="#contact">
 					<figure>
 						<img src="/subscribe/images/contact-icon-dark.png" alt="Contact icon">
@@ -118,25 +118,48 @@
             	</figure>
         </section> -->
 
-        <section id="bio" data-identifier="page-section">
-         	<figure>
-         		<h2>Bio</h2>
-         		<p><b>I have spent the past 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations and businesses.</b> As your representative, I will draw on my expertise in finance to help you take advantage of opportunities to sustain and grow your business or non-profit.</p>
-         		<p>
-         			<img src="/incorporation/01/images/bio-img.jpg" alt="Bio" title="Bio">
-         			<span>Alex Young</span>
-         		</p>
-         	</figure>
-        </section>
+<!--         <section id="bio" data-identifier="page-section">
+	         	<figure>
+	         		<h2>Bio</h2>
+	         		<p>Alex Young focuses his subscribe practice on business formation and corporate commercial transactions. In addition to his subscribe training and experience, Alex has spent 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations, and businesses. As your lawyer, he will draw on his expertise in finance to help you sustain and grow your business or non-profit organization.</p>
+	         		<p>
+	         			<img src="/subscribe/images/bio-img.jpg" alt="Bio" title="Bio" />
+	         			Alex Young
+	         			<figcaption>
+	         				
+	         				<ul>
+	         					<li><a href="javascript:void(0)">Education</a></li>
+	         					<li><a href="javascript:void(0)">Memberships</a></li>
+	         				</ul>
+	         			</figcaption>
+		     			<blockquote>
+		     				Global Professional Masters of Law (University of Toronto, 2016)<br>
+							Masters of Public Administration (University of Victoria, 2004)
+		     			</blockquote>
 
+		     			<blockquote>
+		     				Law Society of Ontario<br>
+							Ontario Bar Association
+		     			</blockquote>
+	         		</p>
+					<h2>SIGNUP TO OUR NEWSLETTER</h2>
+	         		<form action="/./subscribe/" method="get" accept-charset="utf-8">
+						<input type="text" placeholder="First Name" name="firstName">
+						<input type="text" placeholder="Last Name" name="lastName">
+						<input type="email" placeholder="E-mail Address" name="email">
+						<div class="g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
+						<button type="submit">Submit</button>
+					</form>
+	         	</figure>
+        </section>
+ -->
         <footer id="contact" data-identifier="page-section">
 		    <figure>
 	    	    <h2>Contact</h2>
 	    	    <address>
 	    	    	<p>First Canadian Place<br>
-	    	    	100 King Street West,<br>
-	    	    	Suite 5600<br>
-	    	    	Toronto, Ontario  M5X 1C9</p>
+	    	    	100 King Street West, Suite 5600<br>
+	    	    	Toronto, Ontario  M5C 1X9</p>
 	    	    </address>
 
 	    	    <address>

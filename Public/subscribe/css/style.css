@@ -247,13 +247,11 @@
 			vertical-align: middle;
 		}
 		section:nth-child(1) h1{
-			margin: 0;
-		}
-		section:nth-child(1) h1{
 			position: absolute;
 			right: 70px;
 			left: auto;
 			top: 50px;
+			margin: 0;
 		} 
 		section:nth-child(1) p{
 			width: 100%;
@@ -345,156 +343,46 @@
 		}
 
 
-/* Services Section [ Section 2 ]
+/* Bio Section
    ========================================= */
-   		section:nth-child(2){
-   			position: relative;
-   			z-index: 1;
-   		}
-   		section:nth-child(2), footer{
-   			background-color: #cd9933;
-   		}
-   		section:nth-child(2) figure{
-   			max-width: 970px;
-   		}
-   		section:nth-child(2) p{
-   			max-width: 700px;
-   			margin: 0 auto;
-   			display: table;
-   			text-align: center;
-   		}
-		section:nth-child(2) h3, section:nth-child(2) a{
-			width: 33.33%;
-			font-family: 'oklahomabold';
-			font-size: 1.17em;
-			outline: none !important;
-			text-decoration: none;
-			float: left;
-			color: #000;
-   			padding: 35px 15px 55px;
-   			text-align: center;
-   			box-sizing: border-box;
-   			margin: 80px 0 0;
-   			border-radius: 5px;
-   			-webkit-transition: all 0s ease 0s;
-   			  -moz-transition: all 0s ease 0s;
-   			   -ms-transition: all 0s ease 0s;
-   			    -o-transition: all 0s ease 0s;
-   			       transition: all 0s ease 0s;
-   		}
-   		section:nth-child(2) a:hover{
-   			color: #fff;
-   			background: #dba334;
-   		}
-   		section:nth-child(2) a:hover span{
-   			border-color: #fff;
-   		}
-   		section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
-   			display: none;
-   		}
-   		section:nth-child(2) a:hover img:nth-of-type(2){
-   			display: table;
-   		}
-   		section:nth-child(2) h3 img, section:nth-child(2) a img{
-   			margin: 0 auto 30px;
-   			display: table;
-   		}
-   		section:nth-child(2) h3 span, section:nth-child(2) a span{
-   			font-size: 18px;
-   			line-height: 25px;
-   			width: auto;
-   			border-bottom: 1px solid #000;
-   			display: inline-block;
-   			padding-bottom: 10px;
-   			font-family: 'oklahomabold';
-   			text-transform: uppercase;
-   			-webkit-transition: all 0.3s ease 0s;
-   			  -moz-transition: all 0.3s ease 0s;
-   			   -ms-transition: all 0.3s ease 0s;
-   			    -o-transition: all 0.3s ease 0s;
-   			       transition: all 0.3s ease 0s;
-   		}
-   		section:nth-child(2) figure blockquote{
-   			margin: 30px 0 0;
-   		}
-
-
-/* Bio Section [ Section 3 ]
-   ========================================= */
-   		section:nth-child(3){
-   			background-color: transparent;
-   		}
-   		section:nth-child(3) p{
-   			text-align: center;
-   		}
-   		section:nth-child(3) p:nth-child(3){
-   			margin: 70px auto;
-   			display: inline-block;
-   			width: 100%;
-   			text-align: center;
-   			font-size: 20px;
-   			color: #050505;
-   			font-weight: normal;
-   			text-transform: uppercase;
-   			font-family: 'oklahomaregular';
-   		}
-   		section:nth-child(3) p img{
-   			margin: 0 auto 30px;
-   		}
-   		section:nth-child(3) form h2{
-   			border: none;
-   			text-transform: none;
-   			margin: 0 auto 35px;
-   			font-size: 32px;
-   			line-height: 36px;
-   			max-width: 580px;
-   		}
-   		section:nth-child(3) form .g-recaptcha{
-   			transform: scale(0.65);
-   			margin: -68px 0 -10px 550px;
-   			float: left;
-   		}
-   		section:nth-child(3) form .form-control{
-   			display: none;
-   		}
-   		section:nth-child(3) form input:last-child{
-   			width: 100%;
-   		}
-   		section:nth-child(3) form input{
-   			height: 47px;
-   			padding:10px 12px;
-   			background:#ffffff;
-   			border:1px solid #ffffff;
-   			width: calc(25% - 4px);
-   			box-sizing:border-box;
-   			font-size:16px;
-   			font-family: 'Lato', sans-serif;
-   			font-weight: 500;
-   			border-radius:0;
-   			box-shadow:none;
-   			float: left;
-   			margin: 0 6px 6px 0;
-   		}
-   		section:nth-child(3) form button{
-   			background:#cd9933;
-   			border: none;
-   			box-shadow:none;
-   			border-radius:0;
-   			color: #3e3e3e;
-   		   	text-transform:uppercase;
-   		   	font-family: 'oklahomabold';
-   		   	text-align:center;
-   		   	cursor:pointer;	
-   		   	width: 100%;
-   		   	display: inline-block;
-   		   	vertical-align: top;
-   		   	padding: 15px;
-   		   	font-size: 18px;
-   		}
-   		section:nth-child(3) form button:hover{
-   			background-color: #3e3e3e;
-   			color: #fff;
-   		}
+   	section#bio{
+   		background: #cd9933;
+   	}
+	section#bio figure{
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	section#bio h2{
+	    border-bottom: 1px solid;
+	        order: 1;
+	}
+	section#bio p:nth-of-type(1){
+		order: 3;
+		margin-top: 50px;
+	    text-align: center;
+	}
+	section#bio p:nth-of-type(2){
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 100%;
+	    text-align: center;
+	    order: 2;
+	}
+	section#bio span {
+	    font-size: 20px;
+	    color: #050505;
+	    font-weight: normal;
+	    text-transform: uppercase;
+	    font-family: 'oklahomaregular';
+	    padding-bottom: 6px;
+	    border-bottom: 1px solid;
+	}
+	section#bio img{
+	    margin: 0 auto 30px;
+      border-radius: 100%;
+	}
 
 
 /* Contact Section [ Footer ]
@@ -563,13 +451,36 @@
 			section:nth-child(3) form h2{
 				margin: 0 auto 40px;
 			}
-			section:nth-child(2) h3,section:nth-child(2) a{
-				margin: 50px 0 0;
-			}
 			nav{
 				top: 55px;
 				left: 55px;
 			}
+			section#bio p{
+			    margin: 0 auto;
+			}
+			section#bio form h2{
+			    margin: 0 auto 40px;
+			}
+		}
+
+		@media screen and (max-width: 1300px){
+		    nav{
+		        top: 45px;
+		        left: 45px;
+		    }
+		    nav a{
+		        padding: 12px 15px;
+		        margin: 0 0 15px;
+		    }
+		    nav{
+		        max-width: 160px;
+		    }
+		    nav a figure{
+		        margin: 0 10px 0 0;
+		    }
+		    section#bio p:nth-child(2), section#attention h3:first-child{
+		        max-width: 700px;
+		    }
 		}
 
 		@media screen and (max-width: 1199px){
@@ -586,9 +497,6 @@
 			section h2{
 				margin-bottom: 35px;
 			}
-			section:nth-child(2) h3,section:nth-child(2) a{
-				padding: 35px 15px;	
-			}
 			section:nth-child(3) form h2 {
 			    font-size: 28px;
 			    line-height: 34px;
@@ -600,19 +508,13 @@
 			footer address:nth-child(3){
 				margin: 40px auto;
 			}
-			nav{
-				top: 45px;
-				left: 45px;
+			section#bio form h2 {
+			    font-size: 28px;
+			    line-height: 34px;
+			    max-width: 510px;
 			}
-			nav a{
-				padding: 12px 15px;
-				margin: 0 0 15px;
-			}
-			nav{
-				max-width: 160px;
-			}
-			nav a figure{
-				margin: 0 10px 0 0;
+			section#bio p:nth-child(2), section#attention h3:first-child{
+			    max-width: 570px;
 			}
 		}
 
@@ -631,12 +533,6 @@
 			p, blockquote{
 				font-size: 17px;
 				line-height: 32px;
-			}
-			section:nth-child(2) h3 span, section:nth-child(2) a span{
-				line-height: 20px;
-			}
-			section:nth-child(2) h3, section:nth-child(2) a{
-			    margin: 30px 0 0;
 			}
 			section:nth-child(3) p:nth-child(3) {
 			    margin: 40px auto;
@@ -692,6 +588,9 @@
 			}
 			nav:after, nav a span{
 				display: none;
+			}
+			section#bio form h2 {
+			    margin: 0 auto 25px;
 			}
 		}
 
@@ -753,16 +652,6 @@
 			blockquote{
 				text-align: center;
 			}
-			section:nth-child(2) p b {
-			    font-weight: 300;
-			}
-			section:nth-child(2) p, section:nth-child(3) p{
-				text-align: center;
-			}
-			section:nth-child(2) h3, section:nth-child(2) a{
-				width: 100%;
-				order: 2;
-			}
 			/* section:nth-child(3) dd, section:nth-child(3) dd figcaption{
 				display: table;
 				width: 100%;
@@ -800,9 +689,6 @@
 			footer h2{
 				margin-bottom: 40px;
 			}
-			section:nth-child(2) figure blockquote{
-				margin: 0 0 30px;
-			}
 			section:nth-child(1) figure h1 p{
 				font-size: 38px;
 			}
@@ -820,9 +706,21 @@
 			section:nth-child(3) form input:nth-child(4){
 				width: 100%;
 			}
-			section#bio form input:nth-child(2) {
-			    width: 50%;
-			    margin-right: 0;
+			section#bio div,
+			section#bio p{
+			    text-align: center;
+			}
+			section#bio form h2{
+			    text-align: center;
+			    line-height: 40px;
+			    font-size: 30px;
+			    max-width: 540px;
+			}
+			section#bio p:nth-of-type(1){
+				margin-top: 0;
+			}
+			section#bio p:nth-of-type(2){
+			    margin: 40px auto 0;
 			}
 			section:nth-child(3) form input:nth-child(3){
 				width: 100%;
@@ -841,12 +739,17 @@
 		    	height: 27%;
 		    }
 			section:nth-child(1) h1{
-				position: static;
+				position: relative;
 				margin-bottom: 30px;
+				top: -40px;
+				right: 0;
 			}
 			section:nth-child(1) h2{
 				font-size: 24px;
 				line-height: 32px;
+			}
+			section#bio figure{
+				display: inline-block;
 			}	
 		}
 

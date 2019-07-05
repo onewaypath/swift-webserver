@@ -27,7 +27,7 @@
       			<img src="/funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
-	      		<a data-target="new" href="../legal#home" data-active="1">
+	      		<a href="#home" data-active="1">
 					<figure>
 						<img src="/funding/01/images/home-icon-dark.png" alt="Home icon">
 						<img src="/funding/01/images/home-icon.png" alt="Home icon">
@@ -41,13 +41,6 @@
 					</figure>
 					<span>ATTENTION</span>
 				</a> -->
-				<a data-target="new" href="../legal#services">
-					<figure>
-						<img src="/funding/01/images/setting-icon-dark.png" alt="Services icon">
-						<img src="/funding/01/images/setting-icon-gold.png" alt="Services icon">
-					</figure>
-					<span>services</span>
-				</a>
 				<a href="#bio">
 					<figure>
 						<img src="/funding/01/images/bio-icon-dark.png" alt="Bio icon">
@@ -220,7 +213,7 @@
 	    	    <address>
 	    	    	<p>First Canadian Place<br>
 	    	    	100 King Street West, Suite 5600<br>
-	    	    	Toronto, Ontario  M5X 1C9</p>
+	    	    	Toronto, Ontario  M5C 1X9</p>
 	    	    </address>
 
 	    	    <address>
