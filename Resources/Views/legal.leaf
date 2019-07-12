@@ -37,6 +37,20 @@
 					</figure>
 					<span>bio</span>
 				</a>
+				<a href="#testimonials">
+					<figure>
+						<img src="/legal/images/testimonials-icon-dark.png" alt="Testimonials icon">
+						<img src="/legal/images/testimonials-icon-gold.png" alt="Testimonials icon">
+					</figure>
+					<span>testimonials</span>
+				</a>
+				<a href="#faq">
+					<figure>
+						<img src="/legal/images/faq-icon-dark.png" alt="Faq icon">
+						<img src="/legal/images/faq-icon-gold.png" alt="Faq icon">
+					</figure>
+					<span>faq</span>
+				</a>
 				<a href="#contact">
 					<figure>
 						<img src="/legal/images/contact-icon-dark.png" alt="Contact icon">
@@ -105,7 +119,7 @@
 	         			<img src="/legal/images/bio-img.jpg" alt="Bio" title="Bio" />
 	         			Alex Young
 	         			<!-- <figcaption>
-	         				
+
 	         				<ul>
 	         					<li><a href="javascript:void(0)">Education</a></li>
 	         					<li><a href="javascript:void(0)">Memberships</a></li>
@@ -130,6 +144,71 @@
 						<button type="submit">Submit</button>
 					</form>
 	         	</figure>
+        </section>
+
+        <section id="testimonials" data-identifier="page-section">
+         	<figure>
+         		<h2>testimonials</h2>
+				<div>
+					<div>
+						<h4>Brenda Francis</h4>
+						<h5>Executive Director<span>Kenjgewqn Teg</span></h5>
+						<h6>"We had another law firm as our legal counsel already, so we had to consider that fact before hiring someone else.</h6>
+						<p>However, there was no risk in a free consultation and Alex managed to quickly understand our organization and our needs.</p>
+						<p>
+						What we liked most about his service is that Alex is honest about the advice that he's giving. When he is explaining the law, he is able to convey it in laymen's terms, which is important because it is not always easy to understand the risks that our organization  is facing or the rights of the individual people involved.</p>
+						<p>We also liked Alex's availability and the fact that he asks additional questions to make sure that we are understanding what he is saying. In the case of one important project, the quality of his work was much greater than that of other lawyers we have consulted. He asked the right questions to clarify what we wanted to achieve and to make sure that the document he drafted met our needs.</p>
+						<a href="" title="">Read More</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h4>Kai Whitcomb</h4>
+						<h5>Chair<span>Council for Thai Culture of Canada</span></h5>
+						<h6>"I have known Alex for many years so I had no doubt or hesitation before hiring him. I didn't even have to think -- it was just automatic.</h6>
+						<p>The results were as expected: Very timely well thought-through and thorough.</p>
+						<p>
+						Alex has the ability to explain complicated things to a lay person. He helped me understand, using human language, to communicate very efficiently, and to simplify difficult, complicated matters such as the legal side to setting up an organization.
+						</p>
+						<p>I was overwhelmed trying to put together everything that was required to setup our organization. However, Alex anticipated the potential problems and warned us before we made mistakes, which means that he is very thorough and looks after the benefit and well-being of the clients; he's not just about getting paid. I like Alex' honesty, knowledge, and efficiency and that causes me to trust him.
+						</p><p>
+						I would definitely recommend Alex because clients could get all kinds of benefits by working with him, not just the legal side.  Best service ever.
+						</p>
+						<a href="" title="">Read More</a>
+					</div>
+				</div>
+         	</figure>
+        </section>
+
+        <section id="faq" data-identifier="page-section">
+         	<figure>
+         		<h2>Frequently Asked Question</h2>
+         		<h2>FAQs</h2>
+         		<h3>Look through the answers to the most popular questions of our clients. Didn't find what you need? Feel free to send us a message.</h3>
+         		<div>
+         			<div>
+         				<h4>Why should I hire a lawyer instead of doing the incorporation myself or using an online system?</h4>
+         				<p>You could do that and there are such options available. However, that creates risks that the corporation was not setup properly for your given circumstances. A mistake in setting up a corporation may not be discovered until there is a problem and at that point it could be too late to fix the mistake.
+	    				</p>
+	    				<p>Problems may arise from mistakes or omissions in the articles of incorporation but also if other necessary organizing documents such as by-laws, shareholder resolutions, director resolutions, etc. are not prepared or are not prepared properly.
+						</p><p>
+						In addition, if the corporation is not setup correctly, the owner's assets could be improperly exposed to tax or other liability.
+						</p><p>
+						If you get an expert lawyer to help reduce the risk from the get-go, you help to spare yourself such problems.</p>
+         				<a href="" title="">Read More</a>
+         			</div>
+         		</div>
+         		<div>
+         			<div>
+         				<h4>I already have a lawyer and he has my files. Does it make sense to hire you? </h4>
+         				<p>Firstly, if the reason you are seeking a new lawyer is because you do like your current lawyer but s/he is too busy or doesn't have the necessary expertise for the new matter, we can sometimes work with and supplement existing counsel so that you wouldn't necessarily need to change your lawyer.</p>
+         				<p>If you want to change lawyers then we can request that the file be transferred. Lawyers are required to keep their client files in good order just in case the file needs to be transferred for whatever reason so generally file transfer is doable if that is what you wish.
+     					</p><p>
+     					A third option is to work with us for a discrete matter and then decide later whether the whole file should be transferred or not.</p>
+         				<a href="" title="">Read More</a>
+         			</div>
+         		</div>
+         	</figure>
         </section>
 
         <footer id="contact" data-identifier="page-section">

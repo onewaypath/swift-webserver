@@ -128,6 +128,19 @@
                 $(this).hide("slow");
             }
         });
+
+        $("#testimonials a").on('click', function (e) {
+            e.preventDefault();
+            $("#testimonials p").show("slow");
+            $("#testimonials a").hide();
+        });
+
+        $("#faq a").on('click', function (e) {
+            e.preventDefault();
+            $("#faq p").show("slow");
+            $("#faq a").hide();
+        });
+
         $("nav a").on('touchend', function () {
             if (wid <= 991)
             {

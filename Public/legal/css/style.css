@@ -101,7 +101,7 @@
 			outline: none !important;
 		}
 		section, footer{
-			padding: 50px 0;
+			padding: 100px 0;
 			min-height: 100vh;
 			width: 100%;
 			display: -ms-flexbox;
@@ -150,11 +150,6 @@
    			top: 75px;
    			left: 95px;
    		}
-   		nav a{
-   			width: 100%;
-   			float: left;
-   			margin: 0 0 20px;
-   		}
    		nav a:last-child{
    			margin: 0;
    		}
@@ -164,6 +159,7 @@
    			text-decoration: none !important;
    			border-radius: 5px;
    			font-size: 16px;
+   			margin: 0 0 20px;
    			text-transform: uppercase;
    			color: #ca972b;
    			font-weight: 600;
@@ -173,6 +169,8 @@
    			-webkit-box-align: center;
    			-ms-flex-align: center;
    			align-items: center;
+   			-ms-flex-wrap: wrap;
+   			flex-wrap: wrap;
    		}
    		nav a span{
    			opacity: 0;
@@ -198,7 +196,7 @@
    			display: none;
    		}
    		nav{
-   			max-width: 180px;
+   			max-width: 205px;
    			width: 100%;
    		}
    		nav:after{
@@ -214,7 +212,7 @@
    		}
    		nav a figure{
    			float: left;
-   			margin: 0 25px 0 0;
+   			margin: 0 15px 0 0;
    			width: 33px;
    			text-align: center;
    		}
@@ -318,7 +316,7 @@
    			position: relative;
    			z-index: 1;
    		}
-   		section:nth-child(2), footer{
+   		section:nth-child(2), footer, section#testimonials{
    			background-color: #cd9933;
    		}
    		section:nth-child(2) figure{
@@ -463,6 +461,116 @@
    			color: #fff;
    		}
 
+/* Testimonials Section [ Section 4 ]
+   ========================================= */
+   		section#testimonials figure, section#faq figure{
+   			max-width: 1170px;
+   			display: -webkit-box;
+   			display: -ms-flexbox;
+   			display: flex;
+   			-ms-flex-wrap: wrap;
+   			flex-wrap: wrap;
+   		}
+   		section#testimonials h2, section#faq h2{
+   			width: 100%;
+   		}
+   		section#faq h2:nth-of-type(2){
+   		 	display: none;
+   		}
+   		section#testimonials div, section#faq div{
+   			width: 50%;
+   			padding: 0 15px;
+   			text-align: center;
+   		}
+   		section#testimonials div > div, section#faq div > div{
+   			padding: 50px 35px 130px;
+   			width: 100%;
+   			display: inline-block;
+   			background: #be8b27;
+   			position: relative;
+   			height: 100%;
+   		}
+   		section#testimonials h4, section#faq h4{
+   			font-size: 26px;
+   			color: #fff;
+   			text-transform: uppercase;
+   			margin: 0;
+   		}
+   		section#testimonials h5{
+   			color: #fff;
+   			font-size: 18px;
+   			margin: 20px 0 0;
+   			letter-spacing: 2px;
+   			text-transform: uppercase;
+   			font-family: 'Open Sans', sans-serif;
+   		}	
+   		section#testimonials h5 span{
+   			width: 100%;
+   			display: inline-block;
+   			font-weight: 400;
+   			margin-top: 8px;
+   		}
+   		section#testimonials h6{
+   			font-size: 21px;
+   			margin: 50px 0;
+   			line-height: 34px;
+   		}
+   		section#testimonials p:nth-of-type(2), section#faq p:nth-of-type(2){
+   			display: none;
+            width: 100% !important;
+   		}
+   		section#testimonials div > div a, section#faq div > div a{
+   			font-size: 18px;
+   			text-decoration: none;
+   			color: #000;
+   			padding: 10px 15px;
+   			background: #fff;
+   			display: inline-block;
+   			font-family: 'oklahomabold';
+   			position: absolute;
+   			bottom: 50px;
+   			left:  50%;
+   			-webkit-transform: translate(-50%, 0);
+   			   -moz-transform: translate(-50%, 0);
+   			    -ms-transform: translate(-50%, 0);
+   			     -o-transform: translate(-50%, 0);
+   			        transform: translate(-50%, 0);
+   		}
+   		section#testimonials div > div a:hover, section#testimonials div > div a:active, section#testimonials div > div a:focus, 
+   		section#faq div > div a:hover, section#faq div > div a:active, section#faq div > div a:focus{
+   			background-color: #3e3e3e;
+   			color: #fff;
+   		}
+
+/* Faq Section [ Section 5 ]
+   ========================================= */
+   		section#faq{
+   			background: #dae1e7;
+   		}
+   		section#faq h4{
+   			text-transform: none;
+   		}
+   		section#faq div{
+   			text-align: left;
+   		}
+   		section#faq div > div{
+   			background: #e3e9ee;
+   		}
+   		section#faq h4{
+   			color: #030004;
+   			margin: 0 0 50px;
+   			line-height: 40px;
+   		}
+   		section#faq h3{
+			font-size: 26px;
+		    text-transform: uppercase;
+		    max-width: 850px;
+		    margin: 0 auto 60px;
+		    display: block;
+		    text-align: center;
+		    line-height: 44px;
+   		}
+
 
 /* Contact Section [ Footer ]
    ========================================= */
@@ -534,6 +642,9 @@
 				top: 55px;
 				left: 55px;
 			}
+			section#testimonials figure, section#faq figure{
+				max-width: 980px;
+			}
 		}
 
 		@media screen and (max-width: 1199px){
@@ -577,6 +688,22 @@
 			}
 			nav a figure{
 				margin: 0 10px 0 0;
+			}
+			section#testimonials figure, section#faq figure{
+				max-width: 880px;
+			}
+			section, footer{
+				padding: 80px 0;
+			}
+			section#faq h3{
+				font-size: 22px;
+			    max-width: 720px;
+			    line-height: 36px;
+			}
+			section#faq h4{
+				font-size: 22px;
+				line-height: 34px;
+				margin: 0 0 30px;
 			}
 		}
 
@@ -652,6 +779,29 @@
 			}
 			nav:after, nav a span{
 				display: none;
+			}
+			section#testimonials div, section#faq div{
+				width: 100%;
+				padding: 30px 0 0;
+			}
+			section#testimonials h2, section#faq h2{
+				margin-bottom: 0;
+			}
+			section#testimonials, section#faq{
+				width: auto;
+				margin: 0 -20px;
+			}
+			section#testimonials h6{
+				margin: 40px 0;
+			}
+			section, footer{
+				padding: 60px 0;
+			}
+			section#faq h3{
+				font-size: 20px;
+				max-width: 100%;
+				line-height: 32px;
+				margin: 30px 0 0;
 			}
 		}
 
@@ -791,6 +941,19 @@
 			section:nth-child(3) form input {
 			    width: calc(50% - 6px);
 			}
+			section#testimonials h5 span{
+				margin-top: 5px;
+				font-size: 16px;
+			}
+			section, footer{
+				padding: 50px 0;
+			}
+			section#faq h2:nth-of-type(2){
+			 	display: block;
+			}
+			section#faq h2:nth-of-type(1){
+			 	display: none;
+			}
 		}
 
 		@media screen and (max-width: 390px){
@@ -851,5 +1014,16 @@
 	        	width: 162px;
 	        	transform-origin: 0 0;
 	        	-webkit-transform-origin: 0 0;
+	        }
+	        section#testimonials div > div, section#faq div > div{
+	        	padding: 30px 15px;
+	        }
+	        section#testimonials h6 {
+	            margin: 30px 0 10px;
+	        }
+	        section#faq h4 {
+	            font-size: 20px;
+	            line-height: 28px;
+	            margin: 0 0 15px;
 	        }
 	    }

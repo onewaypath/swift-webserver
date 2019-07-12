@@ -131,8 +131,8 @@
         		<!--
 				<h3>2 STEPS:</h3>
         		<h3>Your next project’s success</h3> -->
-        		<h6>STEP #1: Survey and Newsletter</h6>
-        		<p>Complete a short three question survey, and provide your name and email address. Review our newsletters to get to link to our prices and to get to know us and our expertise, or if you prefer, proceed directly to Step #2</p>
+        		<h6>STEP #1: Sign Up to Our Newsletter</h6>
+        		<p>Enter your name and email and click submit. Review our newsletters to get to link to our incorporation price and get to know us and our expertise, or if you prefer,<br>proceed directly to Step #2</p>
         		<h6>STEP #2: Free Consultation</h6>
         		<p>Schedule a free consultation with our incorporation lawyer Alex Young who also has 16 years of experience in finances to find out what is required to incorporate your business and whether you can benefit from our express business setup service.</p>
 				<h6>STEP #3: 30 Minute Meeting</h6>
@@ -316,15 +316,15 @@
 		  
 		  <section id="detail-form" data-identifier="page-section">
 			<figure>
-				<h2>TRY A SHORT THREE QUESTION SURVEY AND SIGN-UP TO GET OUR CURRENT PRICE LIST</h2>
-				<h2><a href="https://onewaypath.typeform.com/to/f64l4D">Click here to get our prices</a></h2>
-				<!--<form action="/./subscribe/" method="get" accept-charset="utf-8">
+				<h2>SIGNUP TO OUR NEWSLETTER AND GET OUR CURRENT PRICE LIST</h2>
+				
+				<form action="/./subscribe/" method="get" accept-charset="utf-8">
 					<input type="text" placeholder="First Name" name="firstName">
 					<input type="text" placeholder="Last Name" name="lastName">
 					<input type="email" placeholder="E-mail Address" name="email">
 					<div class="g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
 					<button type="submit">Submit</button>
-				</form> -->
+				</form>
 			</figure>
 		</section> 
 
@@ -371,7 +371,39 @@
 					</div>
 				</div>
          	</figure>
-        </section> 
+        </section> <section id="testimonials" data-identifier="page-section">
+         	<figure>
+         		<h2>testimonials</h2>
+				<div>
+					<div>
+						<h4>Brenda Francis</h4>
+						<h5>Executive Director<span>Kenjgewqn Teg</span></h5>
+						<h6>"We had another law firm as our legal counsel already, so we had to consider that fact before hiring someone else.</h6>
+						<p>However, there was no risk in a free consultation and Alex managed to quickly understand our organization and our needs.</p>
+						<p>
+						What we liked most about his service is that Alex is honest about the advice that he's giving. When he is explaining the law, he is able to convey it in laymen's terms, which is important because it is not always easy to understand the risks that our organization  is facing or the rights of the individual people involved.</p>
+						<p>We also liked Alex's availability and the fact that he asks additional questions to make sure that we are understanding what he is saying. In the case of one important project, the quality of his work was much greater than that of other lawyers we have consulted. He asked the right questions to clarify what we wanted to achieve and to make sure that the document he drafted met our needs.</p>
+						<a href="" title="">Read More</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h4>Kai Whitcomb</h4>
+						<h5>Chair<span>Council for Thai Culture of Canada</span></h5>
+						<h6>"I have known Alex for many years so I had no doubt or hesitation before hiring him. I didn't even have to think -- it was just automatic.</h6>
+						<p>The results were as expected: Very timely well thought-through and thorough.</p>
+						<p>
+						Alex has the ability to explain complicated things to a lay person. He helped me understand, using human language, to communicate very efficiently, and to simplify difficult, complicated matters such as the legal side to setting up an organization.
+						</p>
+						<p>I was overwhelmed trying to put together everything that was required to setup our organization. However, Alex anticipated the potential problems and warned us before we made mistakes, which means that he is very thorough and looks after the benefit and well-being of the clients; he's not just about getting paid. I like Alex' honesty, knowledge, and efficiency and that causes me to trust him.
+						</p><p>
+						I would definitely recommend Alex because clients could get all kinds of benefits by working with him, not just the legal side.  Best service ever.
+						</p>
+						<a href="" title="">Read More</a>
+					</div>
+				</div>
+         	</figure>
+        </section>
 
         <section id="faq" data-identifier="page-section">
          	<figure>
