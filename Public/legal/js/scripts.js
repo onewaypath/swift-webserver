@@ -93,13 +93,68 @@
             e.preventDefault();
             $("#testimonials p").show("slow");
             $("#testimonials a").hide();
+			// setTimeout(function(){
+	            var maxHeight = Math.max.apply(null, $("#testimonials div div div").map(function () {
+				    return $(this).height();
+				}).get());
+				$("#testimonials div div div").css('min-height',maxHeight);
+			// },100);
+
         });
+
+
+
+
+// var defaultHeightnew = 400;
+// var textnew = $("#testimonials div div div");
+// var textHeightnew = textnew[0].scrollHeight;
+// textnew.css({"max-height": defaultHeightnew, "overflow": "hidden"});
+// var button = $(".button");
+//  $("#testimonials a").on("click", function(){
+//   var newHeightnew = 0;
+//   if (textnew.hasClass("active")) {
+//     newHeightnew = defaultHeightnew;
+//     textnew.removeClass("active");
+//   } else {
+//     newHeightnew = textHeightnew;
+//     textnew.addClass("active");
+//   }
+//   textnew.animate({
+//     "max-height": newHeightnew
+//   }, 500);
+// });
 
         $("#faq a").on('click', function (e) {
             e.preventDefault();
             $("#faq p").show("slow");
             $("#faq a").hide();
+
+            setTimeout(function(){
+	            var maxHeight = Math.max.apply(null, $("#faq div div div").map(function () {
+				    return $(this).height();
+				}).get());
+				$("#faq div div div").css('min-height',maxHeight);
+            },700);
         });
+
+// var defaultHeight = 400;
+// var text = $("#faq div div div");
+// var textHeight = text[0].scrollHeight;
+// var button = $(".button");
+// text.css({"max-height": defaultHeight, "overflow": "hidden"});
+//  $("#faq a").on("click", function(){
+//   var newHeight = 0;
+//   if (text.hasClass("active")) {
+//     newHeight = defaultHeight;
+//     text.removeClass("active");
+//   } else {
+//     newHeight = textHeight;
+//     text.addClass("active");
+//   }
+//   text.animate({
+//     "max-height": newHeight
+//   }, 500);
+// });
 
         $("nav a").click(function () {
             if (wid <= 991)

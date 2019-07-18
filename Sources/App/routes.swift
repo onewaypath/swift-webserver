@@ -58,7 +58,7 @@ public func routes(_ router: Router) throws {
     }
     
     router.get ("incorporation") { req in
-        return try req.view().render("incorporation-01")
+        return try req.view().render("incorporation-03")
     }
     
     router.get ("pricing") { req in
