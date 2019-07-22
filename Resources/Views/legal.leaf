@@ -37,7 +37,7 @@
 					</figure>
 					<span>bio</span>
 				</a>
-				<a href="#testimonials">
+				<!-- <a href="#testimonials">
 					<figure>
 						<img src="/legal/images/testimonials-icon-dark.png" alt="Testimonials icon">
 						<img src="/legal/images/testimonials-icon-gold.png" alt="Testimonials icon">
@@ -50,7 +50,7 @@
 						<img src="/legal/images/faq-icon-gold.png" alt="Faq icon">
 					</figure>
 					<span>faq</span>
-				</a>
+				</a> -->
 				<a href="#contact">
 					<figure>
 						<img src="/legal/images/contact-icon-dark.png" alt="Contact icon">
@@ -85,12 +85,12 @@
 
         <section id="services" data-identifier="page-section">
             	<figure>
-            		<h2>Services</h2>
-            		<p>When helping you to form and structure your business or when negotiating agreements on your behalf, our objective is to use the law to maximize your return on investment.</p>
-        				<a href="incorporation" title="">
+            		<h2>Services and Fees</h2>
+            		<p>When you work with me, you only pay for success because I prefer to work on a pay for results or contingency basis. That means that if I take on your matter, you do not pay up front and I only get paid when you do or when your problem is solved. When negotiating on your behalf my objective is to use the law to maximize your return on investment and my approach to fees relects that objetive. I invite you to contact me to setup a meeting to explore how I can help solve your problem.</p>
+        				<a href="legal" title="">
         					<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
         					<img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" />
-        					<span>Incorporation</span>
+        					<span>Litigation</span>
         				</a>
             			<h3>
             				<img src="/legal/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
@@ -114,7 +114,7 @@
         <section id="bio" data-identifier="page-section">
 	         	<figure>
 	         		<h2>Bio</h2>
-	         		<p>Alex Young focuses his legal practice on business formation and corporate commercial transactions. In addition to his legal training and experience, Alex has spent 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations, and businesses. As your lawyer, he will draw on his expertise in finance to help you sustain and grow your business or non-profit organization.</p>
+	         		<p>Alex Young focuses his legal practice on corporate commercial matters. In addition to his legal training and experience, Alex has spent 16 years analyzing and seeking to maximize return on investment for governments, non-profit organizations, and businesses. He holds a Global Professional Master of Laws from the University of Toronto, a Masters of Public Administration from the University of Victoria and is a member in good standing of the Law Society of Ontario. As financial and public policy issues underlie all legal disputes Alex's strong background in both, along with legal expertise, positions him well to help you solve your problem.</p>
 	         		<p>
 	         			<img src="/legal/images/bio-img.jpg" alt="Bio" title="Bio" />
 	         			Alex Young
@@ -135,7 +135,7 @@
 							Ontario Bar Association
 		     			</blockquote> -->
 	         		</p>
-					<h2>SIGNUP TO OUR NEWSLETTER</h2>
+					<h2>SIGNUP TO MY NEWSLETTER</h2>
 	         		<form action="/./subscribe/" method="get" accept-charset="utf-8">
 						<input type="text" placeholder="First Name" name="firstName">
 						<input type="text" placeholder="Last Name" name="lastName">
@@ -146,7 +146,7 @@
 	         	</figure>
         </section>
 
-        <section id="testimonials" data-identifier="page-section">
+        <!--<section id="testimonials" data-identifier="page-section">
          	<figure>
          		<h2>testimonials</h2>
 				<div>
@@ -217,7 +217,7 @@
          			</div>
          		</div>
          	</figure>
-        </section>
+        </section> -->
 
         <footer id="contact" data-identifier="page-section">
 		    <figure>
