@@ -87,11 +87,16 @@
             	<figure>
             		<h2>Services and Fees</h2>
             		<p>When you work with me, you only pay for success because I prefer to work on a pay for results or contingency basis. That means that if I take on your matter, I only get paid when you do or when your problem is solved. When negotiating on your behalf my objective is to use the law to maximize your return on investment and my approach to fees relects that objetive. I invite you to contact me to setup a meeting to explore how I can help solve your problem.</p>
-        				<a href="legal" title="">
+        				<!-- <a href="incorporation" title="">
         					<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
         					<img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" />
-        					<span>Litigation</span>
-        				</a>
+        					<span>Incorporation</span>
+        				</a> -->
+        				<h3>
+        					<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
+        					<!-- <img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" /> -->
+        					<span>Incorporation</span>
+        				</h3>
             			<h3>
             				<img src="/legal/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
             				<!-- <img src="/legal/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> -->
