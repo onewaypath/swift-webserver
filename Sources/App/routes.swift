@@ -69,9 +69,9 @@ public func routes(_ router: Router) throws {
         return "Its Working nowww..."
     }
     
-    /*router.get ("incorporation", "02") { req in
+     router.get ("incorporation", "02") { req in
         return try req.view().render("incorporation-02")
-    }*/
+    }
     
     /*router.get("contactAdded") { req -> Future<View> in
     

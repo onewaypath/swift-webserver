@@ -1,17 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      
+
 	    <!-- Global site tag (gtag.js) - Google Analytics -->
-     <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></scr ipt>
+     <!--  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
       <script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		  gtag('config', 'UA-27239837-5');
 	  </script> -->
-	  
-	  <!-- Set the user ID using signed-in user_id. --> 
+
+	  <!-- Set the user ID using signed-in user_id. -->
 	<!--   <script>
 		  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 		  ga('create', 'UA-27239837-5', 'auto');
@@ -72,7 +72,7 @@
 	         		<p>
 	         			<!-- <img src="/subscribe/images/logo-bottom-border-img.png" alt="" /> -->
 	         		</p>
-	         		
+
 	         	</figure>
 	         	<!-- <ul>
 	         		<li>
@@ -101,7 +101,7 @@
         				</a>
             			<h3>
             				<img src="/subscribe/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
-            				 <img src="/subscribe/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> 
+            				 <img src="/subscribe/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" />
             				<span>Purchase and Sale</span>
             			</h3>
             			<h3>
