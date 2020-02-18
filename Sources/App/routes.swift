@@ -42,7 +42,7 @@ public func routes(_ router: Router) throws {
    
     
     router.get { req in
-        return try req.view().render("legal")
+        return try req.view().render("owpg-main")
     }
     
     /*router.get ("funding", "01") { req in
@@ -55,6 +55,10 @@ public func routes(_ router: Router) throws {
     
     router.get ("legal") { req in
         return try req.view().render("legal")
+    }
+    
+    router.get ("owpg-main") { req in
+        return try req.view().render("owpg-main")
     }
     
     router.get ("incorporation") { req in
