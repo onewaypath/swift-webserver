@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      
+
 	   <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
       <script>
@@ -10,7 +10,7 @@
 		  gtag('js', new Date());
 		  gtag('config', 'UA-27239837-5');
 	  </script>
-	   
+
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
       			<img src="/funding/01/images/menu-icon.png" alt="Menu selector">
       		</button>
       		<div>
-	      		<a href="#home" data-active="1">
+	      		<a data-target="new" href="../legal#home" data-active="1">
 					<figure>
 						<img src="/funding/01/images/home-icon-dark.png" alt="Home icon">
 						<img src="/funding/01/images/home-icon.png" alt="Home icon">
@@ -41,6 +41,13 @@
 					</figure>
 					<span>ATTENTION</span>
 				</a> -->
+				<a data-target="new" href="../legal#services">
+					<figure>
+						<img src="/funding/01/images/setting-icon-dark.png" alt="Services icon">
+						<img src="/funding/01/images/setting-icon-gold.png" alt="Services icon">
+					</figure>
+					<span>services</span>
+				</a>
 				<a href="#bio">
 					<figure>
 						<img src="/funding/01/images/bio-icon-dark.png" alt="Bio icon">
@@ -89,7 +96,7 @@
          		</li>
          	</ul> -->
 		</section>
-		
+
 <section id="rates" data-identifier="page-section">
 	<figure>
 		<h2><span>rates</span></h2>
@@ -183,7 +190,7 @@
  	         			<img src="/legal/images/bio-img.jpg" alt="Bio" title="Bio" />
  	         			Alex Young
  	         			<!-- <figcaption>
- 	         				
+
  	         				<ul>
  	         					<li><a href="javascript:void(0)">Education</a></li>
  	         					<li><a href="javascript:void(0)">Memberships</a></li>
@@ -213,12 +220,12 @@
 	    	    <address>
 	    	    	<p>First Canadian Place<br>
 	    	    	100 King Street West, Suite 5600<br>
-	    	    	Toronto, Ontario  M5C 1X9</p>
+	    	    	Toronto, Ontario  M5X 1C9</p>
 	    	    </address>
 
 	    	    <address>
 	    	    	<p><b>E-Mail:</b> info@onewaypath.com</p>
-	    	    	<p><b>Phone:</b> +1 416.840.5710</p>
+	    	    	<p><b>Phone:</b> +1 416.840.5711</p>
 	    	    </address>
 
 	    		<!-- <figcaption>

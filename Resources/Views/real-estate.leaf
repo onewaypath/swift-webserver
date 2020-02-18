@@ -85,28 +85,21 @@
 
         <section id="services" data-identifier="page-section">
             	<figure>
-            		<h2>Services and Fees</h2>
-            		<p>When you work with me, you only pay for success because I prefer to work on a pay for results or contingency basis. That means that if I take on your matter, I only get paid when you do or when your problem is solved. When negotiating on your behalf my objective is to use the law to maximize your return on investment and my approach to fees relects that objetive. I invite you to contact me to setup a meeting to explore how I can help solve your problem.</p>
-        				<!-- <a href="incorporation" title="">
+            		<h2>Real Estate Development Opportunity</h2>
+            		<p>We are currently in possession of plans for a number of small condominium development projects. The projects involve buying land in the Kitchener-Waterloo area, pre-selling 20-25 unit multi-residential condominiums and then constructing the buildings using a bonded builder who is registered with Tarion. Based on pre-qualification data, these projects would comfortably support a cash-on-cash return on equity of approximately 20-25% per annum. The sites under consideration are already appropriately zoned. In addition, a pre-sale requirement coupled with cost/time overrun insurance would help to manage the investment risks.</p> 
+
+					<h2><br>Investor Profile</h2>
+					
+					<p>We are looking for equity investors who are interested in leading one or more developments as founding investors. Total equity requirements for projects of this scale would run about $3 million, a comfortable size for small but serious investor interested in getting started in this space. We would also consider interest from investors looking to make smaller investments of a minimum of $500,000 each who could pool their resources. <br></p>
+					
+					<h2><br>Access to High Quality Advice</h2>
+					<p>Our legal services, compensated on contingency, would include formation of project entities, negotiation of contracts with builders, supervision of real estate transactions including purchase of land and condominium registration and appropriate due diligence. We can also facilitate access to highly qualified and reputable tax and financial advisors upon request. Please contact us if you are interested in becoming involved in this high cash return business. </p>
+        				<!-- <a href="incorporation-01.html" title="">
         					<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
         					<img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" />
         					<span>Incorporation</span>
-        				</a> -->
-        				<h3>
-        					<img src="/legal/images/service-1-dark.png" alt="Incorporation" title="Incorporation" />
-        					<!-- <img src="/legal/images/service-1.png" alt="Incorporation" title="Incorporation" /> -->
-        					<span>Incorporation</span>
-        				</h3>
-            			<h3>
-            				<img src="/legal/images/service-2-dark.png" alt="Purchase and Sale" title="Purchase and Sale" />
-            				<!-- <img src="/legal/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> -->
-            				<span>Purchase and Sale</span>
-            			</h3>
-            			<h3>
-            				<img src="/legal/images/service-3-dark.png" alt="Secured Finance" title="Secured Finance" />
-            				<!-- <img src="/legal/images/service-3.png" alt="Secured Finance" title="Secured Finance" /> -->
-            				<span>Secured Finance</span>
-            			</h3>
+        				</a> --> 
+        				
 
             			<!-- <blockquote>We guide you through the process of incorporating a federal or provincial business or not-for-profit organization or formation of a limited partnership. Our service includes providing you with incorporation certificates, by-laws and organizing resolutions. We can also maintain your organization's registers (share transfers, shareholders, directors and officers) and process your annual returns to the corporate registrar.</blockquote>
 
@@ -140,14 +133,7 @@
 							Ontario Bar Association
 		     			</blockquote> -->
 	         		</p>
-					<h2>SIGNUP TO MY NEWSLETTER</h2>
-	         		<form action="/./subscribe/" method="get" accept-charset="utf-8">
-						<input type="text" placeholder="First Name" name="firstName">
-						<input type="text" placeholder="Last Name" name="lastName">
-						<input type="email" placeholder="E-mail Address" name="email">
-						<div class="g-recaptcha" data-sitekey="6LfwmJYUAAAAAFdaK3bRaA67rgnv4tWgqfahIV80"></div>
-						<button type="submit">Submit</button>
-					</form>
+					
 	         	</figure>
         </section>
 

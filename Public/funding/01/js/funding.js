@@ -59,30 +59,40 @@
                     }
                 });
 
-        $('a[href*=\\#]').bind('click', function (e) {
-            e.preventDefault(); // prevent hard jump, the default behavior
-
-            var target = $(this).attr("href");
-
-            if (target == '#') {
-                var offset = 0
-            } else {
-                var offset = $(target).offset().top;
-                
-                if (target == '#home') {
-                    offset = 0
-                }
-
-                // perform animated scrolling by getting top-position of target-element and set it as scroll target
-                $('html, body').stop().animate({
-                    scrollTop: offset
-                }, 600, function () {
-                    //location.hash = target; //attach the hash (#jumptarget) to the pageurl
-                });
-            }
+            $('a[href*=\\#]').bind('click', function (e) {
             
 
-            return false;
+            if($(this).attr('data-target') == 'new'){
+                 
+            } else {
+                e.preventDefault(); // prevent hard jump, the default behavior
+                var target = $(this).attr("href");            
+                if (target == '#') {
+                    var offset = 0
+                } else {
+                    if ($(target).length) {
+                        var offset = $(target).offset().top;    
+                    } else{
+                        var offset = 0
+                    }
+                    if (target == '#home') {
+                        offset = 0
+                    }
+
+                    // perform animated scrolling by getting top-position of target-element and set it as scroll target
+                    $('html, body').stop().animate({
+                        scrollTop: offset
+                    }, 600, function () {
+                        //location.hash = target; //attach the hash (#jumptarget) to the pageurl
+                    });
+                }
+                return false;
+            }
+
+            
+            
+
+            
         });
 
         $(window).scroll(function () {

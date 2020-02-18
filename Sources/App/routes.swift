@@ -56,22 +56,27 @@ public func routes(_ router: Router) throws {
     router.get ("legal") { req in
         return try req.view().render("legal")
     }
-    
-    router.get ("owpg-main") { req in
-        return try req.view().render("owpg-main")
+
+    router.get ("real-estate") { req in
+        return try req.view().render("real-estate")
+
     }
     
     router.get ("incorporation") { req in
-        return try req.view().render("incorporation-01")
+        return try req.view().render("incorporation-03")
     }
     
-    router.get ("pricing") { req in
+    router.get ("pricing") { req  in
         return try req.view().render("pricing")
     }
     
-    /*router.get ("incorporation", "02") { req in
+    router.get ("dev-Vishnu") { req in
+        return "Its Working nowww..."
+    }
+    
+     router.get ("incorporation", "02") { req in
         return try req.view().render("incorporation-02")
-    }*/
+    }
     
     /*router.get("contactAdded") { req -> Future<View> in
     

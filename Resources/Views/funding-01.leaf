@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      
+
 	   <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27239837-5"></script>
       <script>
@@ -9,8 +9,8 @@
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 		  gtag('config', 'UA-27239837-5');
-	  </script> 
-	   
+	  </script>
+
 	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,7 +71,7 @@
 				<p>ONE WAY PATH</p>
 				<p>group</p>
 				</h1>
-				
+
 			</figure>
 			<!-- <ul>
          		<li>
@@ -161,7 +161,7 @@
 								<td><a id="disabled" href="#">1</a></td>
 							</tr>
 							<tr>
-								
+
 								<td><a id="disabled" href="#">2</a></td>
 								<td><a id="disabled" href="#">3</a></td>
 								<td><a id="disabled" href="#">4</a></td>
@@ -307,8 +307,8 @@
 			</figure>
 		</section> -->
 
-		
-		  
+
+
 		  <section id="detail-form" data-identifier="page-section">
 			<figure>
 				<h2>SIGNUP TO OUR NEWSLETTER</h2>
@@ -320,7 +320,7 @@
 					<button type="submit">Submit</button>
 				</form>
 			</figure>
-		</section> 
+		</section>
 
         <section id="bio" data-identifier="page-section">
          	<figure>
@@ -347,7 +347,7 @@
 
 	    	    <address>
 	    	    	<p><b>E-Mail:</b> info@onewaypath.com</p>
-	    	    	<p><b>Phone:</b> +1 416.840.5710</p>
+	    	    	<p><b>Phone:</b> +1 416.840.5711</p>
 	    	    </address>
 
      			<!-- <ul>
