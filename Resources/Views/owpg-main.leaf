@@ -50,7 +50,7 @@
         <p>group</p>
       </h1>
       <!-- <p><img src="./owpg-main/images/logo-bottom-border-img.png" alt="" /></p> -->
-      <figure> <span class="d-block mt-50">liv.a.ble./*livab(a)//</span> <span><b>adjective:</b>worth living; enjoyable</span> </figure>
+      <figure> <span class="d-block mt-50">liv.a.ble./*livab(a)//</span> <span><b>adjective : </b>worth living; enjoyable</span> </figure>
     </figure>
     
     <!-- <ul>
@@ -134,17 +134,17 @@
         
         <p>Vise President and Chief Design Officer</p>
       </h3>
-      
-      <h3> <img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
-        <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
-        <span>Ianne Beth <br>Santos</span>
-        <p>Internal Auditor</p>
-      </h3>
       <h3> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
-        <span>Mery Ann <br>Therese Gime </span>
+        <span>Ianne Beth<br>Santos</span>
+        <p>Internal Auditor</p>
+      </h3>
+      <h3> <img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
+        <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
+        <span>Mary Ann<br>Therese Gime</span>
         <p>Administrative Assistant</p>
       </h3>
+      
     </figure>
   </section>
   

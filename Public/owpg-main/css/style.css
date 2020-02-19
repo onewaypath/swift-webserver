@@ -294,8 +294,8 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
   content: "";
   top: calc(50% - 2px);
   height: 2px;
-  width: 80px;
-  left: -100px;
+  width: 135px;
+  left: -150px;
   background-color: #000;
 }
 section:nth-child(1) figure h1 p:nth-child(2):before{
@@ -303,8 +303,8 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
   content: "";
   top: calc(50% - 2px);
   height: 2px;
-  width: 80px;
-  right: -100px;
+  width: 135px;
+  right: -150px;
   background-color: #000;
 }
 
@@ -1056,8 +1056,8 @@ section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
 section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 7px; width: 100px;
                                                           margin: auto;}
 section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
-                                                          width: 100px;}
-section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 30px; display: table; border: 2px solid;                                                           width: 100px;}
+                                                          width: 100px; padding: 10px;}
+section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 30px; display: table; border: 2px solid; width: 100px; padding: 10px;}
 section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;}
 
 @media (max-width:767px){
