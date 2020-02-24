@@ -53,7 +53,11 @@ public func routes(_ router: Router) throws {
         return try req.view().render("funding-02")
     }*/
     
-    router.get ("legal") { req in
+    router.get ("edgehill") { req in
+        return try req.view().render("edgehill-3")
+    }
+    
+    /* router.get ("legal") { req in
         return try req.view().render("legal")
     }
 
@@ -76,7 +80,7 @@ public func routes(_ router: Router) throws {
     
      router.get ("incorporation", "02") { req in
         return try req.view().render("incorporation-02")
-    }
+    }  */
     
     /*router.get("contactAdded") { req -> Future<View> in
     
