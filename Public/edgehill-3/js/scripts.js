@@ -62,6 +62,8 @@
         $(window).scroll(function () {
             var scrollDistance = $(window).scrollTop();
             $('[data-identifier="page-section"]').each(function (i) {
+
+                var top = $(this).position().top;
                 if ($(this).position().top <= scrollDistance) {
                     $("nav a").removeAttr('data-active');
                     $("nav a").eq(i).attr('data-active', '1');
