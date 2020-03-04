@@ -35,6 +35,7 @@ img{
   width:100%;
   background: #dae1e7;
   box-sizing: border-box;
+  overflow: hidden;
 }
 ul, li{
   list-style:none;
@@ -174,6 +175,7 @@ nav a{
 }
 nav a span{
   opacity: 0;
+    text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -186,24 +188,27 @@ nav a img{
 nav a:hover, nav a[data-active="1"]{
   background: #fff;
 }
-nav a:hover span, nav a[data-active="1"] span{
+nav a:hover span, nav a[data-active="1"] span,
+nav > div > a > span{
   opacity: 1;
 }
-nav a:hover img:last-child, nav a[data-active="1"] img:last-child{
+nav a:hover img:last-child, nav a[data-active="1"] img:last-child,
+nav > div > a img:last-child{
   display: block;
 }
-nav a:hover img:first-child, nav a[data-active="1"] img:first-child{
+nav a:hover img:first-child, nav a[data-active="1"] img:first-child,
+nav > div > a img:first-child{
   display: none;
 }
 nav{
-  max-width: 205px;
+  max-width: 260px;
   width: 100%;
 }
-a:hover {color: #cd9933; 	}
+a:hover {color: #cd9933;  }
 nav:after{
   position: absolute;
   content: "";
-  right: 70px;
+  right: 110px;
   top: 0;
   height: 100%;
   width: 1px;
@@ -222,6 +227,17 @@ nav a img:last-child{
 }
 nav button{
   display: none;
+}
+
+nav > div> div {
+    margin-left: 60px;
+}
+nav > div > a{
+  max-width: 225px;
+  background-color: #fff;
+}
+nav > div > a span{
+  text-transform: uppercase;
 }
 
 #home span {font-family: 'Open Sans', sans-serif; font-style: italic;}
@@ -257,7 +273,7 @@ section:nth-child(1) h1, section:nth-child(1) p{
 section:nth-child(1) p img{
   display: block;
   position: absolute;
-  top: 170%;
+  top: 120%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -293,7 +309,7 @@ section:nth-child(1) figure h1 p:nth-child(2){
   position: relative;
   color: #000;
 }
-.edge_hill section:nth-child(1) figure h1 p:nth-child(2):after{
+section:nth-child(1) figure h1 p:nth-child(2):after{
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -302,7 +318,7 @@ section:nth-child(1) figure h1 p:nth-child(2){
   left: -90px;
   background-color: #000;
 }
-.edge_hill section:nth-child(1) figure h1 p:nth-child(2):before{
+section:nth-child(1) figure h1 p:nth-child(2):before{
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -641,17 +657,17 @@ footer p:nth-child(4){
 .number_section sup { top: -.3em; left: -5px;}
 .number_section h4 { border: 3px solid #cd9933; height: 130px; line-height: 130px; font-size: 30px;}
 .number_section .blog{background: #fff;  display: block; height: 150px; padding: 10px; width: 150px;
-	                  margin: auto;}
+                    margin: auto;}
 .number_section p {font-weight: 500;}
 .text_wrap {margin-top: 6rem;}
 .location_section img{ margin: 0 auto 30px; display: table; border: 2px solid; padding: 10px; width: 60%;
-	                   object-fit: cover;}
+                     object-fit: cover;}
 .value_section p { line-height: 26px; font-weight: 500; font-size: 20px;}
 .value_section img { width: 60px;  margin-right: 10px;}
 .team_wrap .title {color: #cd9933; margin-bottom: 0; text-transform: uppercase;}
 .team_wrap .info_wrap {margin-top: 2rem;}
 .team_wrap .position {margin-bottom: 0; font-weight: 500; font-style: italic;}
-.team_wrap label{margin-bottom: 0; display: block; font-weight: 600; margin-top: 2rem; font-style: italic;
+.team_wrap label{margin-bottom: 0; display: block; font-weight: 600; font-style: italic;
                       font-size: 20px;}
 .team_wrap .info_wrap p {font-weight: 500;}
 
@@ -715,7 +731,7 @@ footer p:nth-child(4){
       margin: 0 0 15px;
   }
   nav{
-      max-width: 160px;
+      max-width: 200px;
   }
   nav a figure{
       margin: 0 10px 0 0;
@@ -735,6 +751,12 @@ footer p:nth-child(4){
       font-size: 22px;
       line-height: 34px;
       margin: 0 0 30px;
+  }
+  nav > div > a {
+      max-width: 155px;
+  }
+  nav > div> div {
+      margin-left: 25px;
   }
 }
 
@@ -800,7 +822,7 @@ footer p:nth-child(4){
       left: 20px;
       max-width: 110px;
   }
-  nav div{
+  nav > div{
       background: #e4eaef;
       padding: 30px 0 30px 25px;
       display: none;
@@ -833,6 +855,10 @@ footer p:nth-child(4){
       max-width: 100%;
       line-height: 32px;
       margin: 30px 0 0;
+  }
+  nav > div> div {
+      margin-left: 0;
+      padding: 0;
   }
 }
 
@@ -1067,11 +1093,11 @@ footer p:nth-child(4){
   }
 } 
 span.d-block {display: block;}
-#services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
-                           top: -150px; left: 50%;}
+/* #services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
+                           top: -150px; left: 50%;} */
 #services {position: relative;}
-section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
-                         top: -165px; border-radius: 50%;}
+/* section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
+                         top: -165px; border-radius: 50%;} */
 .mt-50 {margin-top: 50px;}
 
 
@@ -1089,14 +1115,14 @@ section:nth-child(2)  img, section:nth-child(2) a img { margin: 0 auto 30px; dis
 section:nth-child(2) span, section:nth-child(2) a span {border-bottom: none;     font-size: 22px;} 
 
 @media (max-width:767px){
-	
-	section:nth-child(2) h3, section:nth-child(2) a, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
-	section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
-	section:nth-child(2) img, section:nth-child(2) a img, section:nth-child(3) img, section:nth-child(3) a img, section:nth-child(4) img, section:nth-child(4) a img { margin: 15px auto 15px;}
-	#home .text-wrap {padding: 0; font-style: italic;}
-	section:nth-child(2) span, section:nth-child(2) a span {margin-bottom: 2rem;}
-	.text_wrap b {display: block;}
-	.location_section .d-none {display: block !important; width: 100% !important;}
-	.location_section .mobile_none {display: none;}
-	
+  
+  section:nth-child(2) h3, section:nth-child(2) a, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
+  section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
+  section:nth-child(2) img, section:nth-child(2) a img, section:nth-child(3) img, section:nth-child(3) a img, section:nth-child(4) img, section:nth-child(4) a img { margin: 15px auto 15px;}
+  #home .text-wrap {padding: 0; font-style: italic;font-size: 18px;}
+  section:nth-child(2) span, section:nth-child(2) a span {margin-bottom: 2rem;}
+  .text_wrap b {display: block;}
+  .location_section .d-none {display: block !important; width: 100% !important;}
+  .location_section .mobile_none {display: none;}
+  
 }

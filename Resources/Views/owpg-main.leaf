@@ -13,7 +13,7 @@
   <button> <img src="./owpg-main/images/menu-icon.png" alt="Menu selector"> </button>
   <div> <a href="#home" data-active="1">
     <figure> <img src="./owpg-main/images/home-icon-dark.png" alt="Home icon"> <img src="./owpg-main/images/home-icon.png" alt="Home icon"> </figure>
-    <span>home</span> </a> 
+    <span>homes</span> </a> 
     <!--<a href="#services">
 				<figure>
 					<img src="./owpg-main/images/setting-icon-dark.png" alt="Services icon">
@@ -50,7 +50,8 @@
         <p>group</p>
       </h1>
       <!-- <p><img src="./owpg-main/images/logo-bottom-border-img.png" alt="" /></p> -->
-      <figure> <span class="d-block mt-50">liv.a.ble./*livab(a)//</span> <span><b>adjective : </b>worth living; enjoyable</span> </figure>
+      <figure> <em><span class="d-block mt-50">liv.a.ble./*livab(a)//</span> <span><b>adjective : </b>worth living; enjoyable</span></em> </figure>
+      <p><img src="./owpg-main/images/logo-bottom-border-img.png" alt=""></p>
     </figure>
     
     <!-- <ul>
@@ -96,14 +97,21 @@
 
             			<blockquote>Whether you are seeking loans to expand your existing business or to purchase a new business, our advice will help you along the way. We can structure loans secured against assets or guaratees to help you meet your objectives.</blockquote> --> 
     </figure>
+    <figure>  
+      <h2>Home</h2>
+      <h3> <img src="./owpg-main/images/Barrie-ontario.png" alt="Incorporation" title="Incorporation" /> 
+        <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
+        <span>Barrie, Ontario</span> </h3>
+      <h3> <img src="./owpg-main/images/mc-chomtong.png" alt="Purchase and Sale" title="Purchase and Sale" /> 
+        <!-- <img src="./owpg-main/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> --> 
+        <span>Peterborough, Ontario</span> </h3>
+    </figure>
   </section>
   <section id="bio">
     <figure>
       <h2>Values</h2>
-      <p>One Way Path Group is creating the world's most liveable communities <br> by developing high density
-        living spaces that are: </p>
-    </figure>
-    <figure>
+      <p>One Way Path Group is pursuing a vision of creating the world's most liveable communities. <br> Our mission is to develop high density living speces that are:
+   
       <h3> <img src="owpg-main/images/values-affordable.png" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Affordable</span> </h3>
@@ -121,28 +129,27 @@
   <section id="team" data-identifier="page-section">
     <figure>
       <h2>Team</h2>
-    </figure>
-    <figure>
+   
       <h3> <img src="owpg-main/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Alex Young</span>
-        <p>President and Chief Executive Officer</p>
+        <p><em>President and Chief Executive Officer</em></p>
       </h3>
       <h3 > <img src="owpg-main/images/photo-miriam.jpg" alt="Incorporation" title="Incorporation" class="mr-0"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Miriam Young </span>
         
-        <p>Vise President and Chief Design Officer</p>
+        <p><em>Vise President and Chief Design Officer</em></p>
       </h3>
       <h3> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Ianne Beth<br>Santos</span>
-        <p>Internal Auditor</p>
+        <p><em>Internal Auditor</em></p>
       </h3>
       <h3> <img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Mary Ann<br>Therese Gime</span>
-        <p>Administrative Assistant</p>
+        <p><em>Administrative Assistant</em></p>
       </h3>
       
     </figure>

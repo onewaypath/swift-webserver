@@ -52,7 +52,7 @@
             // perform animated scrolling by getting top-position of target-element and set it as scroll target
             $('html, body').stop().animate({
                 scrollTop: offset
-            }, 600, function () {
+            }, 635, function () {
                 //location.hash = target; //attach the hash (#jumptarget) to the pageurl
             });
 
@@ -62,9 +62,11 @@
         $(window).scroll(function () {
             var scrollDistance = $(window).scrollTop();
             $('[data-identifier="page-section"]').each(function (i) {
+
+                var top = $(this).position().top;
                 if ($(this).position().top <= scrollDistance) {
-                    $("nav a").removeAttr('data-active');
-                    $("nav a").eq(i).attr('data-active', '1');
+                    $("nav > div > div a").removeAttr('data-active');
+                    $("nav > div > div a").eq(i).attr('data-active', '1');
                 }
             });
         }).scroll();
@@ -74,17 +76,17 @@
         $(window).resize(function () {
             wid = $(window).width();
             if (wid > 991) {
-                $("nav div").show();
+                $("nav > div").show();
             }
             else {
-                $("nav div").hide();
+                $("nav > div").hide();
             }
         });
 
         $("nav button").click(function () {
             if (wid <= 991)
             {
-                $("nav div").show("slow");
+                $("nav > div").show("slow");
                 $(this).hide("slow");
             }
         });
@@ -93,12 +95,12 @@
             e.preventDefault();
             $("#testimonials p").show("slow");
             $("#testimonials a").hide();
-			// setTimeout(function(){
-	            var maxHeight = Math.max.apply(null, $("#testimonials div div div").map(function () {
-				    return $(this).height();
-				}).get());
-				$("#testimonials div div div").css('min-height',maxHeight);
-			// },100);
+            // setTimeout(function(){
+                var maxHeight = Math.max.apply(null, $("#testimonials div div div").map(function () {
+                    return $(this).height();
+                }).get());
+                $("#testimonials div div div").css('min-height',maxHeight);
+            // },100);
 
         });
 
@@ -130,10 +132,10 @@
             $("#faq a").hide();
 
             setTimeout(function(){
-	            var maxHeight = Math.max.apply(null, $("#faq div div div").map(function () {
-				    return $(this).height();
-				}).get());
-				$("#faq div div div").css('min-height',maxHeight);
+                var maxHeight = Math.max.apply(null, $("#faq div div div").map(function () {
+                    return $(this).height();
+                }).get());
+                $("#faq div div div").css('min-height',maxHeight);
             },700);
         });
 
@@ -159,21 +161,21 @@
         $("nav a").click(function () {
             if (wid <= 991)
             {
-                $("nav div").hide("slow");
+                $("nav > div").hide("slow");
                 $("nav button").show("slow");
             }
         });
         $("nav button").on('touchend', function () {
             if (wid <= 991)
             {
-                $("nav div").show("slow");
+                $("nav > div").show("slow");
                 $(this).hide("slow");
             }
         });
         $("nav a").on('touchend', function () {
             if (wid <= 991)
             {
-                $("nav div").hide("slow");
+                $("nav > div").hide("slow");
                 $("nav button").show("slow");
             }
         });

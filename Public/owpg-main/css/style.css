@@ -253,7 +253,7 @@ section:nth-child(1) h1, section:nth-child(1) p{
 section:nth-child(1) p img{
   display: block;
   position: absolute;
-  top: 170%;
+  top: 130%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -371,7 +371,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span{
   display: inline-block;
   padding-bottom: 10px;
   font-family: 'oklahomabold';
-  text-transform: uppercase;
+  text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
@@ -380,6 +380,25 @@ section:nth-child(2) h3 span, section:nth-child(2) a span{
 }
 section:nth-child(2) figure blockquote{
   margin: 30px 0 0;
+}
+section:nth-child(2) figure:last-child{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: -40px;
+}
+section:nth-child(2) figure:last-child h2{
+  width: 100%;
+  padding-bottom: 0;
+  margin-top: 70px;
+}
+section:nth-child(2) figure:last-child h3{
+  margin: 20px 0 0;
 }
 
 
@@ -390,6 +409,7 @@ section:nth-child(3), footer{
 }
 section:nth-child(3) p{
   text-align: center;
+  margin-bottom: 70px;
 }
 section:nth-child(3) p:nth-child(3){
   margin: 70px auto;
@@ -459,6 +479,7 @@ section:nth-child(3) form button:hover{
   background-color: #3e3e3e;
   color: #fff;
 }
+
 
 /* Testimonials Section [ Section 4 ]
  ========================================= */
@@ -629,6 +650,26 @@ footer p:nth-child(4){
   line-height: 30px;
   text-align: center;
 }
+
+/* -------------------------- */
+span.d-block {display: block;}
+/* #services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
+                           top: -150px; left: 50%;}
+#services {position: relative;}
+section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
+                         top: -165px; border-radius: 50%;} */
+.mt-50 {margin-top: 50px;}
+section:nth-child(2) h3, section:nth-child(2) a {width: 25%;}
+section:nth-child(3) h3, section:nth-child(3) a {width: 25%; float: left; text-align: center;padding: 50px 0;}
+section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;padding: 100px 15px;margin: 0;}
+section:nth-child(4) span {color: #fff; margin: 16px 0; display: block;}
+section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
+section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 7px; width: 100px;
+                                                          margin: auto;}
+section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
+                                                          width: 100px; padding: 10px;}
+section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid; width: 130px;}
+section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;padding-bottom: 0;}
 
 
 /* Media Screen
@@ -878,6 +919,7 @@ footer p:nth-child(4){
   section:nth-child(2) h3, section:nth-child(2) a{
       width: 100%;
       order: 2;
+      margin: 0;
   }
   /* section:nth-child(3) dd, section:nth-child(3) dd figcaption{
           display: table;
@@ -960,6 +1002,17 @@ footer p:nth-child(4){
   section#faq h2:nth-of-type(1){
       display: none;
   }
+  section:nth-child(2) figure:last-child{
+    margin-bottom: 0;
+  }
+  section:nth-child(3) h3, section:nth-child(3) a{
+    padding: 20px 0;
+  }
+  section:nth-child(2) h3, section:nth-child(2) a, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
+  section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
+  section:nth-child(4) h3, section:nth-child(4) a{
+    padding: 40px 15px;
+  }
 }
 
 
@@ -1041,27 +1094,4 @@ footer p:nth-child(4){
       right: -43px;
   }
 } 
-span.d-block {display: block;}
-#services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
-                           top: -150px; left: 50%;}
-#services {position: relative;}
-section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
-                         top: -165px; border-radius: 50%;}
-.mt-50 {margin-top: 50px;}
-section:nth-child(2) h3, section:nth-child(2) a {width: 25%;}
-section:nth-child(3) h3, section:nth-child(3) a {width: 25%; float: left; text-align: center;}
-section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;}
-section:nth-child(4) span {color: #fff; margin: 16px 0; display: block;}
-section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
-section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 7px; width: 100px;
-                                                          margin: auto;}
-section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
-                                                          width: 100px; padding: 10px;}
-section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 30px; display: table; border: 2px solid; width: 100px; padding: 10px;}
-section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;}
 
-@media (max-width:767px){
-	
-	section:nth-child(2) h3, section:nth-child(2) a, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
-	section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
-}
