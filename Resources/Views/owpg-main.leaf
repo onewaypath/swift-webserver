@@ -13,7 +13,7 @@
   <button> <img src="./owpg-main/images/menu-icon.png" alt="Menu selector"> </button>
   <div> <a href="#home" data-active="1">
     <figure> <img src="./owpg-main/images/home-icon-dark.png" alt="Home icon"> <img src="./owpg-main/images/home-icon.png" alt="Home icon"> </figure>
-    <span>homes</span> </a> 
+    <span>home</span> </a> 
     <!--<a href="#services">
 				<figure>
 					<img src="./owpg-main/images/setting-icon-dark.png" alt="Services icon">
@@ -98,7 +98,7 @@
             			<blockquote>Whether you are seeking loans to expand your existing business or to purchase a new business, our advice will help you along the way. We can structure loans secured against assets or guaratees to help you meet your objectives.</blockquote> --> 
     </figure>
     <figure>  
-      <h2>Home</h2>
+      <h2>Homes</h2>
       <h3> <img src="./owpg-main/images/Barrie-ontario.png" alt="Incorporation" title="Incorporation" /> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Barrie, Ontario</span> </h3>
