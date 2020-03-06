@@ -86,7 +86,7 @@ p b{
 }
 h2{
   color: #080002;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: normal;
   font-size: 38px;
   line-height: normal;
@@ -346,16 +346,16 @@ section:nth-child(2) h3, section:nth-child(2) a{
   -o-transition: all 0s ease 0s;
   transition: all 0s ease 0s;
 }
-section:nth-child(2) a:hover{
+/* section:nth-child(2) a:hover{
   color: #fff;
   background: #dba334;
-}
+} */
 section:nth-child(2) a:hover span{
   border-color: #fff;
 }
-section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
+/* section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
   display: none;
-}
+} */
 section:nth-child(2) a:hover img:nth-of-type(2){
   display: table;
 }
@@ -399,6 +399,12 @@ section:nth-child(2) figure:last-child h2{
 }
 section:nth-child(2) figure:last-child h3{
   margin: 20px 0 0;
+}
+section:nth-child(2) figure:last-child h3 a{
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -661,14 +667,14 @@ section#services:after { content: ""; width: 17px; height: 17px; background: #cd
 .mt-50 {margin-top: 50px;}
 section:nth-child(2) h3, section:nth-child(2) a {width: 25%;}
 section:nth-child(3) h3, section:nth-child(3) a {width: 25%; float: left; text-align: center;padding: 50px 0;}
-section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;padding: 100px 15px;margin: 0;}
+section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;padding: 100px 15px;margin: 0;text-decoration: none;}
 section:nth-child(4) span {color: #fff; margin: 16px 0; display: block;}
 section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
 section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 7px; width: 100px;
                                                           margin: auto;}
 section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
-                                                          width: 100px; padding: 10px;}
-section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid; width: 130px;}
+                                                          width: 110px; padding: 7px;}
+section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid; width: 110px;}
 section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;padding-bottom: 0;}
 
 

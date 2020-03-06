@@ -99,10 +99,10 @@
     </figure>
     <figure>  
       <h2>Homes</h2>
-      <h3> <img src="./owpg-main/images/Barrie-ontario.png" alt="Incorporation" title="Incorporation" /> 
+      <h3> <a href="https://onewaypath.com/edgehill" title=""><img src="./owpg-main/images/Barrie-ontario.png" alt="Incorporation" title="Incorporation" /> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
-        <span>Barrie, Ontario</span> </h3>
-      <h3> <img src="./owpg-main/images/mc-chomtong.png" alt="Purchase and Sale" title="Purchase and Sale" /> 
+        <span>Barrie, Ontario</span></a> </h3>
+      <h3> <img src="./owpg-main/images/Peterborough-Ontario.png" alt="Purchase and Sale" title="Purchase and Sale" /> 
         <!-- <img src="./owpg-main/images/service-2.png" alt="Purchase and Sale" title="Purchase and Sale" /> --> 
         <span>Peterborough, Ontario</span> </h3>
     </figure>
@@ -130,28 +130,28 @@
     <figure>
       <h2>Team</h2>
    
-      <h3> <img src="owpg-main/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
+       <a href="https://onewaypath.com/bio-alex" title=""><img src="owpg-main/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Alex Young</span>
         <p><em>President and Chief Executive Officer</em></p>
-      </h3>
-      <h3 > <img src="owpg-main/images/photo-miriam.jpg" alt="Incorporation" title="Incorporation" class="mr-0"> 
+        </a>
+      
+       <a href="https://onewaypath.com/bio-miriam" title=""><img src="owpg-main/images/photo-miriam.jpg" alt="Incorporation" title="Incorporation" class="mr-0"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Miriam Young </span>
         
-        <p><em>Vise President and Chief Design Officer</em></p>
-      </h3>
-      <h3> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
+        <p><em>Vise President and Chief Design Officer</em></p></a>
+      
+      <a href="https://onewaypath.com/bio-ianne" title=""> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Ianne Beth<br>Santos</span>
-        <p><em>Internal Auditor</em></p>
-      </h3>
-      <h3> <img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
+        <p><em>Internal Auditor</em></p></a>
+     
+       <a href="https://onewaypath.com/bio-mary" title=""><img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Mary Ann<br>Therese Gime</span>
-        <p><em>Administrative Assistant</em></p>
-      </h3>
-      
+        <p><em>Administrative Assistant</em></p></a>
+            
     </figure>
   </section>
   

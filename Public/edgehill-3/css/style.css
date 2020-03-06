@@ -87,7 +87,7 @@ p b{
 }
 h2{
   color: #080002;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: normal;
   font-size: 38px;
   line-height: normal;
@@ -188,16 +188,13 @@ nav a img{
 nav a:hover, nav a[data-active="1"]{
   background: #fff;
 }
-nav a:hover span, nav a[data-active="1"] span,
-nav > div > a > span{
+nav a:hover span, nav a[data-active="1"] span{
   opacity: 1;
 }
-nav a:hover img:last-child, nav a[data-active="1"] img:last-child,
-nav > div > a img:last-child{
+nav a:hover img:last-child, nav a[data-active="1"] img:last-child{
   display: block;
 }
-nav a:hover img:first-child, nav a[data-active="1"] img:first-child,
-nav > div > a img:first-child{
+nav a:hover img:first-child, nav a[data-active="1"] img:first-child{
   display: none;
 }
 nav{
@@ -234,10 +231,14 @@ nav > div> div {
 }
 nav > div > a{
   max-width: 225px;
-  background-color: #fff;
 }
 nav > div > a span{
   text-transform: uppercase;
+  opacity: 1;
+  color: #000;
+}
+nav > div > a:hover span{
+  color: #ca972b;
 }
 
 #home span {font-family: 'Open Sans', sans-serif; font-style: italic;}
@@ -756,7 +757,10 @@ footer p:nth-child(4){
       max-width: 155px;
   }
   nav > div> div {
-      margin-left: 25px;
+      margin-left: 45px;
+  }
+  nav:after{
+      right: 80px;
   }
 }
 
