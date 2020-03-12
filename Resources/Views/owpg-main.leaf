@@ -11,7 +11,7 @@
 <body>
 <nav>
   <button> <img src="./owpg-main/images/menu-icon.png" alt="Menu selector"> </button>
-  <div> <a href="#home" data-active="1">
+  <div class="scroll-menu-container"> <a href="#home" data-active="1">
     <figure> <img src="./owpg-main/images/home-icon-dark.png" alt="Home icon"> <img src="./owpg-main/images/home-icon.png" alt="Home icon"> </figure>
     <span>home</span> </a> 
     <!--<a href="#services">
@@ -130,24 +130,24 @@
     <figure>
       <h2>Team</h2>
    
-       <a href="https://onewaypath.com" title=""><img src="owpg-main/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
+       <a href="https://onewaypath.com/bio-ayoung" title=""><img src="owpg-main/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Alex Young</span>
         <p><em>President and Chief Executive Officer</em></p>
         </a>
       
-       <a href="https://onewaypath.com" title=""><img src="owpg-main/images/photo-miriam.jpg" alt="Incorporation" title="Incorporation" class="mr-0"> 
+       <a href="https://onewaypath.com/bio-myoung" title=""><img src="owpg-main/images/photo-miriam.jpg" alt="Incorporation" title="Incorporation" class="mr-0"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Miriam Young </span>
         
         <p><em>Vise President and Chief Design Officer</em></p></a>
       
-      <a href="https://onewaypath.com" title=""> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
+      <a href="https://onewaypath.com/bio-ibsantos" title=""> <img src="owpg-main/images/photo-beth.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Ianne Beth<br>Santos</span>
         <p><em>Internal Auditor</em></p></a>
      
-       <a href="https://onewaypath.com" title=""><img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
+       <a href="https://onewaypath.com/bio-matgime" title=""><img src="./owpg-main/images/photo-mary-ann.jpg" alt="Incorporation" title="Incorporation"> 
         <!-- <img src="./owpg-main/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
         <span>Mary Ann<br>Therese Gime</span>
         <p><em>Administrative Assistant</em></p></a>
