@@ -17,7 +17,6 @@
   font-style: normal;
 }
 
-
 /* Basic css
  ========================================= */
 body{
@@ -346,18 +345,23 @@ section:nth-child(2) h3, section:nth-child(2) a{
   -o-transition: all 0s ease 0s;
   transition: all 0s ease 0s;
 }
-/* section:nth-child(2) a:hover{
-  color: #fff;
-  background: #dba334;
-} */
+section:nth-child(2) a{
+-webkit-transition: all .25s;
+-moz-transition: all .25s;
+-ms-transition: all .25s;
+-o-transition: all .25s;
+transition: all .25s;
+}
 section:nth-child(2) a:hover span{
   border-color: #fff;
 }
-/* section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
+section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
   display: none;
-} */
+}
 section:nth-child(2) a:hover img:nth-of-type(2){
   display: table;
+  background-color: #dae1e7;
+  border: 1px solid #dae1e7;
 }
 section:nth-child(2) h3 img, section:nth-child(2) a img{
   margin: 0 auto 30px;
