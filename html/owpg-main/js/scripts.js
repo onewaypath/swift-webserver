@@ -38,11 +38,9 @@
                     }
                 });
 
-        $('a[href*=\\#]').bind('click', function (e) {
+        $('a[href*=\\#]').on('click touchstart tap',function (e) {
             e.preventDefault(); // prevent hard jump, the default behavior
-
             var target = $(this).attr("href");
-
             var offset = $(target).offset().top;
 
             if (target == '#home') {
@@ -114,12 +112,12 @@
             e.preventDefault();
             $("#testimonials p").show("slow");
             $("#testimonials a").hide();
-			// setTimeout(function(){
-	            var maxHeight = Math.max.apply(null, $("#testimonials div div div").map(function () {
-				    return $(this).height();
-				}).get());
-				$("#testimonials div div div").css('min-height',maxHeight);
-			// },100);
+            // setTimeout(function(){
+                var maxHeight = Math.max.apply(null, $("#testimonials div div div").map(function () {
+                    return $(this).height();
+                }).get());
+                $("#testimonials div div div").css('min-height',maxHeight);
+            // },100);
 
         });
 
@@ -151,10 +149,10 @@
             $("#faq a").hide();
 
             setTimeout(function(){
-	            var maxHeight = Math.max.apply(null, $("#faq div div div").map(function () {
-				    return $(this).height();
-				}).get());
-				$("#faq div div div").css('min-height',maxHeight);
+                var maxHeight = Math.max.apply(null, $("#faq div div div").map(function () {
+                    return $(this).height();
+                }).get());
+                $("#faq div div div").css('min-height',maxHeight);
             },700);
         });
 
