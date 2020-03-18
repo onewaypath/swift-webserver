@@ -407,9 +407,9 @@ section:nth-child(2) figure blockquote{
 /* Bio Section [ Section 3 ]
  ========================================= */
 section:nth-child(3) {background: transparent;}
- footer{
+/*  footer{
   background-color: #cd9933;
-}
+} */
 section:nth-child(3) p{
   text-align: center;
 }
@@ -624,7 +624,7 @@ footer address:nth-child(3){
   margin: 45px auto 50px;
   max-width: 500px;
   display: table;
-  border:1px solid rgb(218, 225, 231);
+  border: 1px solid rgb(205, 152, 50);
   padding: 20px;
   width: 100%;
 }
@@ -665,7 +665,7 @@ footer p:nth-child(4){
                      object-fit: cover;}
 .value_section p { line-height: 26px; font-weight: 500; font-size: 20px;}
 .value_section img { width: 60px;  margin-right: 10px;}
-.team_wrap .title {color: #cd9933; margin-bottom: 0; text-transform: uppercase;}
+.team_wrap .title { margin-bottom: 0; text-transform: uppercase;}
 .team_wrap .info_wrap {margin-top: 2rem;}
 .team_wrap .position {margin-bottom: 0; font-weight: 500; font-style: italic;}
 .team_wrap label{margin-bottom: 0; display: block; font-weight: 600; font-style: italic;
