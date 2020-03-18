@@ -14,12 +14,14 @@ let package = Package(
 
     ],
     targets: [
-        .target(name: "activeCampaignApi", dependencies: ["Vapor"], path: "activeCampaignApi"),
-        .target(name: "App", dependencies: ["Leaf", "Vapor", "activeCampaignApi"]),
+      /*  .target(name: "activeCampaignApi", dependencies: ["Vapor"], path: "activeCampaignApi"),
+        .target(name: "App", dependencies: ["Leaf", "Vapor", "activeCampaignApi"]),*/
+        .target(name: "App", dependencies: ["Leaf", "Vapor"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"]),
+        /*
         .testTarget(name: "activeCampaignApiTests", dependencies: ["activeCampaignApi"], path: "activeCampaignApiTests")
-
+        */
     ]
 )
 
