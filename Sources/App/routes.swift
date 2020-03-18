@@ -1,5 +1,6 @@
 import Vapor
 import activeCampaignApi
+import Foundation
 
 struct UsersFilters: Content {
     var firstName: String
@@ -12,7 +13,13 @@ public func routes(_ router: Router) throws {
     // "It works" page
     
     
-    
+    let edgehill3Html = runUnix("cat", arguments: ["Public/edgehill-3.html"])
+    let bioayoungHtml = runUnix("cat", arguments: ["Public/bio-ayoung.html"])
+    let biomyoungHtml = runUnix("cat", arguments: ["Public/bio-myoung.html"])
+    let bioibsantosHtml = runUnix("cat", arguments: ["Public/bio-ibsantos.html"])
+    let biomatgimeHtml = runUnix("cat", arguments: ["Public/bio-matgime.html"])
+    let owpgmainHtml = runUnix("cat", arguments: ["Public/owpg-main.html"])
+  
     router.get("subscribe") { req -> Future<View> in
         
         let filters = try req.query.decode(UsersFilters.self)
@@ -42,7 +49,7 @@ public func routes(_ router: Router) throws {
    
     
     router.get { req in
-        return try req.view().render("owpg-main")
+        return try req.view().render("main-template", ["html": owpgmainHtml])
     }
     
     /*router.get ("funding", "01") { req in
@@ -53,28 +60,33 @@ public func routes(_ router: Router) throws {
         return try req.view().render("funding-02")
     }*/
     
-    router.get ("edgehill") { req in
+   /* router.get ("edgehill") { req in
         return try req.view().render("edgehill-3")
         
-    }
+    }*/
     
     router.get ("bio-ayoung") { req in
-        return try req.view().render("bio-ayoung")
+        return try req.view().render("main-template", ["html": bioayoungHtml])
         
     }
 
     router.get ("bio-ibsantos") { req in
-        return try req.view().render("bio-ibsantos")
+        return try req.view().render("main-template", ["html": bioibsantosHtml])
         
     }
 
     router.get ("bio-matgime") { req in
-        return try req.view().render("bio-matgime")
+        return try req.view().render("main-template", ["html": biomatgimeHtml])
         
     }
 
     router.get ("bio-myoung") { req in
-        return try req.view().render("bio-myoung")
+        return try req.view().render("main-template", ["html": biomyoungHtml])
+        
+    }
+    
+    router.get ("edgehill") { req in
+        return try req.view().render("main-template", ["html": edgehill3Html])
         
     }
 
@@ -148,4 +160,31 @@ public func routes(_ router: Router) throws {
 
 struct outPut: Content {
     var text = "module initialized"
+}
+
+
+func runUnix(_ command: String, commandPath: String = "/bin/", arguments: [String] = []) -> String {
+    
+    // Create a process (was NSTask on swift pre 3.0)
+    let task = Process()
+    let path = commandPath + command
+    
+    // Set the task parameters
+    task.launchPath = path
+    task.arguments = arguments
+    
+    // Create a Pipe and make the task
+    // put all the output there
+    let pipe = Pipe()
+    task.standardOutput = pipe
+    
+    // Launch the task
+    task.launch()
+    
+    // Get the data
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = String(data: data, encoding: String.Encoding.utf8)
+    
+    return (output!)
+    
 }
