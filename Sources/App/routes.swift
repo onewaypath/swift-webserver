@@ -1,12 +1,12 @@
 import Vapor
 import activeCampaignApi
-import Foundation
 
+/*
 struct UsersFilters: Content {
     var firstName: String
     var lastName: String
     var email: String
-}
+}*/
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
@@ -19,7 +19,7 @@ public func routes(_ router: Router) throws {
     let bioibsantosHtml = runUnix("cat", arguments: ["Public/bio-ibsantos.html"])
     let biomatgimeHtml = runUnix("cat", arguments: ["Public/bio-matgime.html"])
     let owpgmainHtml = runUnix("cat", arguments: ["Public/owpg-main.html"])
-  
+  /*
     router.get("subscribe") { req -> Future<View> in
         
         let filters = try req.query.decode(UsersFilters.self)
@@ -45,7 +45,7 @@ public func routes(_ router: Router) throws {
         return try req.view().render("subscribe", data)
         //return "user id #\(tester.subscriberID), First Name #\(firstName), Last Name #\(lastName), Email #\(email)"
     }
-    
+    */
    
     
     router.get { req in
@@ -157,10 +157,10 @@ public func routes(_ router: Router) throws {
         ])
     }*/
 }
-
+/*
 struct outPut: Content {
     var text = "module initialized"
 }
-
+*/
 
 
