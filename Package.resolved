@@ -128,15 +128,6 @@
         }
       },
       {
-        "package": "unixTools",
-        "repositoryURL": "https://github.com/rahyoung/unixTools.git",
-        "state": {
-          "branch": null,
-          "revision": "b7297c7b74410030d021be5472fde660976126c1",
-          "version": "1.0.2"
-        }
-      },
-      {
         "package": "URLEncodedForm",
         "repositoryURL": "https://github.com/vapor/url-encoded-form.git",
         "state": {
