@@ -1,6 +1,6 @@
 import Vapor
 /*import activeCampaignApi*/
-
+import unixTools
 /*
 struct UsersFilters: Content {
     var firstName: String
@@ -13,12 +13,13 @@ public func routes(_ router: Router) throws {
     // "It works" page
     
     
-    let edgehill3Html = runUnix("cat", arguments: ["Public/edgehill-3.html"])
-    let bioayoungHtml = runUnix("cat", arguments: ["Public/bio-ayoung.html"])
-    let biomyoungHtml = runUnix("cat", arguments: ["Public/bio-myoung.html"])
-    let bioibsantosHtml = runUnix("cat", arguments: ["Public/bio-ibsantos.html"])
-    let biomatgimeHtml = runUnix("cat", arguments: ["Public/bio-matgime.html"])
-    let owpgmainHtml = runUnix("cat", arguments: ["Public/owpg-main.html"])
+    
+    let edgehill3Html = unixTools().runUnix("cat", arguments: ["Public/edgehill-3.html"])
+    let bioayoungHtml = unixTools().runUnix("cat", arguments: ["Public/bio-ayoung.html"])
+    let biomyoungHtml = unixTools().runUnix("cat", arguments: ["Public/bio-myoung.html"])
+    let bioibsantosHtml = unixTools().runUnix("cat", arguments: ["Public/bio-ibsantos.html"])
+    let biomatgimeHtml = unixTools().runUnix("cat", arguments: ["Public/bio-matgime.html"])
+    let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/owpg-main.html"])
   /*
     router.get("subscribe") { req -> Future<View> in
         
