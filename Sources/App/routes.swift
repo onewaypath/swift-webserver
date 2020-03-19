@@ -16,11 +16,11 @@ public func routes(_ router: Router) throws {
     }*/
     
     
-    let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
+    let html = unixTools().runUnix("cat", arguments: ["Public/index.html"])
     
       
       router.get { req in
-          return try req.view().render("main-template", ["html": owpgmainHtml])
+          return try req.view().render("main-template", ["html": html])
       }
     
     
@@ -28,14 +28,15 @@ public func routes(_ router: Router) throws {
     router.get(String.parameter) { req -> Future<View> in
         
         do {
+            var html = unixTools().runUnix("cat", arguments: ["Public/index.html"])
             let htmlFile = try req.parameters.next(String.self)
             let htmlFilePath = "Public/\(htmlFile)"
-            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+            html = unixTools().runUnix("cat", arguments: [htmlFilePath])
             return try req.view().render("main-template", ["html": html])
         }
-        catch {
-            return try req.view().render("main-template", ["html": owpgmainHtml])
-        }
+        //catch {
+        //    return try req.view().render("main-template", ["html": html])
+        // }
         
         
     }
