@@ -8,11 +8,21 @@ public func routes(_ router: Router) throws {
     // html routes
     
     // render the view for the site index (where no page is identified)
+    /*
     let siteIndex = unixTools().runUnix("cat", arguments: ["Public/index.html"])
     
     router.get { req in
         return try req.view().render("main-template", ["html": siteIndex])
-    }
+    }*/
+    
+    
+    let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
+    
+      
+      router.get { req in
+          return try req.view().render("main-template", ["html": owpgmainHtml])
+      }
+    
     
     // render the view for any html page that is identified
     router.get(String.parameter) { req -> Future<View> in
