@@ -25,15 +25,15 @@ public func routes(_ router: Router) throws {
     
     
     // render the view for any html page that is identified
-    router.get(String.parameter) { req -> Future<View> in
+    router.get("OWPG",String.parameter) { req -> Future<View> in
         
-        do {
-            var html = unixTools().runUnix("cat", arguments: ["Public/index.html"])
+        
+           
             let htmlFile = try req.parameters.next(String.self)
-            let htmlFilePath = "Public/\(htmlFile)"
-            html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+            let htmlFilePath = "Public/OWPG/\(htmlFile)"
+            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
             return try req.view().render("main-template", ["html": html])
-        }
+    
         //catch {
         //    return try req.view().render("main-template", ["html": html])
         // }
