@@ -24,7 +24,7 @@ public func routes(_ router: Router) throws {
         // return try req.view().render("main-template", ["html": html])
       }
     
-    
+    /*
     // render the view for any html page that is identified
     router.get("owpg",String.parameter) { req -> Future<View> in
         
@@ -40,6 +40,6 @@ public func routes(_ router: Router) throws {
         // }
         
         
-    }
+    }*/
 }
 
