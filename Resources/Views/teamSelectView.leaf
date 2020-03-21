@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+#raw(head) 
+<body>
+	#raw(nav)
+	<div class="page-container-wrap">
+		<section id="bio" data-identifier="page-section">
+     		<figure>
+       			<figure>
+        			<h1>
+					  <p>one way path</p>
+					  <p>group</p>
+        			</h1>
+      			</figure>
+				<h3> 
+				<img src="./bios/images/#(username).jpg" alt="Incorporation" title="Incorporation">
+				</h3>
+          	</figure> 
+    		<figure>
+      			<h4>
+         			<span>#(firstname) #(lastname)</span>
+        			<p>#(position)</p>
+      			</h3>
+      			#raw(bio)
+    		</figure>
+  		</section>
+  		#raw(footer)  
+	</div>
+	#raw(script) 
+</body>
+</html>

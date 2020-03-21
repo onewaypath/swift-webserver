@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Way Path Group</title>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./bios/css/style.css" />
+</head>
+<body>
+<nav>
+  <button> <img src="./bios/images/menu-icon.png" alt="Menu selector"> </button>
+  <div> <a href="./">
+    <figure> <img src="./bios/images/home-icon-dark.png" alt="Home icon"> <img src="./bios/images/home-icon.png" alt="Home icon"> </figure>
+    <span>home</span> </a> 
+    <!--<a href="#services">
+        <figure>
+          <img src="./bios/images/setting-icon-dark.png" alt="Services icon">
+          <img src="./bios/images/setting-icon-gold.png" alt="Services icon">
+        </figure>
+        <span>services</span>
+      </a>--> 
+    <a href="#bio" id="" data-active="1">
+    <figure> <img src="./bios/images/bio-icon-dark.png" alt="Bio icon"> <img src="./bios/images/bio-icon-gold.png" alt="Bio icon"> </figure>
+    <span>Bio</span> </a> 
+    <!-- <a href="#testimonials">
+          <figure>
+            <img src="./bios/images/testimonials-icon-dark.png" alt="Testimonials icon">
+            <img src="./bios/images/testimonials-icon-gold.png" alt="Testimonials icon">
+          </figure>
+          <span>testimonials</span>
+        </a>
+        <a href="#faq">
+          <figure>
+            <img src="./bios/images/faq-icon-dark.png" alt="Faq icon">
+            <img src="./bios/images/faq-icon-gold.png" alt="Faq icon">
+          </figure>
+          <span>faq</span>
+        </a> --> 
+    <a href="#contact">
+    <figure> <img src="./bios/images/contact-icon-dark.png" alt="Contact icon"> <img src="./bios/images/contact-icon-gold.png" alt="Contact icon"> </figure>
+    <span>contact</span> </a> </div>
+</nav>
+<div class="page-container-wrap">
+  <section id="bio" data-identifier="page-section">
+   
+     <figure>
+       <figure>
+        <h1>
+          <p>one way path</p>
+          <p>group</p>
+        </h1>
+      </figure> 
+       <h3> <img src="./bios/images/photo-alex.jpg" alt="Incorporation" title="Incorporation"> 
+        <!-- <img src="./bios/images/service-1.png" alt="Incorporation" title="Incorporation" /> --> 
+      </h3>
+      
+    </figure>
+    
+	
+	
+	
+		<figure>
+		  <h4>
+			 <span>#(firstname) #(" ") #(lastname)</span>
+			<p>#(position)</p>
+		  </h3>
+		  <p>#(bio)Alex Young is Co-Founder, President and Chief Executive Officer of One Way Path Group. In this role he co-ordinates all projects sponsored by the company with ultimate responsibility for financial, design and operational matters. Alex draws on a background of public policy, law and finance, to solve public policy problems in ways that generate higher than average profits for investors without incurring additional risk.</p>
+		  <p>Alex worked in the federal and provincial governments for over a decade including negotiating for Canada at the United Nations General Assembly in New York and directly advising the Deputy Premier of Ontario on health and long-term care policy.  After leaving government, Alex joined the private sector, practicing corporate law at Canada’s leading First Nations Law firm, Olthuis, Kleer, Townshend LLP. </p>
+		  <p>Alex is Co-Founder and a pro-bono teacher in residence at the Buddhavipassana Meditation Centre in Toronto. His work in developing meditation centres and teaching insight meditation was recognized in 2014 by the Governor of Chiangmai Province, Thailand by presentation of the Benefactor of Buddhism Award. </p>
+		  <p>Alex earned an insight meditation teaching certificate from Chomtong Temple and Meditation Centre in Northern Thailand, training under the late Ven. Ajahn Tong Sirimangalo, Thanat Chindaporn and Kathryn Johnston Chindaporn. He holds a Masters of Public Administration from the University of Victoria, a Global Professional Master of Laws from the University of To ronto and is a member in good standing of the Law Society of Ontario (LSO #74016R). </p>
+		  <p>Professional and Academic Designations: BSc. H., MPA, LL.B., GPLLM and Insight Meditation Teacher</p>
+		</figure>
+		<footer id="contact" data-identifier="page-section">
+    <figure>
+      <h2>Contact</h2>
+      <address>
+      <p>First Canadian Place<br>
+        100 King Street West, Suite 5600<br>
+        Toronto, Ontario  M5X 1C9</p>
+      </address>
+      <address>
+      <p><b>E-Mail:</b> info@onewaypath.com</p>
+      <p><b>Phone:</b> +1 416.848.1746</p>
+      </address>
+      
+      <!-- <figcaption>
+            <ul>
+              <li><a href="javascript:void(0)">map</a></li>
+              <li><a href="javascript:void(0)">directions</a></li>
+            </ul>
+            <blockquote>
+              To arrive by public transit, take the subway on the Younge-University-Spadina line to St. Andrew station. Walk east on King Street until you reach the BMO Bank of Montreal on the corner of Bay and King Streets. Enter the bank, take the elevators
+              from the ground floor to the the 56th floor and ask for us at reception. Or from King subway station walk west on King Street to arrive at the BMO at King and Bay Streets.
+            </blockquote>
+          </figcaption> -->
+      
+      <p>Copyright 2019<br>
+        onewaypath.com</p>
+    </figure>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script> 
+<script src="https://www.google.com/recaptcha/api.js"></script> 
+<script src="./bios/js/scripts.js?v=xdfxdf"></script>
+</body>
+</html>
