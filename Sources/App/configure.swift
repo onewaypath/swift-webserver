@@ -2,6 +2,8 @@ import Leaf
 import Vapor
 import FluentMySQL
 
+let host = "ubuntu-01"
+
 /// Called before your application initializes.
 public func configure(_ config: inout Config, _ env: inout Environment, _ services: inout Services) throws {
     // Register providers first
@@ -23,15 +25,32 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     // services.register(databases)
     
     // configure Fluent MySQL
+    
+    switch host {
+    case "ubuntu-01":
+        try services.register(FluentMySQLProvider())
+        let mysqlConfig = MySQLDatabaseConfig(
+          hostname: "172.104.17.220",
+          port: 3306,
+          username: "ayoung",
+          password: "6uEHZwjKyR22#637",
+          database: "ubuntu01"
+        )
+        services.register(mysqlConfig)
+        
+    default :
     try services.register(FluentMySQLProvider())
     let mysqlConfig = MySQLDatabaseConfig(
       hostname: "localhost",
       port: 3306,
       username: "root",
-      password: "root",
+      password: "LQJdO3HYiN*X",
       database: "test"
     )
     services.register(mysqlConfig)
+        
+        
+    }
     
     //Initiate and register migration services
     var migrations = MigrationConfig()

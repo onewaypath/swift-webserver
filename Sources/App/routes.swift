@@ -34,6 +34,7 @@ public func routes(_ router: Router) throws {
     // get route at the url team members fetching all members from the database and passing them into a view
     
     let teamController = TeamController()
+    
     router.get("team", String.parameter) { req -> Future<View> in
         let user = try req.parameters.next(String.self)
         return try teamController.select(req, username: user)

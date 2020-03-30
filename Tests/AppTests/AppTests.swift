@@ -3,10 +3,14 @@ import XCTest
 
 class AppTests: XCTestCase {
     func testStub() throws {
-        XCTAssert(true)
+       // XCTAssert(true)
+        let bookingSearch = BookingSearch()
+        bookingSearch.test()
+
+        
     }
-    
+    /*
     static let allTests = [
         ("testStub", testStub),
-    ]
+    ]*/
 }
