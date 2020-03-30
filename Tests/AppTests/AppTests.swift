@@ -4,9 +4,7 @@ import XCTest
 class AppTests: XCTestCase {
     func testStub() throws {
        // XCTAssert(true)
-        let bookingSearch = BookingSearch()
-        bookingSearch.test()
-
+       
         
     }
     /*
