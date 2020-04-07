@@ -226,7 +226,7 @@ nav button{
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0;
+  padding: 0 0 0 160px;
   text-align: center;
   background-color: transparent;
   position: relative;
@@ -257,6 +257,7 @@ section:nth-child(1) img{
   position: absolute;
   top: 80%;
   left: 0;
+  left: 160px;
   right: 0;
   margin: 0 auto;
 }
@@ -787,6 +788,12 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       line-height: 34px;
       margin: 0 0 30px;
   }
+  section:nth-child(1){
+        padding: 0 0 0 185px;
+  }
+  section:nth-child(1) img{
+    left: 185px;
+  }
 }
 
 @media screen and (max-width: 991px){
@@ -884,6 +891,12 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       max-width: 100%;
       line-height: 32px;
       margin: 30px 0 0;
+  }
+  section:nth-child(1){
+    padding: 0;
+  }
+  section:nth-child(1) img{
+    left: 0;
   }
 }
 
