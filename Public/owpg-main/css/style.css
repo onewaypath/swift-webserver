@@ -1,3 +1,4 @@
+
 /* Font Face
  ========================================= */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
@@ -225,11 +226,13 @@ nav button{
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0;
+  padding: 0 0 0 240px;
   text-align: center;
   background-color: transparent;
   position: relative;
   min-height: calc(100vh - 20px);
+  -ms-flex-line-pack: center;
+    align-content: center;
 }
 section:nth-child(1) ul{
   position: absolute;
@@ -249,18 +252,18 @@ section:nth-child(1) h1, section:nth-child(1) p{
   width: 100%;
   display: inline-block;
 }
-section:nth-child(1) p img{
+section:nth-child(1) img{
   display: block;
   position: absolute;
-  top: 130%;
-  left: 0;
+  top: 80%;
+  left: 240px;
   right: 0;
   margin: 0 auto;
 }
 section:nth-child(1) ul li a{
   color: #cd9933
 }
-section:nth-child(1) figure h1 p{
+section:nth-child(1) h1{
   text-transform: uppercase;
   font-size: 54px;
   font-family: 'oklahomaregular';
@@ -268,27 +271,28 @@ section:nth-child(1) figure h1 p{
   color: #000;
   margin: 0;
 }
-section:nth-child(1) figure h1 p{
+section:nth-child(1) h1{
   text-transform: uppercase;
   font-family: 'oklahomaregular';
   font-weight: normal;
   width: auto;
   font-size: 54px;
 }
-section:nth-child(1) figure h1 p:nth-child(1){
+section:nth-child(1) h1{
   width: 100%;
   display: inline-block;
   font-style: normal;
   color: #000;
   line-height: normal;
 }
-section:nth-child(1) figure h1 p:nth-child(2){
+section:nth-child(1) h2{
   font-size: 26px;
   letter-spacing: 1.5px;
   position: relative;
   color: #000;
+  font-family: 'oklahomaregular';
 }
-section:nth-child(1) figure h1 p:nth-child(2):after{
+section:nth-child(1) h2:before{
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -297,7 +301,7 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
   left: -150px;
   background-color: #000;
 }
-section:nth-child(1) figure h1 p:nth-child(2):before{
+section:nth-child(1) h2:after{
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -305,6 +309,27 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
   width: 135px;
   right: -150px;
   background-color: #000;
+}
+section:nth-child(1) h3{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+    width: 100%;
+}
+section:nth-child(1) h4{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    display: inline-block;
+}
+section:nth-child(1) p{
+    font-size: 16px;
+    font-style: italic;
+    width: auto;
+    font-weight: normal;
+    line-height: normal;
 }
 
 
@@ -705,7 +730,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
 }
 
 @media screen and (max-width: 1199px){
-  /* section:nth-child(1) p img {
+  /* section:nth-child(1) img {
       height: 250px;
   } */
   section:nth-child(1) ul {
@@ -761,6 +786,12 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       font-size: 22px;
       line-height: 34px;
       margin: 0 0 30px;
+  }
+  section:nth-child(1){
+        padding: 0 0 0 185px;
+  }
+  section:nth-child(1) img{
+    left: 185px;
   }
 }
 
@@ -860,6 +891,12 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       line-height: 32px;
       margin: 30px 0 0;
   }
+  section:nth-child(1){
+    padding: 0;
+  }
+  section:nth-child(1) img{
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 920px){
@@ -904,7 +941,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   /* section:nth-child(1) h1{
       margin: 0 0 45px;
   } */
-  /* section:nth-child(1) p img {
+  /* section:nth-child(1) img {
       height: 250px;
   } */
   section figure{
@@ -971,19 +1008,16 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(2) figure blockquote{
       margin: 0 0 30px;
   }
-  section:nth-child(1) figure h1 p{
+  section:nth-child(1) h1{
       font-size: 38px;
   }
-  section:nth-child(1) figure h1 p:nth-child(2){
-      font-size: 20px;
-  }
-  section:nth-child(1) figure h1 p:nth-child(2):before {
-      width: 47px;
-      right: -56px;
-  }
-  section:nth-child(1) figure h1 p:nth-child(2):after {
+  section:nth-child(1) h2:before {
       width: 47px;
       left: -56px;
+  }
+  section:nth-child(1) h2:after {
+      width: 47px;
+      right: -56px;
   }
   section:nth-child(3) form input:nth-child(4){
       width: 100%;
@@ -1023,6 +1057,9 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(4) h3, section:nth-child(4) a{
     padding: 40px 15px;
   }
+  section:nth-child(1) figure figure{
+      padding: 0;
+    }
 }
 
 
@@ -1085,23 +1122,22 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   /* section:nth-child(3) form button{
       margin-top: -11px;
   } */
-  section:nth-child(1) figure h1 p:nth-child(2){
+  section:nth-child(1) h2{
       font-size: 16px;
   }
-  section:nth-child(1) figure h1 p{
+  section:nth-child(1) h1{
       font-size: 30px;
   }
-  section:nth-child(1) figure h1 p:nth-child(2):after{
-      top: calc(50% - 1px);
-      height: 2px;
-      width: 35px;
-      left: -43px;
-  }
-  section:nth-child(1) figure h1 p:nth-child(2):before{
+  section:nth-child(1) h2:after{
       top: calc(50% - 1px);
       height: 2px;
       width: 35px;
       right: -43px;
   }
+  section:nth-child(1) h2:before{
+      top: calc(50% - 1px);
+      height: 2px;
+      width: 35px;
+      left: -43px;
+  }
 } 
-
