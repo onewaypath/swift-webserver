@@ -84,7 +84,8 @@ a, button{
 p b{
   font-weight: 600;
 }
-h2{
+h2,
+section:nth-child(2) h1{
   color: #080002;
   text-transform: capitalize;
   font-weight: normal;
@@ -113,6 +114,8 @@ section, footer{
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 section aside, footer aside{
   height: 100%;
@@ -125,7 +128,8 @@ section figure{
   padding: 0 40px;
   width: 100%;
 }
-section h2{
+section h2,
+section:nth-child(2) h1{
   margin-bottom: 50px;
 }
 blockquote{
@@ -226,25 +230,23 @@ nav button{
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0 0 0 160px;
+  padding: 0 0 0 240px;
   text-align: center;
   background-color: transparent;
   position: relative;
   min-height: calc(100vh - 20px);
-  -ms-flex-line-pack: center;
-    align-content: center;
 }
 section:nth-child(1) ul{
   position: absolute;
   right: 100px;
   bottom: 100px;
 }
-section:nth-child(1) figure{
+/*section:nth-child(1) figure{
   position: relative;
-}
-section:nth-child(1) aside{
+}*/
+/*section:nth-child(1) aside{
   vertical-align: middle;
-}
+}*/
 section:nth-child(1) h1{
   margin: 0;
 }
@@ -256,14 +258,13 @@ section:nth-child(1) img{
   display: block;
   position: absolute;
   top: 80%;
-  left: 0;
-  left: 160px;
+  left: 240px;
   right: 0;
   margin: 0 auto;
 }
-section:nth-child(1) ul li a{
+/*section:nth-child(1) ul li a{
   color: #cd9933
-}
+}*/
 section:nth-child(1) h1{
   text-transform: uppercase;
   font-size: 54px;
@@ -334,7 +335,7 @@ section:nth-child(1) p{
 }
 
 
-/* Services Section [ Section 2 ]
+/* projects Section [ Section 2 ]
  ========================================= */
 section:nth-child(2){
   position: relative;
@@ -343,16 +344,19 @@ section:nth-child(2){
 section:nth-child(2), section:nth-child(4), section#testimonials{
   background-color: #cd9933;
 }
-section:nth-child(2) figure{
-  max-width: 970px;
+section:nth-child(2) h1{
+	width: 100%;
 }
+/*section:nth-child(2) figure{
+  max-width: 970px;
+}*/
 section:nth-child(2) p{
   max-width: 700px;
   margin: 0 auto;
   display: table;
   text-align: center;
 }
-section:nth-child(2) h3, section:nth-child(2) a{
+section:nth-child(2) h2{
   width: 33.33%;
   font-family: 'oklahomabold';
   font-size: 1.17em;
@@ -389,14 +393,15 @@ section:nth-child(2) a:hover img:nth-of-type(2){
   background-color: #dae1e7;
   border: 1px solid #dae1e7;
 }
-section:nth-child(2) h3 img, section:nth-child(2) a img{
+section:nth-child(2) h2 img, section:nth-child(2) a img{
   margin: 0 auto 30px;
   display: table;
 }
-section:nth-child(2) h3 span, section:nth-child(2) a span{
+section:nth-child(2) h2 span, section:nth-child(2) a span{
   font-size: 18px;
   line-height: 25px;
   width: auto;
+  color: #000;
   border-bottom: 1px solid #000;
   display: inline-block;
   padding-bottom: 10px;
@@ -408,7 +413,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span{
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-section:nth-child(2) figure blockquote{
+/*section:nth-child(2) figure blockquote{
   margin: 30px 0 0;
 }
 section:nth-child(2) figure:last-child{
@@ -421,13 +426,13 @@ section:nth-child(2) figure:last-child{
   -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: -40px;
-}
-section:nth-child(2) figure:last-child h2{
+}*/
+section:nth-child(2) h1:nth-of-type(2){
   width: 100%;
   padding-bottom: 0;
   margin-top: 70px;
 }
-section:nth-child(2) figure:last-child h3{
+/*section:nth-child(2) figure:last-child h3{
   margin: 20px 0 0;
 }
 section:nth-child(2) figure:last-child h3 a{
@@ -436,7 +441,7 @@ section:nth-child(2) figure:last-child h3 a{
   padding: 0;
   margin: 0;
 }
-
+*/
 
 /* Bio Section [ Section 3 ]
  ========================================= */
@@ -695,7 +700,7 @@ span.d-block {display: block;}
 section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
                          top: -165px; border-radius: 50%;} */
 .mt-50 {margin-top: 50px;}
-section:nth-child(2) h3, section:nth-child(2) a {width: 25%;}
+section:nth-child(2) h2 {width: 17%;}
 section:nth-child(3) h3, section:nth-child(3) a {width: 25%; float: left; text-align: center;padding: 50px 0;}
 section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;padding: 100px 15px;margin: 0;text-decoration: none;}
 section:nth-child(4) span {color: #fff; margin: 16px 0; display: block;}
@@ -704,8 +709,8 @@ section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff
                                                           margin: auto;}
 section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
                                                           width: 110px; padding: 7px;}
-section:nth-child(2) h3 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid; width: 110px;}
-section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;padding-bottom: 0;}
+section:nth-child(2) h2 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid #000; width: 110px;}
+section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;padding-bottom: 0;}
 
 
 /* Media Screen
@@ -718,7 +723,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(3) form h2{
       margin: 0 auto 40px;
   }
-  section:nth-child(2) h3,section:nth-child(2) a{
+  section:nth-child(2) h2{
       margin: 50px 0 0;
   }
   nav{
@@ -738,14 +743,19 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       right: 60px;
       bottom: 60px;
   }
-  h2{
+  h2,
+  section:nth-child(2) h1{
       font-size: 42px;
   }
-  section h2{
+  section h2,
+  section:nth-child(2) h1{
       margin-bottom: 35px;
   }
-  section:nth-child(2) h3,section:nth-child(2) a{
+  section:nth-child(2) h2{
       padding: 35px 15px;
+  }
+  section:nth-child(2) h2{
+  	width: 22%;
   }
   section:nth-child(3) form h2 {
       font-size: 28px;
@@ -801,17 +811,18 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       right: 50px;
       bottom: 50px;
   }
-  h2 {
+  h2,
+  section:nth-child(2) h1 {
       font-size: 40px;
   }
   p, blockquote{
       font-size: 17px;
       line-height: 32px;
   }
-  section:nth-child(2) h3 span, section:nth-child(2) a span{
+  section:nth-child(2) h2 span, section:nth-child(2) a span{
       line-height: 20px;
   }
-  section:nth-child(2) h3, section:nth-child(2) a{
+  section:nth-child(2) h2, section:nth-child(2) a{
       margin: 30px 0 0;
   }
   section:nth-child(3) p:nth-child(3) {
@@ -935,7 +946,8 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
       top: 50px;
       width: 100%;
   }
-  h2 {
+  h2,
+  section:nth-child(2) h1 {
       font-size: 30px;
       padding-bottom: 0;
   }
@@ -964,9 +976,8 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(2) p, section:nth-child(3) p{
       text-align: center;
   }
-  section:nth-child(2) h3, section:nth-child(2) a{
+  section:nth-child(2) h2{
       width: 100%;
-      order: 2;
       margin: 0;
   }
   /* section:nth-child(3) dd, section:nth-child(3) dd figcaption{
@@ -977,7 +988,8 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(3) dd figcaption{
           margin-top: 35px;
   } */
-  section h2{
+  section h2,
+  section:nth-child(2) h1{
       line-height: 45px;
   }
   /* section:nth-child(3) dd figcaption ul li a, footer figcaption ul a{
@@ -1053,7 +1065,7 @@ section:nth-child(2) h3 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(3) h3, section:nth-child(3) a{
     padding: 20px 0;
   }
-  section:nth-child(2) h3, section:nth-child(2) a, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
+  section:nth-child(2) h2, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
   section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
   section:nth-child(4) h3, section:nth-child(4) a{
     padding: 40px 15px;
