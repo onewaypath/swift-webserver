@@ -91,8 +91,10 @@ final class BookingSearch {
        
     }
 
-    func test() {
+    func test() -> String {
 
+        
+        // create and make the URL request; store the response as an array in CalArray
         let semaphore = DispatchSemaphore (value: 0)
         var calArray :  [Int : Int] = [0:0]
 
@@ -126,13 +128,15 @@ final class BookingSearch {
        
         // sort the availability array and print out the array values
         
+        var output = ""
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEE, MMMM d, YYYY") // set template after setting locale
         let keys = Array(self.availability.keys)
         for date in keys.sorted(by: <) {
             let formattedDate = dateFormatter.string(from: date)
-            print( "\(formattedDate) -> \(self.availability[date])" )
+            //print( "\(formattedDate) -> \(self.availability[date])" )
+            output.append("\(formattedDate) -> \(self.availability[date] ?? 0) \n")
         }
-        
+        return output
         //print (calArray)
 
     }

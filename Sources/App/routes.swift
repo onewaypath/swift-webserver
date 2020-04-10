@@ -5,6 +5,7 @@ import unixTools
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     
+    let  bookingSearch = BookingSearch()
     let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
 
     router.get { req in
@@ -43,7 +44,12 @@ public func routes(_ router: Router) throws {
     router.get("team", "all",  use: teamController.list)
     // post route so that on form submission the input-field data form-url-encoded will be sent to the team members route as a post
     router.post("team","submit", use: teamController.create)
-    
+   
+    // test route for API calls
+    router.get("api") { req in
+     
+      return (bookingSearch.test())
+    }
     
 }
 
