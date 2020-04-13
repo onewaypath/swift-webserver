@@ -1,0 +1,48 @@
+<!doctype html>
+<canvas id="myChart"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["3/31/20","4/1/20","4/2/20","4/3/20","4/4/20","4/5/20","4/6/20","4/7/20","4/8/20","4/9/20","4/10/20","4/11/20"],
+        datasets: [{
+            label: 'Covid-19 Related Deaths Per Day in Ontario (7-day moving average) ',
+            // backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [3.6,3.4,5.4,7,10.7,13.7,15.6,17.1,19.6,21,22.1,22.7]
+        }]
+    },
+
+    // Configuration options go here
+	options: {
+        scales: {
+            yAxes: [{
+                id: 'first-y-axis',
+                type: 'logarithmic'
+            }, {
+                id: 'second-y-axis',
+                type: 'linear'
+            }]
+        }
+    }
+    
+});
+</script>
+	
+	
+</body>
+</html>
