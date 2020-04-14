@@ -134,7 +134,7 @@ class Covid19ChartsController {
     <html>
     <head>
     <meta charset="UTF-8">
-    <title>Untitled Document</title>
+    <title>\(chartTitle)</title>
     </head>
 
     <body>
