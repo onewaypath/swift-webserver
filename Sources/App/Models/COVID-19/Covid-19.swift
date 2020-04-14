@@ -7,6 +7,9 @@
 
 //import UIKit
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 
 extension String {
