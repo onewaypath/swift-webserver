@@ -178,7 +178,7 @@ final class Jurisdiction  {
         production.decode(master: self)
         
         //print("debug")
-        let data: String = "{label: \'\(self.label)\', borderColor: \'\(self.colour)\', data: \(production.avgChanges)}"
+        let data: String = "{label: \'\(self.label)\', borderColor: \'\(self.colour)\', fill: false, data: \(production.avgChanges)}"
         return data
     }
 }

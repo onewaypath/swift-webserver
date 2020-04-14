@@ -106,10 +106,24 @@ class Covid19ChartsController {
         }
     dataset.append("]")
 
-
+        var chartTitle: String
+        var xAxisTitle: String
+        var yAxisTitle: String
+        
+        switch field {
+        case "deaths" :
+            chartTitle = "COVID-19 Related Deaths Per Day (7-Day Moving Average)"
+            xAxisTitle = "Days Since 3 Deaths Recorded"
+            yAxisTitle = "Deaths Per Day"
+            
+        default :
+            chartTitle = "COVID-19 New Cases Per Day (7-Day Moving Average)"
+            xAxisTitle = "Days Since 3 New Cases Recorded"
+            yAxisTitle = "New Cases Per Day"
+        }
     // *** HTML Templete
 
-
+        
     let html = """
     <!doctype html>
 
@@ -126,7 +140,16 @@ class Covid19ChartsController {
     <body>
 
     <script>
-        var ctx3 = document.getElementById('myChart3').getContext('2d');
+    Chart.scaleService.updateScaleDefaults('logarithmic', {
+      ticks: {
+        callback: function(tick, index, ticks) {
+          return tick.toLocaleString()
+        },
+        callback: function(label, index)
+          { console.log(index); return index % 5 === 0 ? label: '';}
+      }
+    });
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
     var chart3 = new Chart(ctx3, {
         // The type of chart we want to create
         type: 'line',
@@ -140,13 +163,35 @@ class Covid19ChartsController {
 
         // Configuration options go here
         options: {
+            title: {
+                       display: true,
+                       text: '\(chartTitle)',
+                       fontSize: '22'
+                   },
+                   
+                   legend: {
+                       position: 'bottom',
+                           },
             scales: {
                 yAxes: [{
                     id: 'first-y-axis',
-                    type: 'logarithmic'
-                }, {
-                    id: 'second-y-axis',
-                    type: 'linear'
+                    type: 'logarithmic',
+                    scaleLabel: {
+                        labelString: '\(yAxisTitle)',
+                        display: 'true',
+                        fontSize: '16'},
+                    ticks: {
+                        stepSize: 100
+                    }
+                }],
+                 xAxes: [{
+                    id: 'first-x-axis',
+                    
+                    scaleLabel: {
+                        labelString: '\(xAxisTitle)',
+                        display: 'true',
+                        fontSize: '16'}
+                    
                 }]
             }
         }
