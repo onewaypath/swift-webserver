@@ -230,7 +230,7 @@ nav button{
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0 0 0 240px;
+  padding: 0 0 0 100px;
   text-align: center;
   background-color: transparent;
   position: relative;
@@ -258,7 +258,7 @@ section:nth-child(1) img{
   display: block;
   position: absolute;
   top: 80%;
-  left: 240px;
+  left: 100px;
   right: 0;
   margin: 0 auto;
 }
@@ -338,6 +338,7 @@ section:nth-child(1) p{
 /* projects Section [ Section 2 ]
  ========================================= */
 section:nth-child(2){
+  padding: 0 0 0 100px;
   position: relative;
   z-index: 1;
 }
