@@ -55,6 +55,9 @@ public func routes(_ router: Router) throws {
     let checkFrontController = CheckfrontConroller()
     router.get("api", "checkfront", "availability", use: checkFrontController.availability)
     
+    let covid19ChartsController = Covid19ChartsController()
+    router.get("covid19", String.parameter , use: covid19ChartsController.view)
+    
     
     
     
