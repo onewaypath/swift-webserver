@@ -83,7 +83,7 @@ final class Jurisdiction  {
                 for column in master.csvData[row-1] {
                     if (master.dataSource == "global" && column.isInt) || (columnID > 13) {
                         
-                        deathsThisDay = Int(column)!
+                        deathsThisDay = Int(column) ?? 0
                         if !master.datafields.dailyTotals.indices.contains(i)   {
                             master.datafields.dailyTotals.append(deathsThisDay)
                             master.datafields.dailyChanges.append(deathsThisDay - deathsLastDay)
