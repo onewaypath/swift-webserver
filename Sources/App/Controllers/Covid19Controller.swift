@@ -34,13 +34,13 @@ class Covid19ChartsController {
         return responseString
     }
     
-    func view(_ req: Request) throws -> Future<View> {
+    func outputHTML(field: String) -> String {
     
 
     // Fetch the global data from the site
         
         var content: String = ""
-        let field = try req.parameters.next(String.self)
+        
         
         switch field {
         
@@ -203,6 +203,13 @@ class Covid19ChartsController {
     </body>
     </html>
     """
-    return try req.view().render("main-template", ["html": html])
+    return html
+    }
+    
+    func view(_ req: Request) throws -> Future<View> {
+            
+        let field = try req.parameters.next(String.self)
+        let html = outputHTML(field: field)
+        return try req.view().render("main-template", ["html": html])
     }
 }
