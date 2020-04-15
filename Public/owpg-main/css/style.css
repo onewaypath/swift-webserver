@@ -338,15 +338,20 @@ section:nth-child(1) p{
 /* projects Section [ Section 2 ]
  ========================================= */
 section:nth-child(2){
-  padding: 0 0 0 100px;
+  padding-left: 100px;
   position: relative;
   z-index: 1;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+
 }
 section:nth-child(2), section:nth-child(4), section#testimonials{
   background-color: #cd9933;
 }
 section:nth-child(2) h1{
 	width: 100%;
+  margin-bottom: 0;
 }
 /*section:nth-child(2) figure{
   max-width: 970px;
@@ -382,7 +387,10 @@ section:nth-child(2) a{
 -ms-transition: all .25s;
 -o-transition: all .25s;
 transition: all .25s;
+color: #000;
+text-decoration: none;
 }
+
 section:nth-child(2) a:hover span{
   border-color: #fff;
 }
@@ -448,6 +456,9 @@ section:nth-child(2) figure:last-child h3 a{
  ========================================= */
 section:nth-child(3), footer{
   background-color: transparent;
+}
+section:nth-child(3){
+  padding-left: 100px;
 }
 section:nth-child(3) p{
   text-align: center;
@@ -725,7 +736,7 @@ section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;p
       margin: 0 auto 40px;
   }
   section:nth-child(2) h2{
-      margin: 50px 0 0;
+      margin: 30px 0 0;
   }
   nav{
       top: 55px;
@@ -811,6 +822,10 @@ section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(1) ul {
       right: 50px;
       bottom: 50px;
+  }
+  section:nth-child(2),
+  section:nth-child(3){
+    padding-left: 0;
   }
   h2,
   section:nth-child(2) h1 {
