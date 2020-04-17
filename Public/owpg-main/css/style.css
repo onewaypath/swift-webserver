@@ -1,5 +1,5 @@
 
-/* Font Face 
+/* Font Face
  ========================================= */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
@@ -463,6 +463,7 @@ section:nth-child(3){
 section:nth-child(3) p{
   text-align: center;
   margin-bottom: 70px;
+  width: 100%;
 }
 section:nth-child(3) p:nth-child(3){
   margin: 70px auto;
@@ -531,6 +532,9 @@ section:nth-child(3) form button{
 section:nth-child(3) form button:hover{
   background-color: #3e3e3e;
   color: #fff;
+}
+section:nth-child(3) h2{
+  width: 100%;
 }
 
 
@@ -660,21 +664,24 @@ footer{
   min-height: calc(100vh - 20px);
 }
 footer h2{
+  width: 100%;
   border: none;
   margin-bottom: 35px;
   padding-bottom: 0;
 }
 footer address{
+  width: 100%;
   font-style: normal;
 }
 footer p{
+  width: 100%;
   color: #000;
   font-size: 20px;
   line-height: 40px;
 }
 footer address:nth-child(3){
   margin: 45px auto 50px;
-  max-width: 500px;
+  max-width: 325px;
   display: table;
   border:1px solid rgb(205, 153, 51);
   padding: 20px;
@@ -713,12 +720,15 @@ section#services:after { content: ""; width: 17px; height: 17px; background: #cd
                          top: -165px; border-radius: 50%;} */
 .mt-50 {margin-top: 50px;}
 section:nth-child(2) h2 {width: 17%;}
-section:nth-child(3) h3, section:nth-child(3) a {width: 25%; float: left; text-align: center;padding: 50px 0;}
-section:nth-child(4) h3, section:nth-child(4) a {width: 25%; float: left; text-align: center;padding: 100px 15px;margin: 0;text-decoration: none;}
-section:nth-child(4) span {color: #fff; margin: 16px 0; display: block;}
+section:nth-child(3) h3, section:nth-child(3) a {width: 17%; float: left; text-align: center;padding: 50px 0;}
+section:nth-child(4) h3, section:nth-child(4) a {width: 17%; float: left; text-align: center;padding: 100px 15px;margin: 0;text-decoration: none;}
+section:nth-child(4) a > p:nth-child(2){color: #fff; margin: 16px 0; display: block;}
 section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
 section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 5px; width: 110px;
                                                           margin: auto;}
+section:nth-child(4) h2{width: 100%}
+section:nth-child(4){  padding-left: 100px; }
+
 section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
                                                           width: 110px; padding: 7px;}
 section:nth-child(2) h2 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid #000; width: 110px;}
@@ -766,7 +776,9 @@ section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;p
   section:nth-child(2) h2{
       padding: 35px 15px;
   }
-  section:nth-child(2) h2{
+  section:nth-child(2) h2,
+  section:nth-child(3) h3, section:nth-child(3) a,
+  section:nth-child(4) h3, section:nth-child(4) a{
   	width: 22%;
   }
   section:nth-child(3) form h2 {
@@ -824,7 +836,8 @@ section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;p
       bottom: 50px;
   }
   section:nth-child(2),
-  section:nth-child(3){
+  section:nth-child(3),
+  section:nth-child(4){
     padding-left: 0;
   }
   h2,
@@ -1128,6 +1141,9 @@ section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;p
   }
   section#testimonials div > div a, section#faq div > div a{
     display: none;
+  }
+  footer address:nth-child(3){
+    max-width: 260px;
   }
 }
 
