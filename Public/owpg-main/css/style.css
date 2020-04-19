@@ -659,7 +659,8 @@ section#faq h3{
 /* Contact Section [ Footer ]
  ========================================= */
 footer{
-  padding-bottom: 25px;
+  padding-left: 100px;
+	padding-bottom: 25px;
   text-align:center;
   min-height: calc(100vh - 20px);
 }
