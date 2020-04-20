@@ -193,6 +193,146 @@ span.d-block {
   margin-top: 50px;
 }
 
+header {
+  padding: 0 0 0 100px;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  min-height: calc(100vh - 20px);
+  width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+header ul {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+
+/*header figure{
+  position: relative;
+}*/
+
+
+/*header aside{
+  vertical-align: middle;
+}*/
+
+header h1 {
+  margin: 0;
+}
+
+header h1,
+header p {
+  width: 100%;
+  display: inline-block;
+}
+
+header img {
+  display: block;
+  position: absolute;
+  top: 80%;
+  left: 100px;
+  right: 0;
+  margin: 0 auto;
+}
+
+
+/*header ul li a{
+  color: #cd9933
+}*/
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 54px;
+  font-family: 'oklahomaregular';
+  font-weight: normal;
+  color: #000;
+  margin: 0;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-family: 'oklahomaregular';
+  font-weight: normal;
+  width: auto;
+  font-size: 54px;
+}
+
+header h1 {
+  width: 100%;
+  display: inline-block;
+  font-style: normal;
+  color: #000;
+  line-height: normal;
+}
+
+header h2 {
+  font-size: 26px;
+  letter-spacing: 1.5px;
+  position: relative;
+  color: #000;
+  font-family: 'oklahomaregular';
+}
+
+header h2:before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 2px);
+  height: 2px;
+  width: 135px;
+  left: -150px;
+  background-color: #000;
+}
+
+header h2:after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 2px);
+  height: 2px;
+  width: 135px;
+  right: -150px;
+  background-color: #000;
+}
+header h2 {
+  margin-bottom: 50px;
+}
+header h3 {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  width: 100%;
+}
+
+header h4 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  display: inline-block;
+}
+
+header p {
+  font-size: 16px;
+  font-style: italic;
+  width: auto;
+  font-weight: normal;
+  line-height: normal;
+}
+
 
 /* Header [ Navbar ]
  ========================================= */
@@ -291,135 +431,6 @@ nav a img:last-child {
 
 nav button {
   display: none;
-}
-
-
-/* Home Section [ Section 1 ]
- ========================================= */
-
-section:nth-child(1) {
-  padding: 0 0 0 100px;
-  text-align: center;
-  background-color: transparent;
-  position: relative;
-  min-height: calc(100vh - 20px);
-}
-
-section:nth-child(1) ul {
-  position: absolute;
-  right: 100px;
-  bottom: 100px;
-}
-
-
-/*section:nth-child(1) figure{
-  position: relative;
-}*/
-
-
-/*section:nth-child(1) aside{
-  vertical-align: middle;
-}*/
-
-section:nth-child(1) h1 {
-  margin: 0;
-}
-
-section:nth-child(1) h1,
-section:nth-child(1) p {
-  width: 100%;
-  display: inline-block;
-}
-
-section:nth-child(1) img {
-  display: block;
-  position: absolute;
-  top: 80%;
-  left: 100px;
-  right: 0;
-  margin: 0 auto;
-}
-
-
-/*section:nth-child(1) ul li a{
-  color: #cd9933
-}*/
-
-section:nth-child(1) h1 {
-  text-transform: uppercase;
-  font-size: 54px;
-  font-family: 'oklahomaregular';
-  font-weight: normal;
-  color: #000;
-  margin: 0;
-}
-
-section:nth-child(1) h1 {
-  text-transform: uppercase;
-  font-family: 'oklahomaregular';
-  font-weight: normal;
-  width: auto;
-  font-size: 54px;
-}
-
-section:nth-child(1) h1 {
-  width: 100%;
-  display: inline-block;
-  font-style: normal;
-  color: #000;
-  line-height: normal;
-}
-
-section:nth-child(1) h2 {
-  font-size: 26px;
-  letter-spacing: 1.5px;
-  position: relative;
-  color: #000;
-  font-family: 'oklahomaregular';
-}
-
-section:nth-child(1) h2:before {
-  position: absolute;
-  content: "";
-  top: calc(50% - 2px);
-  height: 2px;
-  width: 135px;
-  left: -150px;
-  background-color: #000;
-}
-
-section:nth-child(1) h2:after {
-  position: absolute;
-  content: "";
-  top: calc(50% - 2px);
-  height: 2px;
-  width: 135px;
-  right: -150px;
-  background-color: #000;
-}
-
-section:nth-child(1) h3 {
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal;
-  font-style: italic;
-  margin: 0;
-  width: 100%;
-}
-
-section:nth-child(1) h4 {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-style: italic;
-  display: inline-block;
-}
-
-section:nth-child(1) p {
-  font-size: 16px;
-  font-style: italic;
-  width: auto;
-  font-weight: normal;
-  line-height: normal;
 }
 
 
@@ -1037,6 +1048,22 @@ footer p:nth-child(4) {
   section {
     padding: 80px 0;
   }
+  header ul {
+    right: 60px;
+    bottom: 60px;
+  }
+  header {
+    padding: 0 0 0 185px;
+  }
+  header img {
+    left: 185px;
+  }
+  header h2 {
+    margin-bottom: 35px;
+  }
+  /* header img {
+      height: 250px;
+    } */
   /*  end general section css (common css) ====================================*/
   /*  Header [ Navbar ] ====================================*/
   nav {
@@ -1054,21 +1081,6 @@ footer p:nth-child(4) {
     margin: 0 10px 0 0;
   }
   /*  end Header [ Navbar ] ====================================*/
-  /*  Home Section [ Section 1 ] ====================================*/
-  section:nth-child(1) ul {
-    right: 60px;
-    bottom: 60px;
-  }
-  section:nth-child(1) {
-    padding: 0 0 0 185px;
-  }
-  section:nth-child(1) img {
-    left: 185px;
-  }
-  /* section:nth-child(1) img {
-      height: 250px;
-    } */
-  /*  end Home Section [ Section 1 ] ====================================*/
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h1 {
     font-size: 42px;
@@ -1146,6 +1158,16 @@ footer p:nth-child(4) {
   section {
     padding: 60px 0;
   }
+    header ul {
+    right: 50px;
+    bottom: 50px;
+  }
+  header {
+    padding: 0;
+  }
+  header img {
+    left: 0;
+  }
   /*  end general section css (common css) ====================================*/
   /*  Header [ Navbar ] ====================================*/
   nav button {
@@ -1177,18 +1199,6 @@ footer p:nth-child(4) {
     display: none;
   }
   /*  end Header [ Navbar ] ====================================*/
-  /*  Home Section [ Section 1 ] ====================================*/
-  section:nth-child(1) ul {
-    right: 50px;
-    bottom: 50px;
-  }
-  section:nth-child(1) {
-    padding: 0;
-  }
-  section:nth-child(1) img {
-    left: 0;
-  }
-  /*  end Home Section [ Section 1 ] ====================================*/
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) {
     padding-left: 0;
@@ -1370,35 +1380,36 @@ footer p:nth-child(4) {
   section {
     padding: 50px 0;
   }
-  /*  end general section css (common css) ====================================*/
-  /*  Home Section [ Section 1 ] ====================================*/
-  section:nth-child(1) ul {
+   header ul {
     right: 0;
     bottom: auto;
     top: 50px;
     width: 100%;
   }
-  /* section:nth-child(1) h1{
+  /* header h1{
       margin: 0 0 45px;
     } */
-    /* section:nth-child(1) img {
+    /* header img {
         height: 250px;
     } */
-  section:nth-child(1) h1 {
+  header h1 {
     font-size: 38px;
   }
-  section:nth-child(1) h2:before {
+  header h2:before {
     width: 47px;
     left: -56px;
   }
-  section:nth-child(1) h2:after {
+  header h2:after {
     width: 47px;
     right: -56px;
   }
-  section:nth-child(1) figure figure {
+  header figure figure {
     padding: 0;
   }
-  /*  end Home Section [ Section 1 ] ====================================*/
+  header h2 {
+    line-height: 45px;
+  }
+  /*  end general section css (common css) ====================================*/
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h1 {
     font-size: 30px;
@@ -1620,26 +1631,26 @@ footer p:nth-child(4) {
 }
 
 @media screen and (max-width: 390px) {
-  /*  Home Section [ Section 1 ] ====================================*/
-  section:nth-child(1) h2 {
+  /* general section css (common css) ====================================*/
+  header h2 {
     font-size: 16px;
   }
-  section:nth-child(1) h1 {
+  header h1 {
     font-size: 30px;
   }
-  section:nth-child(1) h2:after {
+  header h2:after {
     top: calc(50% - 1px);
     height: 2px;
     width: 35px;
     right: -43px;
   }
-  section:nth-child(1) h2:before {
+  header h2:before {
     top: calc(50% - 1px);
     height: 2px;
     width: 35px;
     left: -43px;
   }
-  /*  end Home Section [ Section 1 ] ====================================*/
+  /*  end general section css (common css) ====================================*/
   /*  Bio Section [ Section 3 ] ====================================*/
   section:nth-child(3) form li .g-recaptcha {
     margin: 0;
