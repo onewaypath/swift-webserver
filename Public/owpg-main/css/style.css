@@ -1,72 +1,103 @@
-
 /* Font Face
  ========================================= */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
-
 @font-face {
   font-family: 'oklahomabold';
-  src: url('../fonts/oklahoma_bold-webfont.woff2') format('woff2'),url('../fonts/oklahoma_bold-webfont.woff') format('woff');
+  src: url('../fonts/oklahoma_bold-webfont.woff2') format('woff2'), url('../fonts/oklahoma_bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'oklahomaregular';
-  src: url('../fonts/oklahoma_normal-webfont.woff2') format('woff2'),url('../fonts/oklahoma_normal-webfont.woff') format('woff');
+  src: url('../fonts/oklahoma_normal-webfont.woff2') format('woff2'), url('../fonts/oklahoma_normal-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
+
 /* Basic css
  ========================================= */
-body{
-  padding:0;
-  margin:0;
-  background:#f2f2f2;
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2;
 }
-img{
-  display:block;
-  max-width:100%;
-}/*  **************************************************/
-.page-container-wrap{
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/*  general section css (common css)
+**************************************************/
+
+.page-container-wrap {
   margin: auto;
   border: 20px solid #ffffff;
-  width:100%;
+  width: 100%;
   background: #dae1e7;
   box-sizing: border-box;
 }
-ul, li{
-  list-style:none;
-  margin:0;
-  padding:0;
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-*, ::after, ::before {
+
+*,
+ ::after,
+ ::before {
   box-sizing: border-box;
   outline: none !important;
 }
-body, input, textarea{
+
+body,
+input,
+textarea {
   font-family: 'Open Sans', sans-serif;
 }
-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
   color: #656565;
 }
-input::-moz-placeholder { /* Firefox 19+ */
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
   color: #656565;
 }
-input:-ms-input-placeholder { /* IE 10+ */
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
   color: #656565;
 }
-input:-moz-placeholder { /* Firefox 18- */
+
+input:-moz-placeholder {
+  /* Firefox 18- */
   color: #656565;
 }
-figure{
+
+figure {
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'oklahomabold';
 }
-p{
+
+p {
   font-size: 18px;
   line-height: 35px;
   color: #030004;
@@ -74,18 +105,21 @@ p{
   margin: 0;
   font-weight: 300;
 }
-a, button{
+
+a,
+button {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-p b{
+
+p b {
   font-weight: 600;
 }
-h2,
-section:nth-child(2) h1{
+
+h2 {
   color: #080002;
   text-transform: capitalize;
   font-weight: normal;
@@ -97,10 +131,13 @@ section:nth-child(2) h1{
   margin: 0 auto;
   padding-bottom: 10px;
 }
-input{
+
+input {
   outline: none !important;
 }
-section, footer{
+
+section,
+footer {
   padding: 100px 0;
   min-height: 100vh;
   width: 100%;
@@ -117,22 +154,26 @@ section, footer{
   -ms-flex-line-pack: center;
   align-content: center;
 }
-section aside, footer aside{
+
+section aside,
+footer aside {
   height: 100%;
   display: table-cell;
   vertical-align: middle;
 }
-section figure{
+
+section figure {
   max-width: 880px;
   margin: 0 auto;
   padding: 0 40px;
   width: 100%;
 }
-section h2,
-section:nth-child(2) h1{
+
+section h2 {
   margin-bottom: 50px;
 }
-blockquote{
+
+blockquote {
   font-size: 18px;
   line-height: 35px;
   color: #030004;
@@ -144,19 +185,30 @@ blockquote{
   display: none;
 }
 
+span.d-block {
+  display: block;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
 
 /* Header [ Navbar ]
  ========================================= */
-nav{
+
+nav {
   position: fixed;
   z-index: 2;
   top: 75px;
   left: 95px;
 }
-nav a:last-child{
+
+nav a:last-child {
   margin: 0;
 }
-nav a{
+
+nav a {
   padding: 15px 20px;
   width: 100%;
   text-decoration: none !important;
@@ -175,7 +227,8 @@ nav a{
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-nav a span{
+
+nav a span {
   opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -183,26 +236,37 @@ nav a span{
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-nav a img{
+
+nav a img {
   margin: 0 auto;
 }
-nav a:hover, nav a[data-active="1"]{
+
+nav a:hover,
+nav a[data-active="1"] {
   background: #fff;
 }
-nav a:hover span, nav a[data-active="1"] span{
+
+nav a:hover span,
+nav a[data-active="1"] span {
   opacity: 1;
 }
-nav a:hover img:last-child, nav a[data-active="1"] img:last-child{
+
+nav a:hover img:last-child,
+nav a[data-active="1"] img:last-child {
   display: block;
 }
-nav a:hover img:first-child, nav a[data-active="1"] img:first-child{
+
+nav a:hover img:first-child,
+nav a[data-active="1"] img:first-child {
   display: none;
 }
-nav{
+
+nav {
   max-width: 205px;
   width: 100%;
 }
-nav:after{
+
+nav:after {
   position: absolute;
   content: "";
   right: 70px;
@@ -213,48 +277,61 @@ nav:after{
   z-index: -1;
   opacity: .24;
 }
-nav a figure{
+
+nav a figure {
   float: left;
   margin: 0 15px 0 0;
   width: 33px;
   text-align: center;
 }
-nav a img:last-child{
+
+nav a img:last-child {
   display: none;
 }
-nav button{
+
+nav button {
   display: none;
 }
 
 
 /* Home Section [ Section 1 ]
  ========================================= */
-section:nth-child(1){
+
+section:nth-child(1) {
   padding: 0 0 0 100px;
   text-align: center;
   background-color: transparent;
   position: relative;
   min-height: calc(100vh - 20px);
 }
-section:nth-child(1) ul{
+
+section:nth-child(1) ul {
   position: absolute;
   right: 100px;
   bottom: 100px;
 }
+
+
 /*section:nth-child(1) figure{
   position: relative;
 }*/
+
+
 /*section:nth-child(1) aside{
   vertical-align: middle;
 }*/
-section:nth-child(1) h1{
+
+section:nth-child(1) h1 {
   margin: 0;
 }
-section:nth-child(1) h1, section:nth-child(1) p{
+
+section:nth-child(1) h1,
+section:nth-child(1) p {
   width: 100%;
   display: inline-block;
 }
-section:nth-child(1) img{
+
+section:nth-child(1) img {
   display: block;
   position: absolute;
   top: 80%;
@@ -262,10 +339,13 @@ section:nth-child(1) img{
   right: 0;
   margin: 0 auto;
 }
+
+
 /*section:nth-child(1) ul li a{
   color: #cd9933
 }*/
-section:nth-child(1) h1{
+
+section:nth-child(1) h1 {
   text-transform: uppercase;
   font-size: 54px;
   font-family: 'oklahomaregular';
@@ -273,28 +353,32 @@ section:nth-child(1) h1{
   color: #000;
   margin: 0;
 }
-section:nth-child(1) h1{
+
+section:nth-child(1) h1 {
   text-transform: uppercase;
   font-family: 'oklahomaregular';
   font-weight: normal;
   width: auto;
   font-size: 54px;
 }
-section:nth-child(1) h1{
+
+section:nth-child(1) h1 {
   width: 100%;
   display: inline-block;
   font-style: normal;
   color: #000;
   line-height: normal;
 }
-section:nth-child(1) h2{
+
+section:nth-child(1) h2 {
   font-size: 26px;
   letter-spacing: 1.5px;
   position: relative;
   color: #000;
   font-family: 'oklahomaregular';
 }
-section:nth-child(1) h2:before{
+
+section:nth-child(1) h2:before {
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -303,7 +387,8 @@ section:nth-child(1) h2:before{
   left: -150px;
   background-color: #000;
 }
-section:nth-child(1) h2:after{
+
+section:nth-child(1) h2:after {
   position: absolute;
   content: "";
   top: calc(50% - 2px);
@@ -312,57 +397,74 @@ section:nth-child(1) h2:after{
   right: -150px;
   background-color: #000;
 }
-section:nth-child(1) h3{
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    font-style: italic;
-    margin: 0;
-    width: 100%;
+
+section:nth-child(1) h3 {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  width: 100%;
 }
-section:nth-child(1) h4{
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-    display: inline-block;
+
+section:nth-child(1) h4 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  display: inline-block;
 }
-section:nth-child(1) p{
-    font-size: 16px;
-    font-style: italic;
-    width: auto;
-    font-weight: normal;
-    line-height: normal;
+
+section:nth-child(1) p {
+  font-size: 16px;
+  font-style: italic;
+  width: auto;
+  font-weight: normal;
+  line-height: normal;
 }
 
 
 /* projects Section [ Section 2 ]
  ========================================= */
-section:nth-child(2){
+
+section:nth-child(2) {
   padding-left: 100px;
   position: relative;
   z-index: 1;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-
 }
-section:nth-child(2), section:nth-child(4), section#testimonials{
+
+section:nth-child(2),
+section:nth-child(4),
+section#testimonials {
   background-color: #cd9933;
 }
-section:nth-child(2) h1{
-	width: 100%;
+
+section:nth-child(2) h1 {
+  color: #080002;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: normal;
+  text-align: center;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+section:nth-child(2) h1 {
+  width: 100%;
   margin-bottom: 0;
 }
-/*section:nth-child(2) figure{
-  max-width: 970px;
-}*/
-section:nth-child(2) p{
+section:nth-child(2) p {
   max-width: 700px;
   margin: 0 auto;
   display: table;
   text-align: center;
 }
-section:nth-child(2) h2{
+
+section:nth-child(2) h2 {
   width: 33.33%;
   font-family: 'oklahomabold';
   font-size: 1.17em;
@@ -381,32 +483,44 @@ section:nth-child(2) h2{
   -o-transition: all 0s ease 0s;
   transition: all 0s ease 0s;
 }
-section:nth-child(2) a{
--webkit-transition: all .25s;
--moz-transition: all .25s;
--ms-transition: all .25s;
--o-transition: all .25s;
-transition: all .25s;
-color: #000;
-text-decoration: none;
+
+section:nth-child(2) h1 {
+  margin-bottom: 50px;
 }
 
-section:nth-child(2) a:hover span{
+section:nth-child(2) a {
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+  color: #000;
+  text-decoration: none;
+}
+
+section:nth-child(2) a:hover span {
   border-color: #fff;
 }
-section:nth-child(2) a:hover img:nth-of-type(1), section:nth-child(2) a img:nth-of-type(2){
+
+section:nth-child(2) a:hover img:nth-of-type(1),
+section:nth-child(2) a img:nth-of-type(2) {
   display: none;
 }
-section:nth-child(2) a:hover img:nth-of-type(2){
+
+section:nth-child(2) a:hover img:nth-of-type(2) {
   display: table;
   background-color: #dae1e7;
   border: 1px solid #dae1e7;
 }
-section:nth-child(2) h2 img, section:nth-child(2) a img{
+
+section:nth-child(2) h2 img,
+section:nth-child(2) a img {
   margin: 0 auto 30px;
   display: table;
 }
-section:nth-child(2) h2 span, section:nth-child(2) a span{
+
+section:nth-child(2) h2 span,
+section:nth-child(2) a span {
   font-size: 18px;
   line-height: 25px;
   width: auto;
@@ -422,6 +536,8 @@ section:nth-child(2) h2 span, section:nth-child(2) a span{
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
+
 /*section:nth-child(2) figure blockquote{
   margin: 30px 0 0;
 }
@@ -436,11 +552,14 @@ section:nth-child(2) figure:last-child{
   justify-content: center;
   margin-bottom: -40px;
 }*/
-section:nth-child(2) h1:nth-of-type(2){
+
+section:nth-child(2) h1:nth-of-type(2) {
   width: 100%;
   padding-bottom: 0;
   margin-top: 70px;
 }
+
+
 /*section:nth-child(2) figure:last-child h3{
   margin: 20px 0 0;
 }
@@ -452,20 +571,44 @@ section:nth-child(2) figure:last-child h3 a{
 }
 */
 
+section:nth-child(2) h2 {
+  width: 17%;
+}
+
+section:nth-child(2) h2 img,
+section:nth-child(2) a img {
+  margin: 0 auto 10px;
+  display: table;
+  border: 2px solid #000;
+  width: 110px;
+}
+
+section:nth-child(2) h2 span,
+section:nth-child(2) a span {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
 /* Bio Section [ Section 3 ]
  ========================================= */
-section:nth-child(3), footer{
+
+section:nth-child(3),
+footer {
   background-color: transparent;
 }
-section:nth-child(3){
+
+section:nth-child(3) {
   padding-left: 100px;
 }
-section:nth-child(3) p{
+
+section:nth-child(3) p {
   text-align: center;
   margin-bottom: 70px;
   width: 100%;
 }
-section:nth-child(3) p:nth-child(3){
+
+section:nth-child(3) p:nth-child(3) {
   margin: 70px auto;
   display: inline-block;
   width: 100%;
@@ -476,10 +619,12 @@ section:nth-child(3) p:nth-child(3){
   text-transform: uppercase;
   font-family: 'oklahomaregular';
 }
-section:nth-child(3) p img{
+
+section:nth-child(3) p img {
   margin: 0 auto 30px;
 }
-section:nth-child(3) form h2{
+
+section:nth-child(3) form h2 {
   border: none;
   text-transform: none;
   margin: 0 auto 35px;
@@ -487,60 +632,128 @@ section:nth-child(3) form h2{
   line-height: 36px;
   max-width: 580px;
 }
-section:nth-child(3) form .g-recaptcha{
+
+section:nth-child(3) form .g-recaptcha {
   transform: scale(0.65);
   margin: -68px 0 -10px 550px;
   float: left;
 }
-section:nth-child(3) form .form-control{
+
+section:nth-child(3) form .form-control {
   display: none;
 }
-section:nth-child(3) form input:last-child{
+
+section:nth-child(3) form input:last-child {
   width: 100%;
 }
-section:nth-child(3) form input{
+
+section:nth-child(3) form input {
   height: 47px;
-  padding:10px 12px;
-  background:#ffffff;
-  border:1px solid #ffffff;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
   width: calc(25% - 4px);
-  box-sizing:border-box;
-  font-size:16px;
+  box-sizing: border-box;
+  font-size: 16px;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  border-radius:0;
-  box-shadow:none;
+  border-radius: 0;
+  box-shadow: none;
   float: left;
   margin: 0 6px 6px 0;
 }
-section:nth-child(3) form button{
-  background:#cd9933;
+
+section:nth-child(3) form button {
+  background: #cd9933;
   border: none;
-  box-shadow:none;
-  border-radius:0;
+  box-shadow: none;
+  border-radius: 0;
   color: #3e3e3e;
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-family: 'oklahomabold';
-  text-align:center;
-  cursor:pointer;
+  text-align: center;
+  cursor: pointer;
   width: 100%;
   display: inline-block;
   vertical-align: top;
   padding: 15px;
   font-size: 18px;
 }
-section:nth-child(3) form button:hover{
+
+section:nth-child(3) form button:hover {
   background-color: #3e3e3e;
   color: #fff;
 }
-section:nth-child(3) h2{
+
+section:nth-child(3) h2 {
   width: 100%;
 }
 
+section:nth-child(3) h3,
+section:nth-child(3) a {
+  width: 17%;
+  float: left;
+  text-align: center;
+  padding: 50px 0;
+}
 
-/* Testimonials Section [ Section 4 ]
+section:nth-child(3) h3 img,
+section:nth-child(3) a img {
+  margin: 0 auto 30px;
+  display: table;
+  border: 2px solid;
+  width: 110px;
+  padding: 7px;
+}
+
+
+/* Section [ Section 4 ]
+=======================================*/
+
+section:nth-child(4) h3,
+section:nth-child(4) a {
+  width: 17%;
+  float: left;
+  text-align: center;
+  padding: 100px 15px;
+  margin: 0;
+  text-decoration: none;
+}
+
+section:nth-child(4) a>p:nth-child(2) {
+  color: #fff;
+  margin: 16px 0;
+  display: block;
+}
+
+section:nth-child(4) p {
+  line-height: 26px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+section:nth-child(4) h3 img,
+section:nth-child(4) a img {
+  border: 2px solid #fff;
+  padding: 5px;
+  width: 110px;
+  margin: auto;
+}
+
+section:nth-child(4) h2 {
+  width: 100%
+}
+
+section:nth-child(4) {
+  padding-left: 100px;
+}
+
+
+/* Testimonials Section 
  ========================================= */
-section#testimonials figure, section#faq figure{
+
+section#testimonials figure,
+section#faq figure {
   max-width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -548,13 +761,18 @@ section#testimonials figure, section#faq figure{
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-section#testimonials h2, section#faq h2{
+
+section#testimonials h2,
+section#faq h2 {
   width: 100%;
 }
-section#faq h2:nth-of-type(2){
+
+section#faq h2:nth-of-type(2) {
   display: none;
 }
-section#testimonials div, section#faq div{
+
+section#testimonials div,
+section#faq div {
   width: 50%;
   padding: 0 15px;
   text-align: center;
@@ -562,20 +780,25 @@ section#testimonials div, section#faq div{
   display: -ms-flexbox;
   display: flex;
 }
-section#testimonials div > div, section#faq div > div{
+
+section#testimonials div>div,
+section#faq div>div {
   padding: 50px 35px 130px;
   width: 100%;
   display: inline-block;
   background: #be8b27;
   position: relative;
 }
-section#testimonials h4, section#faq h4{
+
+section#testimonials h4,
+section#faq h4 {
   font-size: 26px;
   color: #fff;
   text-transform: uppercase;
   margin: 0;
 }
-section#testimonials h5{
+
+section#testimonials h5 {
   color: #fff;
   font-size: 18px;
   margin: 20px 0 0;
@@ -583,22 +806,28 @@ section#testimonials h5{
   text-transform: uppercase;
   font-family: 'Open Sans', sans-serif;
 }
-section#testimonials h5 span{
+
+section#testimonials h5 span {
   width: 100%;
   display: inline-block;
   font-weight: 400;
   margin-top: 8px;
 }
-section#testimonials h6{
+
+section#testimonials h6 {
   font-size: 21px;
   margin: 50px 0;
   line-height: 34px;
 }
+
+
 /*         section#testimonials p:nth-of-type(2), section#faq p:nth-of-type(2){
                       display: none;
           width: 100% !important;
               }*/
-section#testimonials div > div a, section#faq div > div a{
+
+section#testimonials div>div a,
+section#faq div>div a {
   font-size: 18px;
   text-decoration: none;
   color: #000;
@@ -608,44 +837,79 @@ section#testimonials div > div a, section#faq div > div a{
   font-family: 'oklahomabold';
   position: absolute;
   bottom: 50px;
-  left:  50%;
+  left: 50%;
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-section#testimonials div > div a:hover, section#testimonials div > div a:active, section#testimonials div > div a:focus,
-section#faq div > div a:hover, section#faq div > div a:active, section#faq div > div a:focus{
+
+section#testimonials div>div a:hover,
+section#testimonials div>div a:active,
+section#testimonials div>div a:focus,
+section#faq div>div a:hover,
+section#faq div>div a:active,
+section#faq div>div a:focus {
   background-color: #3e3e3e;
   color: #fff;
 }
-section#testimonials p , section#faq p {padding-bottom: 20px;box-sizing: border-box; display: none;width: 100% !important;}
-section#testimonials p:last-of-type , section#faq p:last-of-type { padding-bottom:0px; }
-section#testimonials p:first-child, section#faq p:first-child { display: block; /* min-height: 125px; */}
-section#faq h4 + div , section#testimonials h6 + div {padding: 0px;display:block;overflow:hidden;}
+
+section#testimonials p,
+section#faq p {
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  display: none;
+  width: 100% !important;
+}
+
+section#testimonials p:last-of-type,
+section#faq p:last-of-type {
+  padding-bottom: 0px;
+}
+
+section#testimonials p:first-child,
+section#faq p:first-child {
+  display: block;
+  /* min-height: 125px; */
+}
+
+section#faq h4+div,
+section#testimonials h6+div {
+  padding: 0px;
+  display: block;
+  overflow: hidden;
+}
+
 
 /* Faq Section [ Section 5 ]
  ========================================= */
-section#faq{
+
+section#faq {
   background: #dae1e7;
 }
-section#faq h4{
+
+section#faq h4 {
   text-transform: none;
   /* min-height: 120px; */
 }
+
+
 /*         section#faq div{
                       text-align: left;
               }*/
-section#faq div > div{
+
+section#faq div>div {
   background: #e3e9ee;
 }
-section#faq h4{
+
+section#faq h4 {
   color: #030004;
   margin: 0 0 50px;
   line-height: 40px;
 }
-section#faq h3{
+
+section#faq h3 {
   font-size: 26px;
   text-transform: uppercase;
   max-width: 850px;
@@ -658,53 +922,65 @@ section#faq h3{
 
 /* Contact Section [ Footer ]
  ========================================= */
-footer{
+
+footer {
   padding-left: 100px;
-	padding-bottom: 25px;
-  text-align:center;
+  padding-bottom: 25px;
+  text-align: center;
   min-height: calc(100vh - 20px);
 }
-footer h2{
+
+footer h2 {
   width: 100%;
   border: none;
   margin-bottom: 35px;
   padding-bottom: 0;
 }
-footer address{
+
+footer address {
   width: 100%;
   font-style: normal;
 }
-footer p{
+
+footer p {
   width: 100%;
   color: #000;
   font-size: 20px;
   line-height: 40px;
 }
-footer address:nth-child(3){
+
+footer address:nth-child(3) {
   margin: 45px auto 50px;
   max-width: 325px;
   display: table;
-  border:1px solid rgb(205, 153, 51);
+  border: 1px solid rgb(205, 153, 51);
   padding: 20px;
   width: 100%;
 }
-footer address:nth-child(3) p b{
+
+footer address:nth-child(3) p b {
   text-transform: uppercase;
 }
-footer figcaption{
+
+footer figcaption {
   margin: 0 0 50px;
 }
-footer figcaption ul{
+
+footer figcaption ul {
   margin: 0 auto;
   display: table;
 }
-footer figcaption ul li{
+
+footer figcaption ul li {
   float: left;
 }
-footer figcaption ul li a, footer figcaption ul li a:hover{
+
+footer figcaption ul li a,
+footer figcaption ul li a:hover {
   color: #000;
 }
-footer p:nth-child(4){
+
+footer p:nth-child(4) {
   font-size: 16px;
   color: #000;
   font-weight: 300;
@@ -712,478 +988,677 @@ footer p:nth-child(4){
   text-align: center;
 }
 
-/* -------------------------- */
-span.d-block {display: block;}
-/* #services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
-                           top: -150px; left: 50%;}
-#services {position: relative;}
-section#services:after { content: ""; width: 17px; height: 17px; background: #cd9933; position: absolute;
-                         top: -165px; border-radius: 50%;} */
-.mt-50 {margin-top: 50px;}
-section:nth-child(2) h2 {width: 17%;}
-section:nth-child(3) h3, section:nth-child(3) a {width: 17%; float: left; text-align: center;padding: 50px 0;}
-section:nth-child(4) h3, section:nth-child(4) a {width: 17%; float: left; text-align: center;padding: 100px 15px;margin: 0;text-decoration: none;}
-section:nth-child(4) a > p:nth-child(2){color: #fff; margin: 16px 0; display: block;}
-section:nth-child(4) p {line-height: 26px; font-weight: 500; font-size: 16px;}
-section:nth-child(4) h3 img, section:nth-child(4) a img { border: 2px solid #fff; padding: 5px; width: 110px;
-                                                          margin: auto;}
-section:nth-child(4) h2{width: 100%}
-section:nth-child(4){  padding-left: 100px; }
-
-section:nth-child(3) h3 img, section:nth-child(3) a img { margin: 0 auto 30px; display: table; border: 2px solid; 
-                                                          width: 110px; padding: 7px;}
-section:nth-child(2) h2 img, section:nth-child(2) a img { margin: 0 auto 10px; display: table; border: 2px solid #000; width: 110px;}
-section:nth-child(2) h2 span, section:nth-child(2) a span {border-bottom: none;padding-bottom: 0;}
-
 
 /* Media Screen
  ========================================= */
 
-@media screen and (max-width: 1400px){
-  section:nth-child(3) p:nth-child(3){
-      margin: 50px auto;
+@media screen and (max-width: 1400px) {
+  /*  Header [ Navbar ] ====================================*/
+  nav {
+    top: 55px;
+    left: 55px;
   }
-  section:nth-child(3) form h2{
-      margin: 0 auto 40px;
+  /*  end Header [ Navbar ] ====================================*/
+  /*  projects Section [ Section 2 ] ====================================*/
+  section:nth-child(2) h2 {
+    margin: 30px 0 0;
   }
-  section:nth-child(2) h2{
-      margin: 30px 0 0;
-  }
-  nav{
-      top: 55px;
-      left: 55px;
-  }
-  section#testimonials figure, section#faq figure{
-      max-width: 980px;
-  }
-}
-
-@media screen and (max-width: 1199px){
-  /* section:nth-child(1) img {
-      height: 250px;
-  } */
-  section:nth-child(1) ul {
-      right: 60px;
-      bottom: 60px;
-  }
-  h2,
-  section:nth-child(2) h1{
-      font-size: 42px;
-  }
-  section h2,
-  section:nth-child(2) h1{
-      margin-bottom: 35px;
-  }
-  section:nth-child(2) h2{
-      padding: 35px 15px;
-  }
-  section:nth-child(2) h2,
-  section:nth-child(3) h3, section:nth-child(3) a,
-  section:nth-child(4) h3, section:nth-child(4) a{
-  	width: 22%;
+  /*  end projects Section [ Section 2 ] ====================================*/
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) p:nth-child(3) {
+    margin: 50px auto;
   }
   section:nth-child(3) form h2 {
-      font-size: 28px;
-      line-height: 34px;
-      max-width: 510px;
+    margin: 0 auto 40px;
   }
-  footer p{
-      font-size: 18px;
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Testimonials Section ====================================*/
+  section#testimonials figure {
+    max-width: 980px;
   }
-  footer address:nth-child(3){
-      margin: 40px auto;
+  /*  end Testimonials Section ====================================*/
+  /*  Faq Section ==============================================*/
+  section#faq figure {
+    max-width: 980px;
   }
-  nav{
-      top: 45px;
-      left: 45px;
+  /*  end Faq Section ==============================================*/
+  /* Contact Section [ Footer ] ===========================================*/
+  /* end Contact Section [ Footer ] ===========================================*/
+}
+
+@media screen and (max-width: 1199px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 42px;
   }
-  nav a{
-      padding: 12px 15px;
-      margin: 0 0 15px;
+  section h2 {
+    margin-bottom: 35px;
   }
-  nav{
-      max-width: 160px;
+  section {
+    padding: 80px 0;
   }
-  nav a figure{
-      margin: 0 10px 0 0;
+  /*  end general section css (common css) ====================================*/
+  /*  Header [ Navbar ] ====================================*/
+  nav {
+    top: 45px;
+    left: 45px;
   }
-  section#testimonials figure, section#faq figure{
-      max-width: 880px;
+  nav a {
+    padding: 12px 15px;
+    margin: 0 0 15px;
   }
-  section, footer{
-      padding: 80px 0;
+  nav {
+    max-width: 160px;
   }
-  section#faq h3{
-      font-size: 22px;
-      max-width: 720px;
-      line-height: 36px;
+  nav a figure {
+    margin: 0 10px 0 0;
   }
-  section#faq h4{
-      font-size: 22px;
-      line-height: 34px;
-      margin: 0 0 30px;
+  /*  end Header [ Navbar ] ====================================*/
+  /*  Home Section [ Section 1 ] ====================================*/
+  section:nth-child(1) ul {
+    right: 60px;
+    bottom: 60px;
   }
-  section:nth-child(1){
-        padding: 0 0 0 185px;
+  section:nth-child(1) {
+    padding: 0 0 0 185px;
   }
-  section:nth-child(1) img{
+  section:nth-child(1) img {
     left: 185px;
   }
-}
-
-@media screen and (max-width: 991px){
-  section:nth-child(1) ul {
-      right: 50px;
-      bottom: 50px;
-  }
-  section:nth-child(2),
-  section:nth-child(3),
-  section:nth-child(4){
-    padding-left: 0;
-  }
-  h2,
+  /* section:nth-child(1) img {
+      height: 250px;
+    } */
+  /*  end Home Section [ Section 1 ] ====================================*/
+  /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h1 {
-      font-size: 40px;
+    font-size: 42px;
   }
-  p, blockquote{
-      font-size: 17px;
-      line-height: 32px;
+  section:nth-child(2) h1 {
+    margin-bottom: 35px;
   }
-  section:nth-child(2) h2 span, section:nth-child(2) a span{
-      line-height: 20px;
+  section:nth-child(2) h2 {
+    padding: 35px 15px;
   }
-  section:nth-child(2) h2, section:nth-child(2) a{
-      margin: 30px 0 0;
+  section:nth-child(2) h2 {
+    width: 22%;
   }
-  section:nth-child(3) p:nth-child(3) {
-      margin: 40px auto;
+  /*  end projects Section [ Section 2 ] ====================================*/
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) h3,
+  section:nth-child(3) a {
+    width: 22%;
   }
   section:nth-child(3) form h2 {
-      margin: 0 auto 25px;
+    font-size: 28px;
+    line-height: 34px;
+    max-width: 510px;
   }
-  /* section:nth-child(3) dd figcaption ul li a, footer figcaption ul a{
-          font-size: 14px;
-          padding: 0 0 10px;
-  } */
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Section 4  ====================================*/
+  section:nth-child(4) h3,
+  section:nth-child(4) a {
+    width: 22%;
+  }
+  /*  end Section 4 ====================================*/
+  /*  Testimonials Section ====================================*/
+  section#testimonials figure {
+    max-width: 880px;
+  }
+  /*  end Testimonials Section ====================================*/
+  /*  Faq Section ==============================================*/
+  section#faq figure {
+    max-width: 880px;
+  }
+  section#faq h3 {
+    font-size: 22px;
+    max-width: 720px;
+    line-height: 36px;
+  }
+  section#faq h4 {
+    font-size: 22px;
+    line-height: 34px;
+    margin: 0 0 30px;
+  }
+  /*  end Faq Section ==============================================*/
+  /* Contact Section [ Footer ] ===========================================*/
   footer p {
-      font-size: 16px;
-      line-height: 32px;
-  }
-  footer h2{
-      margin-bottom: 25px;
+    font-size: 18px;
   }
   footer address:nth-child(3) {
-      margin: 35px auto;
-      padding: 15px;
+    margin: 40px auto;
   }
-  footer figcaption {
-      margin: 0 0 35px;
+  footer {
+    padding: 80px 0;
   }
-  footer p:nth-child(4){
-      font-size: 14px;
-      line-height: 26px;
+  /* end Contact Section [ Footer ] ===========================================*/
+}
+
+@media screen and (max-width: 991px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 40px;
   }
-  nav button{
-      display: block;
-      border: none;
-      background: transparent;
-      padding: 0;
-      float: left;
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      width: 40px;
+  p,
+  blockquote {
+    font-size: 17px;
+    line-height: 32px;
   }
-  nav{
-      top: 20px;
-      left: 20px;
-      max-width: 110px;
+  section {
+    padding: 60px 0;
   }
-  nav div{
-      background: #e4eaef;
-      padding: 30px 0 30px 25px;
-      display: none;
+  /*  end general section css (common css) ====================================*/
+  /*  Header [ Navbar ] ====================================*/
+  nav button {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+    float: left;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
   }
-  nav a{
-      float: none;
+  nav {
+    top: 20px;
+    left: 20px;
+    max-width: 110px;
   }
-  nav:after, nav a span{
-      display: none;
+  nav div {
+    background: #e4eaef;
+    padding: 30px 0 30px 25px;
+    display: none;
   }
-  section#testimonials div, section#faq div{
-      width: 100%;
-      padding: 30px 0 0;
+  nav a {
+    float: none;
   }
-  section#testimonials h2, section#faq h2{
-      margin-bottom: 0;
+  nav:after,
+  nav a span {
+    display: none;
   }
-  section#testimonials, section#faq{
-      width: auto;
-      margin: 0 -20px;
+  /*  end Header [ Navbar ] ====================================*/
+  /*  Home Section [ Section 1 ] ====================================*/
+  section:nth-child(1) ul {
+    right: 50px;
+    bottom: 50px;
   }
-  section#testimonials h6{
-      margin: 40px 0;
-  }
-  section, footer{
-      padding: 60px 0;
-  }
-  section#faq h3{
-      font-size: 20px;
-      max-width: 100%;
-      line-height: 32px;
-      margin: 30px 0 0;
-  }
-  section:nth-child(1){
+  section:nth-child(1) {
     padding: 0;
   }
-  section:nth-child(1) img{
+  section:nth-child(1) img {
     left: 0;
   }
-}
-
-@media screen and (max-width: 920px){
-  section:nth-child(3) form{
-      padding: 0 15px;
+  /*  end Home Section [ Section 1 ] ====================================*/
+  /*  projects Section [ Section 2 ] ====================================*/
+  section:nth-child(2) {
+    padding-left: 0;
   }
-  section:nth-child(3) form input{
-      width: calc(33.33% - 6px);
-  }
-  section:nth-child(3) form input:nth-child(4){
-      width: 33.33%;
-      margin-right: 0;
-  }
-  section:nth-child(3) form input:nth-child(5){
-      width: 100%;
-  }
-  section:nth-child(3) form .g-recaptcha{
-      margin: -12px 0 -10px -30px;
-      transform: scale(0.7);
-      width: 197px;
-  }
-  section:nth-child(3) form ul{ margin: 0; max-width: 100%;position: relative;   padding: 0 15px;}
-  section:nth-child(3) form button {width: calc(100% - 218px);padding: 15px 10px;float: right;}
-  section:nth-child(3) figure{padding: 0 5px;}
-  section:nth-child(3) figure p, section:nth-child(3) form h2{padding: 0 15px;}
-  section:nth-child(3) form ul:after{content: ''; display: block; clear: both; width: 100%;}
-  form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0px; left: 0;}
-  section:nth-child(3) form li .g-recaptcha div {width: 100% !important;height: 100% !important;}
-}
-
-@media screen and (max-width: 767px){
-  section:nth-child(1) ul{
-      right: 0;
-      bottom: auto;
-      top: 50px;
-      width: 100%;
-  }
-  h2,
   section:nth-child(2) h1 {
-      font-size: 30px;
-      padding-bottom: 0;
+    font-size: 40px;
+  }
+  section:nth-child(2) h2 span,
+  section:nth-child(2) a span {
+    line-height: 20px;
+  }
+  section:nth-child(2) h2,
+  section:nth-child(2) a {
+    margin: 30px 0 0;
+  }
+  /*  end projects Section [ Section 2 ] ====================================*/
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) {
+    padding-left: 0;
+  }
+  section:nth-child(3) p:nth-child(3) {
+    margin: 40px auto;
+  }
+  section:nth-child(3) form h2 {
+    margin: 0 auto 25px;
+  }
+  /* section:nth-child(3) dd figcaption ul li a{
+          font-size: 14px;
+          padding: 0 0 10px;
+    } */
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Section 4  ====================================*/
+  section:nth-child(4) {
+    padding-left: 0;
+  }
+  /*  end Section 4 ====================================*/
+  /*  Testimonials Section ====================================*/
+  section#testimonials div {
+    width: 100%;
+    padding: 30px 0 0;
+  }
+  section#testimonials h2 {
+    margin-bottom: 0;
+  }
+  section#testimonials {
+    width: auto;
+    margin: 0 -20px;
+  }
+  section#testimonials h6 {
+    margin: 40px 0;
+  }
+  /*  end Testimonials Section ====================================*/
+  /*  Faq Section ==============================================*/
+  section#faq div {
+    width: 100%;
+    padding: 30px 0 0;
+  }
+  section#faq h2 {
+    margin-bottom: 0;
+  }
+  section#faq {
+    width: auto;
+    margin: 0 -20px;
+  }
+  section#faq h3 {
+    font-size: 20px;
+    max-width: 100%;
+    line-height: 32px;
+    margin: 30px 0 0;
+  }
+  /*  end Faq Section ==============================================*/
+  /* Contact Section [ Footer ] ===========================================*/
+  footer p {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  footer {
+    padding: 60px 0;
+  }
+  footer h2 {
+    margin-bottom: 25px;
+  }
+  footer address:nth-child(3) {
+    margin: 35px auto;
+    padding: 15px;
+  }
+  footer figcaption {
+    margin: 0 0 35px;
+  }
+  footer p:nth-child(4) {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  /*footer figcaption ul a{
+          font-size: 14px;
+          padding: 0 0 10px;
+    } */
+  /* end Contact Section [ Footer ] ===========================================*/
+}
+
+@media screen and (max-width: 920px) {
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) form {
+    padding: 0 15px;
+  }
+  section:nth-child(3) form input {
+    width: calc(33.33% - 6px);
+  }
+  section:nth-child(3) form input:nth-child(4) {
+    width: 33.33%;
+    margin-right: 0;
+  }
+  section:nth-child(3) form input:nth-child(5) {
+    width: 100%;
+  }
+  section:nth-child(3) form .g-recaptcha {
+    margin: -12px 0 -10px -30px;
+    transform: scale(0.7);
+    width: 197px;
+  }
+  section:nth-child(3) form ul {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    padding: 0 15px;
+  }
+  section:nth-child(3) form button {
+    width: calc(100% - 218px);
+    padding: 15px 10px;
+    float: right;
+  }
+  section:nth-child(3) figure {
+    padding: 0 5px;
+  }
+  section:nth-child(3) figure p,
+  section:nth-child(3) form h2 {
+    padding: 0 15px;
+  }
+  section:nth-child(3) form ul:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+  section:nth-child(3) form li .g-recaptcha div {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Section 4  ====================================*/
+  form li:nth-child(4) {
+    width: 162px !important;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+  /*  end Section 4 ====================================*/
+}
+
+@media screen and (max-width: 767px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 30px;
+    padding-bottom: 0;
+  }
+  section figure {
+    padding: 0 20px;
+  }
+  p,
+  blockquote {
+    font-size: 16px;
+  }
+  blockquote {
+    text-align: center;
+  }
+  section h2 {
+    line-height: 45px;
+  }
+  section {
+    padding: 50px 0;
+  }
+  /*  end general section css (common css) ====================================*/
+  /*  Home Section [ Section 1 ] ====================================*/
+  section:nth-child(1) ul {
+    right: 0;
+    bottom: auto;
+    top: 50px;
+    width: 100%;
   }
   /* section:nth-child(1) h1{
       margin: 0 0 45px;
-  } */
-  /* section:nth-child(1) img {
-      height: 250px;
-  } */
-  section figure{
-      padding: 0 20px;
-  }
-  footer{
-      padding-right: 20px;
-      padding-left: 20px;
-  }
-  p, blockquote{
-      font-size: 16px;
-  }
-  blockquote{
-      text-align: center;
-  }
-  section:nth-child(2) p b {
-      font-weight: 300;
-  }
-  section:nth-child(2) p, section:nth-child(3) p{
-      text-align: center;
-  }
-  section:nth-child(2) h2{
-      width: 100%;
-      margin: 0;
-  }
-  /* section:nth-child(3) dd, section:nth-child(3) dd figcaption{
-          display: table;
-          width: 100%;
-          text-align: center;
-  }
-  section:nth-child(3) dd figcaption{
-          margin-top: 35px;
-  } */
-  section h2,
-  section:nth-child(2) h1{
-      line-height: 45px;
-  }
-  /* section:nth-child(3) dd figcaption ul li a, footer figcaption ul a{
-          letter-spacing: 1px;
-          font-size: 15px;
-  }
-  section:nth-child(3) dd img, section:nth-child(3) dd figcaption ul{
-          margin: 0 auto;
-          display: table;
-  } */
-  section:nth-child(3) form h2{
-      text-align: center;
-      line-height: 40px;
-      font-size: 30px;
-      max-width: 540px;
-  }
-  section:nth-child(3) p:nth-child(3){
-      margin: 40px auto 60px;
-  }
-  section:nth-child(3) form ul li{
-      width: 50%;
-  }
-  section:nth-child(3) form ul li:nth-child(3){
-      width: 100%;
-  }
-  footer h2{
-      margin-bottom: 40px;
-  }
-  section:nth-child(2) figure blockquote{
-      margin: 0 0 30px;
-  }
-  section:nth-child(1) h1{
-      font-size: 38px;
+    } */
+    /* section:nth-child(1) img {
+        height: 250px;
+    } */
+  section:nth-child(1) h1 {
+    font-size: 38px;
   }
   section:nth-child(1) h2:before {
-      width: 47px;
-      left: -56px;
+    width: 47px;
+    left: -56px;
   }
   section:nth-child(1) h2:after {
-      width: 47px;
-      right: -56px;
+    width: 47px;
+    right: -56px;
   }
-  section:nth-child(3) form input:nth-child(4){
-      width: 100%;
+  section:nth-child(1) figure figure {
+    padding: 0;
   }
-  section#bio form input:nth-child(2) {
-      width: 50%;
-      margin-right: 0;
+  /*  end Home Section [ Section 1 ] ====================================*/
+  /*  projects Section [ Section 2 ] ====================================*/
+  section:nth-child(2) h1 {
+    font-size: 30px;
+    padding-bottom: 0;
   }
-  section:nth-child(3) form input:nth-child(3){
-      width: 100%;
-      margin-right: 0;
+  section:nth-child(2) p b {
+    font-weight: 300;
   }
-  section:nth-child(3) form input {
-      width: calc(50% - 6px);
+  section:nth-child(2) p {
+    text-align: center;
   }
-  section#testimonials h5 span{
-      margin-top: 5px;
-      font-size: 16px;
+  section:nth-child(2) h2 {
+    width: 100%;
+    margin: 0;
   }
-  section, footer{
-      padding: 50px 0;
+  section:nth-child(2) h1 {
+    line-height: 45px;
   }
-  section#faq h2:nth-of-type(2){
-      display: block;
+  section:nth-child(2) figure blockquote {
+    margin: 0 0 30px;
   }
-  section#faq h2:nth-of-type(1){
-      display: none;
-  }
-  section:nth-child(2) figure:last-child{
+  section:nth-child(2) figure:last-child {
     margin-bottom: 0;
   }
-  section:nth-child(3) h3, section:nth-child(3) a{
+  /*  end projects Section [ Section 2 ] ====================================*/
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) p {
+    text-align: center;
+  }
+  /* section:nth-child(3) dd, section:nth-child(3) dd figcaption{
+            display: table;
+            width: 100%;
+            text-align: center;
+    }
+    section:nth-child(3) dd figcaption{
+            margin-top: 35px;
+    } */
+    /* section:nth-child(3) dd figcaption ul li a{
+            letter-spacing: 1px;
+            font-size: 15px;
+    }
+    section:nth-child(3) dd img, 
+    section:nth-child(3) dd figcaption ul{
+            margin: 0 auto;
+            display: table;
+    } */
+  section:nth-child(3) form h2 {
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    max-width: 540px;
+  }
+  section:nth-child(3) p:nth-child(3) {
+    margin: 40px auto 60px;
+  }
+  section:nth-child(3) form ul li {
+    width: 50%;
+  }
+  section:nth-child(3) form ul li:nth-child(3) {
+    width: 100%;
+  }
+  section:nth-child(3) form input:nth-child(4) {
+    width: 100%;
+  }
+  section#bio form input:nth-child(2) {
+    width: 50%;
+    margin-right: 0;
+  }
+  section:nth-child(3) form input:nth-child(3) {
+    width: 100%;
+    margin-right: 0;
+  }
+  section:nth-child(3) form input {
+    width: calc(50% - 6px);
+  }
+  section:nth-child(3) h3,
+  section:nth-child(3) a {
     padding: 20px 0;
   }
-  section:nth-child(2) h2, section:nth-child(3) h3, section:nth-child(3) a, section:nth-child(4) h3, section:nth-child(4) a {width: 100%;}
-  section:nth-child(4) h3 img, section:nth-child(4) a img {margin: auto;}
-  section:nth-child(4) h3, section:nth-child(4) a{
+  section:nth-child(2) h2,
+  section:nth-child(3) h3,
+  section:nth-child(3) a {
     padding: 40px 15px;
   }
-  section:nth-child(1) figure figure{
-      padding: 0;
-    }
-}
-
-
-
-@media screen and (max-width: 481px){
-  section:nth-child(3) figure{    padding: 0 5px;}
-  section:nth-child(3) figure p, section:nth-child(3) form h2{padding: 0 15px;}
-  section:nth-child(3) form ul{margin: 0; max-width: 100%;position: relative;padding: 0 0;}
-  section:nth-child(3) form ul:after{content: ''; display: block; clear: both; width: 100%;}
-  form li:nth-child(4) {width: 162px !important; position: absolute; bottom: 0; left: 0;}
-  section:nth-child(3) form{padding: 0 2px;}
-  section:nth-child(3) form button {margin-top: 0px;padding: 10px 10px;width: calc(100% - 170px);}
-  section:nth-child(3) form .g-recaptcha{
-      margin: 0px 0 -35px 0px;
-      transform: scale(0.55);
-      display: block;
-      width: 162px;
-      transform-origin: 0 0;
-      -webkit-transform-origin: 0 0;
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Section 4  ====================================*/
+  section:nth-child(4) h3,
+  section:nth-child(4) a {
+    width: 100%;
   }
-  section#testimonials div > div, section#faq div > div{
-      padding: 30px 15px;
+  section:nth-child(4) h3 img,
+  section:nth-child(4) a img {
+    margin: auto;
   }
-  section#testimonials div > div > div, section#faq div > div > div{
-      padding: 0;
+  section:nth-child(4) h3,
+  section:nth-child(4) a {
+    padding: 40px 15px;
   }
-  section#testimonials h6 {
-      margin: 30px 0 10px;
+  /*  end Section 4 ====================================*/
+  /*  Testimonials Section ====================================*/
+  section#testimonials h5 span {
+    margin-top: 5px;
+    font-size: 16px;
   }
-  section#faq h4 {
-      font-size: 20px;
-      line-height: 28px;
-      margin: 0 0 15px;
-  }
-  section#testimonials p, section#faq p{
+  /*  end Testimonials Section ====================================*/
+  /*  Faq Section ==============================================*/
+  section#faq h2:nth-of-type(2) {
     display: block;
   }
-  section#testimonials div > div a, section#faq div > div a{
+  section#faq h2:nth-of-type(1) {
     display: none;
   }
-  footer address:nth-child(3){
-    max-width: 260px;
+  /*  end Faq Section ==============================================*/
+  /* Contact Section [ Footer ] ===========================================*/
+  footer {
+    padding-right: 20px;
+    padding-left: 20px;
   }
+  footer h2 {
+    margin-bottom: 40px;
+  }
+  /*    footer figcaption ul a{
+          letter-spacing: 1px;
+          font-size: 15px;
+    }*/
+  footer {
+    padding: 50px 0;
+  }
+  /* end Contact Section [ Footer ] ===========================================*/
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 481px) {
+  /*  Bio Section [ Section 3 ] ====================================*/
+  section:nth-child(3) figure {
+    padding: 0 5px;
+  }
+  section:nth-child(3) figure p,
+  section:nth-child(3) form h2 {
+    padding: 0 15px;
+  }
+  section:nth-child(3) form ul {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    padding: 0 0;
+  }
+  section:nth-child(3) form ul:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 100%;
+  }
+  section:nth-child(3) form {
+    padding: 0 2px;
+  }
+  section:nth-child(3) form button {
+    margin-top: 0px;
+    padding: 10px 10px;
+    width: calc(100% - 170px);
+  }
+  section:nth-child(3) form .g-recaptcha {
+    margin: 0px 0 -35px 0px;
+    transform: scale(0.55);
+    display: block;
+    width: 162px;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+  /*  end Bio Section [ Section 3 ] ====================================*/
+  /*  Section 4  ====================================*/
+  form li:nth-child(4) {
+    width: 162px !important;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  /*  end Section 4 ====================================*/
+  /*  Testimonials Section ====================================*/
+  section#testimonials div>div {
+    padding: 30px 15px;
+  }
+  section#testimonials div>div>div {
+    padding: 0;
+  }
+  section#testimonials h6 {
+    margin: 30px 0 10px;
+  }
+  section#testimonials p {
+    display: block;
+  }
+  section#testimonials div>div a {
+    display: none;
+  }
+  /*  end Testimonials Section ====================================*/
+  /*  Faq Section ==============================================*/
+  section#faq div>div {
+    padding: 30px 15px;
+  }
+  section#faq div>div>div {
+    padding: 0;
+  }
+  section#faq h4 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 15px;
+  }
+  section#faq p {
+    display: block;
+  }
+  section#faq div>div a {
+    display: none;
+  }
+  /*  end Faq Section ==============================================*/
+  /* Contact Section [ Footer ] ===========================================*/
+  footer address:nth-child(3) {
+    max-width: 260px;
+  }
+  /* end Contact Section [ Footer ] ===========================================*/
+}
+
+@media screen and (max-width: 390px) {
+  /*  Home Section [ Section 1 ] ====================================*/
+  section:nth-child(1) h2 {
+    font-size: 16px;
+  }
+  section:nth-child(1) h1 {
+    font-size: 30px;
+  }
+  section:nth-child(1) h2:after {
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 35px;
+    right: -43px;
+  }
+  section:nth-child(1) h2:before {
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 35px;
+    left: -43px;
+  }
+  /*  end Home Section [ Section 1 ] ====================================*/
+  /*  Bio Section [ Section 3 ] ====================================*/
   section:nth-child(3) form li .g-recaptcha {
-      margin: 0;
-      transform:scale(0.7778);
-      -webkit-transform:scale(0.7778);
-      transform-origin:0 0;
-      -webkit-transform-origin:0 0;
+    margin: 0;
+    transform: scale(0.7778);
+    -webkit-transform: scale(0.7778);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
   }
-  section:nth-child(3) form li .g-recaptcha div{
-      width: 100% !important;
-      height: 100% !important;
+  section:nth-child(3) form li .g-recaptcha div {
+    width: 100% !important;
+    height: 100% !important;
   }
-  section:nth-child(3) form ul{
-      display: block;
-      margin: 0 auto;
-      max-width: 240px;
+  section:nth-child(3) form ul {
+    display: block;
+    margin: 0 auto;
+    max-width: 240px;
   }
   /* section:nth-child(3) form button{
       margin-top: -11px;
-  } */
-  section:nth-child(1) h2{
-      font-size: 16px;
-  }
-  section:nth-child(1) h1{
-      font-size: 30px;
-  }
-  section:nth-child(1) h2:after{
-      top: calc(50% - 1px);
-      height: 2px;
-      width: 35px;
-      right: -43px;
-  }
-  section:nth-child(1) h2:before{
-      top: calc(50% - 1px);
-      height: 2px;
-      width: 35px;
-      left: -43px;
-  }
-} 
+    } */
+  /*  end Bio Section [ Section 3 ] ====================================*/
+}
