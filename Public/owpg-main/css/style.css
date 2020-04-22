@@ -368,13 +368,17 @@ nav a {
   flex-wrap: wrap;
 }
 
-nav a span {
+nav a h1 {
   opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
 }
 
 nav a img {
@@ -386,8 +390,8 @@ nav a[data-active="1"] {
   background: #fff;
 }
 
-nav a:hover span,
-nav a[data-active="1"] span {
+nav a:hover h1,
+nav a[data-active="1"] h1 {
   opacity: 1;
 }
 
@@ -1195,7 +1199,7 @@ footer p:nth-child(4) {
     float: none;
   }
   nav:after,
-  nav a span {
+  nav a h1 {
     display: none;
   }
   /*  end Header [ Navbar ] ====================================*/
@@ -1471,7 +1475,8 @@ footer p:nth-child(4) {
   section:nth-child(3) form ul li:nth-child(3) {
     width: 100%;
   }
-  section:nth-child(3) form input:nth-child(4) {
+  section:nth-child(3) form input:nth-child(4),
+  section:nth-child(3) h3, section:nth-child(3) a {
     width: 100%;
   }
   section#bio form input:nth-child(2) {
