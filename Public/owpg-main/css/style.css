@@ -333,10 +333,6 @@ header p {
   line-height: normal;
 }
 
-
-/* Header [ Navbar ]
- ========================================= */
-
 nav {
   position: fixed;
   z-index: 2;
@@ -436,6 +432,7 @@ nav a img:last-child {
 nav button {
   display: none;
 }
+
 
 
 /* projects Section [ Section 2 ]
@@ -605,7 +602,8 @@ section:nth-child(2) a span {
 }
 
 
-/* Bio Section [ Section 3 ]
+
+/* Values Section [ Section 3 ]
  ========================================= */
 
 section:nth-child(3),
@@ -722,7 +720,8 @@ section:nth-child(3) a img {
 }
 
 
-/* Section [ Section 4 ]
+
+/* Team Section [ Section 4 ]
 =======================================*/
 
 section:nth-child(4) h3,
@@ -764,178 +763,7 @@ section:nth-child(4) {
 }
 
 
-/* Testimonials Section 
- ========================================= */
-
-section#testimonials figure,
-section#faq figure {
-  max-width: 1170px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-section#testimonials h2,
-section#faq h2 {
-  width: 100%;
-}
-
-section#faq h2:nth-of-type(2) {
-  display: none;
-}
-
-section#testimonials div,
-section#faq div {
-  width: 50%;
-  padding: 0 15px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section#testimonials div>div,
-section#faq div>div {
-  padding: 50px 35px 130px;
-  width: 100%;
-  display: inline-block;
-  background: #be8b27;
-  position: relative;
-}
-
-section#testimonials h4,
-section#faq h4 {
-  font-size: 26px;
-  color: #fff;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-section#testimonials h5 {
-  color: #fff;
-  font-size: 18px;
-  margin: 20px 0 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
-}
-
-section#testimonials h5 span {
-  width: 100%;
-  display: inline-block;
-  font-weight: 400;
-  margin-top: 8px;
-}
-
-section#testimonials h6 {
-  font-size: 21px;
-  margin: 50px 0;
-  line-height: 34px;
-}
-
-
-/*         section#testimonials p:nth-of-type(2), section#faq p:nth-of-type(2){
-                      display: none;
-          width: 100% !important;
-              }*/
-
-section#testimonials div>div a,
-section#faq div>div a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #000;
-  padding: 10px 15px;
-  background: #fff;
-  display: inline-block;
-  font-family: 'oklahomabold';
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -o-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-}
-
-section#testimonials div>div a:hover,
-section#testimonials div>div a:active,
-section#testimonials div>div a:focus,
-section#faq div>div a:hover,
-section#faq div>div a:active,
-section#faq div>div a:focus {
-  background-color: #3e3e3e;
-  color: #fff;
-}
-
-section#testimonials p,
-section#faq p {
-  padding-bottom: 20px;
-  box-sizing: border-box;
-  display: none;
-  width: 100% !important;
-}
-
-section#testimonials p:last-of-type,
-section#faq p:last-of-type {
-  padding-bottom: 0px;
-}
-
-section#testimonials p:first-child,
-section#faq p:first-child {
-  display: block;
-  /* min-height: 125px; */
-}
-
-section#faq h4+div,
-section#testimonials h6+div {
-  padding: 0px;
-  display: block;
-  overflow: hidden;
-}
-
-
-/* Faq Section [ Section 5 ]
- ========================================= */
-
-section#faq {
-  background: #dae1e7;
-}
-
-section#faq h4 {
-  text-transform: none;
-  /* min-height: 120px; */
-}
-
-
-/*         section#faq div{
-                      text-align: left;
-              }*/
-
-section#faq div>div {
-  background: #e3e9ee;
-}
-
-section#faq h4 {
-  color: #030004;
-  margin: 0 0 50px;
-  line-height: 40px;
-}
-
-section#faq h3 {
-  font-size: 26px;
-  text-transform: uppercase;
-  max-width: 850px;
-  margin: 0 auto 60px;
-  display: block;
-  text-align: center;
-  line-height: 44px;
-}
-
-
-/* Contact Section [ Footer ]
+/* Contact Section [ Footer - last section ]
  ========================================= */
 
 footer {
@@ -1008,37 +836,28 @@ footer p:nth-child(4) {
  ========================================= */
 
 @media screen and (max-width: 1400px) {
-  /*  Header [ Navbar ] ====================================*/
+  /* general section css (common css) ====================================*/
   nav {
     top: 55px;
     left: 55px;
-  }
-  /*  end Header [ Navbar ] ====================================*/
+  } 
+
+
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h2 {
     margin: 30px 0 0;
   }
-  /*  end projects Section [ Section 2 ] ====================================*/
-  /*  Bio Section [ Section 3 ] ====================================*/
+
+
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) p:nth-child(3) {
     margin: 50px auto;
   }
   section:nth-child(3) form h2 {
     margin: 0 auto 40px;
   }
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Testimonials Section ====================================*/
-  section#testimonials figure {
-    max-width: 980px;
-  }
-  /*  end Testimonials Section ====================================*/
-  /*  Faq Section ==============================================*/
-  section#faq figure {
-    max-width: 980px;
-  }
-  /*  end Faq Section ==============================================*/
-  /* Contact Section [ Footer ] ===========================================*/
-  /* end Contact Section [ Footer ] ===========================================*/
+
+
 }
 
 @media screen and (max-width: 1199px) {
@@ -1057,19 +876,18 @@ footer p:nth-child(4) {
     bottom: 60px;
   }
   header {
-    padding: 0 0 0 185px;
+    padding: 0 0 0 100px;
   }
   header img {
-    left: 185px;
+    left: 100px;
   }
+   /* header img {
+      height: 250px;
+    } */
   header h2 {
     margin-bottom: 35px;
   }
-  /* header img {
-      height: 250px;
-    } */
-  /*  end general section css (common css) ====================================*/
-  /*  Header [ Navbar ] ====================================*/
+   
   nav {
     top: 45px;
     left: 45px;
@@ -1084,7 +902,8 @@ footer p:nth-child(4) {
   nav a figure {
     margin: 0 10px 0 0;
   }
-  /*  end Header [ Navbar ] ====================================*/
+
+
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h1 {
     font-size: 42px;
@@ -1098,8 +917,9 @@ footer p:nth-child(4) {
   section:nth-child(2) h2 {
     width: 22%;
   }
-  /*  end projects Section [ Section 2 ] ====================================*/
-  /*  Bio Section [ Section 3 ] ====================================*/
+
+
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) h3,
   section:nth-child(3) a {
     width: 22%;
@@ -1109,33 +929,15 @@ footer p:nth-child(4) {
     line-height: 34px;
     max-width: 510px;
   }
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Section 4  ====================================*/
+
+
+  /*  Team Section [ Section 4 ]  ====================================*/
   section:nth-child(4) h3,
   section:nth-child(4) a {
     width: 22%;
   }
-  /*  end Section 4 ====================================*/
-  /*  Testimonials Section ====================================*/
-  section#testimonials figure {
-    max-width: 880px;
-  }
-  /*  end Testimonials Section ====================================*/
-  /*  Faq Section ==============================================*/
-  section#faq figure {
-    max-width: 880px;
-  }
-  section#faq h3 {
-    font-size: 22px;
-    max-width: 720px;
-    line-height: 36px;
-  }
-  section#faq h4 {
-    font-size: 22px;
-    line-height: 34px;
-    margin: 0 0 30px;
-  }
-  /*  end Faq Section ==============================================*/
+  
+
   /* Contact Section [ Footer ] ===========================================*/
   footer p {
     font-size: 18px;
@@ -1144,9 +946,8 @@ footer p:nth-child(4) {
     margin: 40px auto;
   }
   footer {
-    padding: 80px 0;
+    padding: 80px 0 0 100px;
   }
-  /* end Contact Section [ Footer ] ===========================================*/
 }
 
 @media screen and (max-width: 991px) {
@@ -1172,8 +973,7 @@ footer p:nth-child(4) {
   header img {
     left: 0;
   }
-  /*  end general section css (common css) ====================================*/
-  /*  Header [ Navbar ] ====================================*/
+  
   nav button {
     display: block;
     border: none;
@@ -1202,7 +1002,8 @@ footer p:nth-child(4) {
   nav a h1 {
     display: none;
   }
-  /*  end Header [ Navbar ] ====================================*/
+
+
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) {
     padding-left: 0;
@@ -1218,62 +1019,31 @@ footer p:nth-child(4) {
   section:nth-child(2) a {
     margin: 30px 0 0;
   }
-  /*  end projects Section [ Section 2 ] ====================================*/
-  /*  Bio Section [ Section 3 ] ====================================*/
+
+
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) {
     padding-left: 0;
   }
   section:nth-child(3) p:nth-child(3) {
     margin: 40px auto;
   }
-  section:nth-child(3) form h2 {
-    margin: 0 auto 25px;
-  }
-  /* section:nth-child(3) dd figcaption ul li a{
+   /* section:nth-child(3) dd figcaption ul li a{
           font-size: 14px;
           padding: 0 0 10px;
     } */
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Section 4  ====================================*/
+  section:nth-child(3) form h2 {
+    margin: 0 auto 25px;
+  }
+ 
+
+
+  /*  Team Section [ Section 4 ]  ====================================*/
   section:nth-child(4) {
     padding-left: 0;
   }
-  /*  end Section 4 ====================================*/
-  /*  Testimonials Section ====================================*/
-  section#testimonials div {
-    width: 100%;
-    padding: 30px 0 0;
-  }
-  section#testimonials h2 {
-    margin-bottom: 0;
-  }
-  section#testimonials {
-    width: auto;
-    margin: 0 -20px;
-  }
-  section#testimonials h6 {
-    margin: 40px 0;
-  }
-  /*  end Testimonials Section ====================================*/
-  /*  Faq Section ==============================================*/
-  section#faq div {
-    width: 100%;
-    padding: 30px 0 0;
-  }
-  section#faq h2 {
-    margin-bottom: 0;
-  }
-  section#faq {
-    width: auto;
-    margin: 0 -20px;
-  }
-  section#faq h3 {
-    font-size: 20px;
-    max-width: 100%;
-    line-height: 32px;
-    margin: 30px 0 0;
-  }
-  /*  end Faq Section ==============================================*/
+
+
   /* Contact Section [ Footer ] ===========================================*/
   footer p {
     font-size: 16px;
@@ -1292,19 +1062,20 @@ footer p:nth-child(4) {
   footer figcaption {
     margin: 0 0 35px;
   }
+    /*footer figcaption ul a{
+          font-size: 14px;
+          padding: 0 0 10px;
+    } */
   footer p:nth-child(4) {
     font-size: 14px;
     line-height: 26px;
   }
-  /*footer figcaption ul a{
-          font-size: 14px;
-          padding: 0 0 10px;
-    } */
-  /* end Contact Section [ Footer ] ===========================================*/
+
+
 }
 
 @media screen and (max-width: 920px) {
-  /*  Bio Section [ Section 3 ] ====================================*/
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) form {
     padding: 0 15px;
   }
@@ -1351,15 +1122,16 @@ footer p:nth-child(4) {
     width: 100% !important;
     height: 100% !important;
   }
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Section 4  ====================================*/
+
+
+  /*  Team Section [ Section 4 ]  ====================================*/
   form li:nth-child(4) {
     width: 162px !important;
     position: absolute;
     bottom: 0px;
     left: 0;
   }
-  /*  end Section 4 ====================================*/
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1413,7 +1185,8 @@ footer p:nth-child(4) {
   header h2 {
     line-height: 45px;
   }
-  /*  end general section css (common css) ====================================*/
+
+
   /*  projects Section [ Section 2 ] ====================================*/
   section:nth-child(2) h1 {
     font-size: 30px;
@@ -1438,8 +1211,9 @@ footer p:nth-child(4) {
   section:nth-child(2) figure:last-child {
     margin-bottom: 0;
   }
-  /*  end projects Section [ Section 2 ] ====================================*/
-  /*  Bio Section [ Section 3 ] ====================================*/
+
+
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) p {
     text-align: center;
   }
@@ -1499,8 +1273,9 @@ footer p:nth-child(4) {
   section:nth-child(3) a {
     padding: 40px 15px;
   }
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Section 4  ====================================*/
+
+
+  /*  Team Section [ Section 4 ]  ====================================*/
   section:nth-child(4) h3,
   section:nth-child(4) a {
     width: 100%;
@@ -1513,21 +1288,8 @@ footer p:nth-child(4) {
   section:nth-child(4) a {
     padding: 40px 15px;
   }
-  /*  end Section 4 ====================================*/
-  /*  Testimonials Section ====================================*/
-  section#testimonials h5 span {
-    margin-top: 5px;
-    font-size: 16px;
-  }
-  /*  end Testimonials Section ====================================*/
-  /*  Faq Section ==============================================*/
-  section#faq h2:nth-of-type(2) {
-    display: block;
-  }
-  section#faq h2:nth-of-type(1) {
-    display: none;
-  }
-  /*  end Faq Section ==============================================*/
+  
+
   /* Contact Section [ Footer ] ===========================================*/
   footer {
     padding-right: 20px;
@@ -1543,11 +1305,10 @@ footer p:nth-child(4) {
   footer {
     padding: 50px 0;
   }
-  /* end Contact Section [ Footer ] ===========================================*/
 }
 
 @media screen and (max-width: 481px) {
-  /*  Bio Section [ Section 3 ] ====================================*/
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) figure {
     padding: 0 5px;
   }
@@ -1583,56 +1344,21 @@ footer p:nth-child(4) {
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
   }
-  /*  end Bio Section [ Section 3 ] ====================================*/
-  /*  Section 4  ====================================*/
+
+
+  /*  Team Section [ Section 4 ]  ====================================*/
   form li:nth-child(4) {
     width: 162px !important;
     position: absolute;
     bottom: 0;
     left: 0;
   }
-  /*  end Section 4 ====================================*/
-  /*  Testimonials Section ====================================*/
-  section#testimonials div>div {
-    padding: 30px 15px;
-  }
-  section#testimonials div>div>div {
-    padding: 0;
-  }
-  section#testimonials h6 {
-    margin: 30px 0 10px;
-  }
-  section#testimonials p {
-    display: block;
-  }
-  section#testimonials div>div a {
-    display: none;
-  }
-  /*  end Testimonials Section ====================================*/
-  /*  Faq Section ==============================================*/
-  section#faq div>div {
-    padding: 30px 15px;
-  }
-  section#faq div>div>div {
-    padding: 0;
-  }
-  section#faq h4 {
-    font-size: 20px;
-    line-height: 28px;
-    margin: 0 0 15px;
-  }
-  section#faq p {
-    display: block;
-  }
-  section#faq div>div a {
-    display: none;
-  }
-  /*  end Faq Section ==============================================*/
+  
+
   /* Contact Section [ Footer ] ===========================================*/
   footer address:nth-child(3) {
     max-width: 260px;
   }
-  /* end Contact Section [ Footer ] ===========================================*/
 }
 
 @media screen and (max-width: 390px) {
@@ -1655,8 +1381,9 @@ footer p:nth-child(4) {
     width: 35px;
     left: -43px;
   }
-  /*  end general section css (common css) ====================================*/
-  /*  Bio Section [ Section 3 ] ====================================*/
+  
+
+  /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) form li .g-recaptcha {
     margin: 0;
     transform: scale(0.7778);
@@ -1676,5 +1403,4 @@ footer p:nth-child(4) {
   /* section:nth-child(3) form button{
       margin-top: -11px;
     } */
-  /*  end Bio Section [ Section 3 ] ====================================*/
 }
