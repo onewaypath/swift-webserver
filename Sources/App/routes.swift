@@ -58,7 +58,11 @@ public func routes(_ router: Router) throws {
     let covid19ChartsController = Covid19ChartsController()
     router.get("covid19", String.parameter , use: covid19ChartsController.view)
     
+    // *** NEWSLETTER POST REQUEST
     
+    let newsletterController = NewsletterController()
+    router.get("newsletter", use: newsletterController.test)
+    router.post("newsletter", use: newsletterController.post)
     
     
 }
