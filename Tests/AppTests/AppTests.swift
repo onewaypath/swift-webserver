@@ -10,10 +10,28 @@ class AppTests: XCTestCase {
         print (bookingSearch.test())
         */
         
+
+        let activeCampaign = ActiveCampaign()
+        print (activeCampaign.reviewLists())
+        /*
+        let data = Data(activeCampaign.reviewLists().utf8)
         
+        let json = (try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])!
+        
+        let sortedKeys = Array(json.keys).sorted(by: <)
+        
+        for key in sortedKeys {
+            print (key)
+            print (json[key] as Any)
+        } */
+       // let id = activeCampaign.createMessage(using: activeCampaign.messageHTML())
+        //activeCampaign.createCampaign(messageID: id)
+
+
+        /*
         let covid19ChartsController = Covid19ChartsController()
         print(covid19ChartsController.outputHTML(field: "deaths"))
-        
+        */
     }
     /*
     static let allTests = [

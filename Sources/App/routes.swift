@@ -58,6 +58,29 @@ public func routes(_ router: Router) throws {
     let covid19ChartsController = Covid19ChartsController()
     router.get("covid19", String.parameter , use: covid19ChartsController.view)
     
+    // *** NEWSLETTER POST REQUEST
+    
+    let newsletterController = NewsletterController()
+    router.get("newsletter", use: newsletterController.test)
+    router.post("newsletter", use: newsletterController.post)
+    
+    
+    // *** OFFICE 365 ROUTES
+    
+  
+    
+    router.get("office365") { req -> String in
+           
+    
+        guard let code = req.query[String.self, at: "code"] else {
+            throw Abort(.badRequest)
+        }
+        return "Authorization Code:\(code)"
+        //return try req.view().render("main-template", ["html": owpgmainHtml])
+      }
+    
+        
+        
     
     
     
