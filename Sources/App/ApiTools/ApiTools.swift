@@ -15,12 +15,24 @@ final class Api {
     var postData: [String: String]
     var url: String
     var parameters: [String: String]
+    enum HTTPMethod {
+        case GET, POST
+    }
+    var httpMethod : HTTPMethod
     
-    
-    init (url: String, parameters: [String: String], postData: [String: String]) {
+    init (url: String, parameters: [String: String], postData: [String: String] = [:]) {
         self.postData = postData
         self.url = url
         self.parameters = parameters
+        
+        // if the initializer includes post data then set the httpMethod to POST otherwise the get method will be used
+        
+        switch postData {
+        case [:] :
+            self.httpMethod = .GET
+        default :
+            self.httpMethod = .POST
+        }
         
     }
     
@@ -78,13 +90,20 @@ final class Api {
     return apiResponse
 }
 
-func request() -> URLRequest {
+    func request() -> URLRequest {
         
         let urlCode = self.dictionaryToUrlCode(using: self.parameters)
         let url = self.url + "?" + urlCode
         var request = URLRequest(url: URL(string: url)!,timeoutInterval: Double.infinity)
-        request.httpBody = dictionaryToData(using: self.postData)
-        request.httpMethod = "POST"
+        
+        switch self.httpMethod {
+        case .POST:
+            request.httpBody = dictionaryToData(using: self.postData)
+            request.httpMethod = "POST"
+        default:
+            request.httpMethod = "GET"
+        }
+        
         return request
         
     }

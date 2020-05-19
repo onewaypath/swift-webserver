@@ -77,7 +77,7 @@ final class NewsletterController {
             // Post the message to ActiveCampaign
             
             let activeCampaign = ActiveCampaign()
-            let id = activeCampaign.createMessage(using: html)
+            let id = activeCampaign.createMessage(using: html, titled: subject)
             activeCampaign.createCampaign(messageID: id, messageName: subject, sdate: sendDate)
             
             // Save the output to a local test file for debugging

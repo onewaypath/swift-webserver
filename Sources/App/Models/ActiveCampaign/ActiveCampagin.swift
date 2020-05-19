@@ -241,7 +241,7 @@ final class ActiveCampaign {
         return htmlText
     }
 */
-    func createMessage(using: String) -> String {
+    func createMessage(using: String, titled: String) -> String {
         let url = "https://buddhavipassana.api-us1.com/admin/api.php"
 
         let parameters = [
@@ -253,13 +253,13 @@ final class ActiveCampaign {
         
         
         let postData = [
-            "fromemail":"alex.young@buddhavipassana.ca",
+            "fromemail":"info@buddhavipassana.ca",
             "format" : "html",
-            "reply2" : "alex.young@buddhavipassana.ca",
+            "reply2" : "info@buddhavipassana.ca",
             "priority" : "3",
             "encoding" : "quoted-printable",
             "textfetch" : "http://yoursite.com",
-            "subject" : "Test Subject",
+            "subject" : titled,
             "textfetchwhen": "send",
             "p[9]":"9",
             "html": using
@@ -309,6 +309,24 @@ final class ActiveCampaign {
         let apiRequest = endpoint.request()
         let apiResponse = endpoint.responseString(using: apiRequest)
         print (apiResponse)
+
+    }
+    
+    func reviewLists() -> String {
+
+        let url = "https://buddhavipassana.api-us1.com/admin/api.php"
+
+        let parameters = [
+            "api_action":"list_list",
+            "api_key": "2daf12468b84cb1a82f928d3ec3ee4694df15eecd57d4fd8059dae454e179c6cf1287934",
+            "api_output": "json",
+            "ids" : "all"
+        ]
+
+        let endpoint = Api(url: url, parameters: parameters)
+        let apiRequest = endpoint.request()
+        let apiResponse = endpoint.responseString(using: apiRequest)
+        return apiResponse
 
     }
     

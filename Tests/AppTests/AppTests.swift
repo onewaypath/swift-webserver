@@ -11,9 +11,20 @@ class AppTests: XCTestCase {
         */
         
         let activeCampaign = ActiveCampaign()
-
-        let id = activeCampaign.createMessage(using: activeCampaign.messageHTML())
-        activeCampaign.createCampaign(messageID: id)
+        print (activeCampaign.reviewLists())
+        /*
+        let data = Data(activeCampaign.reviewLists().utf8)
+        
+        let json = (try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any])!
+        
+        let sortedKeys = Array(json.keys).sorted(by: <)
+        
+        for key in sortedKeys {
+            print (key)
+            print (json[key] as Any)
+        } */
+       // let id = activeCampaign.createMessage(using: activeCampaign.messageHTML())
+        //activeCampaign.createCampaign(messageID: id)
 
         
         
