@@ -42,10 +42,10 @@ final class Office365 {
         
         let decoder = JSONDecoder()
         let apiData = try! decoder.decode(ApiData.self, from: jsonData)
-        
+        /*
         let o365User = ApiConnection(id: 1, name: "o365", authCode: authCode, authToken: apiData.access_token, refreshToken: apiData.refresh_token)
         
-        let didUpdate = o365User.update(on: request)
+        let didUpdate = o365User.update(on: request)*/
         return (authToken: apiData.access_token, refreshToken: apiData.refresh_token)
         
     }
