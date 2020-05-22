@@ -22,10 +22,19 @@ final class Office365Controller {
             name: "o365",
             authCode: code
         )
-       
-        let didUpdate = o365User.update(on: req)
         
-        return didUpdate
+        let newUser = ApiConnection.find(1, on: req).flatMap(to: ApiConnection.self) {api in
+            if api?.authCode ?? "" == "" {
+                let didCreate = o365User.create(on: req)
+                return didCreate
+            }
+            else {
+                 
+                let didUpdate = o365User.update(on: req)
+                return didUpdate
+            }
+        }
+        return newUser
     }
     
     func authCode(_ req: Request) throws -> String {
@@ -33,7 +42,7 @@ final class Office365Controller {
         
         let apiUser = ApiConnection.find(1, on: req)
         var apiName = ""
-        let authCode = apiUser.map(to: String.self ) { api in
+        _ = apiUser.map(to: String.self ) { api in
             apiName = api!.authCode
             return apiName
         }
