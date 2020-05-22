@@ -28,5 +28,20 @@ final class Office365Controller {
         return didUpdate
     }
     
+    func authCode(_ req: Request) throws -> String {
+          
+        
+        let apiUser = ApiConnection.find(1, on: req)
+        var apiName = ""
+        let authCode = apiUser.map(to: String.self ) { api in
+            apiName = api!.authCode
+            return apiName
+        }
+        
+        
+           return apiName
+       }
+       
+    
     
 }

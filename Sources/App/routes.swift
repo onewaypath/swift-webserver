@@ -76,6 +76,7 @@ public func routes(_ router: Router) throws {
 
     let office365Controller = Office365Controller()
     router.get("api", "office365", "register", use: office365Controller.register)
+    router.get("api", "office365", "code", use: office365Controller.authCode)
     
     
     
