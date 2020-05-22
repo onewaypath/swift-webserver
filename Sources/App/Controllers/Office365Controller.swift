@@ -24,7 +24,7 @@ final class Office365Controller {
         )
         
         let newUser = ApiConnection.find(1, on: req).flatMap(to: ApiConnection.self) {api in
-            if api?.authCode ?? "" == "" {
+            if api?.id ?? 0 == 0 {
                 let didCreate = o365User.create(on: req)
                 return didCreate
             }
@@ -37,18 +37,20 @@ final class Office365Controller {
         return newUser
     }
     
-    func authCode(_ req: Request) throws -> String {
+    func token(_ req: Request) throws -> Future<ApiConnection> {
           
         
         let apiUser = ApiConnection.find(1, on: req)
-        var apiName = ""
-        _ = apiUser.map(to: String.self ) { api in
-            apiName = api!.authCode
-            return apiName
+        
+        let newUser = apiUser.flatMap(to: ApiConnection.self ) { api in
+            let code = api!.authCode
+            let o365 = Office365()
+            let didUpdate = o365.accessToken(authCode: code, request: req)
+            return didUpdate
         }
         
         
-           return apiName
+           return newUser
        }
        
     
