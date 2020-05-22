@@ -16,6 +16,12 @@ final class User: MySQLModel {
     self.id = id
     self.username = username
   }
+    
+    func nameFilter(user: User, comparator: String) -> Bool {
+        
+        return user.username == "Alex"
+    }
+    
 }
 extension User: Content {}
 extension User: Migration {}

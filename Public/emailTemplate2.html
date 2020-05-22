@@ -1,0 +1,1252 @@
+Received: from YT1PR01MB3705.CANPRD01.PROD.OUTLOOK.COM (2603:10b6:b01::35) by YT1PR01MB2826.CANPRD01.PROD.OUTLOOK.COM with HTTPS via YT1PR01CA0022.CANPRD01.PROD.OUTLOOK.COM; Wed, 6 May 2020 15:19:22 +0000Received: from CH2PR10CA0026.namprd10.prod.outlook.com (2603:10b6:610:4c::36) by YT1PR01MB3705.CANPRD01.PROD.OUTLOOK.COM (2603:10b6:b01:c::29) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2979.28; Wed, 6 May 2020 15:19:21 +0000Received: from TO1CAN01FT017.eop-CAN01.prod.protection.outlook.com (2603:10b6:610:4c:cafe::d4) by CH2PR10CA0026.outlook.office365.com (2603:10b6:610:4c::36) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2979.28 via Frontend Transport; Wed, 6 May 2020 15:19:21 +0000Authentication-Results: spf=pass (sender IP is 13.111.51.250) smtp.mailfrom=bounce.email.slackhq.com; onewaypath.com; dkim=pass (signature was verified) header.d=email.slackhq.com;onewaypath.com; dmarc=pass action=none header.from=email.slackhq.com;compauth=pass reason=100Received-SPF: Pass (protection.outlook.com: domain of bounce.email.slackhq.com designates 13.111.51.250 as permitted sender) receiver=protection.outlook.com; client-ip=13.111.51.250; helo=mta2.email.slackhq.com;Received: from mta2.email.slackhq.com (13.111.51.250) by TO1CAN01FT017.mail.protection.outlook.com (10.152.122.127) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.2979.28 via Frontend Transport; Wed, 6 May 2020 15:19:20 +0000DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=email.slackhq.com; h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:List-ID: X-CSA-Complaints:Message-ID:Content-Type; i=no-reply@email.slackhq.com; bh=NyxMRhms+PPap0zBoIeA2U0bDjqkF0hkoqP+XXdlCiY=; b=WjI0Q0Cb75sXLhsjZunZqtu1aMTBEIA/RDXRyb4mbIZNUIocfkBXOHVNaHjX/2X2fnX9Q/QGVZvi   3Lqjmj3sefHwwUzd1stt7T4z8zu7X3+T/axbEVOhL3e/ubzIQxoqtviGtCfNImeT0tCnygOXhim1   rZ/FBZ+Ip6Alc1uSv4w=Received: by mta2.email.slackhq.com id hmbang2fmd4j for <ayoung@onewaypath.com>; Wed, 6 May 2020 15:19:20 +0000 (envelope-from <bounce-131_HTML-186772888-3724567-10959666-164@bounce.email.slackhq.com>)From: "Slack" <no-reply@email.slackhq.com>To: <ayoung@onewaypath.com>Subject: May admin update: See your message activityDate: Wed, 06 May 2020 09:19:07 -0600List-Unsubscribe: <mailto:leave-fd561573740b5c392848-fe1815787363037f7d1c78-fe8d17777760017b72-fe5515707c610d7b7312-ff64157671@leave.email.slackhq.com>MIME-Version: 1.0Reply-To: "Slack" <reply-3724567-131_HTML-186772888-10959666-164@email.slackhq.com>List-ID: <10958519.xt.local>X-CSA-Complaints: whitelist-complaints@eco.deX-SFMC-Stack: 1x-job: 10959666_3724567Message-ID: <15555851-0e92-480f-ba99-c44663348e38@ind1s01mta677.xt.local>Return-Path: bounce-131_HTML-186772888-3724567-10959666-164@bounce.email.slackhq.comX-MS-Exchange-Organization-ExpirationStartTime: 06 May 2020 15:19:20.8416 (UTC)X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmitX-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmitX-MS-Exchange-Organization-Network-Message-Id: 21841187-adb0-4e96-f9e2-08d7f1d0d9f4X-EOPAttributedMessage: 0X-EOPTenantAttributedMessage: 779685b7-ab65-4112-ac58-2c6f84a221f4:0X-MS-Exchange-Organization-MessageDirectionality: IncomingX-Forefront-Antispam-Report: CIP:13.111.51.250;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mta2.email.slackhq.com;PTR:mta2.email.slackhq.com;CAT:NONE;SFTY:;SFS:(286005)(33430700001)(33964004)(31696002)(356005)(30864003)(33440700001)(966005)(58800400005)(83170400001)(166002)(7636003)(7596003)(8676002)(76236002)(6666004)(19627405001)(19810500001)(31686004)(5426002)(9686003)(1096003)(336012)(7066003)(42186006)(426003)(15650500001)(26005)(6916009)(38960500001)(559001)(579004);DIR:INB;SFP:;X-MS-Exchange-Organization-AuthSource: TO1CAN01FT017.eop-CAN01.prod.protection.outlook.comX-MS-Exchange-Organization-AuthAs: AnonymousX-MS-PublicTrafficType: EmailX-MS-Office365-Filtering-Correlation-Id: 21841187-adb0-4e96-f9e2-08d7f1d0d9f4X-MS-TrafficTypeDiagnostic: YT1PR01MB3705:X-MS-Oob-TLC-OOBClassifiers: OLM:2449;X-MS-Exchange-Organization-SCL: 1X-Microsoft-Antispam: BCL:3;X-MS-Exchange-CrossTenant-OriginalArrivalTime: 06 May 2020 15:19:20.6550 (UTC)X-MS-Exchange-CrossTenant-Network-Message-Id: 21841187-adb0-4e96-f9e2-08d7f1d0d9f4X-MS-Exchange-CrossTenant-Id: 779685b7-ab65-4112-ac58-2c6f84a221f4X-MS-Exchange-CrossTenant-FromEntityHeader: InternetX-MS-Exchange-Transport-CrossTenantHeadersStamped: YT1PR01MB3705X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1893560X-MS-Exchange-Processed-By-BccFoldering: 15.20.2979.027X-Microsoft-Antispam-Mailbox-Delivery:	ucf:0;jmr:0;auth:0;dest:I;ENG:(20160514016)(750127)(520011016)(944504077)(944701077)(944506383)(944626516);X-Microsoft-Antispam-Message-Info:	=?us-ascii?Q?qUjt+RQdC1lzi1O19E2tXKyY+XopuIMSJkS9IzNZGYUzuW7idMFz5VGYafFE?= =?us-ascii?Q?L4isDuklM+siReTGMo4xaWsCsmwTyEQ9Do1OY/nGIy+ckRb3GtPCm06e3RBB?= =?us-ascii?Q?VIYWkeHCoTNfb2yD1tn9bc60I21Znmt5yiQraf18vwvGWeELiTFIxip0RwIj?= =?us-ascii?Q?MvMHHsI+/0n0HD7Eb/YE8mnJwHKj0CVl9pAvHZ6iUr7TJQUJxG2tKdUnGVzg?= =?us-ascii?Q?j8In7iizPzs7FpSpIG5698svwfkxaN1o9Yv1vvihDSEw2JsTju4L07t2LNsg?= =?us-ascii?Q?Z0lu6p21Flwa9SeWoyhZAbo3Fw2Tk603NpQRzwbgRn2N8C7mCGE0zRhNFx8r?= =?us-ascii?Q?74l5IPa3pKCdb8XLDy7Mas/0Iv87tGcefNtZzwGl/9Qe8r8lF8EUmxvtDvtU?= =?us-ascii?Q?IG88HAOeP81LKJoW3GsoUw/N76V7/1Pbevm2zYlLPgoqEjp7ozjZVBTkCL20?= =?us-ascii?Q?K9YXaBz76t6HM+yJyen1HXsKm/JZpp3currZleVaMmIzzinSuktKQWLXohCR?= =?us-ascii?Q?is66Orn8nX0EAN3A5VYu3ljY3Gxg2Lm+pxOT+Fw6Eg45ttNXRl8oNcU080YM?= =?us-ascii?Q?WKACBp9CjMFXwfgrPNXKTv41PERNboshax1zDKfKKhifXshL7DIvJiCTHxaV?= =?us-ascii?Q?lZySuzd9xZPOypr2lXkpuB+ZzResiRXt/M9wPwAcjW+hzhKG64p6Alp0xddB?= =?us-ascii?Q?HV5vOAXcTxh60KQYMKrg1F5oL4Q/WtrGx5ZOTvzWnqnwq6fxwcPy63Jrw1Vu?= =?us-ascii?Q?bqI3XHjLPTac87F0Z4tANYCLUW7dTbb9VT3c8QPQUdbkhVICCNa+dG6dRMIk?= =?us-ascii?Q?1b5ke6w1mAtdnQNu0EgGmIulgX79U67HQv619Vkbs5tkOG2j4g5q4QVYmw92?= =?us-ascii?Q?80CJBBLG5wMjl3o+p3ll+jo9YFUcZmV67y7I+bqmezCzw4aSn5tnf90gla6s?= =?us-ascii?Q?fhrT+9cK/BmmwejKaFLVlJHYq1diauW1A/AF9vb3Simt7i1HhIqT1ephbLUO?= =?us-ascii?Q?GwQizrQnZhIjGVPNmv7AecjA26s9MNSV/XyN25TbaNQEaQftDVFYg2NFOrRB?= =?us-ascii?Q?G1HaniQ3+rTkfoqNLHVCjpenGJ3E5DxOWEcsHm11tELupPiHAeGcCu6Ep2qe?= =?us-ascii?Q?MMXGURleYRlj7B2g1nK05JSN9MWoEd8RNs2LoGc184MAlrLN9upJ3P0+5RqX?= =?us-ascii?Q?rvqf3Nx8Nd75wtR0ML4Hg4rVxoIGJMPh7mQDBZuzBcHYT9K8aokwScVMnssC?= =?us-ascii?Q?5Loz8hP/kWj/zlcEi7UYECc1U/VTfzy/Sfcc07kmjT5cGc/kObQog/tV6Tfp?= =?us-ascii?Q?RT5ObK9a2dPf0JvFle4zScKV/hnvXcHdp0rJHDFhTQuXaoe1ooy2GcKGCk4m?= =?us-ascii?Q?0yPJRoM8JL+Uz8YoL9dUyYlqOhdE1Z8qe3J3CeGBtIKFFagP2sM0e7O6TcKU?= =?us-ascii?Q?92s3VXfLVz3I5vTOhdlLYYGIZFnmtNE5ptHV9QV+x1aK0G9gOyMLAh44yKtX?= =?us-ascii?Q?fH/UAe+3AdQJFHwTRyj8dvRa8Yv/IRpU5z6TQKzZsK3rD9swD0yQf/WdkQ?= =?us-ascii?Q?=3D=3D?=Content-type: multipart/alternative;	boundary="B_3672922626_1937730743"> This message is in MIME format. Since your mail reader does not understandthis format, some or all of this message may not be legible.--B_3672922626_1937730743Content-type: text/plain;	charset="UTF-8"Content-transfer-encoding: quoted-printableHere=E2=80=99s a look at what=E2=80=99s coming soon and what=E2=80=99s recently launched.Slack Admin Updates=20Here=E2=80=99s a look at what=E2=80=99s coming soon and what=E2=80=99s recently launched.=20May =E2=80=A2 2020=20COMING SOON=20Require a minimum app version (Enterprise Grid)=20We=E2=80=99ll soon require users to be on a minimum version of the Slack mobile a=
+pp. You can decide whether this takes effect immediately or establish a grac=
+e period for your users.=20A new dashboard to manage channels (Plus* and Enterprise Grid)=20Organization primary owners and designated admins will have a new dashboard=
+ for viewing the channels within their Slack workspace. They=E2=80=99ll also be ab=
+le to take actions on these channels, such as archiving, renaming and other =
+administrative duties.*This will be available only for Plus plans with corporate exports enabled.=
+=20Increasingly customizable Do Not Disturb settings=20Users will soon be able to customize their notification preferences for spe=
+cific days, including setting Do Not Disturb schedules for weekends only.=20Marking threads as unread=20Users will soon be able to mark threaded replies as "unread", making it eas=
+ier to come back to key messages in thread, at a later time.=20Grant permission to calendar apps on behalf of your organization=20Once the Google Calendar app is installed in a workspace, G Suite administr=
+ators can authorize the app on behalf of users in their G Suite organization=
+. Office 365 administrators will have the same ability to authorize the Outl=
+ook Calendar app.=20CHANGELOG=20What=E2=80=99s new or currently rolling out:=20See your message activity (Plus and Enterprise Grid)=20Admins and designated members now have access to key metrics for certain me=
+ssages in Slack, such as the number of views, clicks, reactions and shares p=
+er message.=20Connect IDP groups to channels (Enterprise Grid)=20Admins can now assign default channels to identity provider (IDP) groups. A=
+ll current and future IDP group members will be automatically added to those=
+ default channels.=20Custom retention support in shared channels=20Organizations' custom retention settings now apply to messages sent by thei=
+r members in shared channels.=20Data residency: London and Sydney (Plus and Enterprise Grid)=20Organizations now have the ability to choose where their Slack data is stor=
+ed at rest. Frankfurt, Paris, Sydney, London and Tokyo data regions are now =
+available.=20Pre-built templates now available in Workflow Builder=20Check out the new =E2=80=9CTemplates=E2=80=9D tab in Workflow Builder on the desktop ap=
+p for quick and easy access to customizable workflows.=20New ways to manage workflow creation for your team=20Org owners and admins can now set a policy that restricts workflow creation=
+ and publishing.=20Launch a phone call from Slack=20Customers with VoIP services can use an app to start a phone call in Slack,=
+ leveraging services such as Zoom Phone, Jabber, RingCentral and Dialpad.=20View an app=E2=80=99s security details in the App Directory=20We=E2=80=99ve added a new tab to app listings where admins can view key security =
+information. That includes compliance details such as HIPAA and FedRAMP and =
+security practices like data-retention policies.=20The creation of legacy test tokens has been deprecated=20We=E2=80=99ve deprecated the creation of new legacy test tokens. If your company =
+needs new tokens to interact with the Slack API, please create a Slack app i=
+nstead=20View All Updates=20IN CASE YOU MISSED IT=20An admin's guide to app management=20Giving employees the flexibility to use apps, while also maintaining contro=
+l over how those apps operate, is a delicate balance. We=E2=80=99ve compiled a com=
+prehensive guide for managing apps securely and at scale.=20Get the guide =E2=86=92=20A guided tour of the newest Slack improvements=20Share these tips to help your members find their way and get the most out o=
+f the simpler, more organized Slack desktop experience.=20Read the article =E2=86=92=20Help your team stay connected to external partners=20Forty-three percent of workers report that "difficulty communicating and co=
+llaborating with external stakeholders" is the primary challenge they face i=
+n their work. Learn how to remedy that with shared channels in Slack.=20Watch the webinar =E2=86=92=20Have questions about anything we've shared?=20Reach out to your Customer Success Manager or write to=20feedback@slack.com. We're happy to help!=20Sent to all Owners and Admins in your workspace.=20Slack Technologies, Inc.=20500 Howard Street=20San Francisco, CA 94105=20slack.com=20Slack Platform Blog   |   Help Center   |   Unsubscribe=20--B_3672922626_1937730743Content-type: text/html;	charset="UTF-8"Content-transfer-encoding: quoted-printable<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-c=
+om:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<!--[if gte mso 9]><xml>    <o:OfficeDocumentSettings>    <o:AllowPNG/>    =
+<o:PixelsPerInch>96</o:PixelsPerInch>    </o:OfficeDocumentSettings>   </xml=
+><![endif]-->
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">
+<!--[if !mso]><!-->
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<!--<![endif]--><link href=3D"https://fonts.googleapis.com/css?family=3DOpen&#4=
+3;Sans" rel=3D"stylesheet"><style type=3D"text/css">
+.ReadMsgBody {
+    width: 100%;
+} /* Forces Hotmail to display emails at full width */
+.ExternalClass {
+    width: 100%;
+} /* Hotmail table centering fix */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font,=
+ .ExternalClass td, .ExternalClass div {
+    line-height: 100%;
+}  /* Forces Hotmail to display normal line spacing */
+.ExternalClass * {
+    line-height: 100%
+}
+p {
+    margin: 1em 0;
+} /* Yahoo paragraph fix */
+table td {
+    border-collapse: collapse;
+}  /* This resolves the Outlook 07, 10, and Gmail td padding issue fix */
+/* This resolves the issue when iphone puts links on dates, etc. */
+.appleLinksWhite a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.appleLinksWhiteUL a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.appleLinksGray a {
+    color: #1D1C1D;
+    text-decoration: none;
+}
+.appleLinksGray2 a {
+    color: #707070;
+    text-decoration: none;
+}
+.appleLinksBlack a {
+    color: #1d1d1d;
+    text-decoration: none;
+}
+.appleLinksGreen a {
+    color: #1a3c34 !important;
+}
+a.mobileshow, .mobilehide {
+    display: none;
+    color: #fff; /* for Gmail */
+}
+  sup {
+ line-height: 0;
+ font-size: 55%;
+}
+a[x-apple-data-detectors] {
+ color: inherit !important;
+ text-decoration: none !important;
+ font-size: inherit !important;
+ font-family: inherit !important;
+ font-weight: inherit !important;
+ line-height: inherit !important;
+}
+  </style><style type=3D"text/css">
+@media only screen and (max-width: 660px) {
+html, body {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 auto !important;
+}
+.container, .responsive-table {
+    width: 100% !important;
+}
+.body-table-spacing {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+  .image {
+   width:100% !important;
+    height:auto !important;
+    display:block !important;
+  }
+  .mobilePadding {
+   padding:0px 10px !important;=20
+  }
+.noPad {
+    padding: 0 0 0 0 !important;
+}
+.padBot20 {
+    padding: 0px 0px 20px 0px !important;
+}
+  .pad20 {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+.CTA-Primary {
+    width: 100% !important;
+  line-height:30px !important;
+  padding:10px 15px !important;
+  box-sizing: border-box !important;
+}
+.block {
+  display:block !important;
+  width:100% !important;
+  }
+.mob-centerme {
+    text-align: center !important;
+}
+.mob-leftme {
+    text-align: left !important;
+}
+.two-column .column, .column-text, .column-image, .column-button, .column-t=
+eaminfo-r {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.button a {
+    width: 100% !important;
+}
+.logo {
+    width: 98% !important;
+}
+.font-21 {
+    font-size: 21px !important;
+    line-height: 26px !important;
+}
+.font-paragraph {
+    text-align: center !important;
+    font-size: 16px !important;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    width: auto !important;
+    max-height: inherit !important;
+}
+  .btn {
+    padding-top:15px !important;
+    padding-bottom:15px !important;
+}=20
+  .noLRpad {
+   padding-left:0px !important;
+    padding-right:0px !important;
+  }
+}
+</style><style type=3D"text/css">
+@media only screen and (max-width: 450px) {
+/* global 450 wide styles */
+body {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 auto !important;
+}
+.body {
+    min-width: 100vw;
+}
+.container, .responsive-table {
+    width: 100% !important;
+}
+.body-table-spacing {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+  .image {
+   width:100% !important;
+    height:auto !important;
+    display:block !important;
+  }
+  .mobilePadding {
+   padding:0px 10px !important;=20
+  }
+.noPad {
+    padding: 0 0 0 0 !important;
+}
+.padBot20 {
+    padding: 0px 0px 20px 0px !important;
+}
+  .pad20 {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+.CTA-Primary {
+    width: 100% !important;
+  line-height:30px !important;
+  padding:10px 15px !important;
+    box-sizing: border-box !important;
+}
+.block {
+  display:block !important;
+  width:100% !important;
+  }
+.mob-centerme {
+    text-align: center !important;
+}
+.mob-leftme {
+    text-align: left !important;
+}
+.two-column .column, .column-text, .column-image, .column-button, .column-t=
+eaminfo-r {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.button a {
+    width: 100% !important;
+}
+.logo {
+    width: 98% !important;
+}
+.font-21 {
+    font-size: 21px !important;
+    line-height: 26px !important;
+}
+.font-paragraph {
+    text-align: center !important;
+    font-size: 16px !important;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    width: auto !important;
+    max-height: inherit !important;
+}
+  .btn {
+    padding-top:15px !important;
+    padding-bottom:15px !important;
+    line-height:30px !important;
+}=20
+  .noLRpad {
+   padding-left:0px !important;
+    padding-right:0px !important;
+  }
+u + .body .gwfw {
+    width: 100% !important;
+    width: 100vw !important;
+}
+  /* SAMSUNG APP FIX */
+#MessageViewBody, #MessageWebViewDiv {
+min-width:100vw;
+margin:0 !important;
+zoom:1 !important;
+}
+}
+</style><!--[if gte mso 9]>   <style>     sup { font-size: 100% !important;=
+ }   </style>  <![endif]--><!--[if !mso]><!-- --><link href=3D"https://fonts.g=
+oogleapis.com/css?family=3DLato:400,900" rel=3D"stylesheet"><link href=3D"https://=
+fonts.googleapis.com/css?family=3DSource&#43;Sans&#43;Pro" rel=3D"stylesheet"><!=
+--<![endif]--><!--[if gte mso 10]>    <style type=3D"text/css" media=3D"all">   =
+      div, center, body, table, td { font-family: Arial, Helvetica, sans-ser=
+if !important; font-size:19px !important!}    </style> <![endif]-->
+<title></title>
+<!--[if gte mso 15]>   <style type=3D"text/css">   table { mso-line-height-ru=
+le: exactly !important; }   * { mso-line-height-rule: exactly !important; } =
+  </style>   <![endif]--><!--[if gte mso 12]>       <style type=3D"text/css"> =
+      /* Your Outlook-specific CSS goes here. */        table { mso-line-hei=
+ght-rule: exactly !important; border-left: none !important; }       td { bor=
+der-left: none !important; }       * { mso-line-height-rule: exactly !import=
+ant; }              </style>   <![endif]--><!--[if gte mso 9]><xml>    <o:Of=
+ficeDocumentSettings>    <o:AllowPNG/>    <o:PixelsPerInch>96</o:PixelsPerIn=
+ch>    </o:OfficeDocumentSettings>   </xml><![endif]--><!--[if gte mso 9]>  =
+<style type=3D"text/css">       .module-spacer40-border { margin-top:20px; }  =
+     #outbor { border:none !important; }       </style> <![endif]-->
+</head>
+<body leftmargin=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0" style=3D"=
+width:100% !important;-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;pa=
+dding-bottom:0;padding-right:0;padding-left:0;background-color:#ffffff;backg=
+round-image:none;background-repeat:repeat;background-position:top left;backg=
+round-attachment:scroll;min-width:100%;" class=3D"body">
+<style type=3D"text/css">
+div.preheader=20
+{ display: none !important; }=20
+</style>
+<div class=3D"preheader" style=3D"font-size: 1px; display: none !important;">He=
+re=E2=80=99s a look at what=E2=80=99s coming soon and what=E2=80=99s recently launched.</div>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner"><span style=3D"font-f=
+amily:Courier,arial; font-size:12px; color:#666666;"></span><span style=3D"dis=
+play:none;"></span></td>
+</tr>
+</tbody>
+</table>
+<img src=3D"http://click.email.slackhq.com/open.aspx?ffcb10-fe8d17777760017b7=
+2-fe1e16787263007e701d74-fe5515707c610d7b7312-ff6a157374-fe1815787363037f7d1=
+c78-ff64157671" width=3D"1" height=3D"1">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%" class=3D"gwfw">
+<tbody>
+<tr>
+<td align=3D"center">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"con=
+tainer" style=3D"font-family: Arial, Helvetica, sans-serif; width: 100%;">
+<tbody>
+<tr>
+<td>
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+>
+<tbody>
+<tr>
+<td style=3D"border:0px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"cente=
+r" class=3D"full-wrap" style=3D"table-layout: fixed; margin: 0 auto;">
+<tbody>
+<tr>
+<td align=3D"center">
+<div align=3D"center">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"cente=
+r" class=3D"container" style=3D"table-layout: fixed; margin: 0 auto;">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-family:Courier,arial; font-size:12px; color:=
+#000000;">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" bgcolor=3D"#ff=
+ffff" class=3D"container" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"padding-bottom: 30px; padding-top: 30px;" align=3D"center" bgcolor=
+=3D"#ffffff">
+<a href=3D"http://click.email.slackhq.com/?qs=3Df54fdeff21c590b9a49857acead96e2=
+4cffad84279178fd15f9b36f90ff4407cf15fbf34adf16ec645d5207dcc52f1f5c98b4d8955f=
+6e4274ba4b87d02b45e72" target=3D"_blank"><img src=3D"http://image.email.slackhq.=
+com/lib/fe5515707c610d7b7312/m/1/53fd294c-f4d3-46b9-a2b5-5b9400c6bd87.png" a=
+lt=3D"Slack Logo" border=3D"0" style=3D"display:block;" width=3D"40"></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" align=3D"cente=
+r" class=3D"container" style=3D"table-layout: fixed; margin: 0 auto;">
+<tbody>
+<tr>
+<td align=3D"center">
+<div align=3D"center">
+<table width=3D"600" class=3D"container" border=3D"0" align=3D"center" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"font-family:'Source Sans Pro', Calibri, Arial, sa=
+ns-serif;  background-color:#ffffff;">
+<tbody>
+<tr>
+<td align=3D"center">
+<div align=3D"center">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"backg=
+round-color:#ffffff;">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding:0px 20px;" class=3D"mobilePadding">
+<table width=3D"560" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"contai=
+ner">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding-bottom:30px;">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"container" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding-top: 30px;padding-bottom: 5px; padding-le=
+ft: 8px; padding-right: 8px; font-size: 18px; line-height:22px; font-family:=
+ 'Source Sans Pro', Calibri, Arial, sans-serif; color:#323648; font-weight:b=
+old;">
+Slack Admin Updates</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding:20px; font-size: 18px; line-height:22px; =
+font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#323648;">
+Here=E2=80=99s a look at what=E2=80=99s coming soon and what=E2=80=99s recently&nbsp;launched=
+.</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; font-family: 'Source Sans Pro', =
+Calibri, Arial, sans-serif;">
+<img alt=3D"" border=3D"0" src=3D"http://image.email.slackhq.com/lib/fe5515707c61=
+0d7b7312/m/1/4218f647-d256-4bdc-a708-f90f6ece3b53.png" style=3D"display:block;=
+" width=3D"20"></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding-bottom: 30px; padding-top: 20px; font-siz=
+e: 12px; line-height:16px; font-family:'Source Sans Pro', Calibri, Arial, sa=
+ns-serif; color:#323648; font-weight:bold;">
+May =E2=80=A2 2020</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"stylingblock-con=
+tent-wrapper" style=3D"min-width: 100%; ">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-margin-cell" style=3D"padding: 30px 1px 1px; =
+">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-color=
+: transparent; min-width: 100%; " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td style=3D"padding: 0px; " class=3D"stylingblock-content-wrapper camarker-inn=
+er">
+<table bgcolor=3D"#D6FOE5" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+container" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-left: 30px; padding-top:30px; padding-botto=
+m: 30px; padding-right: 30px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-right: 5px;"><img alt=3D"" border=3D"0" src=3D"ht=
+tp://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/c90db7c5-f678-4d4a=
+-8db5-f77dcea3f9c0.png" style=3D"display:block;" width=3D"35"></td>
+<td align=3D"left" style=3D"font-size: 12px; line-height:12px; font-family: 'Lu=
+cidia Console', Monaco, monospace, sans-serif; color: #323648; padding-left:=
+ 10px;">
+COMING SOON</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Require a minimum app version (Enterprise Grid)</strong></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 10px; font-size: 16px;  line-height:21=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+We=E2=80=99ll soon require users to be on a minimum version of the Slack mobile a=
+pp. You can decide whether this takes effect immediately or establish a grac=
+e period for your users.</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 15px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D=
+"image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a44=
+1fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;"></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>A new dashboard to manage channels (Plus* and Enterprise Grid)</str=
+ong></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 10px; font-size: 16px;  line-height:21=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+Organization primary owners and designated admins will have a new dashboard=
+ for viewing the channels within their Slack workspace. They=E2=80=99ll also be ab=
+le to take actions on these channels, such as archiving, renaming and other =
+administrative duties.<br>
+<i>*This will be available only for Plus plans with corporate exports enabl=
+ed.</i></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;"></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px; padding-bottom:=
+15px;  line-height:23px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+<strong>Increasingly customizable Do Not Disturb settings</strong></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; font-size: 16px;  line-height=
+:21px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32=
+3648; text-decoration:none;">
+Users will soon be able to customize their notification preferences for spe=
+cific days, including
+<a href=3D"http://click.email.slackhq.com/?qs=3Df54fdeff21c590b9785727fc75603d9=
+6a47da09f4169d8373283059c528efc0fb7829fa04e4f7f2034a9ecda2de9c1b759628a5e1c2=
+778d9" style=3D"text-decoration:underline;color:#0645AD;" target=3D"_blank">
+setting Do Not Disturb schedules</a> for weekends only.</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;"></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px; padding-bottom:=
+15px;  line-height:23px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+<strong>Marking threads as unread</strong></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; font-size: 16px;  line-height=
+:21px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32=
+3648; text-decoration:none;">
+Users will soon be able to mark threaded replies as &quot;unread&quot;, mak=
+ing it easier to come back to key messages in thread, at a later time.</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;"></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px; padding-bottom:=
+15px;  line-height:23px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+<strong>Grant permission to calendar apps on behalf of your organization</s=
+trong></td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; font-size: 16px;  line-height=
+:21px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32=
+3648; text-decoration:none;">
+Once the Google Calendar app is installed in a workspace, G Suite administr=
+ators can authorize the app on behalf of users in their G Suite organization=
+. Office 365 administrators will have the same ability to authorize the Outl=
+ook Calendar app.</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;"></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-color=
+: transparent; min-width: 100%; " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td style=3D"padding: 30px 0px 0px; " class=3D"stylingblock-content-wrapper cam=
+arker-inner">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"conta=
+iner" bgcolor=3D"#D8F3FB">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-left: 30px; padding-top:30px; padding-botto=
+m: 30px; padding-right: 30px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-right: 5px;"><img src=3D"http://image.email.s=
+lackhq.com/lib/fe5515707c610d7b7312/m/1/d0f8362f-8b0a-4b23-b14d-17b482b90b87=
+.png" width=3D"36" style=3D"display:block;" border=3D"0" alt=3D"">
+</td>
+<td align=3D"left" style=3D"font-size: 12px; line-height:12px; font-family: 'Lu=
+cidia Console', Monaco, monospace, sans-serif; color: #323648; padding-left:=
+ 10px;">
+CHANGELOG </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+What=E2=80=99s new or currently rolling out: </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>See your message activity (Plus and Enterprise Grid)</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Admins and designated members now have access to <a href=3D"http://click.emai=
+l.slackhq.com/?qs=3Df54fdeff21c590b90b4ace7fdab1ab4c042b7d7d11c7378344394047f3=
+c5d050d092590e790bf8662b56c10f51843326b3942335a66fd2b4" style=3D"text-decorati=
+on:underline;color:#0645AD;" target=3D"_blank">
+key metrics for certain messages</a> in Slack, such as the number of views,=
+ clicks, reactions and shares per message.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Connect IDP groups to channels (Enterprise Grid)</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Admins can now assign default channels to <a href=3D"http://click.email.slack=
+hq.com/?qs=3Df54fdeff21c590b93cf7af809299763eda31e7e583c357fd9c9eeb79d02ea92a7=
+2a5cdbbd6e525dc6a9a3124319fb79f55f80bfa86c44c46" style=3D"text-decoration:unde=
+rline;color:#0645AD;" target=3D"_blank">
+identity provider (IDP) groups</a>. All current and future IDP group member=
+s will be automatically added to those default channels.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Custom retention support in shared channels</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Organizations' <a href=3D"http://click.email.slackhq.com/?qs=3Df54fdeff21c590b9=
+e24163026d4045083e76adebe2525e332d40f2c0c372d563a50a33909feca6a1f87b38a114a7=
+989434d39e4cccf37382" style=3D"text-decoration:underline;color:#0645AD;" targe=
+t=3D"_blank">
+custom retention settings</a> now apply to messages sent by their members i=
+n shared channels.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Data residency: London and Sydney (Plus and Enterprise Grid)</stron=
+g> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Organizations now have the ability to <a href=3D"http://click.email.slackhq.c=
+om/?qs=3Df54fdeff21c590b9cf92095900b3873b6b6823a700943ea00edecf04b862ae5323273=
+4a52062b96bc01f36b995f1c2127fcc1dc347f0384e" style=3D"text-decoration:underlin=
+e;color:#0645AD;" target=3D"_blank">
+choose where</a> their Slack data is stored at rest. Frankfurt, Paris, Sydn=
+ey, London and Tokyo data regions are now available.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Pre-built templates now available in Workflow Builder</strong> </td=
+>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Check out the new =E2=80=9CTemplates=E2=80=9D tab in <a href=3D"http://click.email.slackh=
+q.com/?qs=3Df54fdeff21c590b9aba209ff4a9a35728afab25b94d4156dd1fb1f61e269c2cc5e=
+de1f95c545f78c71e98ecef2afa089d8afbdb3ab2059dc" style=3D"text-decoration:under=
+line;color:#0645AD;" target=3D"_blank">
+Workflow Builder</a> on the desktop app for quick and easy access to custom=
+izable workflows.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>New ways to manage workflow creation for your team</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Org owners and admins can now <a href=3D"http://click.email.slackhq.com/?qs=3Df=
+54fdeff21c590b946caf9473e095ee9a2ef1c6b562a459959afea74acdaa0a6376a5223e6bdc=
+f3861b9d83518d98d8686c771f59f841e9d" style=3D"text-decoration:underline;color:=
+#0645AD;" target=3D"_blank">
+set a policy</a> that restricts workflow creation and publishing. </td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>Launch a phone call from Slack</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Customers with VoIP services can use an app to <a href=3D"http://click.email.=
+slackhq.com/?qs=3Df54fdeff21c590b9742e0bac028437f81bfe19c509f68c5f0df322e29686=
+d5c766eaeaacc6ff296e31bd2986958e64a31dd7890b66cf9e8a" style=3D"text-decoration=
+:underline;color:#0645AD;" target=3D"_blank">
+start a phone call in Slack</a>, leveraging services such as Zoom Phone, Ja=
+bber, RingCentral and Dialpad.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>View an app=E2=80=99s security details in the App Directory</strong> </td=
+>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+We=E2=80=99ve added a new tab to <a href=3D"http://click.email.slackhq.com/?qs=3D2900=
+805f4913a586202b0d275dd74ff06fd2e4a61669bdd06ce001abeb4b73a74d516fe805c27df5=
+85715059cac3052b7cde70ea2df2328b" style=3D"text-decoration:underline;color:#06=
+45AD;" target=3D"_blank">
+app listings</a> where admins can view key security information. That inclu=
+des compliance details such as HIPAA and FedRAMP and security practices like=
+ data-retention policies.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>The creation of legacy test tokens has been deprecated</strong> </t=
+d>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+We=E2=80=99ve deprecated the creation of new <a href=3D"http://click.email.slackhq.=
+com/?qs=3D2900805f4913a586837e7c52ab83e1a99cfe8da2809ae2bc0ed4688c715ce1216cb0=
+e40dd4fd91b67bf3f86a95f447f5b740de6c455b86bc" style=3D"text-decoration:underli=
+ne;color:#0645AD;" target=3D"_blank">
+legacy test tokens</a>. If your company needs new tokens to interact with t=
+he Slack API, please
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a586c2b504620916fa4=
+ed49e828a7d62ed85479ff153df18aba1b9f37435b0b4e4546b89c24fffc9cfd7cc0884b6dc0=
+451af" style=3D"text-decoration:underline;color:#0645AD;" target=3D"_blank">
+create a Slack app</a> instead </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" height=3D"40" style=3D"background-color: #323648; border-col=
+or: #323648; border: 2px solid #323648; border-radius: 5px; padding-left:15p=
+x; padding-right:15px; font-family: 'Source Sans Pro', Calibri, Arial, sans-=
+serif; font-size:16px; color: #ffffff;" width=3D"100%">
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a586b9fcb1b3d9edc78=
+6ebd63daa5c3ad943590d752f17374b1bc0406163a8a814c353b55353a95ac1acb9a92b951fc=
+dbd83" style=3D"text-decoration: none; color: #ffffff" target=3D"_blank"><strong=
+>View All Updates</strong></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"background-color=
+: transparent; min-width: 100%; " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td style=3D"padding: 30px 0px 0px; " class=3D"stylingblock-content-wrapper cam=
+arker-inner">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"conta=
+iner" bgcolor=3D"#F5F4F5">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-left: 30px; padding-top:30px; padding-botto=
+m: 30px; padding-right: 30px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%">
+<tbody>
+<tr>
+<td>
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-right: 5px;"><img src=3D"http://image.email.s=
+lackhq.com/lib/fe5515707c610d7b7312/m/1/cd159c62-1776-439c-8341-30b364999eda=
+.png" width=3D"36" style=3D"display:block;" border=3D"0" alt=3D"">
+</td>
+<td align=3D"left" style=3D"font-size: 12px; line-height:12px; font-family: 'Lu=
+cidia Console', Monaco, monospace, sans-serif; color: #323648; padding-left:=
+ 10px;">
+IN CASE YOU MISSED IT </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 30px; font-size: 18px;  line-height:23=
+px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32364=
+8;">
+<strong>An admin's guide to app management</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; padding-top:15px; font-size: =
+16px;  line-height:21px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+Giving employees the flexibility to use apps, while also maintaining contro=
+l over how those apps operate, is a delicate balance. We=E2=80=99ve compiled a com=
+prehensive guide for managing apps securely and at scale.
+<br>
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a5861731300ecf259ab=
+628a00bd5ccd09776d69c78f8b60d41ccc42a13cd077ee3d0c16dde84f69ed82bb6899c21dee=
+df8aa" target=3D"_blank" style=3D"color:#3366BB; text-decoration:underline;">Get=
+ the guide&nbsp;=E2=86=92</a>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px; padding-bottom:=
+15px;  line-height:23px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+<strong>A guided tour of the newest Slack improvements</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; font-size: 16px;  line-height=
+:21px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32=
+3648;">
+Share these tips to help your members find their way and get the most out o=
+f the simpler, more organized Slack desktop experience.
+<br>
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a586bc1a0701febb844=
+7acf3a22e1cb40851b261e4de7b03242a634170f48120c07e875926c6ae593bdecbeffbc3c4e=
+22bff" target=3D"_blank" style=3D"color:#3366BB; text-decoration:underline;">Rea=
+d the article&nbsp;=E2=86=92</a>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-top: 5px; font-size:0px;"><img alt=3D"" border=3D"0" class=3D"=
+image" src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/a441=
+fc95-7801-4ac8-917b-8b5a5abeef39.png" style=3D"display:block;">
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-top: 15px; font-size: 18px; padding-bottom:=
+15px;  line-height:23px; font-family: 'Source Sans Pro', Calibri, Arial, san=
+s-serif; color:#323648;">
+<strong>Help your team stay connected to external partners</strong> </td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"padding-bottom: 15px; font-size: 16px;  line-height=
+:21px; font-family: 'Source Sans Pro', Calibri, Arial, sans-serif; color:#32=
+3648;">
+Forty-three percent of workers report that &quot;difficulty communicating a=
+nd collaborating with external stakeholders&quot; is the primary challenge t=
+hey face in their work. Learn how to remedy that with shared channels in Sla=
+ck.
+<br>
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a586e50b8faeefd1667=
+82454c84aa8d7936e154cefec682852f4ee8aadb0b0b5289b8ece974cfa720eabbfc6936d3c8=
+1e3e2" target=3D"_blank" style=3D"color:#3366BB; text-decoration:underline;">Wat=
+ch the webinar&nbsp;=E2=86=92</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"container" width=3D"=
+100%" align=3D"center">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"font-size: 18px; line-height:23px; font-family: '=
+Source Sans Pro', Calibri, Arial, sans-serif; color:#323648; padding-left: 3=
+0px; padding-right: 30px;padding-top:25px;">
+<strong>Have questions about anything we've&nbsp;shared?</strong></td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 16px; line-height:21px; font-family: '=
+Source Sans Pro', Calibri, Arial, sans-serif; color:#323648; padding-left: 3=
+0px; padding-right: 30px;">
+Reach out to your Customer Success Manager or write to <br class=3D"hideBreak=
+">
+<a href=3D"mailto:feedback@slack.com" target=3D"_blank" alias=3D"mail-feedback" s=
+tyle=3D"color:#3366BB; text-decoration:underine;">feedback@slack.com</a>. We'r=
+e happy to&nbsp;help!</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 16px; line-height:21px; font-family: '=
+Source Sans Pro', Calibri, Arial, sans-serif; color:#323648; padding-left: 3=
+0px; padding-right: 30px;">
+<br>
+Sent to all Owners and Admins in your&nbsp;workspace.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+<!---->
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-family:Courier,arial; font-size:12px; color:=
+#000000;">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;=
+ " class=3D"stylingblock-content-wrapper">
+<tbody>
+<tr>
+<td class=3D"stylingblock-content-wrapper camarker-inner">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"container" bgcolor=
+=3D"#ffffff" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center">
+<table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"container" align=3D"=
+center">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"mobilePadding" style=3D"padding-top: 0px; padding-b=
+ottom: 0px;">
+<img src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7312/m/1/2ff69=
+cfb-def3-4761-bf00-be8b7f766975.png" width=3D"600" style=3D"display: block;" cla=
+ss=3D"image" border=3D"0">
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"padding-top: 20px; padding-bottom: 0px;"><a href=3D=
+"http://click.email.slackhq.com/?qs=3D2900805f4913a586533bb3806aeb46bb0be1276f=
+6ff7e8a187d808bbaf7d5fd7b447dee35c83b7eb4c36aeacf5b614799e1024a8945c314e" ta=
+rget=3D"_blank"><img src=3D"http://image.email.slackhq.com/lib/fe5515707c610d7b7=
+312/m/1/c2795888-c636-4f25-8a43-4cbb755c0cba.png" style=3D"display: block;" wi=
+dth=3D"80" border=3D"0"></a>
+</td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; font-family: 'Source Sans Pro', =
+Calibri, Arial, sans-serif; color: #313647; padding-top: 30px; padding-botto=
+m: 5px;">
+<strong>Slack Technologies, Inc.</strong> </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; font-family: 'Source Sans Pro', =
+Calibri, Arial, sans-serif; color: #313647; padding-top: 5px; padding-bottom=
+: 5px;">
+500 Howard Street </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; font-family: 'Source Sans Pro', =
+Calibri, Arial, sans-serif; color: #313647; padding-top: 5px; padding-bottom=
+: 5px;">
+San Francisco, CA 94105 </td>
+</tr>
+<tr>
+<td align=3D"center" style=3D"font-size: 12px; font-family: 'Source Sans Pro', =
+Calibri, Arial, sans-serif; color: #313647; padding-top: 5px; padding-bottom=
+: 20px;">
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a58630477220daa7866=
+cb645b0c79fae019ec70f81ac627cd4d66a5b7543355a9c041557af456f38dfbd0530f6d2294=
+118e8" target=3D"_blank" style=3D"color:#313647;">slack.com</a>
+</td>
+</tr>
+<tr>
+<td style=3D"padding-bottom:25px;">
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"con=
+tainer">
+<tbody>
+<tr>
+<td class=3D"block" align=3D"center" style=3D"font-size: 12px; font-family: 'Sour=
+ce Sans Pro', Calibri, Arial, sans-serif; color: #313647; padding-bottom: 5p=
+x;">
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a5869b055ac1460b382=
+f5cd68ee7d39717c8f73b0eaf51e088dd1d71765be49aebb039d3beabe034824d4face43eef4=
+9ef1b" target=3D"_blank" style=3D"color:#313647;">Slack Platform Blog</a>
+</td>
+<td class=3D"hide" align=3D"center" style=3D"font-size: 12px; font-family: 'Sourc=
+e Sans Pro', Calibri, Arial, sans-serif; color: #313647; padding-bottom: 5px=
+;">
+&nbsp;&nbsp;|&nbsp;&nbsp; </td>
+<td class=3D"block" align=3D"center" style=3D"font-size: 12px; font-family: 'Sour=
+ce Sans Pro', Calibri, Arial, sans-serif; color: #313647; padding-bottom: 5p=
+x;">
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a586ed9f806c406b7dd=
+0c2d11efe434f4c6f228e7736fd959b8f50a13cbba4031d95d907eb2ddc0c27bdd36f0f46dc9=
+d9b88" target=3D"_blank" style=3D"color:#313647;">Help Center</a>
+</td>
+<td class=3D"hide" align=3D"center" style=3D"font-size: 12px; font-family: 'Sourc=
+e Sans Pro', Calibri, Arial, sans-serif; color: #313647; padding-bottom: 5px=
+;">
+&nbsp;&nbsp;|&nbsp;&nbsp; </td>
+<td class=3D"block" align=3D"center" style=3D"font-size: 12px; font-family: 'Sour=
+ce Sans Pro', Calibri, Arial, sans-serif; color: #313647; padding-bottom: 5p=
+x;">
+<a href=3D"http://click.email.slackhq.com/?qs=3D2900805f4913a5867745ae2d3703bb9=
+0a4ef584a20d2d56d1b144749a1dc3617151e84dcdb1e54f405382d350ce853984a4429a737a=
+19793833770abd09670b7" target=3D"_blank" style=3D"color:#313647;">Unsubscribe</a=
+>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<img src=3D"http://click.email.slackhq.com/open.aspx?ffcb10-fe8d17777760017b7=
+2-fe1e16787263007e701d74-fe5515707c610d7b7312-ff6a157374-fe1815787363037f7d1=
+c78-ff64157671" width=3D"1" height=3D"1">
+</body>
+</html>
+--B_3672922626_1937730743--

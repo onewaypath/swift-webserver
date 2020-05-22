@@ -9,7 +9,7 @@ import Foundation
 #if canImport(FoundationNetworking)
 import FoundationNetworking
 #endif
-
+import Vapor
 
 final class ActiveCampaign {
 /*
@@ -241,7 +241,7 @@ final class ActiveCampaign {
         return htmlText
     }
 */
-    func createMessage(using: String, titled: String) -> String {
+    func createMessage(using: (html: String, text: String), titled: String) -> String {
         let url = "https://buddhavipassana.api-us1.com/admin/api.php"
 
         let parameters = [
@@ -254,7 +254,8 @@ final class ActiveCampaign {
         
         let postData = [
             "fromemail":"info@buddhavipassana.ca",
-            "format" : "html",
+            "fromname":"Buddhavipassana Meditation Centre",
+            "format" : "mime",
             "reply2" : "info@buddhavipassana.ca",
             "priority" : "3",
             "encoding" : "quoted-printable",
@@ -262,7 +263,8 @@ final class ActiveCampaign {
             "subject" : titled,
             "textfetchwhen": "send",
             "p[9]":"9",
-            "html": using
+            "html": using.html,
+            "text": using.text
         ]
 
         let endpoint = Api(url: url, parameters: parameters, postData: postData)
@@ -325,7 +327,13 @@ final class ActiveCampaign {
 
         let endpoint = Api(url: url, parameters: parameters)
         let apiRequest = endpoint.request()
-        let apiResponse = endpoint.responseString(using: apiRequest)
+    
+        var apiResponse = ""
+        
+        endpoint.asyncResponseString(using: apiRequest) { (response) -> () in
+           
+            apiResponse = response
+        }
         return apiResponse
 
     }

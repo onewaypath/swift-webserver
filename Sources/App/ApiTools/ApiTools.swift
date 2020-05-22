@@ -108,4 +108,24 @@ final class Api {
         
     }
     
+    func asyncResponseString(using: URLRequest,  completion: @escaping (String) -> Void ) {
+        
+        var apiResponse: String = ""
+        let semaphore = DispatchSemaphore (value: 0)
+        let task = URLSession.shared.dataTask(with: using) { data, response, error in
+             guard let data = data else {
+                 print(String(describing: error))
+                 return
+             }
+              
+            apiResponse = String(data: data, encoding: .utf8)!
+            completion(apiResponse)
+            semaphore.signal()
+        }
+
+        task.resume()
+        semaphore.wait()
+        
+    }
+    
 }

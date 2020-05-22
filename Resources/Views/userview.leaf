@@ -16,10 +16,12 @@
           </div>
       </div>
     </form>
-    #for(user in userlist) {
+
+	#for(user in userlist) {
       <p class="mb-0">
         #(user.username)
-      </p>
-    }
+      </p> 
+	  }
+
   </body>
 </html>

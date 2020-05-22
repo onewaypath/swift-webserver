@@ -7,14 +7,29 @@
 
 import Foundation
 import Vapor
+import FluentMySQL
 
 final class UserController {
 
+    
     func list(_ req: Request) throws -> Future<View> {
         return User.query(on: req).all().flatMap { users in
             let data = ["userlist": users]
+            
             return try req.view().render("userview", data)
         }
+    }
+    
+    
+    func update(_ req: Request) throws -> Future<User> {
+        
+        
+        let user = User(id:1, username: "Alex")
+        let didUpdate = user.save(on: req)
+        print(didUpdate)
+
+        return didUpdate
+        
     }
     
     func create(_ req: Request) throws -> Future<Response> {

@@ -12,7 +12,9 @@ public func routes(_ router: Router) throws {
     router.get { req in
           return try req.view().render("main-template", ["html": owpgmainHtml])
     }
-  
+    
+   
+    
     // *** ROUTES TO DISPLAY TEAM MEMBER PAGES ***
     
     // get route at the url team members fetching all members from the database and passing them into a view
@@ -44,7 +46,8 @@ public func routes(_ router: Router) throws {
     // get route at the url users fetching all users from the database and passing them into a view
     
     let userController = UserController()
-    router.get("users", use: userController.list)
+    router.get("users", "list", use: userController.list)
+     router.get("users", "update", use: userController.update)
     
     // post route so that on form submission the input-field data form-url-encoded will be sent to the /users route as a post
     router.post("users", use: userController.create)
@@ -66,21 +69,14 @@ public func routes(_ router: Router) throws {
     
     
     // *** OFFICE 365 ROUTES
+
+    let testController = TestController()
+    router.get("test", "async", use: testController.async)
+    router.get("test", "office365", use: testController.office365)
+
+    let office365Controller = Office365Controller()
+    router.get("api", "office365", "register", use: office365Controller.register)
     
-  
-    
-    router.get("office365") { req -> String in
-           
-    
-        guard let code = req.query[String.self, at: "code"] else {
-            throw Abort(.badRequest)
-        }
-        return "Authorization Code:\(code)"
-        //return try req.view().render("main-template", ["html": owpgmainHtml])
-      }
-    
-        
-        
     
     
     
