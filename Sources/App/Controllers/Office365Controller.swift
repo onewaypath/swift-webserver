@@ -23,29 +23,35 @@ final class Office365Controller {
             authCode: code
         )
         
+    
         let newUser = ApiConnection.find(1, on: req).flatMap(to: ApiConnection.self) {api in
             if api?.id ?? 0 == 0 {
                 let didCreate = o365User.create(on: req)
-                return didCreate
+                return try self.updateToken(req, apiUser: didCreate)
             }
             else {
                  
                 let didUpdate = o365User.update(on: req)
-                return didUpdate
+                return try self.updateToken(req, apiUser: didUpdate)
             }
+            
         }
+        
+       
         return newUser
     }
     
-    func token(_ req: Request) throws -> Future<ApiConnection> {
+    func updateToken(_ req: Request, apiUser: Future<ApiConnection>) throws -> Future<ApiConnection> {
           
-        
-        let apiUser = ApiConnection.find(1, on: req)
-        
         let newUser = apiUser.flatMap(to: ApiConnection.self ) { api in
-            let code = api!.authCode
+            let code = api.authCode
             let o365 = Office365()
-            let didUpdate = o365.accessToken(authCode: code, request: req)
+            let credentials = o365.accessToken(authCode: code, request: req)
+            
+            let o365User = ApiConnection(id: 1, name: "o365", authCode: code, authToken: credentials.authToken, refreshToken: credentials.refreshToken)
+            
+            let didUpdate = o365User.update(on: req)
+            
             return didUpdate
         }
         

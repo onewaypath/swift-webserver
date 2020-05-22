@@ -13,7 +13,7 @@ import Vapor
 
 final class Office365 {
 
-    func accessToken(authCode: String, request: Request) -> Future<ApiConnection> {
+    func accessToken(authCode: String, request: Request) -> (authToken: String, refreshToken: String) {
         
         let url = "https://login.microsoftonline.com/common/oauth2/token"
 
@@ -46,7 +46,7 @@ final class Office365 {
         let o365User = ApiConnection(id: 1, name: "o365", authCode: authCode, authToken: apiData.access_token, refreshToken: apiData.refresh_token)
         
         let didUpdate = o365User.update(on: request)
-        return didUpdate
+        return (authToken: apiData.access_token, refreshToken: apiData.refresh_token)
         
     }
 
