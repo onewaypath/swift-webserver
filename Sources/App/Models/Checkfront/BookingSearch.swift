@@ -86,6 +86,39 @@ final class BookingSearch {
        
     }
     
+    func response() -> String {
+       
+        // format date for HTML request
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("YYYYMMdd")
+        let startDate = dateFormatter.string(from: self.startDate)
+        let endDate = dateFormatter.string(from: self.endDate)
+        
+        // generate HTML request
+        
+        let url = "http://buddhavipassana.checkfront.com/api/3.0/item/37/cal?start_date=\(startDate)&end_date=\(endDate)"
+        
+        let parameters = [
+            "start_date" : startDate,
+            "endDate" : endDate
+        ]
+        
+        let headers = [
+            "Host": "buddhavipassana.checkfront.com",
+            "Accept": "application/json",
+            "X-On-Behalf": "1",
+            "Authorization": "Basic ZTZlOGQ5YzE3OTBkNTNiNDFhMWZkODFiYmQ0NmJhMTFmMjdlODRiNzo1NmFlM2VjOGNiNTBlODA1OWY3NTE4MDA4NWY2YWRhMjZhYTNlZjcxZTIxN2Y3MjQxNGE2ZmViZjkyZDEyMmI3"
+        ]
+        
+        let endpoint = Api(url: url, parameters: parameters, headers: headers)
+        let apiRequest = endpoint.request()
+        let apiResponse = endpoint.responseString(using: apiRequest)
+        print(apiResponse)
+        
+        return apiResponse
+    }
+    
     func test(arrayData: [Date: Int]) -> String {
 
         // generate a string containing all the entries in the availability array so that the contents of that, for debugging purposes, the contents of that array can be checked

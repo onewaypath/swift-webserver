@@ -102,7 +102,7 @@ final class ActiveCampaign {
     
         var apiResponse = ""
         
-        endpoint.asyncResponseString(using: apiRequest) { (response) -> () in
+        endpoint.responseStringAsync(using: apiRequest) { (response) -> () in
            
             apiResponse = response
         }

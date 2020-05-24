@@ -11,6 +11,7 @@ import unixTools
 
 final class NewsletterController {
     
+    
     func test(_ req: Request) throws -> Future<View> {
         
         // let content = "This is the email"
@@ -43,9 +44,10 @@ final class NewsletterController {
             var subject: String
          }
          
-         return try req.content.decode(MessageRequest.self).map(to: HTTPStatus.self) { messageRequest in
-             print("author: \(messageRequest.author)")
-             print("content: \(messageRequest.content)")
+    return try req.content.decode(MessageRequest.self).map(to: HTTPStatus.self) { messageRequest in
+            
+            print("author: \(messageRequest.author)")
+            print("content: \(messageRequest.content)")
             print ("subject: \(messageRequest.subject)")
             
           

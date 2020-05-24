@@ -15,15 +15,20 @@ final class Api {
     var postData: [String: String]
     var url: String
     var parameters: [String: String]
+    var headers: [String: String]
+    var jsonBody: Data?
+    
     enum HTTPMethod {
         case GET, POST
     }
     var httpMethod : HTTPMethod
     
-    init (url: String, parameters: [String: String], postData: [String: String] = [:]) {
+    init (url: String, parameters: [String: String], headers: [String:String] = [:], postData: [String: String] = [:], jsonBody: Data? = nil) {
         self.postData = postData
         self.url = url
         self.parameters = parameters
+        self.headers = headers
+        self.jsonBody = jsonBody
         
         // if the initializer includes post data then set the httpMethod to POST otherwise the get method will be used
         
@@ -73,32 +78,50 @@ final class Api {
 
     func responseString(using: URLRequest) -> String {
     
+    //print ("starting data task")
     var apiResponse: String = ""
     let semaphore = DispatchSemaphore (value: 0)
     let task = URLSession.shared.dataTask(with: using) { data, response, error in
          guard let data = data else {
-             print(String(describing: error))
+             apiResponse = (String(describing: error))
              return
          }
           
          apiResponse = String(data: data, encoding: .utf8)!
+         //apiResponse = String(decoding: data, as: UTF8.self)
+         let string = (String(describing: response))
+         print(string)
+         //print(apiResponse)
          semaphore.signal()
     }
 
     task.resume()
     semaphore.wait()
+    
     return apiResponse
 }
 
     func request() -> URLRequest {
         
-        let urlCode = self.dictionaryToUrlCode(using: self.parameters)
-        let url = self.url + "?" + urlCode
+        let urlCode : String? = self.dictionaryToUrlCode(using: self.parameters)
+        let url = self.url + "?" + (urlCode ?? "")
         var request = URLRequest(url: URL(string: url)!,timeoutInterval: Double.infinity)
+        
+        // add headers if any
+        for header in self.headers {
+            request.addValue(header.value, forHTTPHeaderField: header.key)
+        }
         
         switch self.httpMethod {
         case .POST:
-            request.httpBody = dictionaryToData(using: self.postData)
+            if self.postData["json"]?.data(using: String.Encoding.utf8)  != nil {
+                request.httpBody = self.jsonBody
+                //let jsonString = String(data: self.jsonBody!, encoding: .utf8)!
+                //print (jsonString)
+            }
+            else {
+                request.httpBody = dictionaryToData(using: self.postData)
+            }
             request.httpMethod = "POST"
         default:
             request.httpMethod = "GET"
@@ -108,23 +131,22 @@ final class Api {
         
     }
     
-    func asyncResponseString(using: URLRequest,  completion: @escaping (String) -> Void ) {
+    func responseStringAsync(using: URLRequest,  completion: @escaping (String) -> Void ) {
         
-        var apiResponse: String = ""
-        let semaphore = DispatchSemaphore (value: 0)
+        //var apiResponse: String = ""
+        
         let task = URLSession.shared.dataTask(with: using) { data, response, error in
              guard let data = data else {
                  print(String(describing: error))
                  return
              }
               
-            apiResponse = String(data: data, encoding: .utf8)!
+            let apiResponse = String(data: data, encoding: .utf8)!
             completion(apiResponse)
-            semaphore.signal()
+            
         }
 
         task.resume()
-        semaphore.wait()
         
     }
     
