@@ -56,7 +56,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     var migrations = MigrationConfig()
     migrations.add(model: User.self, database: .mysql)
     migrations.add(model: TeamMember.self, database: .mysql)
-    migrations.add(model: ApiConnection.self, database: .mysql)
+    migrations.add(model: ApiCreds.self, database: .mysql)
     services.register(migrations)
     
 

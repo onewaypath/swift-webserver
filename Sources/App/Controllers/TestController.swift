@@ -25,13 +25,13 @@ final class TestController {
     }
     
     
-    func office365(_ req: Request) throws -> Future<ApiConnection> {
+    func office365(_ req: Request) throws -> Future<ApiCreds> {
        
         guard let code = req.query[String.self, at: "code"] else {
             throw Abort(.badRequest)
         }
         
-        let  o365User = ApiConnection(
+        let  o365User = ApiCreds(
             id: 1,
             name: "o365",
             authCode: code

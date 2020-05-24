@@ -9,15 +9,17 @@ import Foundation
 import FluentMySQL
 import Vapor
 
-struct TokenCredential: Codable {
-    var code: String
-    var expiry: Date
-    
-    
-   }
 
-final class ApiConnection: MySQLModel {
+
+final class ApiCreds: MySQLModel {
         
+    struct TokenCredential: Codable {
+     var code: String
+     var expiry: Date
+     
+     
+    }
+    
     var id: Int?
     var name: String
     var authCode: TokenCredential
@@ -27,14 +29,14 @@ final class ApiConnection: MySQLModel {
     init(id: Int? = nil, name: String, authCode: String = "", accessToken: String = "", refreshToken: String = "") {
     self.id = id
     self.name = name
-    self.authCode = TokenCredential(code:authCode, expiry: Date())
-    self.accessToken = TokenCredential(code:authCode, expiry: Date())
+    self.authCode = TokenCredential(code: authCode, expiry: Date())
+    self.accessToken = TokenCredential(code:"", expiry: Date())
     self.refreshToken = refreshToken
   }
     
     
     
 }
-extension ApiConnection: Content {}
-extension ApiConnection: Migration {}
+extension ApiCreds: Content {}
+extension ApiCreds: Migration {}
 

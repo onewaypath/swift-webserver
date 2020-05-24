@@ -11,44 +11,47 @@ import unixTools
 
 final class Office365Controller {
     
-    func registerAuthCode(_ req: Request) throws -> Future<ApiConnection> {
+    func registerAuthCode(_ req: Request) throws -> ApiCreds {
        
         guard let code = req.query[String.self, at: "code"] else {
             throw Abort(.badRequest)
         }
         
-        let  o365User = ApiConnection(
+        let  o365User = ApiCreds(
             id: 1,
             name: "o365",
             authCode: code
         )
         
-    
+        let didUpdate = o365User.save(on: req)
+        //print("Searching for user")
+        /*
         let newUser = ApiConnection.find(1, on: req).flatMap(to: ApiConnection.self) {api in
             if api?.id ?? 0 == 0 {
-                let didCreate = o365User.create(on: req)
+                print ("user could not be found, creating a new one")
+                let didCreate = o365User.save(on: req)
                 return try self.updateTokens(req, apiUser: didCreate)
             }
             else {
                  
-                let didUpdate = o365User.update(on: req)
+                let didUpdate = o365User.save(on: req)
                 return try self.updateTokens(req, apiUser: didUpdate)
             }
             
-        }
+        }*/
         
        
-        return newUser
+        return o365User
     }
     
-    func updateTokens(_ req: Request, apiUser: Future<ApiConnection>) throws -> Future<ApiConnection> {
+    func updateTokens(_ req: Request, apiUser: Future<ApiCreds>) throws -> Future<ApiCreds> {
           
-        let newUser = apiUser.flatMap(to: ApiConnection.self ) { api in
+        let newUser = apiUser.flatMap(to: ApiCreds.self ) { api in
             let code = api.authCode.code
             let o365 = Office365()
             let credentials = o365.accessToken(authCode: code, request: req)
             
-            let o365User = ApiConnection(id: 1, name: "o365", authCode: code, accessToken: credentials.accessToken, refreshToken: credentials.refreshToken)
+            let o365User = ApiCreds(id: 1, name: "o365", authCode: code, accessToken: credentials.accessToken, refreshToken: credentials.refreshToken)
             
             let didUpdate = o365User.update(on: req)
             
@@ -98,7 +101,7 @@ final class Office365Controller {
     func sendEmail(_ req: Request) throws -> Future<String> {
         
        
-        let apiResponse = ApiConnection.find(1, on: req).map(to: String.self) {api in
+        let apiResponse = ApiCreds.find(1, on: req).map(to: String.self) {api in
            
                 // get updated tokens from the o365 API
                 let o365 = Office365()
@@ -130,7 +133,7 @@ final class Office365Controller {
         
        
         
-        let newCredentials = ApiConnection.find(1, on: req).map(to: ApiConnection?.self) { api in
+        let newCredentials = ApiCreds.find(1, on: req).map(to: ApiCreds?.self) { api in
                 guard let api = api else {
                     return nil
                 }
