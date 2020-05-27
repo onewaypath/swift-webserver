@@ -30,7 +30,7 @@ final class ApiCreds: MySQLModel {
     self.id = id
     self.name = name
     self.authCode = TokenCredential(code: authCode, expiry: Date())
-    self.accessToken = TokenCredential(code:"", expiry: Date())
+    self.accessToken = TokenCredential(code: accessToken, expiry: Date())
     self.refreshToken = refreshToken
   }
     
