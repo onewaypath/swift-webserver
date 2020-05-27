@@ -26,9 +26,9 @@ final class O365 {
         }
         
         var apiData: ApiData
-        var request: Request
         
-        init(grantType: GrantType, code: String, req: Request)  {
+        
+        init(grantType: GrantType, code: String)  {
             
             let url = "https://login.microsoftonline.com/common/oauth2/token"
             let parameters:  [String:String] = [:]
