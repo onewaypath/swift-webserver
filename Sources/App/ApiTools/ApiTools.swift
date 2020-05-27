@@ -88,9 +88,9 @@ final class Api {
          }
           
          apiResponse = String(data: data, encoding: .utf8)!
-         //apiResponse = String(decoding: data, as: UTF8.self)
-         let string = (String(describing: response))
-         print(string)
+         print (apiResponse)//apiResponse = String(decoding: data, as: UTF8.self)
+         //let string = (String(describing: response))
+         //print(string)
          //print(apiResponse)
          semaphore.signal()
     }
@@ -131,18 +131,18 @@ final class Api {
         
     }
     
-    func responseStringAsync(using: URLRequest,  completion: @escaping (String) -> Void ) {
+    func responseStringAsync(using: URLRequest,  completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void ) {
         
         //var apiResponse: String = ""
         
         let task = URLSession.shared.dataTask(with: using) { data, response, error in
              guard let data = data else {
-                 print(String(describing: error))
+                 completion(nil, nil, error)
+                 //print(String(describing: error))
                  return
              }
               
-            let apiResponse = String(data: data, encoding: .utf8)!
-            completion(apiResponse)
+            completion(data, response, nil)
             
         }
 

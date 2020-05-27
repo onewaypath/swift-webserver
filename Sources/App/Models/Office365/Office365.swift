@@ -31,24 +31,29 @@ final class Office365 {
         let endpoint = Api(url: url, parameters: parameters, postData: postData)
         let apiRequest = endpoint.request()
         let apiResponse = endpoint.responseString(using: apiRequest)
-        // print(apiResponse)
+        print(apiResponse)
         
         struct ApiData: Codable {
             var access_token: String
             var refresh_token: String
+            var expires_in: String
         }
         
         let jsonData = apiResponse.data(using: .utf8)!
         
         let decoder = JSONDecoder()
         let apiData = try! decoder.decode(ApiData.self, from: jsonData)
+        
+        
+        
         return (accessToken: apiData.access_token, refreshToken: apiData.refresh_token)
         
     }
    
     
-    func refreshToken(refreshToken: String, request: Request) -> (accessToken: String, newRefreshToken: String) {
-            
+    func updateAccessToken(refreshToken: String, request: Request) -> Api {//(accessToken: String, accessTokenExpiry: Date, newRefreshToken: String) {
+        
+        
             let url = "https://login.microsoftonline.com/common/oauth2/token"
 
            
@@ -63,20 +68,31 @@ final class Office365 {
             ]
 
             let endpoint = Api(url: url, parameters: parameters, postData: postData)
-            let apiRequest = endpoint.request()
+            //let apiRequest = endpoint.request()
+        
+        /*
             let apiResponse = endpoint.responseString(using: apiRequest)
             //print(apiResponse)
             
             struct ApiData: Codable {
                 var access_token: String
                 var refresh_token: String
+                var expires_in: String
             }
             
             let jsonData = apiResponse.data(using: .utf8)!
             
             let decoder = JSONDecoder()
             let apiData = try! decoder.decode(ApiData.self, from: jsonData)
-            return (accessToken: apiData.access_token, newRefreshToken: apiData.refresh_token)
+        
+            var expiryOffset = DateComponents()
+            expiryOffset.second = Int(apiData.expires_in)
+            
+            
+            let expiry = Calendar.current.date(byAdding: expiryOffset, to: Date()) ?? Date()
+            */
+        
+        return endpoint//(accessToken: apiData.access_token, accessTokenExpiry: expiry, newRefreshToken: apiData.refresh_token)
     }
     
     struct Address: Codable {
@@ -138,7 +154,7 @@ final class Office365 {
         let apiResponse = endpoint.responseString(using: apiRequest)
         //print(apiResponse)
         
-        return apiResponse
+        return payload.message.body.content
            
     }
     
@@ -180,6 +196,46 @@ final class Office365 {
         return endPoint
            
     }
+    
+    /*
+    func updateAccessToken(_ req: Request) throws -> Future<ApiCreds> {
+        
+       //updates only the access token
+        
+        let updatedCredentials = ApiCreds.find(1, on: req).map(to: ApiCreds?.self) {api in
+               
+                // get updated tokens from the o365 API
+                let o365 = Office365()
+                guard let currentRefreshToken = api?.refreshToken else {
+                    print("there is no existing refresh token")
+                    throw Abort(.badRequest)
+                }
+                    
+                let credentials = o365.refreshToken(refreshToken: currentRefreshToken, request: req)
+              
+                // update the database
+                api?.accessToken.code = credentials.accessToken
+                api?.refreshToken = credentials.newRefreshToken
+                
+                
+            return api
+            }
+        
+       
+        let didUpdate = updatedCredentials.flatMap(to: ApiCreds.self) { api in
+            guard let update = api?.update(on: req) else {
+                print("could not update the database")
+                throw Abort(.badRequest)
+            }
+            
+            return update
+        }
+        return didUpdate
+          
+        }
+       
+    */
+    
 }
 
    
