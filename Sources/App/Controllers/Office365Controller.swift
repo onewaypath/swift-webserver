@@ -94,14 +94,21 @@ final class Office365Controller {
             let o365 = Office365()
             let credentials = o365.accessToken(authCode: code, request: req)
             */
+            let promise: Promise<O365.UpdateRefreshToken> = req.eventLoop.newPromise()
+            DispatchQueue.global().async {
+                let apiCall = O365.UpdateRefreshToken(grantType: grantType, code: code!)
+                promise.succeed(result: apiCall)
+            }
             
-            let apiCall = O365.UpdateRefreshToken(grantType: grantType, code: code!)
+            let newO365User = promise.futureResult.map(to: ApiCreds.self) { call in
+                
+                let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: call.apiData.access_token ?? "could not decode access token", refreshToken: call.apiData.refresh_token ?? "")
+                return o365User
+            }
             
             
             
-            let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: apiCall.apiData.access_token ?? "could not decode access token", refreshToken: apiCall.apiData.refresh_token ?? "")
-            
-            let didUpdate = o365User.update(on: req)
+            let didUpdate = newO365User.update(on: req)
             return didUpdate
         }
         

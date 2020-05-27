@@ -58,7 +58,7 @@ final class O365 {
             //print(apiResponse)
             
             //let promise: Promise<Data> = req.eventLoop.newPromise()
-            DispatchQueue.global().async {
+            //DispatchQueue.global().async {
 
                 endpoint.responseStringAsync(using: apiRequest) { data, response, error in
                     if error != nil {
@@ -76,7 +76,7 @@ final class O365 {
                         */
                     }
                 }
-            }
+            //}
             //let apiResponse = endpoint.responseString(using: apiRequest)
             //print(apiResponse)
             
