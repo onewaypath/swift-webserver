@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Vapor
 
 final class O365 {
     
@@ -25,8 +26,9 @@ final class O365 {
         }
         
         var apiData: ApiData
+        var request: Request
         
-        init(grantType: GrantType, code: String)  {
+        init(grantType: GrantType, code: String, req: Request)  {
             
             let url = "https://login.microsoftonline.com/common/oauth2/token"
             let parameters:  [String:String] = [:]
@@ -54,6 +56,10 @@ final class O365 {
             var apiResponse = ApiData()
             
             //print(apiResponse)
+            
+            //let promise: Promise<Data> = req.eventLoop.newPromise()
+            DispatchQueue.global().async {
+
                 endpoint.responseStringAsync(using: apiRequest) { data, response, error in
                     if error != nil {
                         print("The API did not return a valid Access Token")
@@ -70,11 +76,12 @@ final class O365 {
                         */
                     }
                 }
+            }
             //let apiResponse = endpoint.responseString(using: apiRequest)
             //print(apiResponse)
             
             //et jsonData = apiResponse.data(using: .utf8)!
-            
+            //promise.succeed(result: apiResponse)
             self.apiData = apiResponse
            }
     }
