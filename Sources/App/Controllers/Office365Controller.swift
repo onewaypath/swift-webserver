@@ -24,7 +24,7 @@ final class Office365Controller {
             
             var didUpdate = o365User.create(on: req)
             didUpdate = try updateRefreshToken(req) // get the new refresh token
-            didUpdate = try updateRefreshToken(req) // get the the authorization code
+            // didUpdate = try updateRefreshToken(req) // get the the authorization code
             return didUpdate
         }
         else {
