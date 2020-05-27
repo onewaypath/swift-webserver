@@ -97,7 +97,9 @@ final class Office365Controller {
             
             let apiCall = O365.UpdateRefreshToken(grantType: grantType, code: code!)
             
-            let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: apiCall.apiData.access_token ?? "", refreshToken: apiCall.apiData.refresh_token ?? "")
+            
+            
+            let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: apiCall.apiData.access_token ?? "could not decode access token", refreshToken: apiCall.apiData.refresh_token ?? "")
             
             let didUpdate = o365User.update(on: req)
             return didUpdate
