@@ -105,8 +105,11 @@ final class Office365Controller {
                     else {
                         let decoder = JSONDecoder()
                         apiData = try! decoder.decode(O365.UpdateRefreshToken.ApiData.self, from: data!)
-                        let apiString = String(data: data!, encoding: .utf8)
-                        print (apiString!)
+                        
+                        promise.succeed(result: apiData)
+                        print(promise.futureResult)
+                        //let apiString = String(data: data!, encoding: .utf8)
+                        //print (apiString!)
                         /*
                         var expiryOffset = DateComponents()
                         expiryOffset.second = Int(apiData.expires_in)
@@ -116,7 +119,7 @@ final class Office365Controller {
                 }
                 
                 
-                promise.succeed(result: apiData)
+               
             }
             
             let newO365User = promise.futureResult.map(to: ApiCreds.self) { call in
