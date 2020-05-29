@@ -10,7 +10,7 @@ import Vapor
 
 final class O365 {
     
-    final class UpdateRefreshToken: Codable {
+    final class UpdateRefreshToken {
     
         
         enum GrantType {
@@ -25,7 +25,8 @@ final class O365 {
             var expires_in:  String? = nil
         }
         
-        var apiData: ApiData
+        //var apiData: ApiData
+        var endpoint: Api
         
         
         init(grantType: GrantType, code: String)  {
@@ -50,16 +51,16 @@ final class O365 {
             
             print (postData)
             
-            let endpoint = Api(url: url, parameters: parameters, postData: postData)
-            let apiRequest = endpoint.request()
+            self.endpoint = Api(url: url, parameters: parameters, postData: postData)
+            //self.request = endpoint.request()
             //var apiData: UpdateRefreshToken
-            var apiResponse = ApiData()
+            //var apiResponse = ApiData()
             
             //print(apiResponse)
             
             //let promise: Promise<Data> = req.eventLoop.newPromise()
             //DispatchQueue.global().async {
-
+/*
                 endpoint.responseStringAsync(using: apiRequest) { data, response, error in
                     if error != nil {
                         print("The API did not return a valid Access Token")
@@ -69,6 +70,7 @@ final class O365 {
                         apiResponse = try! decoder.decode(UpdateRefreshToken.ApiData.self, from: data!)
                         let apiString = String(data: data!, encoding: .utf8)
                         print (apiString!)
+*/
                         /*
                         var expiryOffset = DateComponents()
                         expiryOffset.second = Int(apiData.expires_in)
@@ -82,7 +84,7 @@ final class O365 {
             
             //et jsonData = apiResponse.data(using: .utf8)!
             //promise.succeed(result: apiResponse)
-            self.apiData = apiResponse
-           }
-    }
+            //self.apiData = apiResponse
+   //        }
+   // }
 }

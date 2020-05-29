@@ -94,15 +94,34 @@ final class Office365Controller {
             let o365 = Office365()
             let credentials = o365.accessToken(authCode: code, request: req)
             */
-            let promise: Promise<O365.UpdateRefreshToken> = req.eventLoop.newPromise()
+            let promise: Promise<O365.UpdateRefreshToken.ApiData> = req.eventLoop.newPromise()
             DispatchQueue.global().async {
                 let apiCall = O365.UpdateRefreshToken(grantType: grantType, code: code!)
-                promise.succeed(result: apiCall)
+                var apiData = O365.UpdateRefreshToken.ApiData()
+                apiCall.endpoint.responseStringAsync(using: apiCall.endpoint.request()) { data, response, error in
+                    if error != nil {
+                        print("The API did not return a valid Access Token")
+                    }
+                    else {
+                        let decoder = JSONDecoder()
+                        apiData = try! decoder.decode(O365.UpdateRefreshToken.ApiData.self, from: data!)
+                        let apiString = String(data: data!, encoding: .utf8)
+                        print (apiString!)
+                        /*
+                        var expiryOffset = DateComponents()
+                        expiryOffset.second = Int(apiData.expires_in)
+                        let expiry = Calendar.current.date(byAdding: expiryOffset, to: Date()) ?? Date()
+                        */
+                    }
+                }
+                
+                
+                promise.succeed(result: apiData)
             }
             
             let newO365User = promise.futureResult.map(to: ApiCreds.self) { call in
                 
-                let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: call.apiData.access_token ?? "could not decode access token", refreshToken: call.apiData.refresh_token ?? "")
+                let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: call.access_token ?? "could not decode access token", refreshToken: call.refresh_token ?? "")
                 return o365User
             }
             
