@@ -1,8 +1,8 @@
 //
-//  ApiTools.swift
+//  NetworkRequest.swift
 //  App
 //
-//  Created by Alex Young on 5/18/20.
+//  Created by Alex Young on 5/30/20.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Foundation
 import FoundationNetworking
 #endif
 
-struct Api {
+struct NetworkRequest {
     
     var postData: [String: String]
     var url: String
@@ -76,30 +76,6 @@ struct Api {
         return dataString
     }
 
-    func responseString(using: URLRequest) -> String {
-    
-    //print ("starting data task")
-    var apiResponse: String = ""
-    let semaphore = DispatchSemaphore (value: 0)
-    let task = URLSession.shared.dataTask(with: using) { data, response, error in
-         guard let data = data else {
-             apiResponse = (String(describing: error))
-             return
-         }
-          
-         apiResponse = String(data: data, encoding: .utf8)!
-         print (apiResponse)//apiResponse = String(decoding: data, as: UTF8.self)
-         //let string = (String(describing: response))
-         //print(string)
-         //print(apiResponse)
-         semaphore.signal()
-    }
-
-    task.resume()
-    semaphore.wait()
-    
-    return apiResponse
-}
 
     func request() -> URLRequest {
         
@@ -131,7 +107,7 @@ struct Api {
         
     }
     
-    func responseStringAsync(using: URLRequest,  completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void ) {
+    func execute(using: URLRequest,  completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void ) {
         
         //var apiResponse: String = ""
         
@@ -151,3 +127,4 @@ struct Api {
     }
     
 }
+

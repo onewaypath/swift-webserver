@@ -11,110 +11,63 @@ import unixTools
 
 final class Office365Controller {
     
-    func registerAuthCode(_ req: Request) throws -> Future<ApiCreds> {
+    func registerAuthCode(_ req: Request) throws -> Future<O365.Authenticate.O365ApiCreds> {
        
         let code = req.query[String.self, at: "code"] ?? nil
         
-        if code != nil {
-            let  o365User = ApiCreds(
-                id: 1,
-                name: "o365",
-                authCode: code!
-            )
+            if code != nil {
+                let  o365User = O365.Authenticate.O365ApiCreds(
+                    id: 1
+                    //name: "o365",
+                    //authCode: code!
+                    
+                )
             
-            var didUpdate = o365User.create(on: req)
-            didUpdate = try updateRefreshToken(req) // get the new refresh token
+                var didUpdate = o365User.create(on: req)
+            didUpdate = try requestTokens(req) // get the new refresh token
             // didUpdate = try updateRefreshToken(req) // get the the authorization code
             return didUpdate
         }
         else {
-            return try updateRefreshToken(req)
+            return try requestTokens(req)
         }
-        /*
-        guard let code = req.query[String.self, at: "code"] else {
-            throw Abort(.badRequest)
-        }
-        
-        let  o365User = ApiCreds(
-            id: 1,
-            name: "o365",
-            authCode: code
-        )
-        
-        let didUpdate = o365User.create(on: req)
-        
-       
-        //print("Searching for user")
-    
-        let newUser = ApiConnection.find(1, on: req).flatMap(to: ApiConnection.self) {api in
-            if api?.id ?? 0 == 0 {
-                print ("user could not be found, creating a new one")
-                let didCreate = o365User.save(on: req)
-                return try self.updateTokens(req, apiUser: didCreate)
-            }
-            else {
-                 
-                let didUpdate = o365User.save(on: req)
-                return try self.updateTokens(req, apiUser: didUpdate)
-            }
-            
-        }*/
         
     }
     
-    func updateRefreshToken(_ req: Request) throws -> Future<ApiCreds> {
+    func requestTokens(_ req: Request) throws ->  Future<O365.Authenticate.O365ApiCreds> {//Future<ApiCreds> {
          
         //updates both the access token and the refresh token based on the current authorization code
         
         // get the existing authorization code
-        let newUser = ApiCreds.find(1, on: req).flatMap(to: ApiCreds.self) { api in
+        let newUser = O365.Authenticate.O365ApiCreds.find(1, on: req).flatMap(to: O365.Authenticate.O365ApiCreds.self) { api in
             
-            var grantType : O365.UpdateRefreshToken.GrantType
+            var grantType : O365.Authenticate.GrantType
             
             var code: String?
             code = req.query[String.self, at: "code"] ?? nil
             
-            /*
-            guard let code = api?.authCode.code else {
-                throw Abort(.badRequest)
-            }*/
-            
             
             if code == nil {
                 grantType = .refreshToken
-                code = api?.refreshToken ?? nil
+                code = api?.refresh_token ?? nil
             }
             else {grantType = .authorizationCode}
            
-
-             
-            // TODO: check expiry of authorization code and request a new one if required
-            
-            /*
-            let o365 = Office365()
-            let credentials = o365.accessToken(authCode: code, request: req)
-            */
-            let promise: Promise<O365.UpdateRefreshToken.ApiData> = req.eventLoop.newPromise()
+           
+            let promise: Promise<O365.Authenticate.O365ApiCreds> = req.eventLoop.newPromise()
             DispatchQueue.global().async {
-                let apiCall = O365.UpdateRefreshToken(grantType: grantType, code: code!)
-                var apiData = O365.UpdateRefreshToken.ApiData()
-                apiCall.endpoint.responseStringAsync(using: apiCall.endpoint.request()) { data, response, error in
+                let apiCall = O365.Authenticate(grantType: grantType, code: code!)
+                var apiData = O365.Authenticate.O365ApiCreds()
+                apiCall.networkRequest.execute(using: apiCall.networkRequest.request()) { data, response, error in
                     if error != nil {
                         print("The API did not return a valid Access Token")
                     }
                     else {
                         let decoder = JSONDecoder()
-                        apiData = try! decoder.decode(O365.UpdateRefreshToken.ApiData.self, from: data!)
-                        
+                        apiData = try! decoder.decode(O365.Authenticate.O365ApiCreds.self, from: data!)
+                        print(String(data: data!, encoding: .utf8) as Any)
                         promise.succeed(result: apiData)
-                        print(promise.futureResult)
-                        //let apiString = String(data: data!, encoding: .utf8)
-                        //print (apiString!)
-                        /*
-                        var expiryOffset = DateComponents()
-                        expiryOffset.second = Int(apiData.expires_in)
-                        let expiry = Calendar.current.date(byAdding: expiryOffset, to: Date()) ?? Date()
-                        */
+                        
                     }
                 }
                 
@@ -122,9 +75,10 @@ final class Office365Controller {
                
             }
             
-            let newO365User = promise.futureResult.map(to: ApiCreds.self) { call in
+            let newO365User = promise.futureResult.map(to: O365.Authenticate.O365ApiCreds.self) { call in
                 
-                let o365User = ApiCreds(id: 1, name: "o365", authCode: code!, accessToken: call.access_token ?? "could not decode access token", refreshToken: call.refresh_token ?? "")
+                let o365User = O365.Authenticate.O365ApiCreds(id: 1, code: code!, access_token: call.access_token ?? "could not decode access token", refresh_token:  call.refresh_token ?? "")
+                
                 return o365User
             }
             
@@ -138,44 +92,41 @@ final class Office365Controller {
            return newUser
        }
     
-    
-    
-    
-    
-    /*
     func sendEmail(_ req: Request) throws -> Future<String> {
-        
-        let semaphore = DispatchSemaphore (value: 0)
-        let apiResponse = ApiConnection.find(1, on: req).map(to: String.self) {api in
-           
-                // refresh the access token
-                let o365 = Office365()
-                let credentials = o365.refreshToken(refreshToken: api!.refreshToken, request: req)
-                
-                // update the database
-                api?.authToken = credentials.authToken
-                api?.refreshToken = credentials.newRefreshToken
-                let didUpdate = api?.update(on: req)
             
-                // send the email
-                var responseString = ""
-                responseString = o365.sendEmail(refreshToken: api!.authToken)
-
+            //let o365 = Office365()
             
-                                
+            
+                let apiResponse = try self.requestTokens(req).flatMap(to: String.self) { api in
+            
+                let token =  api.access_token
+                let htmlEmailContent = unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"])
+                    
+                    let apiCall = O365.sendEmail(accessToken: token!, content: htmlEmailContent)
                 
-                semaphore.signal()
-                return responseString
-                
+                // hit the API to send the email
+                    
+                let promise: Promise<String> = req.eventLoop.newPromise()
+                DispatchQueue.global().async {
+                    apiCall.networkRequest.execute(using: apiCall.networkRequest.request()) { data, response, error in
+                        if error != nil {
+                            promise.succeed(result: String(describing: error))
+                        }
+                        else {
+                            promise.succeed(result: String(describing: response))
+                        }
+                    }
                 }
+                return promise.futureResult // the result will be the respose from the API
+            }
+            return apiResponse
         
-        // let string = apiResponse
-        // semaphore.wait()
-        
-        return apiResponse
-    
     }
-    */
+    
+}
+    
+    
+/*
     
     func updateAccessToken(_ req: Request) throws -> Future<ApiCreds> {
         
@@ -268,68 +219,5 @@ final class Office365Controller {
         }
         
     
+    */
     
-    /*
-    func sendEmail(_ req: Request) throws -> Future<String> {
-        
-       
-        let apiResponse = ApiCreds.find(1, on: req).map(to: String.self) {api in
-           
-                // get updated tokens from the o365 API
-                let o365 = Office365()
-                let credentials = o365.refreshToken(refreshToken: api!.refreshToken, request: req)
-                
-                // update the database
-                api?.accessToken.code = credentials.accessToken
-                api?.refreshToken = credentials.newRefreshToken
-                let didUpdate = api?.update(on: req)
-            
-                // send the email
-                
-            let responseString = o365.sendEmail(refreshToken: api!.accessToken.code)
-                //print (responseString)
-            return responseString
-                
-                }
-        
-       
-        
-        return apiResponse
-    
-    } */
-    
-    func sendEmail2(_ req: Request) throws -> Future<String> {
-            
-            let o365 = Office365()
-            
-            
-                let apiResponse = try self.updateAccessToken(req).flatMap(to: String.self) { api in
-            
-                let token =  api.accessToken.code
-                //let response = o365.sendEmail(refreshToken: token)
-                let endpoint = o365.sendEmailRequest(refreshToken: token)
-                let apiRequest = endpoint.request()
-                //var apiResponse = ""
-                
-                // hit the API to send the email
-                    
-                let promise: Promise<String> = req.eventLoop.newPromise()
-                DispatchQueue.global().async {
-                    endpoint.responseStringAsync(using: apiRequest) { data, response, error in
-                        if error != nil {
-                            promise.succeed(result: String(describing: error))
-                        }
-                        else {
-                            promise.succeed(result: String(describing: response))
-                        }
-                    }
-                }
-                return promise.futureResult // the result will be the respose from the API
-            }
-            return apiResponse
-        
-    }
-    
-    
-
-}

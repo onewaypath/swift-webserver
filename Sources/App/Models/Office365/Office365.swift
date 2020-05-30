@@ -4,7 +4,7 @@
 //
 //  Created by Alex Young on 5/21/20.
 //
-
+/*
 import Foundation
 #if canImport(FoundationNetworking)
 import FoundationNetworking
@@ -117,7 +117,7 @@ final class Office365 {
         
     }
 
-        
+/*
     func sendEmail(refreshToken: String) -> String {
     
         
@@ -157,8 +157,8 @@ final class Office365 {
         return payload.message.body.content
            
     }
-    
-    func sendEmailRequest(refreshToken: String) -> Api {
+    */
+    func sendEmailRequest(accessToken: String) -> Api {
     
         
         
@@ -179,7 +179,7 @@ final class Office365 {
         let parameters:  [String:String] = [:]
            
         let headers = [
-            "Authorization" : "Bearer \(refreshToken)",
+            "Authorization" : "Bearer \(accessToken)",
             "Content-Type" : "application/json",
             
         ]
@@ -237,7 +237,7 @@ final class Office365 {
     */
     
 }
-
+*/
    
     
     

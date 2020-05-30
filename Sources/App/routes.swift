@@ -75,10 +75,10 @@ public func routes(_ router: Router) throws {
     router.get("test", "office365", use: testController.office365)
 
     let office365Controller = Office365Controller()
-    router.get("api", "office365", "register", use: office365Controller.registerAuthCode)
-    router.get("api", "office365", "updateRefreshToken", use: office365Controller.updateRefreshToken)
-    router.get("api", "office365", "sendEmail", use: office365Controller.sendEmail2)
-    router.get("api", "office365", "updateAccessToken", use: office365Controller.updateAccessToken)
+    router.get("api", "office365", use: office365Controller.registerAuthCode)
+    router.get("api", "office365", "requestTokens", use: office365Controller.requestTokens)
+    router.get("api", "office365", "sendEmail", use: office365Controller.sendEmail)
+    //router.get("api", "office365", "updateAccessToken", use: office365Controller.updateAccessToken)
     
     
     
