@@ -17,9 +17,9 @@ final class Office365Controller {
         
             if code != nil {
                 let  o365User = O365.Authenticate.O365ApiCreds(
-                    id: 1
+                    id: 1,
                     //name: "o365",
-                    //authCode: code!
+                    code: code!
                     
                 )
             
