@@ -24,7 +24,7 @@ final class TestController {
         
     }
     
-    
+/*
     func office365(_ req: Request) throws -> Future<ApiCreds> {
        
         guard let code = req.query[String.self, at: "code"] else {
@@ -47,8 +47,8 @@ final class TestController {
         
         return didUpdate
     }
+
     
-    
-    
-    
+*/
 }
+

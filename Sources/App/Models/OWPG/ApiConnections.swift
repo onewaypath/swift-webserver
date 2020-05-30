@@ -4,7 +4,7 @@
 //
 //  Created by Alex Young on 5/21/20.
 //
-
+/*
 import Foundation
 import FluentMySQL
 import Vapor
@@ -40,3 +40,4 @@ final class ApiCreds: MySQLModel {
 extension ApiCreds: Content {}
 extension ApiCreds: Migration {}
 
+*/

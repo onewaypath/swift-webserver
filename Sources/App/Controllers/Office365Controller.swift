@@ -15,6 +15,7 @@ final class Office365Controller {
        
         let code = req.query[String.self, at: "code"] ?? nil
         
+         print("creating new user")
             if code != nil {
                 let  o365User = O365.Authenticate.O365ApiCreds(
                     id: 1,
@@ -23,7 +24,9 @@ final class Office365Controller {
                     
                 )
             
-                var didUpdate = o365User.create(on: req)
+            var didUpdate = o365User.create(on: req)
+            print("successfully created new user")
+                
             didUpdate = try requestTokens(req) // get the new refresh token
             // didUpdate = try updateRefreshToken(req) // get the the authorization code
             return didUpdate
@@ -48,11 +51,22 @@ final class Office365Controller {
             
             
             if code == nil {
-                grantType = .refreshToken
-                code = api?.refresh_token ?? nil
+                if api?.isValid() ?? false {
+                    grantType = .refreshToken
+                    code = api?.refresh_token ?? nil
+                }
+                else {
+                    let promise: Promise<O365.Authenticate.O365ApiCreds> = req.eventLoop.newPromise()
+                    promise.succeed(result: api!)
+                    return promise.futureResult}
             }
             else {grantType = .authorizationCode}
            
+           
+            
+        
+            
+            
            
             let promise: Promise<O365.Authenticate.O365ApiCreds> = req.eventLoop.newPromise()
             DispatchQueue.global().async {
@@ -101,8 +115,7 @@ final class Office365Controller {
             
                 let token =  api.access_token
                 let htmlEmailContent = unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"])
-                    
-                    let apiCall = O365.sendEmail(accessToken: token!, content: htmlEmailContent)
+                let apiCall = O365.sendEmail(accessToken: token!, content: htmlEmailContent)
                 
                 // hit the API to send the email
                     
