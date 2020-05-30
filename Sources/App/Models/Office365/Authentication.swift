@@ -56,7 +56,7 @@ struct O365 {
             
             var postData = [
                 "client_id":"ac8ec0e2-9ecf-47e9-b0bc-fbb072227fc1",
-                "redirect_uri" : "https://onewaypath.com/api/office365/register",
+                "redirect_uri" : "https://onewaypath.com/api/office365/",
                 "client_secret" : ".zVHv77s7wFLeHR8qCsVdn.~nf_p8_jkZ0",
             ]
             
