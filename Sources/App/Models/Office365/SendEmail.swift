@@ -15,6 +15,7 @@ extension O365 {
         
         struct Address: Codable {
             var address = "rahyoung@gmail.com"
+            var name = "Alex Young (rahyoung@gmail.com)"
         }
         
         struct EmailAddress: Codable {
@@ -32,13 +33,14 @@ extension O365 {
         }
         
         struct Message: Codable {
-            var subject = "Meet for Lunch?"
+            var subject : String
             var body : MessageBody
             var toRecipients = [EmailAddress()]
-            var ccRecipients = [EmailAddress()]
+            //var ccRecipients = [EmailAddress()]
             
-            init(content: String) {
+            init(content: String, subject: String) {
                 self.body = MessageBody(content: content)
+                self.subject = subject
             }
             
             
@@ -46,7 +48,7 @@ extension O365 {
         
         var networkRequest: NetworkRequest
         
-        init(accessToken: String, content: String)  {
+        init(accessToken: String, content: String, subject: String)  {
         
             let url = "https://graph.microsoft.com/beta/me/sendMail"
             
@@ -57,13 +59,13 @@ extension O365 {
                 var message : Message
                 var SaveToSentItems: Bool = true
                 
-                init(content: String) {
-                    self.message = Message(content: content)
+                init(content: String, subject: String) {
+                    self.message = Message(content: content, subject: subject)
                 }
                 
             }
             
-            let payload = Payload(content: content)
+            let payload = Payload(content: content, subject: subject)
             let jsonData = try! JSONEncoder().encode(payload)
             // let jsonString = String(data: jsonData, encoding: .utf8)!
             
@@ -79,7 +81,7 @@ extension O365 {
             let postData = [
                    "json": "json"
                ]
-            print (postData)
+            //print (postData)
             self.networkRequest = NetworkRequest(url: url, parameters: parameters, headers: headers, postData: postData, jsonBody: jsonData)
     
         }

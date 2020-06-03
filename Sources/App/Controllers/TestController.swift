@@ -16,7 +16,7 @@ final class TestController {
         let promise: Promise<String> = req.eventLoop.newPromise()
 
         DispatchQueue.global().async {
-            let activeCampaign = ActiveCampaign()
+            let activeCampaign = OldActiveCampaign()
             promise.succeed(result: activeCampaign.reviewLists())
         }
 

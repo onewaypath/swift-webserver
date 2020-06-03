@@ -28,26 +28,26 @@ struct O365 {
             var code: String?
             var access_token: String?
             var refresh_token : String?
-            var ext_expires_in:  String?
+            var expires_in:  String?
             var date: Date?
             
-            init(id: Int? = nil, code: String? = nil, access_token: String? = nil, refresh_token: String? = nil, ext_expires_in: String? = nil, date: Date? = Date()) {
+            init(id: Int? = nil, code: String? = nil, access_token: String? = nil, refresh_token: String? = nil, expires_in: String? = nil, date: Date? = Date()) {
                 
                 self.id = id
                 self.code = code
                 self.access_token = access_token
                 self.refresh_token = refresh_token
-                self.ext_expires_in = ext_expires_in
+                self.expires_in = expires_in
                 self.date = date
             }
             
-            func isValid() -> Bool {
+            func isExpired() -> Bool {
                 // check the expiry of the existing token
                     
                     
                 // determine the expiry date
                 var standardExpiry = DateComponents()
-                standardExpiry.second = 3599
+                standardExpiry.second = Int(self.expires_in ?? "3600")
                 let expiry = Calendar.current.date(byAdding: standardExpiry, to: self.date!) ?? Date()
                 
                 
@@ -57,7 +57,9 @@ struct O365 {
                 let expiryDateString = dateFormatter.string(from: expiry)
                 let nowDateString = dateFormatter.string(from: Date())
                 print ("The date now is: \(nowDateString)")
-                print("The expiry date will be: \(expiryDateString)")
+                print("The token expiry date is: \(expiryDateString)")
+                if Date() > expiry {print("The Token is expired and will be refreshed")}
+                else {print("The Token is still valid")}
             
                 
                 // add a buffer to the expriry date
@@ -65,11 +67,13 @@ struct O365 {
                 buffer.second = -10
                 let bufferedExpiry = Calendar.current.date(byAdding: buffer, to: expiry) ?? Date()
                 let bufferedExpiryString = dateFormatter.string(from: bufferedExpiry)
-                print ("The buffered expiry is: \(bufferedExpiryString)")
+                print ("The buffered token expiry is: \(bufferedExpiryString)")
+                if Date() > bufferedExpiry {print("The token is older than the buffered expiry and will be refreshed")}
+                else {print("The token is still valid compared to the buffered expiry")}
                 
-                // compare the buffered expriry date to the current date
+                // compare the buffered expriry date to the current date and return the appropriate result
                 
-                if Date() < bufferedExpiry {return true}
+                if Date() > bufferedExpiry {return true}
                 else {return false}
                 
             }

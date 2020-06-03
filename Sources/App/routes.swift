@@ -56,16 +56,26 @@ public func routes(_ router: Router) throws {
     // *** ROUTES TO TEST API CALLS ***
     
     let checkFrontController = CheckfrontConroller()
-    router.get("api", "checkfront", "availability", use: checkFrontController.availabilityAsync)
+    //router.get("api", "checkfront", "availability", use: checkFrontController.availabilityAsync)
+    router.get("api", "checkfront", "availability", use: checkFrontController.availability)
     
     let covid19ChartsController = Covid19ChartsController()
     router.get("covid19", String.parameter , use: covid19ChartsController.view)
     
+    // ACTIVECAMPAIGN REQUESTS
+    let activeCampaignController = ActiveCampaignController()
+    //router.get("newsletter", "test", use: newsletterController.test)
+    router.get("newsletter", "reviewLists", use: activeCampaignController.reviewLists)
+    
+    
     // *** NEWSLETTER POST REQUEST
     
     let newsletterController = NewsletterController()
-    router.get("newsletter", use: newsletterController.test)
+   
+    //router.get("newsletter", "createMessage", use: newsletterController.createMessage)
+    //router.get("newsletter", "createCampaign", use: newsletterController.createCampaign)
     router.post("newsletter", use: newsletterController.post)
+    //router.get("newsletter", use: newsletterController.post)
     
     
     // *** OFFICE 365 ROUTES
@@ -77,11 +87,58 @@ public func routes(_ router: Router) throws {
     let office365Controller = Office365Controller()
     router.get("api", "office365", use: office365Controller.registerAuthCode)
     router.get("api", "office365", "requestTokens", use: office365Controller.requestTokens)
-    router.get("api", "office365", "sendEmail", use: office365Controller.sendEmail)
+    //router.get("api", "office365", "sendEmail", use: office365Controller.sendEmail)
     //router.get("api", "office365", "updateAccessToken", use: office365Controller.updateAccessToken)
     
+    router.get("api", "office365", "sendEmail") { req -> Future<String> in
+        return try office365Controller.sendEmail(req, content: "Test Content", subject: "Test Subject")
+    }
     
     
+    /*
+    struct MySQLVersion: Codable {
+        let version: String
+    }
+
+    router.get("sql") { req in
+        return req.withPooledConnection(to: .mysql2) { conn in
+            return conn.raw("SELECT @@version as version")
+                .all(decoding: MySQLVersion.self)
+        }.map { rows in
+            return rows[0].version
+        }
+    }
     
+    
+    router.get("sql2") { req in
+        return req.withPooledConnection(to: .mysql2) { conn in
+            
+           // let users = conn.select().all().from(User.self).where(\User.name == "Vapor").all(decoding: User.self)
+            
+            return conn.raw("SELECT * FROM User")
+                .all(decoding: User.self)
+        }.map { rows in
+            return rows[0].username
+        }
+    }
+    
+    
+    router.get("sql3") { req -> Future<String> in
+              
+        let queryResult = req.withPooledConnection(to: .mysql2) { conn in
+                   
+                  // let users = conn.select().all().from(User.self).where(\User.name == "Vapor").all(decoding: User.self)
+                   
+                   return conn.raw("SELECT * FROM User")
+                       .all(decoding: User.self)
+               }.map { rows in
+                   return rows[0].username
+               }
+        
+        
+              return queryResult
+      }
+   
+    */
 }
 

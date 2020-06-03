@@ -51,7 +51,7 @@ final class Office365Controller {
             
             
             if code == nil {
-                if api?.isValid() ?? false {
+                if api?.isExpired() ?? true {
                     grantType = .refreshToken
                     code = api?.refresh_token ?? nil
                 }
@@ -79,7 +79,7 @@ final class Office365Controller {
                     else {
                         let decoder = JSONDecoder()
                         apiData = try! decoder.decode(O365.Authenticate.O365ApiCreds.self, from: data!)
-                        print(String(data: data!, encoding: .utf8) as Any)
+                        print(String(data: data!, encoding: .utf8)!)
                         promise.succeed(result: apiData)
                         
                     }
@@ -91,7 +91,7 @@ final class Office365Controller {
             
             let newO365User = promise.futureResult.map(to: O365.Authenticate.O365ApiCreds.self) { call in
                 
-                let o365User = O365.Authenticate.O365ApiCreds(id: 1, code: code!, access_token: call.access_token ?? "could not decode access token", refresh_token:  call.refresh_token ?? "")
+                let o365User = O365.Authenticate.O365ApiCreds(id: 1, code: code!, access_token: call.access_token ?? "could not decode access token", refresh_token:  call.refresh_token ?? "", expires_in: call.expires_in ?? nil)
                 
                 return o365User
             }
@@ -106,7 +106,7 @@ final class Office365Controller {
            return newUser
        }
     
-    func sendEmail(_ req: Request) throws -> Future<String> {
+    func sendEmail(_ req: Request, content: String, subject: String) throws -> Future<String> {
             
             //let o365 = Office365()
             
@@ -114,8 +114,11 @@ final class Office365Controller {
                 let apiResponse = try self.requestTokens(req).flatMap(to: String.self) { api in
             
                 let token =  api.access_token
-                let htmlEmailContent = unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"])
-                let apiCall = O365.sendEmail(accessToken: token!, content: htmlEmailContent)
+                let htmlEmailContent = content// unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"])
+                //let subject = "What To Do When We're Overwhelmed"
+                let subject = subject// Test Subject"
+                    
+                    let apiCall = O365.sendEmail(accessToken: token!, content: htmlEmailContent, subject: subject)
                 
                 // hit the API to send the email
                     
@@ -126,7 +129,11 @@ final class Office365Controller {
                             promise.succeed(result: String(describing: error))
                         }
                         else {
-                            promise.succeed(result: String(describing: response))
+                            let urlResponse = response as! HTTPURLResponse
+                            let responseCode = String(urlResponse.statusCode)
+                            let responseString = "{\"e-mail status\": \(responseCode)}"
+                            //promise.succeed(result: String(describing: response))
+                            promise.succeed(result: String(responseString))
                         }
                     }
                 }

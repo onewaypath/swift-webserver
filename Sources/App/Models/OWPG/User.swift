@@ -9,7 +9,7 @@ import Foundation
 import FluentMySQL
 import Vapor
 
-final class User: MySQLModel {
+final class User: MySQLModel, SQLTable, Codable{
   var id: Int?
   var username: String
   init(id: Int? = nil, username: String) {

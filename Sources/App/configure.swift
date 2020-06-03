@@ -1,8 +1,35 @@
 import Leaf
 import Vapor
 import FluentMySQL
+import MySQL
 
 let host = "ubuntu-01"
+
+/*
+/// Creates connections to an identified MySQL database.
+public final class MySQLDatabase2: Database {
+    /// This database's configuration.
+    public let config: MySQLDatabaseConfig
+
+    /// Creates a new `MySQLDatabase`.
+    public init(config: MySQLDatabaseConfig) {
+        self.config = config
+    }
+
+    /// See `Database`
+    public func newConnection(on worker: Worker) -> Future<MySQLConnection> {
+        return MySQLConnection.connect(config: self.config, on: worker)
+    }
+}*/
+
+extension DatabaseIdentifier {
+    /// Default identifier for `MySQLDatabase`.
+    public static var mysql2: DatabaseIdentifier<MySQLDatabase> {
+        return .init("mysql2")
+    }
+}
+
+
 
 /// Called before your application initializes.
 public func configure(_ config: inout Config, _ env: inout Environment, _ services: inout Services) throws {
@@ -49,25 +76,46 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     )
     services.register(mysqlConfig)
         
-        
     }
+    
+    
+    let mysql = MySQLDatabase(config: MySQLDatabaseConfig(
+               hostname: "172.104.17.220",
+               port: 3306,
+               username: "ayoung",
+               password: "6uEHZwjKyR22#637",
+               database: "ubuntu01"
+               )
+       )
+    var databases = DatabasesConfig()
+    databases.add(database: mysql, as: .mysql)
+
+    
+   // try services.register(MySQLProvider())
+    let mysql2 = MySQLDatabase(config: MySQLDatabaseConfig(
+            hostname: "localhost",
+            port: 3306,
+            username: "root",
+            password: "LQJdO3HYiN*X",
+            database: "test"
+            )
+    )
+    //var databases = DatabasesConfig()
+    databases.add(database: mysql2, as: .mysql2)
+    services.register(databases)
+        
+        
+    
     
     //Initiate and register migration services
     var migrations = MigrationConfig()
-    migrations.add(model: User.self, database: .mysql)
+    
+    
+    migrations.add(model: User.self, database: .mysql2)
     migrations.add(model: TeamMember.self, database: .mysql)
 //    migrations.add(model: ApiCreds.self, database: .mysql)
     migrations.add(model: O365.Authenticate.O365ApiCreds.self, database: .mysql)
-    
-    
-   
-    
-    
-    
-    
-    
-    
-    
+
     
     services.register(migrations)
     
