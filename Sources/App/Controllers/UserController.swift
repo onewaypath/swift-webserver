@@ -4,7 +4,7 @@
 //
 //  Created by Alex Young on 3/20/20.
 //
-/*
+
 import Foundation
 import Vapor
 import FluentMySQL
@@ -43,5 +43,5 @@ final class UserController {
       }
     }
 }
-*/
+
 
