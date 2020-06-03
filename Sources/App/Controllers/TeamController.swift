@@ -8,6 +8,9 @@
 import Foundation
 import Vapor
 import unixTools
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 extension String {
 

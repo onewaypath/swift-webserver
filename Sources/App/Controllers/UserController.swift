@@ -8,6 +8,9 @@
 import Foundation
 import Vapor
 import FluentMySQL
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 final class UserController {
 
