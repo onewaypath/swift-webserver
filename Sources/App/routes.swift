@@ -79,11 +79,11 @@ public func routes(_ router: Router) throws {
     
     
     // *** OFFICE 365 ROUTES
-
+/*
     let testController = TestController()
     router.get("test", "async", use: testController.async)
 //    router.get("test", "office365", use: testController.office365)
-
+*/
     let office365Controller = Office365Controller()
     router.get("api", "office365", use: office365Controller.registerAuthCode)
     router.get("api", "office365", "requestTokens", use: office365Controller.requestTokens)
