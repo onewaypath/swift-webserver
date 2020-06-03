@@ -89,8 +89,9 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
        )
     var databases = DatabasesConfig()
     databases.add(database: mysql, as: .mysql)
+    services.register(databases)
 
-    
+    /*
    // try services.register(MySQLProvider())
     let mysql2 = MySQLDatabase(config: MySQLDatabaseConfig(
             hostname: "localhost",
@@ -104,14 +105,14 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     databases.add(database: mysql2, as: .mysql2)
     services.register(databases)
         
-        
+        */
     
     
     //Initiate and register migration services
     var migrations = MigrationConfig()
     
     
-    migrations.add(model: User.self, database: .mysql2)
+    migrations.add(model: User.self, database: .mysql)
     migrations.add(model: TeamMember.self, database: .mysql)
 //    migrations.add(model: ApiCreds.self, database: .mysql)
     migrations.add(model: O365.Authenticate.O365ApiCreds.self, database: .mysql)
