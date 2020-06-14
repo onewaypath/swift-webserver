@@ -19,7 +19,7 @@ extension ActiveCampaign {
         var apiData = ApiData()
         var networkRequest: NetworkRequest
         
-        init (using: (html: String, text: String), titled: String, distributionStatus: String) {
+        init (using: (html: String, text: String), titled: String, distributionStatus: String, author: String) {
             
             let url = "https://buddhavipassana.api-us1.com/admin/api.php"
 
@@ -31,8 +31,8 @@ extension ActiveCampaign {
             
             var postData = [
                 "fromemail":"info@buddhavipassana.ca",
-                "fromname":"Buddhavipassana Meditation Centre",
-                "format" : "mime",
+                "fromname":author,
+                "format" : "html",
                 "reply2" : "info@buddhavipassana.ca",
                 "priority" : "3",
                 "encoding" : "quoted-printable",

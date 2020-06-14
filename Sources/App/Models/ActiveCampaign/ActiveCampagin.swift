@@ -42,7 +42,9 @@ final class OldActiveCampaign {
             "html": using.html,
             "text": using.text
         ]
-
+        
+        //print("Test: \(postData["html"]!)")
+        
         let endpoint = Api(url: url, parameters: parameters, postData: postData)
         let apiRequest = endpoint.request()
         let apiResponse = endpoint.responseString(using: apiRequest)

@@ -75,6 +75,7 @@ public func routes(_ router: Router) throws {
     //router.get("newsletter", "createMessage", use: newsletterController.createMessage)
     //router.get("newsletter", "createCampaign", use: newsletterController.createCampaign)
     router.post("newsletter", use: newsletterController.post)
+    router.get("newsletter", use: newsletterController.get)
     //router.get("newsletter", use: newsletterController.post)
     
     

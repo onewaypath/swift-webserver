@@ -32,15 +32,16 @@ struct ActiveCampaignController {
           return promise.futureResult // the result will be the respose from the API
       }
     
-    func createMessage( req: Request, content: String? = nil, subject: String? = nil, sdate: String, distributionStatus: String) throws -> Future<String> {
+    func createMessage( req: Request, htmlContent: String, subject: String? = nil, sdate: String, distributionStatus: String, textContent: String, author: String) throws -> Future<String> {
        
            
-           let content = content ?? "Test Content" // unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"]
+           //let htmlContent = htmlContent ?? "Test Content" // unixTools().runUnix("cat", arguments: ["Public/emailTemplate2.html"]
            let subject = subject ?? "Test Message"
            
            var responseString = ""
-        var apiCall = ActiveCampaign.createMessage(using: (html: content, text: "TEXT"), titled: subject, distributionStatus: distributionStatus)
+        var apiCall = ActiveCampaign.createMessage(using: (html: htmlContent, text: textContent), titled: subject, distributionStatus: distributionStatus, author: author)
            
+            //print (apiCall.networkRequest.postData["html"]!)
            //get the message ID and save the message response in the response string
            
            let messageResponseID: Promise<String> = req.eventLoop.newPromise()
@@ -66,7 +67,7 @@ struct ActiveCampaignController {
            
            let combinedResponse = messageResponseID.futureResult.flatMap(to: String.self) { messageID in
                
-            let combinedResponse = self.createCampaign(req: req, messageID: messageID, sdate: sdate, messageName: subject, distributionStatus: distributionStatus).map(to: String.self) { response in
+            let combinedResponse = self.createCampaign(req: req, messageID: messageID, sdate: sdate, messageName: subject, distributionStatus: distributionStatus, author: author).map(to: String.self) { response in
                    
                    // format the combined reponse for JSON ouput
                    return "{\"messageResponse\": \(responseString), \"campaignResponse\":\(response)}"
@@ -83,7 +84,7 @@ struct ActiveCampaignController {
            return combinedResponse
        }
        
-    func createCampaign( req: Request, messageID: String, sdate: String, messageName: String, distributionStatus: String) -> Future<String> {
+    func createCampaign( req: Request, messageID: String, sdate: String, messageName: String, distributionStatus: String, author:String) -> Future<String> {
        
         let apiCall = ActiveCampaign.createCampaign(messageID: messageID, messageName: messageName, sdate: sdate, distributionStatus: distributionStatus)
            

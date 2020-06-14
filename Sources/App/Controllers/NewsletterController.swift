@@ -210,18 +210,18 @@ final class NewsletterController {
         emailResponse = try request.content.decode(NewsletterRequest.self).flatMap(to: String.self) { postRequest in
                 
                 let newsletterRequest = NewsletterRequest(postRequest: postRequest)
-                print (String(describing: postRequest))
+               // print (String(describing: postRequest))
                 
             if newsletterRequest.email == true {
                 //print(newsletterRequest.email)
                     let o365Controller = Office365Controller()
                     //let response = try o365Controller.sendEmail(request, content: newsletterRequest.content!, subject: newsletterRequest.subject!)
-                    return try o365Controller.sendEmail(request, content: newsletterRequest.content!, subject: newsletterRequest.subject!)
-                    
+                    return try o365Controller.sendEmail(request, content: newsletterRequest.htmlContent(), subject: newsletterRequest.subject!)
                     
                 }
                 else {
                     let promise: Promise<String> = request.eventLoop.newPromise()
+                    //print(newsletterRequest.htmlContent())
                     promise.succeed(result: "{\"e-mail status\": 204}")
                     return promise.futureResult
                 }
@@ -230,7 +230,9 @@ final class NewsletterController {
          distributionListResponse = try request.content.decode(NewsletterRequest.self).flatMap(to: String.self) { postRequest in
             
             let newsletterRequest = NewsletterRequest(postRequest: postRequest)
-            print (String(describing: postRequest))
+           // print (String(describing: postRequest))
+            
+           // print(newsletterRequest.textContent())
             
             if (newsletterRequest.distributionList != nil ) {
                     //let o365Controller = Office365Controller()
@@ -239,7 +241,7 @@ final class NewsletterController {
                 let activeCampaignController = ActiveCampaignController()
                 
                 
-                let response = try activeCampaignController.createMessage(req: request, content: newsletterRequest.content, subject: newsletterRequest.subject, sdate: newsletterRequest.sdate!, distributionStatus: newsletterRequest.distributionList!)
+                let response = try activeCampaignController.createMessage(req: request, htmlContent: newsletterRequest.htmlContent(), subject: newsletterRequest.subject, sdate: newsletterRequest.sdate!, distributionStatus: newsletterRequest.distributionList!, textContent: newsletterRequest.textContent(), author: newsletterRequest.author!)
                     return response
                     
                 }
@@ -255,7 +257,10 @@ final class NewsletterController {
         
             return "{\"email\":\(email),\"distribution\":\(distribution)}"
         }
-            
+        
+        //save the text content
+        
+        
             
         return combinedResponse
             
@@ -264,6 +269,38 @@ final class NewsletterController {
             
             
         }
+    
+    func get(request: Request) throws -> Future<View> {
+        
+        
+        func replace(template: String, tag: String, tagNumber: Int, with: String) -> String {
+        
+            var str = template
+            let openTag = "<\(tag)>"
+            let closeTag = "</\(tag)>"
+            let closeIndices = str.indices(of: closeTag)
+            let openIndices = str.indices(of: openTag)
+            let index1 = str.index(str.startIndex, offsetBy: openIndices[tagNumber] + openTag.count)
+            let index2 = str.index(str.startIndex, offsetBy: closeIndices[tagNumber])
+            let range = index1..<index2
+            
+            str.replaceSubrange(range, with: with)
+            return str
+        }
+            
+            let newContent = "Here is the New Content!"
+            let defaultTemplate = "emailTemplate.html"
+            let template = unixTools().runUnix("cat", arguments: ["Public/\(defaultTemplate)"])
+            let tag = "section"
+            let tagNumber = 2
+            let str = replace (template: template, tag: tag, tagNumber: tagNumber, with: newContent)
+            
+            
+        
+        
+        return try request.view().render("main-template", ["html": str])
+    }
+        
     }
     
     
