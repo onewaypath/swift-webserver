@@ -91,21 +91,22 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     databases.add(database: mysql, as: .mysql)
     services.register(databases)
 
-    /*
-   // try services.register(MySQLProvider())
+    
+    //try services.register(MySQLProvider())
+    
     let mysql2 = MySQLDatabase(config: MySQLDatabaseConfig(
-            hostname: "localhost",
+            hostname: "97.107.129.88",
             port: 3306,
-            username: "root",
-            password: "LQJdO3HYiN*X",
-            database: "test"
+            username: "ayoung",
+            password: "G&h0L6a7%NK86zkK",
+            database: "onewaypath_wp"
             )
     )
     //var databases = DatabasesConfig()
     databases.add(database: mysql2, as: .mysql2)
     services.register(databases)
         
-        */
+    
     
     
     //Initiate and register migration services
@@ -116,6 +117,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     migrations.add(model: TeamMember.self, database: .mysql)
 //    migrations.add(model: ApiCreds.self, database: .mysql)
     migrations.add(model: O365.Authenticate.O365ApiCreds.self, database: .mysql)
+    //migrations.add(model: wp_posts.self, database: .mysql2)
 
     
     services.register(migrations)

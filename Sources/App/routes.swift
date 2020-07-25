@@ -95,6 +95,22 @@ public func routes(_ router: Router) throws {
         return try office365Controller.sendEmail(req, content: "Test Content", subject: "Test Subject")
     }
     
+    router.get("wordpress") { req in
+        return wp_posts.query(on: req).all()
+    }
+    
+    
+    router.get("sql") { req in
+        return req.withPooledConnection(to: .mysql2) { conn in
+            return conn.raw("SELECT ID, post_date, post_content, post_title FROM onewaypath_wp.wp_posts WHERE post_type = 'post' AND post_status = 'publish'")
+                .all(decoding: wp_posts.self)
+        }.map { rows in
+            return rows
+        }
+    }
+    
+    let wordpress = WordPressController()
+    router.get("owpg", "blog", use: wordpress.owpPosts)
     
     /*
     struct MySQLVersion: Codable {
