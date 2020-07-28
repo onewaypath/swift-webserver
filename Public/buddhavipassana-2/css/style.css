@@ -101,7 +101,7 @@ input{
   outline: none !important;
 }
 section, footer{
-  padding: 100px 0 100px 195px;
+  padding: 100px 0 100px 230px;
   min-height: 100vh;
   width: 100%;
   display: -ms-flexbox;
@@ -246,7 +246,7 @@ nav > div > a:hover span{
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0 0 0 195px;
+  padding: 0 0 0 230px;
   text-align: center;
   background-color: transparent;
   position: relative;
@@ -736,7 +736,7 @@ footer p:nth-child(4){
   }
   nav{
       top: 45px;
-      left: 45px;
+      left: 30px;
   }
   nav a{
       padding: 12px 15px;
@@ -752,10 +752,10 @@ footer p:nth-child(4){
       max-width: 880px;
   }
   section, footer{
-      padding: 80px 0 80px 145px;
+      padding: 80px 0 80px 180px;
   }
   section:nth-child(1){
-    padding: 0 0 0 145px;
+    padding: 0 0 0 180px;
   }
   section#faq h3{
       font-size: 22px;
