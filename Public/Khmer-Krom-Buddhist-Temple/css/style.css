@@ -1,0 +1,849 @@
+/* Font Face
+ ========================================= */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@font-face {
+  font-family: 'oklahomabold';
+  src: url('../fonts/oklahoma_bold-webfont.woff2') format('woff2'), url('../fonts/oklahoma_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oklahomaregular';
+  src: url('../fonts/oklahoma_normal-webfont.woff2') format('woff2'), url('../fonts/oklahoma_normal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Basic css
+ ========================================= */
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/*  general section css (common css)
+**************************************************/
+
+.page-container-wrap {
+  margin: auto;
+  border: 20px solid #ffffff;
+  width: 100%;
+  background: #dae1e7;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+ ::after,
+ ::before {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+body,
+input,
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+
+input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #656565;
+}
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #656565;
+}
+
+input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #656565;
+}
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #656565;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'oklahomabold';
+}
+
+p {
+  font-size: 18px;
+  line-height: 35px;
+  color: #030004;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-weight: 300;
+}
+
+a,
+button {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+p b {
+  font-weight: 600;
+}
+
+h2 {
+  color: #080002;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: normal;
+  text-align: center;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+input {
+  outline: none !important;
+}
+
+section,
+footer {
+  padding: 100px 0 100px 165px;
+  min-height: 100vh;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+section aside,
+footer aside {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+section figure {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+section h2 {
+  margin-bottom: 50px;
+}
+
+blockquote {
+  font-size: 18px;
+  line-height: 35px;
+  color: #030004;
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 0 0;
+  font-weight: 300;
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+span.d-block {
+  display: block;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+header {
+  padding: 80px 0 200px 165px;
+  text-align: center;
+  background-color: transparent;
+  position: relative;
+  min-height: calc(100vh - 20px);
+  width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+header ul {
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+
+/*header figure{
+  position: relative;
+}*/
+
+
+/*header aside{
+  vertical-align: middle;
+}*/
+
+header h1 {
+  margin: 0;
+}
+
+header h1,
+header p {
+  width: 100%;
+  display: inline-block;
+}
+
+header img {
+  display: block;
+  position: absolute;
+  bottom: -210px;
+  left: 165px;
+  right: 0;
+  margin: 0 auto;
+}
+
+
+/*header ul li a{
+  color: #cd9933
+}*/
+
+
+header h1 {
+  text-transform: capitalize;
+  font-family: 'oklahomabold';
+  font-weight: normal;
+  width: auto;
+  font-size: 54px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
+header h2 {
+  font-size: 26px;
+  letter-spacing: 1.5px;
+  position: relative;
+  color: #000;
+  font-family: 'oklahomaregular';
+}
+
+header h2:before {
+  position: absolute;
+  content: "";
+  top: calc(50% - 2px);
+  height: 2px;
+  width: 135px;
+  left: -150px;
+  background-color: #000;
+}
+
+header h2:after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 2px);
+  height: 2px;
+  width: 135px;
+  right: -150px;
+  background-color: #000;
+}
+header h2 {
+  margin-bottom: 50px;
+}
+header h3 {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  width: 100%;
+}
+
+header h4 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  display: inline-block;
+}
+
+header p {
+    font-family: oklahomaregular;
+    font-style: normal;
+    width: 100%;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 21px;
+    max-width: 760px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+header button{
+	display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    background-color: transparent;
+    border-bottom: 1px solid #000 !important;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+}
+header div{
+	width: 100%;
+}
+nav {
+  position: fixed;
+  z-index: 2;
+  top: 75px;
+  left: 95px;
+}
+
+nav a:last-child {
+  margin: 0;
+}
+
+nav a {
+  padding: 15px 20px;
+  width: 100%;
+  text-decoration: none !important;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 0 20px;
+  text-transform: capitalize;
+  color: #ca972b;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+nav a h1 {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+
+}
+
+nav a img {
+  margin: 0 auto;
+}
+
+nav a:hover,
+nav a[data-active="1"] {
+  background: #fff;
+}
+
+nav a:hover h1,
+nav a[data-active="1"] h1 {
+  opacity: 1;
+}
+
+nav a:hover img:last-child,
+nav a[data-active="1"] img:last-child {
+  display: block;
+}
+
+nav a:hover img:first-child,
+nav a[data-active="1"] img:first-child {
+  display: none;
+}
+
+nav {
+  max-width: 270px;
+  width: 100%;
+}
+
+nav:after {
+  position: absolute;
+  content: "";
+  right: 140px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: #a17720;
+  z-index: -1;
+  opacity: .24;
+}
+
+nav a figure {
+  float: left;
+  margin: 0 15px 0 0;
+  width: 33px;
+  text-align: center;
+}
+
+nav a img:last-child {
+  display: none;
+}
+
+nav button {
+  display: none;
+}
+nav > div> div {
+    margin-left: 50px;
+}
+#more {display: none;}
+
+/* About Section 
+ ========================================= */
+section:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+section:nth-child(2),
+section:nth-child(4),
+section#testimonials {
+  background-color: #cd9933;
+}
+
+section:nth-child(2) h1 {
+  color: #080002;
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: normal;
+  text-align: center;
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+section:nth-child(2) h2 {
+	width: 100%;
+}
+#about div img{
+	display: inline-block;
+	float: left;
+    border: 1px solid #000;
+    padding: 6px;
+    margin: 0 20px 30px 0;
+    width: 30%;
+}
+#about div{
+	max-width: 760px;
+}
+#about h3{
+    margin: 0 0 15px;
+    color: #fff;
+    font-size: 22px;
+}
+#about p{
+    line-height: normal;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* By the Number Section 
+ ========================================= */
+#number h2{
+	width: 100%;
+}
+#number > div{
+    margin: 0;
+    padding: 50px 15px;
+    width: 22%;
+    text-align: center;
+    display: inline-block;
+}
+#number > div h4 span{
+	background-color: #fff;
+    font-size: 34px;
+    text-align: center;
+    height: 130px;
+    line-height: 130px;
+    width: 130px;
+    border: 3px solid #dae1e7;
+    display: block;
+}
+#number > div h4{
+	background-color: #fff;
+    display: block;
+    height: 150px;
+    padding: 10px;
+    width: 150px;
+    margin: 0 auto 20px;
+}
+#number > div > span{
+	font-family: 'oklahomabold';
+    font-size: 24px;
+}
+
+/* growth-plan section
+================================*/
+section:nth-child(4) h2 {
+	width: 100%;
+}
+#growth-plan h3{
+    margin: 0;
+    padding: 50px 15px;
+    width: 35%;
+    text-align: center;
+    display: inline-block;
+}
+#growth-plan h3 img{
+    max-width: 150px;
+    margin: 0 auto 15px;
+    padding: 10px;
+    border: 2px solid #000;
+    height: 140px;
+    object-fit: contain;
+    width: 100%;
+}
+#growth-plan h3 span{
+	font-size: 18px;
+    font-family: 'oklahomabold';
+    text-transform: uppercase;
+}
+
+/* Media Screen
+ ========================================= */
+
+@media screen and (max-width: 1400px) {
+  /* general section css (common css) ====================================*/
+  nav {
+    top: 55px;
+    left: 55px;
+  } 
+}
+
+@media screen and (max-width: 1300px) {
+  /* general section css (common css) ====================================*/
+  header p{
+  	max-width: 690px;
+  }
+
+  /* about section ==================================*/
+  #about div {
+    max-width: 690px;
+  }	
+}
+
+@media screen and (max-width: 1199px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 42px;
+  }
+  section h2 {
+    margin-bottom: 35px;
+  }
+  section,footer,header {
+    padding: 100px 0 100px 95px;
+  }
+  header ul {
+    right: 60px;
+    bottom: 60px;
+  }
+  header img {
+    left: 95px;
+    bottom: -280px;
+  }
+   /* header img {
+      height: 250px;
+    } */
+  header h1{
+  	font-size: 48px;
+  }
+  header h2 {
+    margin-bottom: 35px;
+  }
+  header p {
+	    max-width: 560px;
+	}
+   nav > div> div {
+	    margin-left: 0;
+	    padding: 0;
+	}
+  nav {
+    top: 45px;
+    left: 45px;
+  }
+  nav a {
+    padding: 12px 15px;
+    margin: 0 0 15px;
+  }
+  nav {
+    max-width: 210px;
+  }
+  nav a figure {
+    margin: 0 10px 0 0;
+  }
+
+  /* about section =======================*/
+  #about div{
+  	max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 40px;
+  }
+  p,
+  blockquote {
+    font-size: 17px;
+    line-height: 32px;
+  }
+  section {
+    padding: 60px 0;
+  }
+    header ul {
+    right: 50px;
+    bottom: 50px;
+  }
+	header p {
+	    max-width: 100%;
+	    padding: 0 30px;
+	}
+  header {
+    padding: 100px 0;
+  }
+  header img {
+    left: 0;
+  }
+  
+  nav button {
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
+    float: left;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+  }
+  nav {
+    top: 20px;
+    left: 20px;
+    max-width: 110px;
+  }
+  nav > div {
+    background: #e4eaef;
+    padding: 30px 0 30px 25px;
+    display: none;
+  }
+  nav a {
+    float: none;
+  }
+  nav:after,
+  nav a h1 {
+    display: none;
+  }
+
+  /*about section ===================*/
+  #about div {
+	    max-width: 100%;
+	    padding: 0 30px;
+	}
+
+  /*by th number section ========================*/
+  #number > div{
+	width: 30%;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  /*  general section css (common css) ====================================*/
+  h2 {
+    font-size: 30px;
+    padding-bottom: 0;
+  }
+  section figure {
+    padding: 0 20px;
+  }
+  p,
+  blockquote {
+    font-size: 16px;
+  }
+  blockquote {
+    text-align: center;
+  }
+  section h2 {
+    line-height: 45px;
+  }
+  section {
+    padding: 50px 0;
+  }
+   header ul {
+    right: 0;
+    bottom: auto;
+    top: 50px;
+    width: 100%;
+  }
+  /* header h1{
+      margin: 0 0 45px;
+    } */
+    /* header img {
+        height: 250px;
+    } */
+  header h1 {
+    font-size: 38px;
+  }
+  header h2:before {
+    width: 47px;
+    left: -56px;
+  }
+  header h2:after {
+    width: 47px;
+    right: -56px;
+  }
+  header figure figure {
+    padding: 0;
+  }
+  header h2 {
+    line-height: 45px;
+  }
+    header p{
+  	font-size: 17px;
+	text-align: center;
+    padding: 0 10px;
+  }
+	header a{
+		font-size: 16px;
+	}
+
+	/*about section =====================*/
+	#about div img{
+	    display: block;
+	    float: none;
+	    border: none;
+	    padding: 0;
+	    margin: 0 auto 30px;
+	    width: 100%;
+	    max-width: 190px;
+	}
+	#about h3{
+	    font-size: 18px;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+	#about p{
+		text-align: center;
+		font-size: 14px;
+	}
+	 #about div {
+	    padding: 0 15px;
+	}
+
+	/*by the number section ===================*/
+	#number > div {
+	    width: 100%;
+	}
+	#number > div > span br{
+		display: none;
+	}
+
+	/*growth-plan =======================*/
+	#growth-plan h3{
+		width: 100%;
+	}
+	#growth-plan h3 img{
+	    max-width: 100px;
+	    height: 100px;
+	}
+}
+
+@media screen and (max-width: 481px) {
+   header h1 br{
+  	display: none;
+  }
+
+  /*growth plan =====================*/
+  #growth-plan h2 br,
+  #growth-plan h3 span br{
+  	display: none;
+  }
+  #growth-plan h2{
+	line-height: normal;
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  /* general section css (common css) ====================================*/
+  header h2 {
+    font-size: 16px;
+  }
+  header h1 {
+    font-size: 26px;
+  }
+  header h2:after {
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 35px;
+    right: -43px;
+  }
+  header h2:before {
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 35px;
+    left: -43px;
+  }
+  
+}
