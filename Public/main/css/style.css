@@ -791,6 +791,7 @@ footer {
   padding-left: 120px;
   padding-bottom: 25px;
   text-align: center;
+  background-color: #ca972b;
   min-height: calc(100vh - 20px);
 }
 
@@ -817,7 +818,7 @@ footer address:nth-child(3) {
   margin: 45px auto 50px;
   max-width: 325px;
   display: table;
-  border: 1px solid rgb(205, 153, 51);
+  border: 1px solid rgb(218, 225, 231);
   padding: 20px;
   width: 100%;
 }
