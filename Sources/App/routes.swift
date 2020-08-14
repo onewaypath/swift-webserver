@@ -5,7 +5,7 @@ import unixTools
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     
-    // *** ROUTES TO DISPLAY HOME PAGE ***
+    // *** ROUTES TO DISPLAY HOME PAGES ***
     
     let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
 
@@ -13,7 +13,16 @@ public func routes(_ router: Router) throws {
           return try req.view().render("main-template", ["html": owpgmainHtml])
     }
     
+    
+   let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
+   router.get("homes") { req -> Future<View> in
+    return try req.view().render("main-template", ["html": homesHtml])
+   }
    
+    let meditationHtml = unixTools().runUnix("cat", arguments: ["Public/meditation.html"])
+    router.get("meditation") { req -> Future<View> in
+     return try req.view().render("main-template", ["html": meditationHtml])
+    }
     
     // *** ROUTES TO DISPLAY TEAM MEMBER PAGES ***
     
