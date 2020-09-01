@@ -336,6 +336,21 @@ header h3 img{
   width: 110px;
   margin: 0 auto 15px;
 }
+header h3 a:hover img:nth-child(1),
+header h3 a img:nth-child(2){
+  display: none;
+}
+header h3 a{
+  display: inline-block;
+  -webkit-transition: all .25s;
+  -moz-transition: all .25s;
+  -ms-transition: all .25s;
+  -o-transition: all .25s;
+  transition: all .25s;
+}
+header h3 a:hover img:nth-child(2){
+  display: block;
+}
 header h4 {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
