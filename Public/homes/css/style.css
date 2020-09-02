@@ -327,7 +327,7 @@ section:nth-child(1) figure{
 }
 section:nth-child(1) p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: normal;
   text-align: center;
 }
@@ -778,7 +778,6 @@ footer p:nth-child(4) {
     bottom: 60px;
   }
   section:nth-child(1) p{
-    font-size: 19px;
     max-width: 640px;
   }
   section:nth-child(1) p br{
