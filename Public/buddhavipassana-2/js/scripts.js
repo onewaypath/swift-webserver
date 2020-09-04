@@ -38,38 +38,55 @@
                     }
                 });
 
-        $('a[href*=\\#]').bind('click', function (e) {
+        $('a[href*=\\#]').on('click touchstart tap',function (e) {
             e.preventDefault(); // prevent hard jump, the default behavior
-
             var target = $(this).attr("href");
-
             var offset = $(target).offset().top;
 
-            if (target == '#home') {
+            if (target == '#Khmer') {
                 offset = 0
             }
 
             // perform animated scrolling by getting top-position of target-element and set it as scroll target
             $('html, body').stop().animate({
                 scrollTop: offset
-            }, 635, function () {
+            }, 600, function () {
                 //location.hash = target; //attach the hash (#jumptarget) to the pageurl
             });
 
             return false;
         });
 
-        $(window).scroll(function () {
-            var scrollDistance = $(window).scrollTop();
-            $('[data-identifier="page-section"]').each(function (i) {
+        // $(window).scroll(function () {
+        //     var scrollDistance = $(window).scrollTop();
+        //     $('[data-identifier="page-section"]').each(function (i) {
+        //         if ($(this).position().top <= scrollDistance) {
+        //             $("nav a").removeAttr('data-active');
+        //             $("nav a").eq(i).attr('data-active', '1');
+        //         }
+        //     });
+        // }).scroll();
 
-                var top = $(this).position().top;
-                if ($(this).position().top <= scrollDistance) {
-                    $("nav > div > div a").removeAttr('data-active');
-                    $("nav > div > div a").eq(i).attr('data-active', '1');
+        //Scrolling New
+        $(document).on("scroll", onScroll);
+        onScroll();
+        function onScroll(event){
+            var scrollPos = $(document).scrollTop();
+            $('.scroll-menu-container > #sub-nav a').each(function () {
+                var currLink = $(this);
+                var refElement = $(currLink.attr("href"));
+                var height = refElement.height( ) - 205;
+                
+
+                if (refElement.position().top - 200 <= scrollPos && refElement.position().top + height > scrollPos) {
+                    $('.scroll-menu-container > #sub-nav a').removeAttr('data-active');
+                    currLink.attr('data-active', '1');
+                }
+                else{
+                    currLink.removeAttr('data-active');
                 }
             });
-        }).scroll();
+        }
 
         var wid = $(window).width();
 
@@ -161,21 +178,21 @@
         $("nav a").click(function () {
             if (wid <= 991)
             {
-                $("nav > div").hide("slow");
+                $("nav > div.scroll-menu-container").hide("slow");
                 $("nav button").show("slow");
             }
         });
         $("nav button").on('touchend', function () {
             if (wid <= 991)
             {
-                $("nav > div").show("slow");
+                $("nav > div.scroll-menu-container").show("slow");
                 $(this).hide("slow");
             }
         });
         $("nav a").on('touchend', function () {
             if (wid <= 991)
             {
-                $("nav > div").hide("slow");
+                $("nav > div.scroll-menu-container").hide("slow");
                 $("nav button").show("slow");
             }
         });
