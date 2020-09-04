@@ -362,14 +362,14 @@ nav a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-nav a:first-child,
-nav a:last-child{
+nav > div > a:first-child,
+nav > div > a:last-child{
   padding-left: 15px;
 }
-nav a:first-child figure{
+nav > div > a:first-child figure{
   position: relative;
 }
-nav a:first-child figure:after{
+nav > div > a:first-child figure:after{
   content: "";
   height: 40px;
   width: 2px;
@@ -378,7 +378,7 @@ nav a:first-child figure:after{
   right: -13px;
   top: 12px;
 }
-nav a:first-child figure:before {
+nav > div > a:first-child figure:before {
     content: "";
     position: absolute;
     width: 11px;
@@ -807,8 +807,8 @@ footer p:nth-child(4) {
   nav:after {
     right: 90px;
   }
-  nav a:first-child figure:before,
-  nav a:first-child figure:after{
+  nav > div > a:first-child figure:before,
+  nav > div > a:first-child figure:after{
     display: none;
   }
 
@@ -890,7 +890,7 @@ footer p:nth-child(4) {
     left: 20px;
     max-width: 110px;
   }
-  nav div {
+  nav > div {
     background: #e4eaef;
     padding: 30px 0 30px 25px;
     display: none;
