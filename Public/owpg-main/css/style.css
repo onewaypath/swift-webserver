@@ -498,7 +498,8 @@ section:nth-child(2) h2 {
 }
 
 section:nth-child(2) h1 {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  padding-bottom: 0;
 }
 
 section:nth-child(2) a {
@@ -509,6 +510,9 @@ section:nth-child(2) a {
   transition: all .25s;
   color: #000;
   text-decoration: none;
+}
+section:nth-child(2) a:hover{
+  color: #dae1e7;
 }
 
 section:nth-child(2) a:hover span {
@@ -1215,7 +1219,9 @@ footer p:nth-child(4) {
   section:nth-child(2) figure:last-child {
     margin-bottom: 0;
   }
-
+section:nth-child(2){
+      padding: 80px 0 20px;
+}
 
   /*  Values Section [ Section 3 ] ====================================*/
   section:nth-child(3) p {
