@@ -275,15 +275,17 @@ header h1 {
   width: 100%;
   display: inline-block;
   font-style: normal;
-  color: #000;
+  color: #ca972b;
+  font-size: 62px;
   line-height: normal;
 }
 
 header h2 {
-  font-size: 26px;
+  font-size: 40px;
   letter-spacing: 1.5px;
   position: relative;
   color: #000;
+  line-height: 1;
   font-family: 'oklahomaregular';
 }
 
@@ -329,6 +331,9 @@ header h3 a{
   text-decoration: none;
   font-style: normal;
 }
+header h3 a:hover span{
+  color: #ca972b;
+}
 header h3 img{
   position: relative;
   top: unset;
@@ -350,6 +355,7 @@ header h3 a{
 }
 header h3 a:hover img:nth-child(2){
   display: block;
+      background-color: #000;
 }
 header h4 {
   margin: 0;
@@ -366,7 +372,6 @@ header p {
   line-height: 1.5;
   max-width: 710px;
   margin: 0 auto;
-  text-align: left;
 }
 
 nav {
@@ -1219,18 +1224,18 @@ footer p:nth-child(4) {
     font-size: 38px;
   }
   header h2:before {
-    width: 47px;
-    left: -56px;
+    width: 88px;
+    left: -95px;
   }
   header h2:after {
-    width: 47px;
-    right: -56px;
+    width: 88px;
+    right: -95px;
   }
   header figure figure {
     padding: 0;
   }
   header h2 {
-    line-height: 45px;
+    font-size: 21px;
   }
   header p{
     text-align: center;
@@ -1429,23 +1434,20 @@ footer p:nth-child(4) {
 
 @media screen and (max-width: 390px) {
   /* general section css (common css) ====================================*/
-  header h2 {
-    font-size: 16px;
-  }
   header h1 {
     font-size: 30px;
   }
   header h2:after {
     top: calc(50% - 1px);
     height: 2px;
-    width: 35px;
-    right: -43px;
+    width: 60px;
+    right: -69px;
   }
   header h2:before {
     top: calc(50% - 1px);
     height: 2px;
-    width: 35px;
-    left: -43px;
+    width: 60px;
+    left: -69px;
   }
   
 
