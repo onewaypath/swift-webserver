@@ -355,7 +355,6 @@ header h3 a{
 }
 header h3 a:hover img:nth-child(2){
   display: block;
-      background-color: #000;
 }
 header h4 {
   margin: 0;
