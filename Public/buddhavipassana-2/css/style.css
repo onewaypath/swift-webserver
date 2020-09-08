@@ -151,9 +151,9 @@ nav{
   top: 75px;
   left: 95px;
 }
-nav a:last-child{
+/*nav a:last-child{
   margin: 0;
-}
+}*/
 nav a{
   padding: 15px 20px;
   width: 100%;
@@ -240,13 +240,16 @@ nav > div > a span{
 nav > div > a:hover span{
   color: #ca972b;
 }
+nav #sub-nav {
+    position: relative;
+    z-index: 99;
+}
 
 #home span {font-family: 'Open Sans', sans-serif; font-style: italic;}
 
 /* Home Section [ Section 1 ]
  ========================================= */
 section:nth-child(1){
-  padding: 0 0 0 230px;
   text-align: center;
   background-color: transparent;
   position: relative;
@@ -270,11 +273,11 @@ section:nth-child(1) h1, section:nth-child(1) p{
   width: 100%;
   display: inline-block;
 }
-#home .text-wrap {text-align: left;font-weight: 600; font-size: 21px; padding:0 70px; font-style: normal; margin-top: 3rem; display: block;}
+#home .text-wrap {text-align: center;font-weight: 600; font-size: 21px; padding:0 70px; font-style: normal; margin-top: 3rem; display: block;}
 section:nth-child(1) p img{
   display: block;
   position: absolute;
-  top: 120%;
+  top: 115%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -295,13 +298,13 @@ section:nth-child(1) figure h1 p{
   font-family: 'oklahomaregular';
   font-weight: normal;
   width: auto;
-  font-size: 54px;
+  font-size: 56px;
 }
 section:nth-child(1) figure h1 p:nth-child(1){
   width: 100%;
   display: inline-block;
   font-style: normal;
-  color: #000;
+  color: #ca972b;
   line-height: normal;
 }
 section:nth-child(1) figure h1 p:nth-child(2){
@@ -315,8 +318,8 @@ section:nth-child(1) figure h1 p:nth-child(2):after{
   content: "";
   top: calc(50% - 2px);
   height: 2px;
-  width: 130px;
-  right: -142px;
+  width: 135px;
+  right: -150px;
   background-color: #000;
 }
 section:nth-child(1) figure h1 p:nth-child(2):before{
@@ -324,8 +327,8 @@ section:nth-child(1) figure h1 p:nth-child(2):before{
   content: "";
   top: calc(50% - 2px);
   height: 2px;
-  width: 130px;
-  left: -142px;
+  width: 135px;
+  left: -150px;
   background-color: #000;
 }
 
@@ -402,7 +405,10 @@ section:nth-child(2) h3 span, section:nth-child(2) a span{
 section:nth-child(2) figure blockquote{
   margin: 30px 0 0;
 }
-
+section:nth-child(2) span{
+  font-size: 24px;
+  line-height: normal;
+}
 
 /* Bio Section [ Section 3 ]
  ========================================= */
@@ -754,9 +760,9 @@ footer p:nth-child(4){
   section, footer{
       padding: 80px 0 80px 180px;
   }
-  section:nth-child(1){
+ /* section:nth-child(1){
     padding: 0 0 0 180px;
-  }
+  }*/
   section#faq h3{
       font-size: 22px;
       max-width: 720px;
@@ -783,8 +789,9 @@ footer p:nth-child(4){
       right: 50px;
       bottom: 50px;
   }
-  section:nth-child(1) {
-      padding: 0;
+    #home .text-wrap{
+    padding: 0;
+    font-size: 18px;
   }
   h2 {
       font-size: 40px;
@@ -809,6 +816,7 @@ footer p:nth-child(4){
           font-size: 14px;
           padding: 0 0 10px;
   } */
+
   footer p {
       font-size: 16px;
       line-height: 32px;
@@ -869,7 +877,7 @@ footer p:nth-child(4){
       margin: 40px 0;
   }
   section, footer{
-      padding: 60px 0;
+      padding: 80px 0;
   }
   section#faq h3{
       font-size: 20px;
@@ -915,11 +923,17 @@ footer p:nth-child(4){
   .container {
       max-width: 100%;
   }
+  section:nth-child(1){
+        padding: 80px 0 100px;
+  }
   section:nth-child(1) ul{
       right: 0;
       bottom: auto;
       top: 50px;
       width: 100%;
+  }
+  #home .text-wrap{
+    font-size: 16px;
   }
   h2 {
       font-size: 30px;
@@ -956,6 +970,9 @@ footer p:nth-child(4){
   section:nth-child(2) h3, section:nth-child(2) a{
       width: 100%;
       order: 2;
+  }
+  section:nth-child(2) span{
+    margin-bottom: 50px;
   }
   .team_wrap h3{
     font-size: 20px;
@@ -1017,12 +1034,12 @@ footer p:nth-child(4){
       font-size: 20px;
   }
   section:nth-child(1) figure h1 p:nth-child(2):before {
-      width: 47px;
-      left: -56px;
+      width: 80px;
+      left: -90px;
   }
   section:nth-child(1) figure h1 p:nth-child(2):after {
-      width: 47px;
-      right: -56px;
+      width: 80px;
+      right: -90px;
   }
   section:nth-child(3) form input:nth-child(4){
       width: 100%;
@@ -1091,6 +1108,29 @@ footer p:nth-child(4){
   section#testimonials div > div a, section#faq div > div a{
     display: none;
   }
+    section:nth-child(1) figure h1 p{
+      font-size: 23px;
+  }
+    section:nth-child(1) figure h1 p:nth-child(2){
+      font-size: 16px;
+  }
+  #home .text-wrap{
+    font-size: 14px;
+  }
+
+  section:nth-child(1) figure h1 p:nth-child(2):after{
+      top: calc(50% - 1px);
+      height: 2px;
+      width: 30px;
+      right: -35px;
+  }
+  section:nth-child(1) figure h1 p:nth-child(2):before{
+      top: calc(50% - 1px);
+      height: 2px;
+      width: 33px;
+      left: -35px;
+  }
+} 
 }
 
 @media screen and (max-width: 390px){
@@ -1113,25 +1153,7 @@ footer p:nth-child(4){
   /* section:nth-child(3) form button{
       margin-top: -11px;
   } */
-  section:nth-child(1) figure h1 p:nth-child(2){
-      font-size: 16px;
-  }
-  section:nth-child(1) figure h1 p{
-      font-size: 23px;
-  }
-  section:nth-child(1) figure h1 p:nth-child(2):after{
-      top: calc(50% - 1px);
-      height: 2px;
-      width: 30px;
-      right: -35px;
-  }
-  section:nth-child(1) figure h1 p:nth-child(2):before{
-      top: calc(50% - 1px);
-      height: 2px;
-      width: 33px;
-      left: -35px;
-  }
-} 
+
 span.d-block {display: block;}
 /* #services:before { content: ""; width: 1px; height: 150px; background: #cd9933; position: absolute;
                            top: -150px; left: 50%;} */
