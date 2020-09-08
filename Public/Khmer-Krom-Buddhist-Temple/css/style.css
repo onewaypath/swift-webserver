@@ -320,18 +320,16 @@ header p {
     line-height: normal;
     font-size: 21px;
     max-width: 760px;
-    text-align: left;
     margin-bottom: 30px;
 }
 header button{
 	display: inline-block;
     font-size: 20px;
-    font-weight: 600;
-    color: #000;
+    font-family: oklahomaregular;
+    color: #cd9933;
     background-color: transparent;
-    border-bottom: 1px solid #000 !important;
+    border-bottom: 1px solid #cd9933 !important;
     border: 0;
-    font-family: 'Open Sans', sans-serif;
     padding: 0;
 }
 header div{
@@ -342,10 +340,6 @@ nav {
   z-index: 2;
   top: 75px;
   left: 95px;
-}
-
-nav a:last-child {
-  margin: 0;
 }
 
 nav a {
@@ -441,6 +435,10 @@ nav > div> div {
     margin-left: 50px;
 }
 #more {display: none;}
+nav #sub-nav {
+    position: relative;
+    z-index: 99;
+}
 
 /* About Section 
  ========================================= */
