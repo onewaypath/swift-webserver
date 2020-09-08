@@ -387,13 +387,13 @@ nav > div > a:first-child figure:before {
     right: -12px;
     top: 12px;
 }
-nav a:first-child:hover{
+nav >.scroll-menu-container > a:first-child:hover{
   background-color: transparent;
 }
-nav a:first-child:hover img:last-child{
+nav >.scroll-menu-container > a:first-child:hover img:last-child{
   display: none;
 }
-nav a:first-child:hover img:first-child{
+nav >.scroll-menu-container > a:first-child:hover img:first-child{
   display: block;
 }
 nav a h1 {
