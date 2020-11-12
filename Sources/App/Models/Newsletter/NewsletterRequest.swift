@@ -184,7 +184,7 @@ struct NewsletterRequest: Content {
         let mainTextContent = self.content ?? unixTools().runUnix("cat", arguments: ["Public/emailContent.txt"])
         
         
-        let targetTemplate = unixTools().runUnix("cat", arguments: ["Public/emailTemplatePlain.txt"])
+        let targetTemplate = unixTools().runUnix("cat", arguments: ["Public/emailTemplates/emailTemplatePlain.txt"])
         
         
         let replacementDictionary = [
