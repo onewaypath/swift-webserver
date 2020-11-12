@@ -1,5 +1,6 @@
 import Vapor
 import unixTools
+import HTTP
 
 
 /// Register your application's routes here.
@@ -87,7 +88,12 @@ public func routes(_ router: Router) throws {
     router.get("newsletter", use: newsletterController.get)
     //router.get("newsletter", use: newsletterController.post)
     
+    // ROUTE FOR KLAUS MULTI-PARKING REDIRECT
+   
     
+    router.get("parking") { req in
+        return req.redirect(to: "https://www.youtube.com/watch?v=lDbMnNMdFFg")
+    }
     // *** OFFICE 365 ROUTES
 /*
     let testController = TestController()
