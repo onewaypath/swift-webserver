@@ -37,9 +37,9 @@ struct NewsletterRequest: Content {
     //init(content: String? = nil, author: String? = "Alex Young", subject: String? = "Test Subject", template: String? = "emailTemplate.html", distributionList: String? = nil, testEmailAddress: String? = nil) {
     init(postRequest: NewsletterRequest) {
         
-        let defaultTemplate = "emailTemplates/emailTemplate.html"
+        let defaultTemplate = "Public/emailTemplates/emailTemplate.html"
         let defaultAuthor = "Miriam Young"
-        let defaultContent = unixTools().runUnix("cat", arguments: ["Public/emailContent.html"])
+        let defaultContent = unixTools().runUnix("cat", arguments: ["Public/emailTemplates/emailContent.html"])
        
         self.author = postRequest.author ?? defaultAuthor
         self.subject = postRequest.subject ?? "Test: What To Do When We're Overwhelmed"
