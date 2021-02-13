@@ -56,8 +56,17 @@ public func routes(_ router: Router) throws {
     // render the view for any html page that is identified
     router.get("dev", String.parameter) { req -> Future<View> in
             let htmlFile = try req.parameters.next(String.self)
-            let htmlFilePath = "html-dev/\(htmlFile)"
-            let styleFilePath = "Public/main/css/style.css"
+        let htmlFilePath = "html-dev/\(htmlFile).html"
+            let styleFilePath = "Public/dev/htmlFile/css/style.css"
+            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+            let style = unixTools().runUnix("cat", arguments: [styleFilePath])
+        return try req.view().render("dev-template", ["html": html, "style": style])
+    }
+    
+    router.get("dev", "main") { req -> Future<View> in
+            let htmlFile = "index"
+        let htmlFilePath = "html-dev/\(htmlFile).html"
+            let styleFilePath = "Public/dev/main/css/style.css"
             let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
             let style = unixTools().runUnix("cat", arguments: [styleFilePath])
         return try req.view().render("dev-template", ["html": html, "style": style])
