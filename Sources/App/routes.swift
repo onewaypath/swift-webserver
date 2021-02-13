@@ -51,6 +51,16 @@ public func routes(_ router: Router) throws {
             return try req.view().render("main-template", ["html": html])
     }
     
+    
+     // *** ROUTES TO TEST HTML DEV TEMPLATES
+    // render the view for any html page that is identified
+    router.get("dev", String.parameter) { req -> Future<View> in
+            let htmlFile = try req.parameters.next(String.self)
+            let htmlFilePath = "html-dev/\(htmlFile)"
+            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+            return try req.view().render("main-template", ["html": html])
+    }
+    
     // *** ROUTES TO TEST USER MANAGEMENT (Retained for future development)
     
     // get route at the url users fetching all users from the database and passing them into a view
