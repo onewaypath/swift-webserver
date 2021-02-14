@@ -4,13 +4,14 @@
 @font-face {
   font-family: 'oklahoma-regular';
   src: url("main/fonts/oklahoma_normal-webfont.woff") format("woff");
+font-display: swap;
 }
 
 @font-face {
   
   font-family: 'open-sans-regular';
   src: url("main/fonts/open-sans-regular.ttf");
-	
+	font-display: swap;
 }
 
 html {
