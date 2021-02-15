@@ -54,6 +54,8 @@ public func routes(_ router: Router) throws {
     
      // *** ROUTES TO TEST HTML DEV TEMPLATES
     // render the view for any html page that is identified
+    /*
+    
     router.get("dev", String.parameter) { req -> Future<View> in
             let htmlFile = try req.parameters.next(String.self)
         let htmlFilePath = "html-dev/\(htmlFile).html"
@@ -61,16 +63,65 @@ public func routes(_ router: Router) throws {
             let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
             let style = unixTools().runUnix("cat", arguments: [styleFilePath])
         return try req.view().render("dev-template", ["html": html, "style": style])
+    }*/
+    
+    
+    //ROUTES TO TEST NEW CSS
+    
+    func getCSS(draftURL: String) -> String {
+        if let url = URL(string: draftURL) {
+            do {
+                let contents = try String(contentsOf: url)
+                //print(contents)
+                return contents
+            } catch {
+                return "no-css"
+            }
+        } else {
+            return "no-css"
+        }
     }
     
-    router.get("dev", "main") { req -> Future<View> in
+    
+    router.get("dev", String.parameter) { req -> Future<View> in
+            let username = try req.parameters.next(String.self)
             let htmlFile = "index"
-        let htmlFilePath = "html-dev/\(htmlFile).html"
-            let styleFilePath = "Public/dev/main/css/style.css"
+            let htmlFilePath = "html-dev/\(htmlFile).html"
             let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
-            let style = unixTools().runUnix("cat", arguments: [styleFilePath])
+        let style = getCSS(draftURL:"https://raw.githubusercontent.com/onewaypath/css/master/\(username)/style.css")
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
+    
+    router.get("dev", "draft", String.parameter) { req -> Future<View> in
+        let cssURL = req.query[String.self, at: "css"]
+               let htmlFile = "index"
+               let htmlFilePath = "html-dev/\(htmlFile).html"
+               let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+               let style = getCSS(draftURL:cssURL!)
+           return try req.view().render("dev-template", ["html": html, "style": style])
+       }
+    
+    
+    struct CSS: Content {
+        var URL: String?
+    }
+    
+    router.get("dev", "draft") { req -> Future<View> in
+        
+        let htmlFile = "index"
+        let htmlFilePath = "html-dev/\(htmlFile).html"
+        let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+        let css = try req.query.decode(CSS.self)
+        let style = getCSS(draftURL:css.URL!)
+        return try req.view().render("dev-template", ["html": html, "style": style])
+    }
+    
+    router.get("raw", "css", String.parameter) { req -> String in
+           //let root = unixTools().runUnix("pwd")
+        let username = try req.parameters.next(String.self)
+        let rawCSS = unixTools().runUnix("cat", arguments: ["../onewaypath.com-css/\(username)/style.css"])
+           return rawCSS
+       }
     
     // *** ROUTES TO TEST USER MANAGEMENT (Retained for future development)
     
