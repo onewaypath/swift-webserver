@@ -116,6 +116,12 @@ public func routes(_ router: Router) throws {
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
     
+    router.get("param") { req -> String in
+        
+        let css = try req.query.decode(CSS.self)
+        return (css.URL!)
+    }
+    
     router.get("raw", "css", String.parameter) { req -> String in
            //let root = unixTools().runUnix("pwd")
         let username = try req.parameters.next(String.self)
