@@ -14,7 +14,7 @@ struct wp_posts: MySQLModel {
     var id: Int?
     var ID: Int
     var post_date: Date
-    var post_content: String
+    //var post_content: String
     var post_title: String
     
     
