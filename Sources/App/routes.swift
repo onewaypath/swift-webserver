@@ -106,15 +106,15 @@ public func routes(_ router: Router) throws {
         var URL: String?
     }
     
-    router.get("dev", "draft") { req -> String in //Future<View> in
+    router.get("dev", "draft") { req -> Future<View> in
         
         let htmlFile = "index"
         let htmlFilePath = "html-dev/\(htmlFile).html"
         let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
         let css = try req.query.decode(CSS.self)
         let style = getCSS(draftURL:css.URL!)
-        return style
-        // return try req.view().render("dev-template", ["html": html, "style": style])
+        // return style
+        return try req.view().render("dev-template", ["html": html, "style": style])
     }
     
     router.get("param") { req -> String in
