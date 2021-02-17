@@ -6,73 +6,10 @@
 //
 
 import Foundation
-//import Vapor
+import Vapor
 //#if canImport(FoundationNetworking)
 //import FoundationNetworking
 //#endif
-
-public struct WebPageController {
-
-    var template :String
-    var html: String
-    var css: String
-    
-    init() {
-        self.template = "dev-template"
-        self.html = "test"
-        self.css = "test"
-    }
-    
-    func devSubmissions() -> String {
-    
-        
-        return "dummy"
-    
-    }
-
-}
-
-// source css
-// source html
-// construct html
-
-// SOURCE CSS
-
-
-
-/*
-public struct page {
-        
-    public struct css {
-        var sourceURL: String
-    }
-    
-    public struct html {
-        var URLStri
-    }
-    
-
-   func getCSS() -> String {
-    if let url = URL(string: self.URLString) {
-           do {
-               let contents = try String(contentsOf: url)
-               //print(contents)
-               return contents
-           } catch {
-               return "no CSS"
-           }
-       } else {
-           return "no CSS"
-       }
-   }
-
-}
-
-*/
-
-
-    
-
 
 /*
 struct CSSController (cssURL:String) { req -> Future<View> in
