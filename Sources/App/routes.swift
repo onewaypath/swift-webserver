@@ -82,6 +82,8 @@ public func routes(_ router: Router) throws {
         }
     }
     
+    let webPageController = WebPageController()
+    //router.get("users", "list", use: userController.list)
     
     router.get("dev", String.parameter) { req -> Future<View> in
             let username = try req.parameters.next(String.self)
@@ -92,15 +94,29 @@ public func routes(_ router: Router) throws {
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
     
+    router.get("dev", "subs", String.parameter) { req -> Future<View> in
+            let username = try req.parameters.next(String.self)
+            let htmlFile = "index"
+            let htmlFilePath = "html-dev/\(htmlFile).html"
+            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
+            let styleFilePath = "css-submissions/\(username)/style.css"
+            let style =  unixTools().runUnix("cat", arguments: [styleFilePath])
+        return try req.view().render("dev-template", ["html": html, "style": style])
+    }
+    
+    /*
     router.get("dev", "draft", String.parameter) { req -> Future<View> in
         let cssURL = req.query[String.self, at: "css"]
                let htmlFile = "index"
                let htmlFilePath = "html-dev/\(htmlFile).html"
                let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
-               let style = getCSS(draftURL:cssURL!)
+               
+            //let css = CSS2(URLString: cssURL!)
+            //let style = CSS2.getCSS
+        let style = getCSS(draftURL:cssURL!)
            return try req.view().render("dev-template", ["html": html, "style": style])
        }
-    
+    */
     
     struct CSS: Content {
         var URL: String?
@@ -117,6 +133,7 @@ public func routes(_ router: Router) throws {
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
     
+    /*
     router.get("param") { req -> String in
         
         let css = try req.query.decode(CSS.self)
@@ -128,7 +145,7 @@ public func routes(_ router: Router) throws {
         let username = try req.parameters.next(String.self)
         let rawCSS = unixTools().runUnix("cat", arguments: ["../onewaypath.com-css/\(username)/style.css"])
            return rawCSS
-       }
+       }*/
     
     // *** ROUTES TO TEST USER MANAGEMENT (Retained for future development)
     
