@@ -10,9 +10,9 @@ public func routes(_ router: Router) throws {
     
     let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
 
-    router.get { req in
+    /*router.get { req in
           return try req.view().render("main-template", ["html": owpgmainHtml])
-    }
+    }*/
     
     
    let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
@@ -83,7 +83,7 @@ public func routes(_ router: Router) throws {
     }
     
     
-    router.get("dev", String.parameter) { req -> Future<View> in
+    router.get(String.parameter) { req -> Future<View> in
             let username = try req.parameters.next(String.self)
             let htmlFile = "index"
             let htmlFilePath = "html-dev/\(htmlFile).html"
@@ -91,7 +91,7 @@ public func routes(_ router: Router) throws {
         let style = getCSS(draftURL:"https://raw.githubusercontent.com/onewaypath/css/master/\(username)/style.css")
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
-    
+    /*
     router.get("dev", "draft", String.parameter) { req -> Future<View> in
         let cssURL = req.query[String.self, at: "css"]
                let htmlFile = "index"
@@ -99,14 +99,14 @@ public func routes(_ router: Router) throws {
                let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
                let style = getCSS(draftURL:cssURL!)
            return try req.view().render("dev-template", ["html": html, "style": style])
-       }
+       }*/
     
     
     struct CSS: Content {
         var URL: String?
     }
     
-    router.get("dev", "draft") { req -> Future<View> in
+    router.get("draft") { req -> Future<View> in
         
         let htmlFile = "index"
         let htmlFilePath = "html-dev/\(htmlFile).html"
