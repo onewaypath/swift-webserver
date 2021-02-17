@@ -83,8 +83,9 @@ public func routes(_ router: Router) throws {
     }
     
     
-    router.get(String.parameter) { req -> Future<View> in
-            let username = try req.parameters.next(String.self)
+    router.get() { req -> Future<View> in
+            //let username = try req.parameters.next(String.self)
+            let username = "main"
             let htmlFile = "index"
             let htmlFilePath = "html-dev/\(htmlFile).html"
             let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
