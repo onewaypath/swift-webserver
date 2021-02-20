@@ -14,32 +14,33 @@ public func routes(_ router: Router) throws {
           return try req.view().render("main-template", ["html": owpgmainHtml])
     }*/
     
-    
+    /*
    let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
    router.get("homes") { req -> Future<View> in
     return try req.view().render("main-template", ["html": homesHtml])
-   }
-   
+   }*/
+   /*
     let meditationHtml = unixTools().runUnix("cat", arguments: ["Public/meditation.html"])
     router.get("meditation") { req -> Future<View> in
      return try req.view().render("main-template", ["html": meditationHtml])
-    }
+    }*/
     
     // *** ROUTES TO DISPLAY TEAM MEMBER PAGES ***
     
     // get route at the url team members fetching all members from the database and passing them into a view
     
     let teamController = TeamController()
-    
+    /*
     router.get("team", String.parameter) { req -> Future<View> in
         let user = try req.parameters.next(String.self)
         return try teamController.select(req, username: user)
-    }
+    }*/
     
+    /*
     router.get("team", "all",  use: teamController.list)
     // post route so that on form submission the input-field data form-url-encoded will be sent to the team members route as a post
     router.post("team","submit", use: teamController.create)
-    
+    */
     
     // *** ROUTES TO TEST HTML TEMPLATES
     
@@ -82,25 +83,10 @@ public func routes(_ router: Router) throws {
         }
     }
     
+    let webPage = WebPageController()
+    router.get(String.parameter, use: webPage.displayPage)
+    router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
     
-    router.get() { req -> Future<View> in
-            //let username = try req.parameters.next(String.self)
-            let username = "main"
-            let htmlFile = "index"
-            let htmlFilePath = "html-dev/\(htmlFile).html"
-            let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
-        let style = getCSS(draftURL:"https://raw.githubusercontent.com/onewaypath/css/master/\(username)/style.css")
-        return try req.view().render("dev-template", ["html": html, "style": style])
-    }
-    /*
-    router.get("dev", "draft", String.parameter) { req -> Future<View> in
-        let cssURL = req.query[String.self, at: "css"]
-               let htmlFile = "index"
-               let htmlFilePath = "html-dev/\(htmlFile).html"
-               let html = unixTools().runUnix("cat", arguments: [htmlFilePath])
-               let style = getCSS(draftURL:cssURL!)
-           return try req.view().render("dev-template", ["html": html, "style": style])
-       }*/
     
     
     struct CSS: Content {
@@ -118,19 +104,21 @@ public func routes(_ router: Router) throws {
         return try req.view().render("dev-template", ["html": html, "style": style])
     }
     
-    router.get("param") { req -> String in
+   
+    /*    router.get("param") { req -> String in
         
         let css = try req.query.decode(CSS.self)
         return (css.URL!)
-    }
+    }*/
     
+    /*
     router.get("raw", "css", String.parameter) { req -> String in
            //let root = unixTools().runUnix("pwd")
         let username = try req.parameters.next(String.self)
         let rawCSS = unixTools().runUnix("cat", arguments: ["../onewaypath.com-css/\(username)/style.css"])
            return rawCSS
        }
-    
+    */
     // *** ROUTES TO TEST USER MANAGEMENT (Retained for future development)
     
     // get route at the url users fetching all users from the database and passing them into a view

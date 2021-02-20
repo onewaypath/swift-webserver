@@ -16,14 +16,17 @@ final class TeamMember: MySQLModel {
     var lastname: String
     var position: String
     var bio: String
+    var company:String
+
     
-    init(id: Int? = nil, username: String, firstname: String, lastname: String, position: String, bio: String) {
+    init(id: Int? = nil, username: String, firstname: String, lastname: String, position: String, bio: String, company: String) {
         self.id = id
         self.username = username
         self.firstname = firstname
         self.lastname = lastname
         self.position = position
         self.bio = bio
+        self.company = company
     }
 }
 extension TeamMember: Content {}

@@ -9,7 +9,9 @@
 <title>One Way Path Group</title>
 </head>
 <body>
+#get(header)
 #get(html)
+#get(footer)
 </body>
 </html>
 

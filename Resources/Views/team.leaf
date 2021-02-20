@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#get(style)
+</style>
+<!-- <link rel="stylesheet" href="./main/css/style.css" /> -->
+<title>One Way Path Group</title>
+</head>
+<body>
+#get(header)
+<h2>Our Team</h2>
+<h3>Buddhavipassana Foundation</h3>
+#for(teamMember in teamList) {
+	  #if(teamMember.company == "Buddhavipassana Foundation") {
+		  <p>#(teamMember.firstname) #(teamMember.lastname)<br>
+		  #(teamMember.position)</p>
+	  }
+    }
+<h3>One Way Path Group</h3>
+#for(teamMember in teamList) {
+	  #if(teamMember.company == "One Way Path Group") {
+		  <p>#(teamMember.firstname) #(teamMember.lastname)<br>
+		  #(teamMember.position)</p>
+	  }
+    }
+	
+<h3>Strategic Partners</h3>
+#for(teamMember in teamList) {
+	  #if(teamMember.company != "One Way Path Group" && teamMember.company != "Buddhavipassana Foundation") {
+		  <h4>#(teamMember.position)</h4>
+		  <p>#(teamMember.company)<br>
+		  #(teamMember.firstname) #(teamMember.lastname)</p>
+	  }
+    }
+#get(footer)
+</body>
+</html>
+
