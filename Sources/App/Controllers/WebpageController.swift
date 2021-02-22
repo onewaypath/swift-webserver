@@ -17,7 +17,17 @@ struct WebPageController {
     func displayPage(req: Request) throws -> Future<View> {
         let page = try? req.parameters.next(String.self)
         //let page = "index"
-        let webpage = getPage(runtimeState: "live", pageName:page)
+        
+        /*
+        var runtime: String;
+        struct CSS: Content {
+               var URL: String?
+           }
+        
+        let css = try req.query.decode(CSS.self)
+       */
+        
+        let webpage = getPage(runtimeState: "dev", pageName:page)
         
         switch page {
         
@@ -88,19 +98,29 @@ struct getPage {
         }
         
         var style:String
+        
         switch runtimeState {
         case "dev":
-            let cssURL = "https://raw.githubusercontent.com/onewaypath/css/master/\(username)/style.css"
+            //add master CSS
+            var cssURL = "https://raw.githubusercontent.com/onewaypath/css/dev/main/master.css"
             style = getCSS(draftURL:cssURL)
+            
+            //add page specific CSS
+            var cssFile = pageName ?? "main" // the default css file has the same name as the page name
+            if pageName == "meditation" {cssFile = "main"} // assign the meditation page to the main css
+            cssURL = "https://raw.githubusercontent.com/onewaypath/css/dev/main/\(cssFile).css"
+            style += getCSS(draftURL:cssURL)
+            
         default:
+            //add master CSS
             var cssPath: String
-
             cssPath = "../onewaypath.com-css/main/master.css"
             style = unixTools().runUnix("cat", arguments: [cssPath])
+            
+            //add page specific CSS
             var cssFile = pageName ?? "main" // the default css file has the same name as the page name
             if pageName == "meditation" {cssFile = "main"} // assign the meditation page to the main css
             cssPath = "../onewaypath.com-css/main/\(cssFile).css"
-           
             style += unixTools().runUnix("cat", arguments: [cssPath])
         }
         data = ["style":style]
@@ -113,7 +133,7 @@ struct getPage {
             //html += unixTools().runUnix("cat", arguments: ["html-dev/\(element).html"])
             switch key {
             case "html":
-                if pageName != "team" { // omit the HTML element for pages that run only from leaf
+                if pageName != "team" { // omit the HTML element for pages that run exclusively from leaf templates
                     data[key] = unixTools().runUnix("cat", arguments: ["html-dev/\(value).html"])
                 }
             default:
