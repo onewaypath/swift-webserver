@@ -84,11 +84,12 @@ public func routes(_ router: Router) throws {
     }
     
     let webPage = WebPageController()
-    router.get(String.parameter, use: webPage.displayPage)
     router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
+    router.get(String.parameter, use: webPage.displayPage)
+    router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
     
     
-    
+   
     struct CSS: Content {
         var URL: String?
     }

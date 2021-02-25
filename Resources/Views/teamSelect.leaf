@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#get(style)
+</style>
+<!-- <link rel="stylesheet" href="./main/css/style.css" /> -->
+<title>One Way Path Group</title>
+</head>
+<body>
+#get(header)
+#for(teamMember in teamList) {
+	  #if(teamMember.username == targetUsername) {
+		  
+		  <h2>#(teamMember.firstname) #(teamMember.lastname)</h2>
+		  <img src="images/#(teamMember.username).jpg">
+		  <h3>#(teamMember.position)</h3>
+		  <p>#if(bio == nil) {#raw(teamMember.bio)}</p>
+	  }
+    }
+
+#get(footer)
+</body>
+</html>

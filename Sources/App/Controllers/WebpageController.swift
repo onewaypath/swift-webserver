@@ -43,11 +43,35 @@ struct WebPageController {
                 return try req.view().render(webpage.template, pageData)
                 //return try req.view().render("team", data)
             }
+        
         default:  return try req.view().render(webpage.template, webpage.data)
         }
         
      
     }
+    
+    
+    func displayTeamSelect(req: Request) throws -> Future<View> {
+          let page = "team" //try? req.parameters.next(String.self)
+          let username = try? req.parameters.next(String.self)
+        
+          let webpage = getPage(runtimeState: "live", pageName:page)
+          
+          return TeamMember.query(on: req).all().flatMap { teamMembers in
+              struct PageData: Content {
+                  var style: String
+                  var header: String
+                  var footer: String
+                  var teamList: [TeamMember]
+                  var targetUsername:  String
+              }
+              let pageData = PageData(style:webpage.data["style"] ?? "no style", header: webpage.data["header"] ?? "no header", footer:webpage.data["footer"] ?? "no footer", teamList: teamMembers, targetUsername: username!)
+              return try req.view().render("teamSelect", pageData)
+              //return try req.view().render("team", data)
+          }
+       
+      }
+    
     
     func team(_ req: Request) throws -> Future<View> {
         return TeamMember.query(on: req).all().flatMap { teamMembers in

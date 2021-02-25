@@ -14,14 +14,21 @@
 <h3>Buddhavipassana Foundation</h3>
 #for(teamMember in teamList) {
 	  #if(teamMember.company == "Buddhavipassana Foundation") {
-		  <p>#(teamMember.firstname) #(teamMember.lastname)<br>
+
+		  <p> #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+		  	#(teamMember.firstname) #(teamMember.lastname)
+		  #if(teamMember.bio != "n/a") {</a>}
+		  <br>
 		  #(teamMember.position)</p>
 	  }
     }
 <h3>One Way Path Group</h3>
 #for(teamMember in teamList) {
 	  #if(teamMember.company == "One Way Path Group") {
-		  <p>#(teamMember.firstname) #(teamMember.lastname)<br>
+		  <p> #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+		  #(teamMember.firstname) #(teamMember.lastname)
+		   #if(teamMember.bio != "n/a") {</a>}
+		  <br>
 		  #(teamMember.position)</p>
 	  }
     }
