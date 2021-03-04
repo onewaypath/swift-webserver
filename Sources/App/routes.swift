@@ -14,20 +14,15 @@ public func routes(_ router: Router) throws {
           return try req.view().render("main-template", ["html": owpgmainHtml])
     }*/
     
-    router.get("view") { req -> Future<Response> in
+    router.get("images", String.parameter) { req -> Future<Response> in
            //let root = unixTools().runUnix("pwd")
-        let view = try req.view().render("main-template", ["html": owpgmainHtml])
+        let file = try req.parameters.next(String.self)
             
-            
-        
-        return view.flatMap { view -> Future<Response> in
+            let response = try req.streamFile(at: "Public/\(file)")
+     
             var headers = HTTPHeaders()
             headers.add(name: .cacheControl, value: "max-age=60")
-            return view.encode(status: .ok, headers: headers, for: req)
-           
-        }
-        
-        
+            return response.encode(status: .ok, headers: headers, for: req)
        }
     
     /*
