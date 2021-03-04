@@ -14,6 +14,22 @@ public func routes(_ router: Router) throws {
           return try req.view().render("main-template", ["html": owpgmainHtml])
     }*/
     
+    router.get("view") { req -> Future<Response> in
+           //let root = unixTools().runUnix("pwd")
+        let view = try req.view().render("main-template", ["html": owpgmainHtml])
+            
+            
+        
+        return view.flatMap { view -> Future<Response> in
+            var headers = HTTPHeaders()
+            headers.add(name: .cacheControl, value: "max-age=60")
+            return view.encode(status: .ok, headers: headers, for: req)
+           
+        }
+        
+        
+       }
+    
     /*
    let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
    router.get("homes") { req -> Future<View> in
@@ -87,6 +103,8 @@ public func routes(_ router: Router) throws {
     router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
+    
+    
     
     
    

@@ -45,7 +45,8 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     
     // Use Leaf for rendering views
     config.prefer(LeafRenderer.self, for: ViewRenderer.self)
-
+    
+    //config.prefer(LeafRenderer.self, for: PlaintextRenderer.self)
     //initiate a database service, add SQLiteDatabase to it and regsister that database service
     //var databases = DatabasesConfig()
    // try databases.add(database: SQLiteDatabase(storage: .memory), as: .sqlite)
@@ -112,11 +113,11 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     //Initiate and register migration services
     var migrations = MigrationConfig()
     
-    
-    migrations.add(model: User.self, database: .mysql)
-    migrations.add(model: TeamMember.self, database: .mysql)
+    //migrations.add(model: Todo.self, database: DatabaseIdentifier<SQLiteDatabase>.sqlite)
+    migrations.add(model: User.self, database: DatabaseIdentifier<User.Database>.mysql)
+    migrations.add(model: TeamMember.self, database: DatabaseIdentifier<TeamMember.Database>.mysql)
 //    migrations.add(model: ApiCreds.self, database: .mysql)
-    migrations.add(model: O365.Authenticate.O365ApiCreds.self, database: .mysql)
+    migrations.add(model: O365.Authenticate.O365ApiCreds.self, database: DatabaseIdentifier<O365.Authenticate.O365ApiCreds.Database>.mysql)
     //migrations.add(model: wp_posts.self, database: .mysql2)
 
     
