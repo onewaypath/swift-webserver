@@ -19,7 +19,7 @@ public func routes(_ router: Router) throws {
         let file = try req.parameters.next(String.self)
             
            return try req.streamFile(at: "Public/images/\(file)").encode(for: req).map { response in
-                response.http.headers.add(name: .cacheControl, value: "max-age=60")
+                response.http.headers.add(name: .cacheControl, value: "max-age=31536000")
                 return response
            }
      
