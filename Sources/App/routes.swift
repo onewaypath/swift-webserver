@@ -26,6 +26,18 @@ public func routes(_ router: Router) throws {
 
        }
     
+    router.get("cfonts", String.parameter) { req -> Future<Response> in
+           //let root = unixTools().runUnix("pwd")
+        let file = try req.parameters.next(String.self)
+            
+           return try req.streamFile(at: "../onewaypath.com-css/fonts/\(file)").encode(for: req).map { response in
+                response.http.headers.add(name: .cacheControl, value: "max-age=31536000")
+                return response
+           }
+     
+
+       }
+    
     /*
    let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
    router.get("homes") { req -> Future<View> in
