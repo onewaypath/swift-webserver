@@ -112,7 +112,18 @@ public func routes(_ router: Router) throws {
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
     
+    router.get("testHTML") { req -> Future<View> in
+        
+        return try req.view().render("main-template", ["html": testHTML])
+    }
     
+    
+    router.get("testHTMLString") { _ -> HTTPResponse in
+        
+            var headers = HTTPHeaders()
+            headers.add(name: .contentType, value: "text/html")
+        return HTTPResponse(status: .ok, headers: headers, body: testHTML)
+    }
     
     
    
