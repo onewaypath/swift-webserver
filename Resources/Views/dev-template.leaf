@@ -12,7 +12,9 @@
 <body>
 #get(header)
 #get(html)
-#get(footer)
+<footer>   
+	<p><a href="about">About</a> |<a href="/"> Home </a> | <a href="contact-us">Contact Us</a> | <a href="team">Our Team</a> |  <a href="privacy">Privacy</a></p>
+</footer>
 </body>
 </html>
 

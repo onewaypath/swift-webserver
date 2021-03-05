@@ -151,7 +151,7 @@ struct getPage {
         
         // DEFINE THE HTML CONTENT TO ADD TO THE TEMPLATE
         
-        let htmlElements = ["header":"header", "html": pageName ?? "index", "footer": "footer"]
+        let htmlElements = ["header":"header", "html": pageName ?? "index"]
         //var html = ""
         for (key, value) in htmlElements {
             //html += unixTools().runUnix("cat", arguments: ["html-dev/\(element).html"])
