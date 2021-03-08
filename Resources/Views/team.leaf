@@ -44,7 +44,7 @@
 		  }
 		}
 	#for(teamMember in teamList) {
-		  #if(teamMember.company == "Leadership") {
+		  #if(teamMember.category == "Leadership") {
 			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
 			  #(teamMember.firstname) #(teamMember.lastname)
 			   #if(teamMember.bio != "n/a") {</a>}
@@ -57,7 +57,7 @@
 <section>
 	<h3>Administration</h3>
 	#for(teamMember in teamList) {
-		  #if(teamMember.company == "Staff") {
+		  #if(teamMember.category == "Administration") {
 			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
 			  #(teamMember.firstname) #(teamMember.lastname)
 			   #if(teamMember.bio != "n/a") {</a>}
