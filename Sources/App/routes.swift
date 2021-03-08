@@ -109,8 +109,11 @@ public func routes(_ router: Router) throws {
     
     let webPage = WebPageController()
     router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
+    router.get("buddhavipassana", String.parameter, use: webPage.buddhavipassana)
+    router.get("on-num", String.parameter, use: webPage.onNum)
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
+   
     
     router.get("testHTML") { req -> Future<View> in
         

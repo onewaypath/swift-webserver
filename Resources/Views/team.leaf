@@ -9,41 +9,98 @@
 <title>One Way Path Group</title>
 </head>
 <body>
-#get(header)
-<h2>Our Team</h2>
-<h3>Buddhavipassana Foundation</h3>
-#for(teamMember in teamList) {
-	  #if(teamMember.company == "Buddhavipassana Foundation") {
 
-		  <p> <!-- #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">} -->
-		  	#(teamMember.firstname) #(teamMember.lastname)
-		  #if(teamMember.bio != "n/a") {</a>}
-		  <br>
-		  #(teamMember.position)</p>
-	  }
-    }
-<h3>One Way Path Group</h3>
-#for(teamMember in teamList) {
-	  #if(teamMember.company == "One Way Path Group") {
-		  <p> <!-- #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">} -->
-		  #(teamMember.firstname) #(teamMember.lastname)
-		   #if(teamMember.bio != "n/a") {</a>}
-		  <br>
-		  #(teamMember.position)</p>
-	  }
-    }
-	
-<h3>Strategic Partners</h3>
-#for(teamMember in teamList) {
-	  #if(teamMember.company != "One Way Path Group" && teamMember.company != "Buddhavipassana Foundation") {
-		  <h4>#(teamMember.position)</h4>
-		  <p>#(teamMember.company)<br>
-		  #(teamMember.firstname) #(teamMember.lastname)</p>
-	  }
-    }
+<header>
+	#get(header)
+</header>
+
+<section>
+	<h2>Our Team</h2>
+
+	<p> One Way Path Group brings together a team of professionals with combined experience in over <b> a hundred large-scale building and infrastructure projects including a dozen multi-unit residential condominum developments </b>. Our experience spans all disciplines in the industry including, city planning, engineering, architecture, law, accounting, real estate, public policy and community services.</p> 
+
+	<!--<h3>Buddhavipassana Foundation</h3>
+	#for(teamMember in teamList) {
+		  #if(teamMember.company == "Buddhavipassana Foundation") {
+
+			  <p> #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+				#(teamMember.firstname) #(teamMember.lastname)
+			  #if(teamMember.bio != "n/a") {</a>}
+			  <br>
+			  #(teamMember.position)</p>
+		  }
+		}-->
+</section>
+
+<section>
+	<h3>Leadership</h3>
+	#for(teamMember in teamList) {
+		  #if(teamMember.company == "Buddhavipassana Foundation") {
+			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+			  #(teamMember.firstname) #(teamMember.lastname)
+			   #if(teamMember.bio != "n/a") {</a>}
+			  <br>
+			  #(teamMember.position), #(teamMember.company)</p>
+		  }
+		}
+	#for(teamMember in teamList) {
+		  #if(teamMember.company == "Leadership") {
+			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+			  #(teamMember.firstname) #(teamMember.lastname)
+			   #if(teamMember.bio != "n/a") {</a>}
+			  <br>
+			  #(teamMember.position)</p>
+		  }
+		}
+</section>
+
+<section>
+	<h3>Administration</h3>
+	#for(teamMember in teamList) {
+		  #if(teamMember.company == "Staff") {
+			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
+			  #(teamMember.firstname) #(teamMember.lastname)
+			   #if(teamMember.bio != "n/a") {</a>}
+			  <br>
+			  #(teamMember.position)</p>
+		  }
+		}
+</section>
+
+<section>
+	<h3>Design & Engineering</h3>
+	#for(teamMember in teamList) {
+		#if( teamMember.category == "Design" ) {
+			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
+				  <h4>#(teamMember.position)</h4>
+				  #if(teamMember.bio != "n/a") {<a href = "#(teamMember.bio)">}
+				  <p>#(teamMember.company)<br>
+				  #(teamMember.firstname) #(teamMember.lastname)</p>
+				  #if(teamMember.bio != "n/a") {</a>}
+			  }
+		}
+	}
+</section>
+
+<section>
+	<h3>Finance & Investment</h3>
+	#for(teamMember in teamList) {
+		#if( teamMember.category == "Finance" ) {
+			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
+				  <h4>#(teamMember.position)</h4>
+				  #if(teamMember.bio != "n/a") {<a href = "#(teamMember.bio)">}
+				  <p>#(teamMember.company)<br>
+				  #(teamMember.firstname) #(teamMember.lastname)</p>
+				  #if(teamMember.bio != "n/a") {</a>}
+			  }
+		}
+	}
+</section>
+
 <footer>   
 	<p><a href="about">About</a> |<a href="/"> Home </a> | <a href="contact-us">Contact Us</a> | <a href="team">Our Team</a> |  <a href="privacy">Privacy</a></p>
 </footer>
+
 </body>
 </html>
 

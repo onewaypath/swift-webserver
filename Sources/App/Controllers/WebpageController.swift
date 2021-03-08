@@ -27,7 +27,7 @@ struct WebPageController {
         let css = try req.query.decode(CSS.self)
        */
         
-        let webpage = getPage(runtimeState: "live", pageName:page)
+        let webpage = getPage(runtimeState: "dev", pageName:page)
         
         switch page {
         
@@ -55,7 +55,7 @@ struct WebPageController {
           let page = "team" //try? req.parameters.next(String.self)
           let username = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "live", pageName:page)
+          let webpage = getPage(runtimeState: "dev", pageName:page)
           
           return TeamMember.query(on: req).all().flatMap { teamMembers in
               struct PageData: Content {
@@ -80,6 +80,50 @@ struct WebPageController {
             return try req.view().render("team", data)
         }
     }
+    
+    
+    func buddhavipassana(req: Request) throws -> Future<View> {
+          let page = "buddhavipassana" //try? req.parameters.next(String.self)
+          let pageName = try? req.parameters.next(String.self)
+        
+          let webpage = getPage(runtimeState: "dev", pageName:page)
+          
+          struct PageData: Content {
+                var style: String
+                var header: String
+                var footer: String
+                var html: String
+            }
+        let pageHTML = unixTools().runUnix("cat", arguments: ["html-dev/buddhavipassana/\(pageName ?? "courses").html"])
+        
+        let pageData = PageData(style:webpage.data["style"] ?? "no style", header: webpage.data["header"] ?? "no header", footer:webpage.data["footer"] ?? "no footer", html: pageHTML)
+              return try req.view().render("buddhavipassana", pageData)
+              //return try req.view().render("team", data)
+          
+       
+      }
+    
+    func onNum(req: Request) throws -> Future<View> {
+          let page = "on-num" //try? req.parameters.next(String.self)
+          let pageName = try? req.parameters.next(String.self)
+        
+          let webpage = getPage(runtimeState: "dev", pageName:page)
+          
+          struct PageData: Content {
+                var style: String
+                var header: String
+                var footer: String
+                var html: String
+            }
+        let pageHTML = unixTools().runUnix("cat", arguments: ["html-dev/on-num/\(pageName ?? "courses").html"])
+        
+        let pageData = PageData(style:webpage.data["style"] ?? "no style", header: webpage.data["header"] ?? "no header", footer:webpage.data["footer"] ?? "no footer", html: pageHTML)
+              return try req.view().render("on-num", pageData)
+              //return try req.view().render("team", data)
+          
+       
+      }
+    
     
     
 }
