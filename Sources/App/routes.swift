@@ -109,6 +109,9 @@ public func routes(_ router: Router) throws {
     
     let webPage = WebPageController()
     router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
+    router.get("team") { req in
+        return req.redirect(to: "../")
+    }
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
     
