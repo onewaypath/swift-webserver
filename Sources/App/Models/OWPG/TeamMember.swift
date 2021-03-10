@@ -17,9 +17,10 @@ final class TeamMember: MySQLModel {
     var position: String
     var bio: String
     var company:String
+    var category:String
 
     
-    init(id: Int? = nil, username: String, firstname: String, lastname: String, position: String, bio: String, company: String) {
+    init(id: Int? = nil, username: String, firstname: String, lastname: String, position: String, bio: String, company: String, category: String) {
         self.id = id
         self.username = username
         self.firstname = firstname
@@ -27,6 +28,7 @@ final class TeamMember: MySQLModel {
         self.position = position
         self.bio = bio
         self.company = company
+        self.category = category
     }
 }
 extension TeamMember: Content {}
