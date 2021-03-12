@@ -27,7 +27,7 @@ struct WebPageController {
         let css = try req.query.decode(CSS.self)
        */
         
-        let webpage = getPage(runtimeState: "live", pageName:page)
+        let webpage = getPage(runtimeState: "dev", pageName:page)
         
         switch page {
         
