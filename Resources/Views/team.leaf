@@ -68,7 +68,7 @@
 </section>
 
 <section>
-	<h3>Design</h3>
+	<h3>Design & Engineering</h3>
 	#for(teamMember in teamList) {
 		#if( teamMember.category == "Design" ) {
 			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
@@ -83,7 +83,7 @@
 </section>
 
 <section>
-	<h3>Finance</h3>
+	<h3>Finance & Investment</h3>
 	#for(teamMember in teamList) {
 		#if( teamMember.category == "Finance" ) {
 			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
