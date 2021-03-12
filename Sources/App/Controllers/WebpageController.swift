@@ -27,7 +27,7 @@ struct WebPageController {
         let css = try req.query.decode(CSS.self)
        */
         
-        let webpage = getPage(runtimeState: "dev", pageName:page)
+        let webpage = getPage(runtimeState: "live", pageName:page)
         
         switch page {
         
@@ -55,7 +55,7 @@ struct WebPageController {
           let page = "team/teamSelect" //try? req.parameters.next(String.self)
           let username = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "dev", pageName:page)
+          let webpage = getPage(runtimeState: "live", pageName:page)
           
           return TeamMember.query(on: req).all().flatMap { teamMembers in
               struct PageData: Content {
@@ -86,7 +86,7 @@ struct WebPageController {
           let page = "buddhavipassana" //try? req.parameters.next(String.self)
           let pageName = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "dev", pageName:page)
+          let webpage = getPage(runtimeState: "live", pageName:page)
           
           struct PageData: Content {
                 var style: String
@@ -107,7 +107,7 @@ struct WebPageController {
           let page = "on-num" //try? req.parameters.next(String.self)
           let pageName = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "dev", pageName:page)
+          let webpage = getPage(runtimeState: "live", pageName:page)
           
           struct PageData: Content {
                 var style: String
