@@ -52,7 +52,7 @@ struct WebPageController {
     
     
     func displayTeamSelect(req: Request) throws -> Future<View> {
-          let page = "team" //try? req.parameters.next(String.self)
+          let page = "team/teamSelect" //try? req.parameters.next(String.self)
           let username = try? req.parameters.next(String.self)
         
           let webpage = getPage(runtimeState: "dev", pageName:page)
