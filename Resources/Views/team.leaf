@@ -40,14 +40,14 @@
 			  #(teamMember.firstname) #(teamMember.lastname)
 			   #if(teamMember.bio != "n/a") {</a>}
 			  <br>
-			  #(teamMember.position), #(teamMember.company)</p>
+			  #(teamMember.position)</p>
 		  }
 		}
 	#for(teamMember in teamList) {
 		  #if(teamMember.category == "Leadership" && teamMember.company != "Buddhavipassana Foundation") {
-			  <p>  <!--#if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}-->
+			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
 			  #(teamMember.firstname) #(teamMember.lastname)
-			   <!--#if(teamMember.bio != "n/a") {</a>}-->
+			   #if(teamMember.bio != "n/a") {</a>}
 			  <br>
 			  #(teamMember.position)</p>
 		  }
@@ -58,9 +58,9 @@
 	<h3>Administration</h3>
 	#for(teamMember in teamList) {
 		  #if(teamMember.category == "Administration") {
-			  <p>  <!--#if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}-->
+			  <p>  #if(teamMember.bio != "n/a") {<a href = "teamSelect/#(teamMember.username)">}
 			  #(teamMember.firstname) #(teamMember.lastname)
-			   <!--#if(teamMember.bio != "n/a") {</a>}-->
+			   #if(teamMember.bio != "n/a") {</a>}
 			  <br>
 			  #(teamMember.position)</p>
 		  }
@@ -68,7 +68,7 @@
 </section>
 
 <section>
-	<h3>Design & Engineering</h3>
+	<h3>Design</h3>
 	#for(teamMember in teamList) {
 		#if( teamMember.category == "Design" ) {
 			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
@@ -83,7 +83,7 @@
 </section>
 
 <section>
-	<h3>Finance & Investment</h3>
+	<h3>Finance</h3>
 	#for(teamMember in teamList) {
 		#if( teamMember.category == "Finance" ) {
 			  #if( teamMember.company != "Leadership" && teamMember.company != "Staff" ) {
