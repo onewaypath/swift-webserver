@@ -118,7 +118,7 @@ public func routes(_ router: Router) throws {
     router.get("on-num", String.parameter, use: webPage.onNum)
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
-   
+    router.get("atisundara", use: webPage.atisundara)
     
     router.get("testHTML") { req -> Future<View> in
         
