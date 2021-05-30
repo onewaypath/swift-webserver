@@ -62,6 +62,20 @@ public func routes(_ router: Router) throws {
 
        }
     
+    router.get("atisundara", "cfonts", String.parameter) { req -> Future<Response> in
+          //let root = unixTools().runUnix("pwd")
+       let file = try req.parameters.next(String.self)
+           
+          return try req.streamFile(at: "../onewaypath.com-css/fonts/\(file)").encode(for: req).map { response in
+               response.http.headers.add(name: .cacheControl, value: "max-age=31536000")
+               return response
+          }
+    
+
+      }
+    
+    
+    
     /*
    let homesHtml = unixTools().runUnix("cat", arguments: ["Public/homes.html"])
    router.get("homes") { req -> Future<View> in
@@ -142,8 +156,11 @@ public func routes(_ router: Router) throws {
     router.get("on-num", String.parameter, use: webPage.onNum)
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
-    router.get("atisundara", use: webPage.atisundara)
-    
+    router.get("atisundara", String.parameter, use: webPage.atisundara)
+   // router.get("atisundara", use: webPage.atisundara)
+    router.get("atisundara") { req in
+        return req.redirect(to: "atisundara/chomtong")
+    }
     router.get("testHTML") { req -> Future<View> in
         
         return try req.view().render("main-template", ["html": testHTML])

@@ -14,7 +14,7 @@
 <h1>Foundation</h1>
 #get(html)
 <footer>   
-	<p><a href="contact-us">Contact Us</a> | <a href="directors">Directors</a> | <a href="privacy">Privacy</a></p>
+	<p><a href="chomtong">Donate</a> | <a href="directors">Directors</a> | <a href="contact-us">Contact Us</a> |  <a href="privacy">Privacy</a></p>
 </footer>
 </body>
 </html>

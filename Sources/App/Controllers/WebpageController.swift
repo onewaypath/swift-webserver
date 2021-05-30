@@ -126,10 +126,11 @@ struct WebPageController {
     
     
     func atisundara(req: Request) throws -> Future<View> {
-        let page = "atisundara" //try? req.parameters.next(String.self)
-        //let pageName = try? req.parameters.next(String.self)
-      
-        let webpage = getPage(runtimeState: "dev", pageName:page)
+        // let page = "atisundara/chomtong/index" //try? req.parameters.next(String.self)
+        let pageName = try? req.parameters.next(String.self)
+        let page = "atisundara/\(pageName ?? "main")"
+        
+        let webpage = getPage(runtimeState: "live", pageName:page)
         
         struct PageData: Content {
               var style: String
@@ -139,7 +140,7 @@ struct WebPageController {
           }
       //let pageHTML = unixTools().runUnix("cat", arguments: ["html-dev/atisundara/\(pageName ?? "index").html"])
       
-      let pageHTML = unixTools().runUnix("cat", arguments: ["html-dev/atisundara/index.html"])
+      let pageHTML = unixTools().runUnix("cat", arguments: ["html-dev/\(page).html"])
 
       let pageData = PageData(style:webpage.data["style"] ?? "no style", header: webpage.data["header"] ?? "no header", footer:webpage.data["footer"] ?? "no footer", html: pageHTML)
             return try req.view().render("atisundara", pageData)
