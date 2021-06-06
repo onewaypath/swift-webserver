@@ -156,15 +156,15 @@ public func routes(_ router: Router) throws {
     router.get("on-num", String.parameter, use: webPage.onNum)
     router.get(String.parameter, use: webPage.displayPage)
     router.get("teamSelect", String.parameter, use: webPage.displayTeamSelect)
-    router.get("atisundara", String.parameter, use: webPage.atisundara)
+    //router.get("atisundara", String.parameter, use: webPage.atisundara)
    // router.get("atisundara", use: webPage.atisundara)
-    router.get("atisundara") { req in
+    /*router.get("atisundara") { req in
         return req.redirect(to: "atisundara/chomtong")
     }
     router.get("testHTML") { req -> Future<View> in
         
         return try req.view().render("main-template", ["html": testHTML])
-    }
+    }*/
     
     
     router.get("testHTMLString") { _ -> HTTPResponse in
