@@ -7,13 +7,14 @@
 #get(style)
 </style>
 <!-- <link rel="stylesheet" href="./main/css/style.css" /> -->
-<title>One Way Path Group</title>
+<title>Atisundara Foundation</title>
 </head>
 <body>
-#get(header)
+<h1>Atisundara</h1>
+<h1>Foundation</h1>
 #get(html)
 <footer>   
-	<p><!--a href="about">About</a> |--> <a href="/"> Home </a> | <a href="contact-us">Contact Us</a> | <a href="team">Our Team</a> |  <a href="privacy">Privacy</a></p>
+	<p><a href="chomtong">Donate</a> | <a href="directors">Directors</a> | <a href="contact-us">Contact Us</a> |  <a href="privacy">Privacy</a></p>
 </footer>
 </body>
 </html>
