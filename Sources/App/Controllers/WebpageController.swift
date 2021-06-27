@@ -27,7 +27,7 @@ struct WebPageController {
         let css = try req.query.decode(CSS.self)
        */
         
-        let webpage = getPage(runtimeState: "live", pageName:page)
+        let webpage = getPage(runtimeState: "dev", pageName:page)
         
         switch page {
         
@@ -195,13 +195,13 @@ struct getPage {
         switch runtimeState {
         case "dev":
             //add master CSS
-            var cssURL = "https://raw.githubusercontent.com/onewaypath/css/dev/main/master.css"
+            var cssURL = "https://buddhavipassana.ca/onewaypath.com-css/main/master.css"
             style = getCSS(draftURL:cssURL)
             
             //add page specific CSS
             var cssFile = pageName ?? "main" // the default css file has the same name as the page name
             if pageName == "meditation" {cssFile = "main"} // assign the meditation page to the main css
-            cssURL = "https://raw.githubusercontent.com/onewaypath/css/dev/main/\(cssFile).css"
+            cssURL = "https://buddhavipassana.ca/onewaypath.com-css/main/\(cssFile).css"
             style += getCSS(draftURL:cssURL)
             
         default:
