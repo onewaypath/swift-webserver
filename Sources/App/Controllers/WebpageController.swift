@@ -86,7 +86,7 @@ struct WebPageController {
           let page = "buddhavipassana" //try? req.parameters.next(String.self)
           let pageName = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "live", pageName:page)
+        let webpage = getPage(runtimeState: "live", pageName:"\(page)/\(pageName ?? "courses")")
           
           struct PageData: Content {
                 var style: String
@@ -107,7 +107,7 @@ struct WebPageController {
           let page = "on-num" //try? req.parameters.next(String.self)
           let pageName = try? req.parameters.next(String.self)
         
-          let webpage = getPage(runtimeState: "live", pageName:page)
+          let webpage = getPage(runtimeState: "live", pageName:"\(page)/\(pageName ?? "courses")")
           
           struct PageData: Content {
                 var style: String
