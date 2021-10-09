@@ -379,14 +379,14 @@ public func routes(_ router: Router) throws {
     
     router.post("deploy") { req -> Future<HTTPStatus> in
         return try req.content.decode(MessageRequest.self).map(to: HTTPStatus.self) { messageRequest in
-            /*print("To: (messageRequest.to)")
-            print("From: (messageRequest.from)")
-            print("Body: (messageRequest.body)")*/
-            let commandResult = unixTools().runUnix("bash", arguments: ["/home/ayoung/onewaypath.com-css/deploy.sh"])
-            print(commandResult)
+            
+            print("Body: (messageRequest.body)")
+            /*let commandResult = unixTools().runUnix("bash", arguments: ["/home/ayoung/onewaypath.com-css/deploy.sh"])
+            print(commandResult)*/
             return .ok
         }
     }
     
 }
+
 
