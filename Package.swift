@@ -8,7 +8,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/vapor.git", from: "3.3.0"),
         // 🍃 An expressive, performant, and extensible templating language built for Swift.
         .package(url: "https://github.com/vapor/leaf.git", from: "3.0.2"),
-        .package(url: "https://github.com/rahyoung/unixTools.git", from: "1.0.0"),
+        .package(url: "git@github.com:onewaypath/UnixIntegrationTools.git", .exact("1.1.2")),
         .package(url: "https://github.com/vapor/fluent-mysql.git", from: "3.0.0-rc"),
         .package(url: "https://github.com/vapor/mysql.git", from: "3.0.0")
        
