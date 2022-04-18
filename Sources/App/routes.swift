@@ -168,10 +168,16 @@ public func routes(_ router: Router) throws {
             return "no-css"
         }
     }
-    
+// OLD SITE
     let webPage = WebPageController()
-    router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
+//    router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
 
+//BOOTSTRAP SITE
+    router.get() { req in
+        return req.redirect(to: "bootstrap/index.html")
+    }
+    
+    
 /*    router.get("team") { req in
         return req.redirect(to: "../")
     }*/
