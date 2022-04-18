@@ -165,7 +165,7 @@
       },
       {
         "package": "unixTools",
-        "repositoryURL": "https://github.com/rahyoung/unixTools.git",
+        "repositoryURL": "git@github.com:onewaypath/UnixIntegrationTools.git",
         "state": {
           "branch": null,
           "revision": "1df48fc7cecf49f5811f300ad1eba37834a4ac78",
