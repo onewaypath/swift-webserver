@@ -168,10 +168,16 @@ public func routes(_ router: Router) throws {
             return "no-css"
         }
     }
-    
+// OLD SITE
     let webPage = WebPageController()
-    router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
+//    router.get() { req -> Future<View> in return try webPage.displayPage(req:req) }
 
+//BOOTSTRAP SITE
+    router.get() { req in
+        return req.redirect(to: "bootstrap/index.html")
+    }
+    
+    
 /*    router.get("team") { req in
         return req.redirect(to: "../")
     }*/
@@ -364,5 +370,29 @@ public func routes(_ router: Router) throws {
       }
    
     */
+    
+    /*router.get("deploy") { req -> String in
+        let commandResult = unixTools().runUnix("bash", arguments: ["/Users/alexyoung/swift/onewaypath.com-css/deploy.sh"])
+        print(commandResult)
+    return "site deployed"
+    }*/
+    
+    struct MessageRequest: Content {
+        /*var to: String
+        var from: String*/
+        var body: String
+    }
+    
+    router.post("deploy") { req -> Future<HTTPStatus> in
+        return try req.content.decode(MessageRequest.self).map(to: HTTPStatus.self) { messageRequest in
+            /*print("To: (messageRequest.to)")
+            print("From: (messageRequest.from)")
+            print("Body: (messageRequest.body)")*/
+            let commandResult = unixTools().runUnix("bash", arguments: ["/home/ayoung/onewaypath.com-css/deploy.sh"])
+            print(commandResult)
+            return .ok
+        }
+    }
+    
 }
 

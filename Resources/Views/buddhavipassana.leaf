@@ -7,11 +7,11 @@
 #get(style)
 </style>
 <!-- <link rel="stylesheet" href="./main/css/style.css" /> -->
-<title>One Way Path Group</title>
+<title>Buddhavipassana Meditation Centre</title>
 </head>
 <body>
 <h1>Buddhavipassana</h1>
-<h1>Meditation Centre</h1>
+<h1>Meditation Centre | Toronto</h1>
 #get(html)
 <footer>   
 	<p><a href="Courses">Courses</a> |<a href="daily-schedule"> Daily Schedule </a> | <a href="contact-us">Contact Us</a> | <a href="faq">FAQ</a> |  <a href="practice">About the Practice</a> |  <a href="teachers">Teachers</a> |  <a href="privacy">Privacy</a></p>
