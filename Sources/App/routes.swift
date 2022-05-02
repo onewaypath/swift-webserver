@@ -8,7 +8,7 @@ public func routes(_ router: Router) throws {
     
     //** TEST DEPLOY SCRIPT
     
-    router.get("deploy") { req -> String in
+    router.post("deploy") { req -> String in
      
         let serverDir = "/home/ayoung/bashScripts/"
         let localDir = "/Users/alexyoung/swift/onewaypath.com//Public/bootstrap/"
