@@ -10,7 +10,7 @@ public func routes(_ router: Router) throws {
     
     router.get("deploy") { req -> String in
      
-        let serverDir = "/home/ayoung/onewaypath.com-dev/"
+        let serverDir = "/home/ayoung/onewaypath.com"
         let localDir = "/Users/alexyoung/swift/onewaypath.com"
 
         let result = unixTools().runUnix("bash", arguments: ["\(serverDir)/Public/bootstrap/deploy.sh"])
