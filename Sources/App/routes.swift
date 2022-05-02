@@ -6,6 +6,18 @@ import HTTP
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     
+    //** TEST DEPLOY SCRIPT
+    
+    router.get("deploy") { req -> String in
+     
+        let serverDir = "/home/ayoung/onewaypath.com-dev/"
+        let localDir = "/Users/alexyoung/swift/onewaypath.com"
+
+        let result = unixTools().runUnix("bash", arguments: ["\(serverDir)/Public/bootstrap/deploy.sh"])
+        return result
+    }
+    
+    
     // *** ROUTES TO DISPLAY HOME PAGES ***
     
     let owpgmainHtml = unixTools().runUnix("cat", arguments: ["Public/index.html"])
