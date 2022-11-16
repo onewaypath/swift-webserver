@@ -6,6 +6,13 @@ import HTTP
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     
+    // ROUTE FOR MILLEN ROAD DILIGENCE DOCUMENTS
+   
+    
+    router.get("millenroad", "diligence") { req in
+        return req.redirect(to: "https://owpinvesting-my.sharepoint.com/:f:/g/personal/ayoung_onewaypath_com/Ere1v7NgIhNJjiXI9VR60f0BHHnlZZhMdTsXjg9EikeaEQ?e=Wo5tcr")
+    }
+    
     //** TEST DEPLOY SCRIPT
     
     router.post("deploy") { req -> String in
