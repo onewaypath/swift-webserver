@@ -199,6 +199,20 @@ public func routes(_ router: Router) throws {
 
     }
     
+//Millen Road Site
+    
+    router.get("millenroad") { req in
+        //return req.redirect(to: "bootstrap/index.html")
+        return req.redirect(to: "../MillenRoad/index.html")
+
+    }
+    
+    router.get("MillenRoad") { req in
+        //return req.redirect(to: "bootstrap/index.html")
+        return req.redirect(to: "index.html")
+
+    }
+    
     
 /*    router.get("team") { req in
         return req.redirect(to: "../")
