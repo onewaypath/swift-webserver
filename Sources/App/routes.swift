@@ -194,7 +194,9 @@ public func routes(_ router: Router) throws {
 
 //BOOTSTRAP SITE
     router.get() { req in
-        return req.redirect(to: "bootstrap/index.html")
+        //return req.redirect(to: "bootstrap/index.html")
+        return req.redirect(to: "index.html")
+
     }
     
     
