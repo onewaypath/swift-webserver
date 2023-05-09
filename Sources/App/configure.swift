@@ -3,7 +3,8 @@ import Vapor
 import FluentMySQL
 import MySQL
 
-let host = "ubuntu-01"
+//let host = "ubuntu-01"
+//let host = "localhost"
 
 /*
 /// Creates connections to an identified MySQL database.
@@ -54,58 +55,58 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     
     // configure Fluent MySQL
     
-    switch host {
-    case "ubuntu-01":
-        try services.register(FluentMySQLProvider())
-        let mysqlConfig = MySQLDatabaseConfig(
-          hostname: "172.104.17.220",
-          port: 3306,
-          username: "ayoung",
-          password: "6uEHZwjKyR22#637",
-          database: "ubuntu01"
-        )
-        services.register(mysqlConfig)
-        
-    default :
-    try services.register(FluentMySQLProvider())
-    let mysqlConfig = MySQLDatabaseConfig(
-      hostname: "localhost",
-      port: 3306,
-      username: "root",
-      password: "LQJdO3HYiN*X",
-      database: "test"
-    )
-    services.register(mysqlConfig)
-        
-    }
+//    switch host {
+//    case "ubuntu-01":
+//        try services.register(FluentMySQLProvider())
+//        let mysqlConfig = MySQLDatabaseConfig(
+//          hostname: "172.104.17.220",
+//          port: 3306,
+//          username: "ayoung",
+//          password: "6uEHZwjKyR22#637",
+//          database: "ubuntu01"
+//        )
+//        services.register(mysqlConfig)
+//
+//    default :
+//    try services.register(FluentMySQLProvider())
+//    let mysqlConfig = MySQLDatabaseConfig(
+//      hostname: "localhost",
+//      port: 3306,
+//      username: "root",
+//      password: "LQJdO3HYiN*X",
+//      database: "test"
+//    )
+//    services.register(mysqlConfig)
+//
+//    }
     
     
-    let mysql = MySQLDatabase(config: MySQLDatabaseConfig(
-               hostname: "172.104.17.220",
-               port: 3306,
-               username: "ayoung",
-               password: "6uEHZwjKyR22#637",
-               database: "ubuntu01"
-               )
-       )
-    var databases = DatabasesConfig()
-    databases.add(database: mysql, as: .mysql)
-    services.register(databases)
+//    let mysql = MySQLDatabase(config: MySQLDatabaseConfig(
+//               hostname: "172.104.17.220",
+//               port: 3306,
+//               username: "ayoung",
+//               password: "6uEHZwjKyR22#637",
+//               database: "ubuntu01"
+//               )
+//       )
+//    var databases = DatabasesConfig()
+//    databases.add(database: mysql, as: .mysql)
+//    services.register(databases)
 
     
     //try services.register(MySQLProvider())
     
-    let mysql2 = MySQLDatabase(config: MySQLDatabaseConfig(
-            hostname: "97.107.129.88",
-            port: 3306,
-            username: "ayoung",
-            password: "G&h0L6a7%NK86zkK",
-            database: "onewaypath_wp"
-            )
-    )
+//    let mysql2 = MySQLDatabase(config: MySQLDatabaseConfig(
+//            hostname: "97.107.129.88",
+//            port: 3306,
+//            username: "ayoung",
+//            password: "G&h0L6a7%NK86zkK",
+//            database: "onewaypath_wp"
+//            )
+//    )
     //var databases = DatabasesConfig()
-    databases.add(database: mysql2, as: .mysql2)
-    services.register(databases)
+//    databases.add(database: mysql2, as: .mysql2)
+//    services.register(databases)
         
     
     
