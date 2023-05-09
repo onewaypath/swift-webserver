@@ -6,6 +6,12 @@ import HTTP
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     
+    // ROUTE FOR STONEY CREEK SUMMARY DOCUMENT
+    
+    router.get("stoneycreek", "summary") { req in
+        return req.redirect(to: "https://owpinvesting-my.sharepoint.com/:b:/g/personal/ayoung_onewaypath_com/Edco2PeM2ONHhFkiUEPnVYEBDLeB2_RYxMSUNqbNuRbgSA?e=SjdFyD")
+    }
+    
     // ROUTE FOR MILLEN ROAD DILIGENCE DOCUMENTS
    
     
