@@ -9,7 +9,7 @@ public func routes(_ router: Router) throws {
     // ROUTE FOR STONEY CREEK SUMMARY DOCUMENT
     
     router.get("stoneycreek", "summary") { req in
-        return req.redirect(to: "https://owpinvesting-my.sharepoint.com/:b:/g/personal/ayoung_onewaypath_com/Edco2PeM2ONHhFkiUEPnVYEBDLeB2_RYxMSUNqbNuRbgSA?e=SjdFyD")
+        return req.redirect(to: "https://owpinvesting-my.sharepoint.com/:b:/g/personal/ayoung_onewaypath_com/Edr47QX7T9BEqwCYoFr6fTcBfBS2U1xNC_77_D5ibOtkzg?e=sFxdpw")
     }
     
     // ROUTE FOR MILLEN ROAD DILIGENCE DOCUMENTS
